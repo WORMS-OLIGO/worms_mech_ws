@@ -1,0 +1,90 @@
+[0.354s] Invoking command in '/home/jacobrod/worms_ws/build/ros_gz_bridge': CMAKE_PREFIX_PATH=/home/jacobrod/worms_ws/install/ros_gz_interfaces:/home/jacobrod/worms_ws/src/install/worms_gazebo:/home/jacobrod/worms_ws/src/install/worms_description:/home/jacobrod/worms_ws/src/install/ros_gz_example_bringup:/home/jacobrod/worms_ws/src/install/ros_gz_example_gazebo:/home/jacobrod/worms_ws/src/install/ros_gz_example_description:/home/jacobrod/worms_ws/src/install/ros_gz_example_application:/home/jacobrod/worms_ws/src/install/core_bringup:/home/jacobrod/worms_ws/install/worms_gazebo:/home/jacobrod/worms_ws/install/worms_description:/home/jacobrod/worms_ws/install/ros_ign:/home/jacobrod/worms_ws/install/ros_ign_gazebo_demos:/home/jacobrod/worms_ws/install/ros_gz:/home/jacobrod/worms_ws/install/ros_gz_sim_demos:/home/jacobrod/worms_ws/install/sdformat_urdf:/home/jacobrod/worms_ws/install/sdformat_test_files:/home/jacobrod/worms_ws/install/ros_ign_interfaces:/home/jacobrod/worms_ws/install/ros_ign_image:/home/jacobrod/worms_ws/install/ros_ign_gazebo:/home/jacobrod/worms_ws/install/ros_ign_bridge:/home/jacobrod/worms_ws/install/ros_gz_sim:/home/jacobrod/worms_ws/install/ros_gz_image:/home/jacobrod/worms_ws/install/ros_gz_bridge:/home/jacobrod/worms_ws/install/ros_gz_example_bringup:/home/jacobrod/worms_ws/install/ros_gz_example_gazebo:/home/jacobrod/worms_ws/install/ros_gz_example_description:/home/jacobrod/worms_ws/install/ros_gz_example_application:/home/jacobrod/worms_ws/install/core_bringup:/home/jacobrod/AllSeaingVehicle2/install:/home/jacobrod/worms_ws/src/install/worms_mech:/home/jacobrod/worms_ws/install/worms_mech:/opt/ros/humble LD_LIBRARY_PATH=/home/jacobrod/worms_ws/install/ros_gz_interfaces/lib:/home/jacobrod/worms_ws/install/sdformat_urdf/lib:/home/jacobrod/worms_ws/install/ros_ign_interfaces/lib:/home/jacobrod/worms_ws/install/ros_gz_sim/lib:/home/jacobrod/worms_ws/install/ros_gz_bridge/lib:/home/jacobrod/AllSeaingVehicle2/install/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/jacobrod/worms_ws/build/ros_gz_bridge -- -j8 -l8
+[0.412s] [35m[1mConsolidate compiler generated dependencies of target gtest_main[0m
+[0.413s] [35m[1mConsolidate compiler generated dependencies of target bridge_node[0m
+[0.414s] [35m[1mConsolidate compiler generated dependencies of target gtest[0m
+[0.437s] [  2%] Built target gtest_main
+[0.447s] [  4%] Built target gtest
+[0.456s] [  6%] Built target bridge_node
+[0.459s] [35m[1mConsolidate compiler generated dependencies of target ros_gz_bridge_lib[0m
+[0.472s] [35m[1mConsolidate compiler generated dependencies of target test_rcl_interfaces[0m
+[0.475s] [35m[1mConsolidate compiler generated dependencies of target test_utils[0m
+[0.525s] [ 10%] Built target test_rcl_interfaces
+[0.545s] [ 13%] Built target test_utils
+[0.578s] [35m[1mConsolidate compiler generated dependencies of target test_gz_publisher[0m
+[0.597s] [35m[1mConsolidate compiler generated dependencies of target test_ros_publisher[0m
+[0.600s] [35m[1mConsolidate compiler generated dependencies of target test_gz_subscriber[0m
+[0.608s] [35m[1mConsolidate compiler generated dependencies of target test_ros_client[0m
+[0.614s] [35m[1mConsolidate compiler generated dependencies of target test_gz_server[0m
+[0.624s] [35m[1mConsolidate compiler generated dependencies of target test_ros_subscriber[0m
+[0.667s] [ 17%] Built target test_ros_publisher
+[0.674s] [ 20%] Built target test_gz_publisher
+[0.681s] [ 24%] Built target test_gz_subscriber
+[0.683s] [ 26%] Built target test_ros_client
+[0.694s] [ 28%] Built target test_gz_server
+[0.721s] [ 70%] Built target ros_gz_bridge_lib
+[0.742s] [35m[1mConsolidate compiler generated dependencies of target static_bridge[0m
+[0.743s] [35m[1mConsolidate compiler generated dependencies of target bridge_types[0m
+[0.745s] [35m[1mConsolidate compiler generated dependencies of target parameter_bridge[0m
+[0.749s] [35m[1mConsolidate compiler generated dependencies of target test_ros_gz_interfaces[0m
+[0.764s] [ 87%] Built target test_ros_subscriber
+[0.771s] [ 89%] Built target bridge_types
+[0.775s] [35m[1mConsolidate compiler generated dependencies of target ros_gz_bridge_bridge_config[0m
+[0.780s] [ 91%] Built target static_bridge
+[0.785s] [ 94%] Built target parameter_bridge
+[0.795s] [ 97%] Built target test_ros_gz_interfaces
+[0.801s] [100%] Built target ros_gz_bridge_bridge_config
+[0.821s] Invoked command in '/home/jacobrod/worms_ws/build/ros_gz_bridge' returned '0': CMAKE_PREFIX_PATH=/home/jacobrod/worms_ws/install/ros_gz_interfaces:/home/jacobrod/worms_ws/src/install/worms_gazebo:/home/jacobrod/worms_ws/src/install/worms_description:/home/jacobrod/worms_ws/src/install/ros_gz_example_bringup:/home/jacobrod/worms_ws/src/install/ros_gz_example_gazebo:/home/jacobrod/worms_ws/src/install/ros_gz_example_description:/home/jacobrod/worms_ws/src/install/ros_gz_example_application:/home/jacobrod/worms_ws/src/install/core_bringup:/home/jacobrod/worms_ws/install/worms_gazebo:/home/jacobrod/worms_ws/install/worms_description:/home/jacobrod/worms_ws/install/ros_ign:/home/jacobrod/worms_ws/install/ros_ign_gazebo_demos:/home/jacobrod/worms_ws/install/ros_gz:/home/jacobrod/worms_ws/install/ros_gz_sim_demos:/home/jacobrod/worms_ws/install/sdformat_urdf:/home/jacobrod/worms_ws/install/sdformat_test_files:/home/jacobrod/worms_ws/install/ros_ign_interfaces:/home/jacobrod/worms_ws/install/ros_ign_image:/home/jacobrod/worms_ws/install/ros_ign_gazebo:/home/jacobrod/worms_ws/install/ros_ign_bridge:/home/jacobrod/worms_ws/install/ros_gz_sim:/home/jacobrod/worms_ws/install/ros_gz_image:/home/jacobrod/worms_ws/install/ros_gz_bridge:/home/jacobrod/worms_ws/install/ros_gz_example_bringup:/home/jacobrod/worms_ws/install/ros_gz_example_gazebo:/home/jacobrod/worms_ws/install/ros_gz_example_description:/home/jacobrod/worms_ws/install/ros_gz_example_application:/home/jacobrod/worms_ws/install/core_bringup:/home/jacobrod/AllSeaingVehicle2/install:/home/jacobrod/worms_ws/src/install/worms_mech:/home/jacobrod/worms_ws/install/worms_mech:/opt/ros/humble LD_LIBRARY_PATH=/home/jacobrod/worms_ws/install/ros_gz_interfaces/lib:/home/jacobrod/worms_ws/install/sdformat_urdf/lib:/home/jacobrod/worms_ws/install/ros_ign_interfaces/lib:/home/jacobrod/worms_ws/install/ros_gz_sim/lib:/home/jacobrod/worms_ws/install/ros_gz_bridge/lib:/home/jacobrod/AllSeaingVehicle2/install/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/jacobrod/worms_ws/build/ros_gz_bridge -- -j8 -l8
+[1.063s] Invoking command in '/home/jacobrod/worms_ws/build/ros_gz_bridge': CMAKE_PREFIX_PATH=/home/jacobrod/worms_ws/install/ros_gz_interfaces:/home/jacobrod/worms_ws/src/install/worms_gazebo:/home/jacobrod/worms_ws/src/install/worms_description:/home/jacobrod/worms_ws/src/install/ros_gz_example_bringup:/home/jacobrod/worms_ws/src/install/ros_gz_example_gazebo:/home/jacobrod/worms_ws/src/install/ros_gz_example_description:/home/jacobrod/worms_ws/src/install/ros_gz_example_application:/home/jacobrod/worms_ws/src/install/core_bringup:/home/jacobrod/worms_ws/install/worms_gazebo:/home/jacobrod/worms_ws/install/worms_description:/home/jacobrod/worms_ws/install/ros_ign:/home/jacobrod/worms_ws/install/ros_ign_gazebo_demos:/home/jacobrod/worms_ws/install/ros_gz:/home/jacobrod/worms_ws/install/ros_gz_sim_demos:/home/jacobrod/worms_ws/install/sdformat_urdf:/home/jacobrod/worms_ws/install/sdformat_test_files:/home/jacobrod/worms_ws/install/ros_ign_interfaces:/home/jacobrod/worms_ws/install/ros_ign_image:/home/jacobrod/worms_ws/install/ros_ign_gazebo:/home/jacobrod/worms_ws/install/ros_ign_bridge:/home/jacobrod/worms_ws/install/ros_gz_sim:/home/jacobrod/worms_ws/install/ros_gz_image:/home/jacobrod/worms_ws/install/ros_gz_bridge:/home/jacobrod/worms_ws/install/ros_gz_example_bringup:/home/jacobrod/worms_ws/install/ros_gz_example_gazebo:/home/jacobrod/worms_ws/install/ros_gz_example_description:/home/jacobrod/worms_ws/install/ros_gz_example_application:/home/jacobrod/worms_ws/install/core_bringup:/home/jacobrod/AllSeaingVehicle2/install:/home/jacobrod/worms_ws/src/install/worms_mech:/home/jacobrod/worms_ws/install/worms_mech:/opt/ros/humble LD_LIBRARY_PATH=/home/jacobrod/worms_ws/install/ros_gz_interfaces/lib:/home/jacobrod/worms_ws/install/sdformat_urdf/lib:/home/jacobrod/worms_ws/install/ros_ign_interfaces/lib:/home/jacobrod/worms_ws/install/ros_gz_sim/lib:/home/jacobrod/worms_ws/install/ros_gz_bridge/lib:/home/jacobrod/AllSeaingVehicle2/install/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/jacobrod/worms_ws/build/ros_gz_bridge
+[1.072s] -- Install configuration: ""
+[1.072s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/lib/ros_gz_bridge/bridge_node
+[1.073s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/lib/libros_gz_bridge_lib.so
+[1.073s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include
+[1.073s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge
+[1.074s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert
+[1.074s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert/std_msgs.hpp
+[1.074s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert/nav_msgs.hpp
+[1.074s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert/sensor_msgs.hpp
+[1.074s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert/rosgraph_msgs.hpp
+[1.074s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert/geometry_msgs.hpp
+[1.074s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert/builtin_interfaces.hpp
+[1.074s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert/ros_gz_interfaces.hpp
+[1.075s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert/rcl_interfaces.hpp
+[1.075s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert/tf2_msgs.hpp
+[1.075s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert/trajectory_msgs.hpp
+[1.075s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert/actuator_msgs.hpp
+[1.075s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert/vision_msgs.hpp
+[1.075s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert_decl.hpp
+[1.075s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/ros_gz_bridge.hpp
+[1.075s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert.hpp
+[1.076s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/bridge_config.hpp
+[1.076s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/environment/library_path.sh
+[1.076s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/environment/library_path.dsv
+[1.076s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/lib/ros_gz_bridge/parameter_bridge
+[1.076s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/lib/ros_gz_bridge/static_bridge
+[1.076s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/lib/ros_gz_bridge/bridge_types
+[1.076s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/lib/ros_gz_bridge/test_ros_publisher
+[1.076s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/lib/ros_gz_bridge/test_ros_subscriber
+[1.076s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/lib/ros_gz_bridge/test_gz_publisher
+[1.077s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/lib/ros_gz_bridge/test_gz_subscriber
+[1.077s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/lib/ros_gz_bridge/test_gz_server
+[1.078s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/lib/ros_gz_bridge/test_ros_client
+[1.078s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ament_index/resource_index/package_run_dependencies/ros_gz_bridge
+[1.078s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ament_index/resource_index/parent_prefix_path/ros_gz_bridge
+[1.078s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/environment/ament_prefix_path.sh
+[1.078s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/environment/ament_prefix_path.dsv
+[1.079s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/environment/path.sh
+[1.079s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/environment/path.dsv
+[1.079s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/local_setup.bash
+[1.079s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/local_setup.sh
+[1.079s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/local_setup.zsh
+[1.079s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/local_setup.dsv
+[1.079s] -- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/package.dsv
+[1.079s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ament_index/resource_index/packages/ros_gz_bridge
+[1.079s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ament_index/resource_index/rclcpp_components/ros_gz_bridge
+[1.080s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.080s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/cmake/ament_cmake_export_libraries-extras.cmake
+[1.080s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/cmake/ament_cmake_export_dependencies-extras.cmake
+[1.080s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/cmake/ros_gz_bridgeConfig.cmake
+[1.080s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/cmake/ros_gz_bridgeConfig-version.cmake
+[1.080s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/package.xml
+[1.081s] Invoked command in '/home/jacobrod/worms_ws/build/ros_gz_bridge' returned '0': CMAKE_PREFIX_PATH=/home/jacobrod/worms_ws/install/ros_gz_interfaces:/home/jacobrod/worms_ws/src/install/worms_gazebo:/home/jacobrod/worms_ws/src/install/worms_description:/home/jacobrod/worms_ws/src/install/ros_gz_example_bringup:/home/jacobrod/worms_ws/src/install/ros_gz_example_gazebo:/home/jacobrod/worms_ws/src/install/ros_gz_example_description:/home/jacobrod/worms_ws/src/install/ros_gz_example_application:/home/jacobrod/worms_ws/src/install/core_bringup:/home/jacobrod/worms_ws/install/worms_gazebo:/home/jacobrod/worms_ws/install/worms_description:/home/jacobrod/worms_ws/install/ros_ign:/home/jacobrod/worms_ws/install/ros_ign_gazebo_demos:/home/jacobrod/worms_ws/install/ros_gz:/home/jacobrod/worms_ws/install/ros_gz_sim_demos:/home/jacobrod/worms_ws/install/sdformat_urdf:/home/jacobrod/worms_ws/install/sdformat_test_files:/home/jacobrod/worms_ws/install/ros_ign_interfaces:/home/jacobrod/worms_ws/install/ros_ign_image:/home/jacobrod/worms_ws/install/ros_ign_gazebo:/home/jacobrod/worms_ws/install/ros_ign_bridge:/home/jacobrod/worms_ws/install/ros_gz_sim:/home/jacobrod/worms_ws/install/ros_gz_image:/home/jacobrod/worms_ws/install/ros_gz_bridge:/home/jacobrod/worms_ws/install/ros_gz_example_bringup:/home/jacobrod/worms_ws/install/ros_gz_example_gazebo:/home/jacobrod/worms_ws/install/ros_gz_example_description:/home/jacobrod/worms_ws/install/ros_gz_example_application:/home/jacobrod/worms_ws/install/core_bringup:/home/jacobrod/AllSeaingVehicle2/install:/home/jacobrod/worms_ws/src/install/worms_mech:/home/jacobrod/worms_ws/install/worms_mech:/opt/ros/humble LD_LIBRARY_PATH=/home/jacobrod/worms_ws/install/ros_gz_interfaces/lib:/home/jacobrod/worms_ws/install/sdformat_urdf/lib:/home/jacobrod/worms_ws/install/ros_ign_interfaces/lib:/home/jacobrod/worms_ws/install/ros_gz_sim/lib:/home/jacobrod/worms_ws/install/ros_gz_bridge/lib:/home/jacobrod/AllSeaingVehicle2/install/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/jacobrod/worms_ws/build/ros_gz_bridge

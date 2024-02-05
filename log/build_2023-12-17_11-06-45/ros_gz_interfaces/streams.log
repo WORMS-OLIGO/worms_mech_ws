@@ -1,0 +1,21 @@
+[0.215s] Invoking command in '/home/jacobrod/worms_ws/build/ros_gz_interfaces': /usr/bin/cmake /home/jacobrod/worms_ws/src/ros_gz/ros_gz_interfaces -DCMAKE_INSTALL_PREFIX=/home/jacobrod/worms_ws/install/ros_gz_interfaces
+[0.253s] -- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.558s] Traceback (most recent call last):
+[0.559s]   File "/opt/ros/humble/share/ament_cmake_core/cmake/package_templates/templates_2_cmake.py", line 21, in <module>
+[0.559s]     from ament_package.templates import get_environment_hook_template_path
+[0.559s] ModuleNotFoundError: No module named 'ament_package'
+[0.606s] -- Configuring incomplete, errors occurred!
+[0.606s] See also "/home/jacobrod/worms_ws/build/ros_gz_interfaces/CMakeFiles/CMakeOutput.log".
+[0.606s] [31mCMake Error at /opt/ros/humble/share/ament_cmake_core/cmake/ament_cmake_package_templates-extras.cmake:41 (message):
+[0.606s]   execute_process(/usr/bin/python3.10
+[0.606s]   /opt/ros/humble/share/ament_cmake_core/cmake/package_templates/templates_2_cmake.py
+[0.606s]   /home/jacobrod/worms_ws/build/ros_gz_interfaces/ament_cmake_package_templates/templates.cmake)
+[0.606s]   returned error code 1
+[0.607s] Call Stack (most recent call first):
+[0.607s]   /opt/ros/humble/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)
+[0.607s]   /opt/ros/humble/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)
+[0.607s]   /opt/ros/humble/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)
+[0.607s]   CMakeLists.txt:12 (find_package)
+[0.607s] 
+[0.607s] [0m
+[0.613s] Invoked command in '/home/jacobrod/worms_ws/build/ros_gz_interfaces' returned '1': /usr/bin/cmake /home/jacobrod/worms_ws/src/ros_gz/ros_gz_interfaces -DCMAKE_INSTALL_PREFIX=/home/jacobrod/worms_ws/install/ros_gz_interfaces

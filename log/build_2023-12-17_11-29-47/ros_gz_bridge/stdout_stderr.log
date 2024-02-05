@@ -1,0 +1,109 @@
+[35m[1mConsolidate compiler generated dependencies of target gtest_main[0m
+[35m[1mConsolidate compiler generated dependencies of target bridge_node[0m
+[35m[1mConsolidate compiler generated dependencies of target gtest[0m
+[  2%] Built target gtest_main
+[  5%] Built target gtest
+[  6%] Built target bridge_node
+[35m[1mConsolidate compiler generated dependencies of target ros_gz_bridge_lib[0m
+[35m[1mConsolidate compiler generated dependencies of target test_rcl_interfaces[0m
+[35m[1mConsolidate compiler generated dependencies of target test_utils[0m
+[ 10%] Built target test_rcl_interfaces
+[ 13%] Built target test_utils
+[35m[1mConsolidate compiler generated dependencies of target test_gz_subscriber[0m
+[35m[1mConsolidate compiler generated dependencies of target test_gz_publisher[0m
+[35m[1mConsolidate compiler generated dependencies of target test_gz_server[0m
+[35m[1mConsolidate compiler generated dependencies of target test_ros_subscriber[0m
+[35m[1mConsolidate compiler generated dependencies of target test_ros_client[0m
+[ 14%] [32mBuilding CXX object CMakeFiles/test_ros_publisher.dir/generated/test/ros_publisher.cpp.o[0m
+[ 18%] Built target test_gz_subscriber
+[ 19%] [32mBuilding CXX object CMakeFiles/test_ros_subscriber.dir/generated/test/actuator_msgs_subscriber.cpp.o[0m
+[ 21%] Built target test_ros_client
+[ 25%] Built target test_gz_publisher
+[ 27%] Built target test_gz_server
+[ 28%] [32mBuilding CXX object CMakeFiles/test_ros_subscriber.dir/generated/test/geometry_msgs_subscriber.cpp.o[0m
+[ 29%] [32mBuilding CXX object CMakeFiles/test_ros_subscriber.dir/generated/test/rcl_interfaces_subscriber.cpp.o[0m
+[ 31%] [32mBuilding CXX object CMakeFiles/test_ros_subscriber.dir/generated/test/rosgraph_msgs_subscriber.cpp.o[0m
+[ 32%] [32mBuilding CXX object CMakeFiles/test_ros_subscriber.dir/generated/test/ros_gz_interfaces_subscriber.cpp.o[0m
+[ 73%] Built target ros_gz_bridge_lib
+[ 74%] [32mBuilding CXX object CMakeFiles/test_ros_subscriber.dir/generated/test/sensor_msgs_subscriber.cpp.o[0m
+[35m[1mConsolidate compiler generated dependencies of target parameter_bridge[0m
+[ 77%] Built target parameter_bridge
+[ 78%] [32mBuilding CXX object CMakeFiles/test_ros_subscriber.dir/generated/test/std_msgs_subscriber.cpp.o[0m
+[35m[1mConsolidate compiler generated dependencies of target static_bridge[0m
+[ 80%] Built target static_bridge
+[35m[1mConsolidate compiler generated dependencies of target bridge_types[0m
+[ 82%] Built target bridge_types
+[35m[1mConsolidate compiler generated dependencies of target test_ros_gz_interfaces[0m
+[ 86%] Built target test_ros_gz_interfaces
+[35m[1mConsolidate compiler generated dependencies of target ros_gz_bridge_bridge_config[0m
+[ 88%] Built target ros_gz_bridge_bridge_config
+[ 89%] [32mBuilding CXX object CMakeFiles/test_ros_subscriber.dir/generated/test/tf2_msgs_subscriber.cpp.o[0m
+[ 90%] [32mBuilding CXX object CMakeFiles/test_ros_subscriber.dir/generated/test/trajectory_msgs_subscriber.cpp.o[0m
+[ 91%] [32mBuilding CXX object CMakeFiles/test_ros_subscriber.dir/generated/test/vision_msgs_subscriber.cpp.o[0m
+[ 93%] [32m[1mLinking CXX executable test_ros_publisher[0m
+[ 94%] Built target test_ros_publisher
+[ 95%] [32m[1mLinking CXX executable test_ros_subscriber[0m
+[100%] Built target test_ros_subscriber
+-- Install configuration: ""
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/lib/ros_gz_bridge/bridge_node
+-- Set runtime path of "/home/jacobrod/worms_ws/install/ros_gz_bridge/lib/ros_gz_bridge/bridge_node" to ""
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/lib/libros_gz_bridge_lib.so
+-- Set runtime path of "/home/jacobrod/worms_ws/install/ros_gz_bridge/lib/libros_gz_bridge_lib.so" to ""
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/include
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert/std_msgs.hpp
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert/nav_msgs.hpp
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert/sensor_msgs.hpp
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert/rosgraph_msgs.hpp
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert/geometry_msgs.hpp
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert/builtin_interfaces.hpp
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert/ros_gz_interfaces.hpp
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert/rcl_interfaces.hpp
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert/tf2_msgs.hpp
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert/trajectory_msgs.hpp
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert/actuator_msgs.hpp
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert/vision_msgs.hpp
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert_decl.hpp
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/ros_gz_bridge.hpp
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert.hpp
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/bridge_config.hpp
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/environment/library_path.sh
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/environment/library_path.dsv
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/lib/ros_gz_bridge/parameter_bridge
+-- Set runtime path of "/home/jacobrod/worms_ws/install/ros_gz_bridge/lib/ros_gz_bridge/parameter_bridge" to ""
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/lib/ros_gz_bridge/static_bridge
+-- Set runtime path of "/home/jacobrod/worms_ws/install/ros_gz_bridge/lib/ros_gz_bridge/static_bridge" to ""
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/lib/ros_gz_bridge/bridge_types
+-- Set runtime path of "/home/jacobrod/worms_ws/install/ros_gz_bridge/lib/ros_gz_bridge/bridge_types" to ""
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/lib/ros_gz_bridge/test_ros_publisher
+-- Set runtime path of "/home/jacobrod/worms_ws/install/ros_gz_bridge/lib/ros_gz_bridge/test_ros_publisher" to ""
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/lib/ros_gz_bridge/test_ros_subscriber
+-- Set runtime path of "/home/jacobrod/worms_ws/install/ros_gz_bridge/lib/ros_gz_bridge/test_ros_subscriber" to ""
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/lib/ros_gz_bridge/test_gz_publisher
+-- Set runtime path of "/home/jacobrod/worms_ws/install/ros_gz_bridge/lib/ros_gz_bridge/test_gz_publisher" to ""
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/lib/ros_gz_bridge/test_gz_subscriber
+-- Set runtime path of "/home/jacobrod/worms_ws/install/ros_gz_bridge/lib/ros_gz_bridge/test_gz_subscriber" to ""
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/lib/ros_gz_bridge/test_gz_server
+-- Set runtime path of "/home/jacobrod/worms_ws/install/ros_gz_bridge/lib/ros_gz_bridge/test_gz_server" to ""
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/lib/ros_gz_bridge/test_ros_client
+-- Set runtime path of "/home/jacobrod/worms_ws/install/ros_gz_bridge/lib/ros_gz_bridge/test_ros_client" to ""
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ament_index/resource_index/package_run_dependencies/ros_gz_bridge
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ament_index/resource_index/parent_prefix_path/ros_gz_bridge
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/environment/ament_prefix_path.sh
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/environment/ament_prefix_path.dsv
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/environment/path.sh
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/environment/path.dsv
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/local_setup.bash
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/local_setup.sh
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/local_setup.zsh
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/local_setup.dsv
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/package.dsv
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ament_index/resource_index/packages/ros_gz_bridge
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ament_index/resource_index/rclcpp_components/ros_gz_bridge
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/cmake/ament_cmake_export_libraries-extras.cmake
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/cmake/ros_gz_bridgeConfig.cmake
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/cmake/ros_gz_bridgeConfig-version.cmake
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/package.xml

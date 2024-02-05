@@ -1,0 +1,86 @@
+[35m[1mConsolidate compiler generated dependencies of target gtest_main[0m
+[35m[1mConsolidate compiler generated dependencies of target bridge_node[0m
+[35m[1mConsolidate compiler generated dependencies of target gtest[0m
+[  2%] Built target gtest_main
+[  4%] Built target gtest
+[  6%] Built target bridge_node
+[35m[1mConsolidate compiler generated dependencies of target ros_gz_bridge_lib[0m
+[35m[1mConsolidate compiler generated dependencies of target test_rcl_interfaces[0m
+[35m[1mConsolidate compiler generated dependencies of target test_utils[0m
+[ 10%] Built target test_rcl_interfaces
+[ 13%] Built target test_utils
+[35m[1mConsolidate compiler generated dependencies of target test_gz_publisher[0m
+[35m[1mConsolidate compiler generated dependencies of target test_ros_publisher[0m
+[35m[1mConsolidate compiler generated dependencies of target test_gz_subscriber[0m
+[35m[1mConsolidate compiler generated dependencies of target test_ros_client[0m
+[35m[1mConsolidate compiler generated dependencies of target test_gz_server[0m
+[35m[1mConsolidate compiler generated dependencies of target test_ros_subscriber[0m
+[ 17%] Built target test_ros_publisher
+[ 20%] Built target test_gz_publisher
+[ 24%] Built target test_gz_subscriber
+[ 26%] Built target test_ros_client
+[ 28%] Built target test_gz_server
+[ 70%] Built target ros_gz_bridge_lib
+[35m[1mConsolidate compiler generated dependencies of target static_bridge[0m
+[35m[1mConsolidate compiler generated dependencies of target bridge_types[0m
+[35m[1mConsolidate compiler generated dependencies of target parameter_bridge[0m
+[35m[1mConsolidate compiler generated dependencies of target test_ros_gz_interfaces[0m
+[ 87%] Built target test_ros_subscriber
+[ 89%] Built target bridge_types
+[35m[1mConsolidate compiler generated dependencies of target ros_gz_bridge_bridge_config[0m
+[ 91%] Built target static_bridge
+[ 94%] Built target parameter_bridge
+[ 97%] Built target test_ros_gz_interfaces
+[100%] Built target ros_gz_bridge_bridge_config
+-- Install configuration: ""
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/lib/ros_gz_bridge/bridge_node
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/lib/libros_gz_bridge_lib.so
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert/std_msgs.hpp
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert/nav_msgs.hpp
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert/sensor_msgs.hpp
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert/rosgraph_msgs.hpp
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert/geometry_msgs.hpp
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert/builtin_interfaces.hpp
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert/ros_gz_interfaces.hpp
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert/rcl_interfaces.hpp
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert/tf2_msgs.hpp
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert/trajectory_msgs.hpp
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert/actuator_msgs.hpp
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert/vision_msgs.hpp
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert_decl.hpp
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/ros_gz_bridge.hpp
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert.hpp
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/bridge_config.hpp
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/environment/library_path.sh
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/environment/library_path.dsv
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/lib/ros_gz_bridge/parameter_bridge
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/lib/ros_gz_bridge/static_bridge
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/lib/ros_gz_bridge/bridge_types
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/lib/ros_gz_bridge/test_ros_publisher
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/lib/ros_gz_bridge/test_ros_subscriber
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/lib/ros_gz_bridge/test_gz_publisher
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/lib/ros_gz_bridge/test_gz_subscriber
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/lib/ros_gz_bridge/test_gz_server
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/lib/ros_gz_bridge/test_ros_client
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ament_index/resource_index/package_run_dependencies/ros_gz_bridge
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ament_index/resource_index/parent_prefix_path/ros_gz_bridge
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/environment/ament_prefix_path.sh
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/environment/path.sh
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/environment/path.dsv
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/local_setup.bash
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/local_setup.sh
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/local_setup.zsh
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/local_setup.dsv
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/package.dsv
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ament_index/resource_index/packages/ros_gz_bridge
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ament_index/resource_index/rclcpp_components/ros_gz_bridge
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/cmake/ament_cmake_export_libraries-extras.cmake
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/cmake/ros_gz_bridgeConfig.cmake
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/cmake/ros_gz_bridgeConfig-version.cmake
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/package.xml

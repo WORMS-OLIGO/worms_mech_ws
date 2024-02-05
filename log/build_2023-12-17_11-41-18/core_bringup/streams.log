@@ -1,0 +1,42 @@
+[0.332s] Invoking command in '/home/jacobrod/worms_ws/build/core_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jacobrod/worms_ws/install/worms_mech:/opt/ros/humble /usr/bin/cmake /home/jacobrod/worms_ws/src/core_bringup -DCMAKE_INSTALL_PREFIX=/home/jacobrod/worms_ws/install/core_bringup
+[0.371s] -- Found ament_cmake: 1.3.6 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.637s] -- Found ament_lint_auto: 0.12.9 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.823s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.823s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.823s] -- Added test 'lint_cmake' to check CMake code style
+[0.824s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.826s] -- Added test 'xmllint' to check XML markup files
+[0.846s] -- Configuring done
+[0.846s] -- Generating done
+[0.846s] -- Build files have been written to: /home/jacobrod/worms_ws/build/core_bringup
+[0.864s] Invoked command in '/home/jacobrod/worms_ws/build/core_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jacobrod/worms_ws/install/worms_mech:/opt/ros/humble /usr/bin/cmake /home/jacobrod/worms_ws/src/core_bringup -DCMAKE_INSTALL_PREFIX=/home/jacobrod/worms_ws/install/core_bringup
+[0.865s] Invoking command in '/home/jacobrod/worms_ws/build/core_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jacobrod/worms_ws/install/worms_mech:/opt/ros/humble /usr/bin/cmake --build /home/jacobrod/worms_ws/build/core_bringup -- -j8 -l8
+[1.003s] Invoked command in '/home/jacobrod/worms_ws/build/core_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jacobrod/worms_ws/install/worms_mech:/opt/ros/humble /usr/bin/cmake --build /home/jacobrod/worms_ws/build/core_bringup -- -j8 -l8
+[1.145s] Invoking command in '/home/jacobrod/worms_ws/build/core_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jacobrod/worms_ws/install/worms_mech:/opt/ros/humble /usr/bin/cmake --install /home/jacobrod/worms_ws/build/core_bringup
+[1.303s] -- Install configuration: ""
+[1.304s] -- Up-to-date: /home/jacobrod/worms_ws/install/core_bringup/share/core_bringup/launch
+[1.304s] -- Up-to-date: /home/jacobrod/worms_ws/install/core_bringup/share/core_bringup/launch/worms_gazebo.launch.py
+[1.304s] -- Up-to-date: /home/jacobrod/worms_ws/install/core_bringup/share/core_bringup/launch/hound_gazebo.launch.py
+[1.304s] -- Up-to-date: /home/jacobrod/worms_ws/install/core_bringup/share/core_bringup/launch/worms_hound_rviz.launch.py
+[1.305s] -- Up-to-date: /home/jacobrod/worms_ws/install/core_bringup/share/core_bringup/launch/worms_setup.launch copy.py
+[1.305s] -- Up-to-date: /home/jacobrod/worms_ws/install/core_bringup/share/core_bringup/launch/worms_hound_gazebo.launch.py
+[1.305s] -- Up-to-date: /home/jacobrod/worms_ws/install/core_bringup/share/core_bringup/config
+[1.306s] -- Up-to-date: /home/jacobrod/worms_ws/install/core_bringup/share/core_bringup/config/worms_bridge.yaml
+[1.306s] -- Up-to-date: /home/jacobrod/worms_ws/install/core_bringup/share/core_bringup/config/worms.rviz
+[1.306s] -- Up-to-date: /home/jacobrod/worms_ws/install/core_bringup/share/core_bringup/config/diff_drive.rviz
+[1.306s] -- Up-to-date: /home/jacobrod/worms_ws/install/core_bringup/share/ament_index/resource_index/package_run_dependencies/core_bringup
+[1.307s] -- Installing: /home/jacobrod/worms_ws/install/core_bringup/share/ament_index/resource_index/parent_prefix_path/core_bringup
+[1.309s] -- Up-to-date: /home/jacobrod/worms_ws/install/core_bringup/share/core_bringup/environment/ament_prefix_path.sh
+[1.310s] -- Installing: /home/jacobrod/worms_ws/install/core_bringup/share/core_bringup/environment/ament_prefix_path.dsv
+[1.310s] -- Up-to-date: /home/jacobrod/worms_ws/install/core_bringup/share/core_bringup/environment/path.sh
+[1.310s] -- Installing: /home/jacobrod/worms_ws/install/core_bringup/share/core_bringup/environment/path.dsv
+[1.311s] -- Up-to-date: /home/jacobrod/worms_ws/install/core_bringup/share/core_bringup/local_setup.bash
+[1.311s] -- Up-to-date: /home/jacobrod/worms_ws/install/core_bringup/share/core_bringup/local_setup.sh
+[1.311s] -- Up-to-date: /home/jacobrod/worms_ws/install/core_bringup/share/core_bringup/local_setup.zsh
+[1.311s] -- Installing: /home/jacobrod/worms_ws/install/core_bringup/share/core_bringup/local_setup.dsv
+[1.312s] -- Installing: /home/jacobrod/worms_ws/install/core_bringup/share/core_bringup/package.dsv
+[1.313s] -- Up-to-date: /home/jacobrod/worms_ws/install/core_bringup/share/ament_index/resource_index/packages/core_bringup
+[1.313s] -- Up-to-date: /home/jacobrod/worms_ws/install/core_bringup/share/core_bringup/cmake/core_bringupConfig.cmake
+[1.314s] -- Up-to-date: /home/jacobrod/worms_ws/install/core_bringup/share/core_bringup/cmake/core_bringupConfig-version.cmake
+[1.314s] -- Up-to-date: /home/jacobrod/worms_ws/install/core_bringup/share/core_bringup/package.xml
+[1.439s] Invoked command in '/home/jacobrod/worms_ws/build/core_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jacobrod/worms_ws/install/worms_mech:/opt/ros/humble /usr/bin/cmake --install /home/jacobrod/worms_ws/build/core_bringup

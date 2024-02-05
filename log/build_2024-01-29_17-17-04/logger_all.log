@@ -1,0 +1,898 @@
+[1.195s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[1.195s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7fb646ad15a0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7fb646edbbe0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7fb646edbbe0>>)
+[1.262s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[1.263s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[1.263s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[1.263s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[1.263s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[1.263s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[1.263s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/jacobrod/worms_ws'
+[1.263s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[1.263s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[1.263s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[1.263s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[1.263s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[1.263s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[1.263s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[1.263s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[1.263s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[1.276s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[1.276s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[1.276s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[1.276s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[1.276s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[1.276s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[1.277s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[1.277s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[1.277s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[1.277s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[1.277s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[1.277s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[1.277s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[1.277s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[1.277s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[1.277s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[1.277s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[1.278s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[1.278s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[1.278s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[1.278s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[1.278s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[1.278s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[1.278s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[1.278s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[1.278s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[1.278s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[1.278s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[1.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) by extensions ['ignore', 'ignore_ament_install']
+[1.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) by extension 'ignore'
+[1.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) ignored
+[1.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/core_bringup) by extensions ['ignore', 'ignore_ament_install']
+[1.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/core_bringup) by extension 'ignore'
+[1.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/core_bringup) by extension 'ignore_ament_install'
+[1.279s] Level 1:colcon.colcon_core.package_identification:_identify(src/core_bringup) by extensions ['colcon_pkg']
+[1.279s] Level 1:colcon.colcon_core.package_identification:_identify(src/core_bringup) by extension 'colcon_pkg'
+[1.279s] Level 1:colcon.colcon_core.package_identification:_identify(src/core_bringup) by extensions ['colcon_meta']
+[1.279s] Level 1:colcon.colcon_core.package_identification:_identify(src/core_bringup) by extension 'colcon_meta'
+[1.279s] Level 1:colcon.colcon_core.package_identification:_identify(src/core_bringup) by extensions ['ros']
+[1.279s] Level 1:colcon.colcon_core.package_identification:_identify(src/core_bringup) by extension 'ros'
+[1.282s] DEBUG:colcon.colcon_core.package_identification:Package 'src/core_bringup' with type 'ros.ament_cmake' and name 'core_bringup'
+[1.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) by extensions ['ignore', 'ignore_ament_install']
+[1.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) by extension 'ignore'
+[1.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) ignored
+[1.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extensions ['ignore', 'ignore_ament_install']
+[1.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extension 'ignore'
+[1.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) ignored
+[1.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz) by extensions ['ignore', 'ignore_ament_install']
+[1.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz) by extension 'ignore'
+[1.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz) by extension 'ignore_ament_install'
+[1.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz) by extensions ['colcon_pkg']
+[1.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz) by extension 'colcon_pkg'
+[1.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz) by extensions ['colcon_meta']
+[1.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz) by extension 'colcon_meta'
+[1.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz) by extensions ['ros']
+[1.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz) by extension 'ros'
+[1.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz) by extensions ['cmake', 'python']
+[1.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz) by extension 'cmake'
+[1.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz) by extension 'python'
+[1.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz) by extensions ['python_setup_py']
+[1.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz) by extension 'python_setup_py'
+[1.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz) by extensions ['ignore', 'ignore_ament_install']
+[1.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz) by extension 'ignore'
+[1.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz) by extension 'ignore_ament_install'
+[1.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz) by extensions ['colcon_pkg']
+[1.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz) by extension 'colcon_pkg'
+[1.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz) by extensions ['colcon_meta']
+[1.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz) by extension 'colcon_meta'
+[1.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz) by extensions ['ros']
+[1.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz) by extension 'ros'
+[1.285s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ros_gz/ros_gz' with type 'ros.ament_cmake' and name 'ros_gz'
+[1.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz_bridge) by extensions ['ignore', 'ignore_ament_install']
+[1.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz_bridge) by extension 'ignore'
+[1.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz_bridge) by extension 'ignore_ament_install'
+[1.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz_bridge) by extensions ['colcon_pkg']
+[1.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz_bridge) by extension 'colcon_pkg'
+[1.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz_bridge) by extensions ['colcon_meta']
+[1.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz_bridge) by extension 'colcon_meta'
+[1.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz_bridge) by extensions ['ros']
+[1.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz_bridge) by extension 'ros'
+[1.302s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ros_gz/ros_gz_bridge' with type 'ros.ament_cmake' and name 'ros_gz_bridge'
+[1.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz_image) by extensions ['ignore', 'ignore_ament_install']
+[1.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz_image) by extension 'ignore'
+[1.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz_image) by extension 'ignore_ament_install'
+[1.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz_image) by extensions ['colcon_pkg']
+[1.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz_image) by extension 'colcon_pkg'
+[1.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz_image) by extensions ['colcon_meta']
+[1.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz_image) by extension 'colcon_meta'
+[1.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz_image) by extensions ['ros']
+[1.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz_image) by extension 'ros'
+[1.317s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ros_gz/ros_gz_image' with type 'ros.ament_cmake' and name 'ros_gz_image'
+[1.317s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[1.317s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz_interfaces) by extension 'ignore'
+[1.317s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz_interfaces) by extension 'ignore_ament_install'
+[1.318s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz_interfaces) by extensions ['colcon_pkg']
+[1.318s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz_interfaces) by extension 'colcon_pkg'
+[1.318s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz_interfaces) by extensions ['colcon_meta']
+[1.318s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz_interfaces) by extension 'colcon_meta'
+[1.318s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz_interfaces) by extensions ['ros']
+[1.318s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz_interfaces) by extension 'ros'
+[1.319s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ros_gz/ros_gz_interfaces' with type 'ros.ament_cmake' and name 'ros_gz_interfaces'
+[1.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz_point_cloud) by extensions ['ignore', 'ignore_ament_install']
+[1.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz_point_cloud) by extension 'ignore'
+[1.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz_point_cloud) ignored
+[1.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz_sim) by extensions ['ignore', 'ignore_ament_install']
+[1.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz_sim) by extension 'ignore'
+[1.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz_sim) by extension 'ignore_ament_install'
+[1.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz_sim) by extensions ['colcon_pkg']
+[1.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz_sim) by extension 'colcon_pkg'
+[1.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz_sim) by extensions ['colcon_meta']
+[1.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz_sim) by extension 'colcon_meta'
+[1.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz_sim) by extensions ['ros']
+[1.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz_sim) by extension 'ros'
+[1.342s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ros_gz/ros_gz_sim' with type 'ros.ament_cmake' and name 'ros_gz_sim'
+[1.343s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz_sim_demos) by extensions ['ignore', 'ignore_ament_install']
+[1.343s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz_sim_demos) by extension 'ignore'
+[1.343s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz_sim_demos) by extension 'ignore_ament_install'
+[1.343s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz_sim_demos) by extensions ['colcon_pkg']
+[1.343s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz_sim_demos) by extension 'colcon_pkg'
+[1.343s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz_sim_demos) by extensions ['colcon_meta']
+[1.343s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz_sim_demos) by extension 'colcon_meta'
+[1.343s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz_sim_demos) by extensions ['ros']
+[1.343s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_gz_sim_demos) by extension 'ros'
+[1.345s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ros_gz/ros_gz_sim_demos' with type 'ros.ament_cmake' and name 'ros_gz_sim_demos'
+[1.345s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_ign) by extensions ['ignore', 'ignore_ament_install']
+[1.346s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_ign) by extension 'ignore'
+[1.346s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_ign) by extension 'ignore_ament_install'
+[1.346s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_ign) by extensions ['colcon_pkg']
+[1.346s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_ign) by extension 'colcon_pkg'
+[1.346s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_ign) by extensions ['colcon_meta']
+[1.346s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_ign) by extension 'colcon_meta'
+[1.346s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_ign) by extensions ['ros']
+[1.346s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_ign) by extension 'ros'
+[1.347s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ros_gz/ros_ign' with type 'ros.ament_cmake' and name 'ros_ign'
+[1.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_ign_bridge) by extensions ['ignore', 'ignore_ament_install']
+[1.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_ign_bridge) by extension 'ignore'
+[1.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_ign_bridge) by extension 'ignore_ament_install'
+[1.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_ign_bridge) by extensions ['colcon_pkg']
+[1.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_ign_bridge) by extension 'colcon_pkg'
+[1.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_ign_bridge) by extensions ['colcon_meta']
+[1.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_ign_bridge) by extension 'colcon_meta'
+[1.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_ign_bridge) by extensions ['ros']
+[1.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_ign_bridge) by extension 'ros'
+[1.348s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ros_gz/ros_ign_bridge' with type 'ros.ament_cmake' and name 'ros_ign_bridge'
+[1.348s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_ign_gazebo) by extensions ['ignore', 'ignore_ament_install']
+[1.348s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_ign_gazebo) by extension 'ignore'
+[1.348s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_ign_gazebo) by extension 'ignore_ament_install'
+[1.348s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_ign_gazebo) by extensions ['colcon_pkg']
+[1.348s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_ign_gazebo) by extension 'colcon_pkg'
+[1.348s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_ign_gazebo) by extensions ['colcon_meta']
+[1.348s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_ign_gazebo) by extension 'colcon_meta'
+[1.348s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_ign_gazebo) by extensions ['ros']
+[1.348s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_ign_gazebo) by extension 'ros'
+[1.349s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ros_gz/ros_ign_gazebo' with type 'ros.ament_cmake' and name 'ros_ign_gazebo'
+[1.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_ign_gazebo_demos) by extensions ['ignore', 'ignore_ament_install']
+[1.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_ign_gazebo_demos) by extension 'ignore'
+[1.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_ign_gazebo_demos) by extension 'ignore_ament_install'
+[1.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_ign_gazebo_demos) by extensions ['colcon_pkg']
+[1.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_ign_gazebo_demos) by extension 'colcon_pkg'
+[1.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_ign_gazebo_demos) by extensions ['colcon_meta']
+[1.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_ign_gazebo_demos) by extension 'colcon_meta'
+[1.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_ign_gazebo_demos) by extensions ['ros']
+[1.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_ign_gazebo_demos) by extension 'ros'
+[1.350s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ros_gz/ros_ign_gazebo_demos' with type 'ros.ament_cmake' and name 'ros_ign_gazebo_demos'
+[1.350s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_ign_image) by extensions ['ignore', 'ignore_ament_install']
+[1.350s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_ign_image) by extension 'ignore'
+[1.350s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_ign_image) by extension 'ignore_ament_install'
+[1.350s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_ign_image) by extensions ['colcon_pkg']
+[1.350s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_ign_image) by extension 'colcon_pkg'
+[1.350s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_ign_image) by extensions ['colcon_meta']
+[1.350s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_ign_image) by extension 'colcon_meta'
+[1.350s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_ign_image) by extensions ['ros']
+[1.350s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_ign_image) by extension 'ros'
+[1.351s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ros_gz/ros_ign_image' with type 'ros.ament_cmake' and name 'ros_ign_image'
+[1.351s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_ign_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[1.351s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_ign_interfaces) by extension 'ignore'
+[1.351s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_ign_interfaces) by extension 'ignore_ament_install'
+[1.351s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_ign_interfaces) by extensions ['colcon_pkg']
+[1.351s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_ign_interfaces) by extension 'colcon_pkg'
+[1.351s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_ign_interfaces) by extensions ['colcon_meta']
+[1.352s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_ign_interfaces) by extension 'colcon_meta'
+[1.352s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_ign_interfaces) by extensions ['ros']
+[1.352s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_gz/ros_ign_interfaces) by extension 'ros'
+[1.352s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ros_gz/ros_ign_interfaces' with type 'ros.ament_cmake' and name 'ros_ign_interfaces'
+[1.352s] Level 1:colcon.colcon_core.package_identification:_identify(src/sdformat_urdf) by extensions ['ignore', 'ignore_ament_install']
+[1.353s] Level 1:colcon.colcon_core.package_identification:_identify(src/sdformat_urdf) by extension 'ignore'
+[1.353s] Level 1:colcon.colcon_core.package_identification:_identify(src/sdformat_urdf) by extension 'ignore_ament_install'
+[1.353s] Level 1:colcon.colcon_core.package_identification:_identify(src/sdformat_urdf) by extensions ['colcon_pkg']
+[1.353s] Level 1:colcon.colcon_core.package_identification:_identify(src/sdformat_urdf) by extension 'colcon_pkg'
+[1.353s] Level 1:colcon.colcon_core.package_identification:_identify(src/sdformat_urdf) by extensions ['colcon_meta']
+[1.353s] Level 1:colcon.colcon_core.package_identification:_identify(src/sdformat_urdf) by extension 'colcon_meta'
+[1.353s] Level 1:colcon.colcon_core.package_identification:_identify(src/sdformat_urdf) by extensions ['ros']
+[1.353s] Level 1:colcon.colcon_core.package_identification:_identify(src/sdformat_urdf) by extension 'ros'
+[1.353s] Level 1:colcon.colcon_core.package_identification:_identify(src/sdformat_urdf) by extensions ['cmake', 'python']
+[1.353s] Level 1:colcon.colcon_core.package_identification:_identify(src/sdformat_urdf) by extension 'cmake'
+[1.353s] Level 1:colcon.colcon_core.package_identification:_identify(src/sdformat_urdf) by extension 'python'
+[1.353s] Level 1:colcon.colcon_core.package_identification:_identify(src/sdformat_urdf) by extensions ['python_setup_py']
+[1.353s] Level 1:colcon.colcon_core.package_identification:_identify(src/sdformat_urdf) by extension 'python_setup_py'
+[1.353s] Level 1:colcon.colcon_core.package_identification:_identify(src/sdformat_urdf/sdformat_test_files) by extensions ['ignore', 'ignore_ament_install']
+[1.353s] Level 1:colcon.colcon_core.package_identification:_identify(src/sdformat_urdf/sdformat_test_files) by extension 'ignore'
+[1.354s] Level 1:colcon.colcon_core.package_identification:_identify(src/sdformat_urdf/sdformat_test_files) by extension 'ignore_ament_install'
+[1.354s] Level 1:colcon.colcon_core.package_identification:_identify(src/sdformat_urdf/sdformat_test_files) by extensions ['colcon_pkg']
+[1.354s] Level 1:colcon.colcon_core.package_identification:_identify(src/sdformat_urdf/sdformat_test_files) by extension 'colcon_pkg'
+[1.354s] Level 1:colcon.colcon_core.package_identification:_identify(src/sdformat_urdf/sdformat_test_files) by extensions ['colcon_meta']
+[1.354s] Level 1:colcon.colcon_core.package_identification:_identify(src/sdformat_urdf/sdformat_test_files) by extension 'colcon_meta'
+[1.354s] Level 1:colcon.colcon_core.package_identification:_identify(src/sdformat_urdf/sdformat_test_files) by extensions ['ros']
+[1.354s] Level 1:colcon.colcon_core.package_identification:_identify(src/sdformat_urdf/sdformat_test_files) by extension 'ros'
+[1.354s] DEBUG:colcon.colcon_core.package_identification:Package 'src/sdformat_urdf/sdformat_test_files' with type 'ros.cmake' and name 'sdformat_test_files'
+[1.354s] Level 1:colcon.colcon_core.package_identification:_identify(src/sdformat_urdf/sdformat_urdf) by extensions ['ignore', 'ignore_ament_install']
+[1.355s] Level 1:colcon.colcon_core.package_identification:_identify(src/sdformat_urdf/sdformat_urdf) by extension 'ignore'
+[1.355s] Level 1:colcon.colcon_core.package_identification:_identify(src/sdformat_urdf/sdformat_urdf) by extension 'ignore_ament_install'
+[1.355s] Level 1:colcon.colcon_core.package_identification:_identify(src/sdformat_urdf/sdformat_urdf) by extensions ['colcon_pkg']
+[1.355s] Level 1:colcon.colcon_core.package_identification:_identify(src/sdformat_urdf/sdformat_urdf) by extension 'colcon_pkg'
+[1.355s] Level 1:colcon.colcon_core.package_identification:_identify(src/sdformat_urdf/sdformat_urdf) by extensions ['colcon_meta']
+[1.355s] Level 1:colcon.colcon_core.package_identification:_identify(src/sdformat_urdf/sdformat_urdf) by extension 'colcon_meta'
+[1.355s] Level 1:colcon.colcon_core.package_identification:_identify(src/sdformat_urdf/sdformat_urdf) by extensions ['ros']
+[1.355s] Level 1:colcon.colcon_core.package_identification:_identify(src/sdformat_urdf/sdformat_urdf) by extension 'ros'
+[1.360s] DEBUG:colcon.colcon_core.package_identification:Package 'src/sdformat_urdf/sdformat_urdf' with type 'ros.ament_cmake' and name 'sdformat_urdf'
+[1.360s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_description) by extensions ['ignore', 'ignore_ament_install']
+[1.360s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_description) by extension 'ignore'
+[1.360s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_description) by extension 'ignore_ament_install'
+[1.361s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_description) by extensions ['colcon_pkg']
+[1.361s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_description) by extension 'colcon_pkg'
+[1.361s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_description) by extensions ['colcon_meta']
+[1.361s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_description) by extension 'colcon_meta'
+[1.361s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_description) by extensions ['ros']
+[1.361s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_description) by extension 'ros'
+[1.361s] DEBUG:colcon.colcon_core.package_identification:Package 'src/worms_description' with type 'ros.ament_cmake' and name 'worms_description'
+[1.362s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_gazebo) by extensions ['ignore', 'ignore_ament_install']
+[1.362s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_gazebo) by extension 'ignore'
+[1.362s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_gazebo) ignored
+[1.362s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_gazebo_sim) by extensions ['ignore', 'ignore_ament_install']
+[1.362s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_gazebo_sim) by extension 'ignore'
+[1.363s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_gazebo_sim) by extension 'ignore_ament_install'
+[1.363s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_gazebo_sim) by extensions ['colcon_pkg']
+[1.363s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_gazebo_sim) by extension 'colcon_pkg'
+[1.363s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_gazebo_sim) by extensions ['colcon_meta']
+[1.363s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_gazebo_sim) by extension 'colcon_meta'
+[1.363s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_gazebo_sim) by extensions ['ros']
+[1.363s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_gazebo_sim) by extension 'ros'
+[1.363s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_gazebo_sim) by extensions ['cmake', 'python']
+[1.363s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_gazebo_sim) by extension 'cmake'
+[1.363s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_gazebo_sim) by extension 'python'
+[1.363s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_gazebo_sim) by extensions ['python_setup_py']
+[1.363s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_gazebo_sim) by extension 'python_setup_py'
+[1.363s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_gazebo_sim/worms_application) by extensions ['ignore', 'ignore_ament_install']
+[1.363s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_gazebo_sim/worms_application) by extension 'ignore'
+[1.363s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_gazebo_sim/worms_application) by extension 'ignore_ament_install'
+[1.363s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_gazebo_sim/worms_application) by extensions ['colcon_pkg']
+[1.364s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_gazebo_sim/worms_application) by extension 'colcon_pkg'
+[1.364s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_gazebo_sim/worms_application) by extensions ['colcon_meta']
+[1.364s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_gazebo_sim/worms_application) by extension 'colcon_meta'
+[1.364s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_gazebo_sim/worms_application) by extensions ['ros']
+[1.364s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_gazebo_sim/worms_application) by extension 'ros'
+[1.364s] DEBUG:colcon.colcon_core.package_identification:Package 'src/worms_gazebo_sim/worms_application' with type 'ros.ament_cmake' and name 'ros_gz_example_application'
+[1.364s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_gazebo_sim/worms_bringup) by extensions ['ignore', 'ignore_ament_install']
+[1.364s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_gazebo_sim/worms_bringup) by extension 'ignore'
+[1.365s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_gazebo_sim/worms_bringup) by extension 'ignore_ament_install'
+[1.365s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_gazebo_sim/worms_bringup) by extensions ['colcon_pkg']
+[1.365s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_gazebo_sim/worms_bringup) by extension 'colcon_pkg'
+[1.365s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_gazebo_sim/worms_bringup) by extensions ['colcon_meta']
+[1.365s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_gazebo_sim/worms_bringup) by extension 'colcon_meta'
+[1.365s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_gazebo_sim/worms_bringup) by extensions ['ros']
+[1.365s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_gazebo_sim/worms_bringup) by extension 'ros'
+[1.366s] DEBUG:colcon.colcon_core.package_identification:Package 'src/worms_gazebo_sim/worms_bringup' with type 'ros.ament_cmake' and name 'ros_gz_example_bringup'
+[1.366s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_gazebo_sim/worms_description) by extensions ['ignore', 'ignore_ament_install']
+[1.366s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_gazebo_sim/worms_description) by extension 'ignore'
+[1.366s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_gazebo_sim/worms_description) by extension 'ignore_ament_install'
+[1.366s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_gazebo_sim/worms_description) by extensions ['colcon_pkg']
+[1.366s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_gazebo_sim/worms_description) by extension 'colcon_pkg'
+[1.366s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_gazebo_sim/worms_description) by extensions ['colcon_meta']
+[1.366s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_gazebo_sim/worms_description) by extension 'colcon_meta'
+[1.366s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_gazebo_sim/worms_description) by extensions ['ros']
+[1.366s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_gazebo_sim/worms_description) by extension 'ros'
+[1.367s] DEBUG:colcon.colcon_core.package_identification:Package 'src/worms_gazebo_sim/worms_description' with type 'ros.ament_cmake' and name 'ros_gz_example_description'
+[1.367s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_gazebo_sim/worms_gazebo) by extensions ['ignore', 'ignore_ament_install']
+[1.367s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_gazebo_sim/worms_gazebo) by extension 'ignore'
+[1.367s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_gazebo_sim/worms_gazebo) by extension 'ignore_ament_install'
+[1.367s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_gazebo_sim/worms_gazebo) by extensions ['colcon_pkg']
+[1.367s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_gazebo_sim/worms_gazebo) by extension 'colcon_pkg'
+[1.367s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_gazebo_sim/worms_gazebo) by extensions ['colcon_meta']
+[1.367s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_gazebo_sim/worms_gazebo) by extension 'colcon_meta'
+[1.367s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_gazebo_sim/worms_gazebo) by extensions ['ros']
+[1.368s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_gazebo_sim/worms_gazebo) by extension 'ros'
+[1.368s] DEBUG:colcon.colcon_core.package_identification:Package 'src/worms_gazebo_sim/worms_gazebo' with type 'ros.ament_cmake' and name 'ros_gz_example_gazebo'
+[1.368s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_mech) by extensions ['ignore', 'ignore_ament_install']
+[1.368s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_mech) by extension 'ignore'
+[1.368s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_mech) by extension 'ignore_ament_install'
+[1.368s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_mech) by extensions ['colcon_pkg']
+[1.368s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_mech) by extension 'colcon_pkg'
+[1.369s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_mech) by extensions ['colcon_meta']
+[1.369s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_mech) by extension 'colcon_meta'
+[1.369s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_mech) by extensions ['ros']
+[1.369s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_mech) by extension 'ros'
+[1.369s] DEBUG:colcon.colcon_core.package_identification:Package 'src/worms_mech' with type 'ros.ament_python' and name 'worms_mech'
+[1.369s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[1.369s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[1.369s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[1.369s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[1.369s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[1.429s] INFO:colcon.colcon_metadata.metadata.colcon_pkg:Updating descriptor of package 'src/sdformat_urdf/sdformat_urdf' from colcon.pkg: {'dependencies': ['sdformat9']}
+[1.483s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[1.483s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[1.520s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 292 installed packages in /opt/ros/humble
+[1.521s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[1.619s] Level 5:colcon.colcon_core.verb:set package 'core_bringup' build argument 'cmake_args' from command line to 'None'
+[1.620s] Level 5:colcon.colcon_core.verb:set package 'core_bringup' build argument 'cmake_target' from command line to 'None'
+[1.620s] Level 5:colcon.colcon_core.verb:set package 'core_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.620s] Level 5:colcon.colcon_core.verb:set package 'core_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[1.620s] Level 5:colcon.colcon_core.verb:set package 'core_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[1.620s] Level 5:colcon.colcon_core.verb:set package 'core_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[1.620s] Level 5:colcon.colcon_core.verb:set package 'core_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[1.620s] Level 5:colcon.colcon_core.verb:set package 'core_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[1.620s] Level 5:colcon.colcon_core.verb:set package 'core_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.620s] DEBUG:colcon.colcon_core.verb:Building package 'core_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jacobrod/worms_ws/build/core_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jacobrod/worms_ws/install/core_bringup', 'merge_install': False, 'path': '/home/jacobrod/worms_ws/src/core_bringup', 'symlink_install': False, 'test_result_base': None}
+[1.636s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_example_application' build argument 'cmake_args' from command line to 'None'
+[1.637s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_example_application' build argument 'cmake_target' from command line to 'None'
+[1.637s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_example_application' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.637s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_example_application' build argument 'cmake_clean_cache' from command line to 'False'
+[1.637s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_example_application' build argument 'cmake_clean_first' from command line to 'False'
+[1.637s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_example_application' build argument 'cmake_force_configure' from command line to 'False'
+[1.637s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_example_application' build argument 'ament_cmake_args' from command line to 'None'
+[1.637s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_example_application' build argument 'catkin_cmake_args' from command line to 'None'
+[1.637s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_example_application' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.637s] DEBUG:colcon.colcon_core.verb:Building package 'ros_gz_example_application' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jacobrod/worms_ws/build/ros_gz_example_application', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jacobrod/worms_ws/install/ros_gz_example_application', 'merge_install': False, 'path': '/home/jacobrod/worms_ws/src/worms_gazebo_sim/worms_application', 'symlink_install': False, 'test_result_base': None}
+[1.657s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_example_description' build argument 'cmake_args' from command line to 'None'
+[1.657s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_example_description' build argument 'cmake_target' from command line to 'None'
+[1.657s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_example_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.657s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_example_description' build argument 'cmake_clean_cache' from command line to 'False'
+[1.657s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_example_description' build argument 'cmake_clean_first' from command line to 'False'
+[1.657s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_example_description' build argument 'cmake_force_configure' from command line to 'False'
+[1.657s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_example_description' build argument 'ament_cmake_args' from command line to 'None'
+[1.657s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_example_description' build argument 'catkin_cmake_args' from command line to 'None'
+[1.657s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_example_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.657s] DEBUG:colcon.colcon_core.verb:Building package 'ros_gz_example_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jacobrod/worms_ws/build/ros_gz_example_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jacobrod/worms_ws/install/ros_gz_example_description', 'merge_install': False, 'path': '/home/jacobrod/worms_ws/src/worms_gazebo_sim/worms_description', 'symlink_install': False, 'test_result_base': None}
+[1.676s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_interfaces' build argument 'cmake_args' from command line to 'None'
+[1.676s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_interfaces' build argument 'cmake_target' from command line to 'None'
+[1.676s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.676s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[1.676s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[1.676s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[1.676s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[1.676s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[1.676s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.676s] DEBUG:colcon.colcon_core.verb:Building package 'ros_gz_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jacobrod/worms_ws/build/ros_gz_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jacobrod/worms_ws/install/ros_gz_interfaces', 'merge_install': False, 'path': '/home/jacobrod/worms_ws/src/ros_gz/ros_gz_interfaces', 'symlink_install': False, 'test_result_base': None}
+[1.694s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_sim' build argument 'cmake_args' from command line to 'None'
+[1.694s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_sim' build argument 'cmake_target' from command line to 'None'
+[1.694s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_sim' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.694s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_sim' build argument 'cmake_clean_cache' from command line to 'False'
+[1.694s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_sim' build argument 'cmake_clean_first' from command line to 'False'
+[1.694s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_sim' build argument 'cmake_force_configure' from command line to 'False'
+[1.694s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_sim' build argument 'ament_cmake_args' from command line to 'None'
+[1.694s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_sim' build argument 'catkin_cmake_args' from command line to 'None'
+[1.694s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_sim' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.694s] DEBUG:colcon.colcon_core.verb:Building package 'ros_gz_sim' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jacobrod/worms_ws/build/ros_gz_sim', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jacobrod/worms_ws/install/ros_gz_sim', 'merge_install': False, 'path': '/home/jacobrod/worms_ws/src/ros_gz/ros_gz_sim', 'symlink_install': False, 'test_result_base': None}
+[1.711s] Level 5:colcon.colcon_core.verb:set package 'sdformat_test_files' build argument 'cmake_args' from command line to 'None'
+[1.711s] Level 5:colcon.colcon_core.verb:set package 'sdformat_test_files' build argument 'cmake_target' from command line to 'None'
+[1.711s] Level 5:colcon.colcon_core.verb:set package 'sdformat_test_files' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.711s] Level 5:colcon.colcon_core.verb:set package 'sdformat_test_files' build argument 'cmake_clean_cache' from command line to 'False'
+[1.711s] Level 5:colcon.colcon_core.verb:set package 'sdformat_test_files' build argument 'cmake_clean_first' from command line to 'False'
+[1.711s] Level 5:colcon.colcon_core.verb:set package 'sdformat_test_files' build argument 'cmake_force_configure' from command line to 'False'
+[1.711s] Level 5:colcon.colcon_core.verb:set package 'sdformat_test_files' build argument 'ament_cmake_args' from command line to 'None'
+[1.711s] Level 5:colcon.colcon_core.verb:set package 'sdformat_test_files' build argument 'catkin_cmake_args' from command line to 'None'
+[1.711s] Level 5:colcon.colcon_core.verb:set package 'sdformat_test_files' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.711s] DEBUG:colcon.colcon_core.verb:Building package 'sdformat_test_files' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jacobrod/worms_ws/build/sdformat_test_files', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jacobrod/worms_ws/install/sdformat_test_files', 'merge_install': False, 'path': '/home/jacobrod/worms_ws/src/sdformat_urdf/sdformat_test_files', 'symlink_install': False, 'test_result_base': None}
+[1.729s] Level 5:colcon.colcon_core.verb:set package 'worms_description' build argument 'cmake_args' from command line to 'None'
+[1.729s] Level 5:colcon.colcon_core.verb:set package 'worms_description' build argument 'cmake_target' from command line to 'None'
+[1.729s] Level 5:colcon.colcon_core.verb:set package 'worms_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.729s] Level 5:colcon.colcon_core.verb:set package 'worms_description' build argument 'cmake_clean_cache' from command line to 'False'
+[1.729s] Level 5:colcon.colcon_core.verb:set package 'worms_description' build argument 'cmake_clean_first' from command line to 'False'
+[1.729s] Level 5:colcon.colcon_core.verb:set package 'worms_description' build argument 'cmake_force_configure' from command line to 'False'
+[1.729s] Level 5:colcon.colcon_core.verb:set package 'worms_description' build argument 'ament_cmake_args' from command line to 'None'
+[1.729s] Level 5:colcon.colcon_core.verb:set package 'worms_description' build argument 'catkin_cmake_args' from command line to 'None'
+[1.729s] Level 5:colcon.colcon_core.verb:set package 'worms_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.729s] DEBUG:colcon.colcon_core.verb:Building package 'worms_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jacobrod/worms_ws/build/worms_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jacobrod/worms_ws/install/worms_description', 'merge_install': False, 'path': '/home/jacobrod/worms_ws/src/worms_description', 'symlink_install': False, 'test_result_base': None}
+[1.748s] Level 5:colcon.colcon_core.verb:set package 'worms_mech' build argument 'cmake_args' from command line to 'None'
+[1.748s] Level 5:colcon.colcon_core.verb:set package 'worms_mech' build argument 'cmake_target' from command line to 'None'
+[1.748s] Level 5:colcon.colcon_core.verb:set package 'worms_mech' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.748s] Level 5:colcon.colcon_core.verb:set package 'worms_mech' build argument 'cmake_clean_cache' from command line to 'False'
+[1.748s] Level 5:colcon.colcon_core.verb:set package 'worms_mech' build argument 'cmake_clean_first' from command line to 'False'
+[1.748s] Level 5:colcon.colcon_core.verb:set package 'worms_mech' build argument 'cmake_force_configure' from command line to 'False'
+[1.748s] Level 5:colcon.colcon_core.verb:set package 'worms_mech' build argument 'ament_cmake_args' from command line to 'None'
+[1.748s] Level 5:colcon.colcon_core.verb:set package 'worms_mech' build argument 'catkin_cmake_args' from command line to 'None'
+[1.748s] Level 5:colcon.colcon_core.verb:set package 'worms_mech' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.748s] DEBUG:colcon.colcon_core.verb:Building package 'worms_mech' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jacobrod/worms_ws/build/worms_mech', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jacobrod/worms_ws/install/worms_mech', 'merge_install': False, 'path': '/home/jacobrod/worms_ws/src/worms_mech', 'symlink_install': False, 'test_result_base': None}
+[1.765s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_bridge' build argument 'cmake_args' from command line to 'None'
+[1.765s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_bridge' build argument 'cmake_target' from command line to 'None'
+[1.766s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_bridge' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.766s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_bridge' build argument 'cmake_clean_cache' from command line to 'False'
+[1.766s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_bridge' build argument 'cmake_clean_first' from command line to 'False'
+[1.766s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_bridge' build argument 'cmake_force_configure' from command line to 'False'
+[1.766s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_bridge' build argument 'ament_cmake_args' from command line to 'None'
+[1.766s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_bridge' build argument 'catkin_cmake_args' from command line to 'None'
+[1.766s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_bridge' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.766s] DEBUG:colcon.colcon_core.verb:Building package 'ros_gz_bridge' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jacobrod/worms_ws/build/ros_gz_bridge', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jacobrod/worms_ws/install/ros_gz_bridge', 'merge_install': False, 'path': '/home/jacobrod/worms_ws/src/ros_gz/ros_gz_bridge', 'symlink_install': False, 'test_result_base': None}
+[1.783s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_example_gazebo' build argument 'cmake_args' from command line to 'None'
+[1.783s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_example_gazebo' build argument 'cmake_target' from command line to 'None'
+[1.783s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_example_gazebo' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.783s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_example_gazebo' build argument 'cmake_clean_cache' from command line to 'False'
+[1.783s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_example_gazebo' build argument 'cmake_clean_first' from command line to 'False'
+[1.783s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_example_gazebo' build argument 'cmake_force_configure' from command line to 'False'
+[1.783s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_example_gazebo' build argument 'ament_cmake_args' from command line to 'None'
+[1.783s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_example_gazebo' build argument 'catkin_cmake_args' from command line to 'None'
+[1.783s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_example_gazebo' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.783s] DEBUG:colcon.colcon_core.verb:Building package 'ros_gz_example_gazebo' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jacobrod/worms_ws/build/ros_gz_example_gazebo', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jacobrod/worms_ws/install/ros_gz_example_gazebo', 'merge_install': False, 'path': '/home/jacobrod/worms_ws/src/worms_gazebo_sim/worms_gazebo', 'symlink_install': False, 'test_result_base': None}
+[1.799s] Level 5:colcon.colcon_core.verb:set package 'ros_ign_gazebo' build argument 'cmake_args' from command line to 'None'
+[1.800s] Level 5:colcon.colcon_core.verb:set package 'ros_ign_gazebo' build argument 'cmake_target' from command line to 'None'
+[1.800s] Level 5:colcon.colcon_core.verb:set package 'ros_ign_gazebo' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.800s] Level 5:colcon.colcon_core.verb:set package 'ros_ign_gazebo' build argument 'cmake_clean_cache' from command line to 'False'
+[1.800s] Level 5:colcon.colcon_core.verb:set package 'ros_ign_gazebo' build argument 'cmake_clean_first' from command line to 'False'
+[1.800s] Level 5:colcon.colcon_core.verb:set package 'ros_ign_gazebo' build argument 'cmake_force_configure' from command line to 'False'
+[1.800s] Level 5:colcon.colcon_core.verb:set package 'ros_ign_gazebo' build argument 'ament_cmake_args' from command line to 'None'
+[1.800s] Level 5:colcon.colcon_core.verb:set package 'ros_ign_gazebo' build argument 'catkin_cmake_args' from command line to 'None'
+[1.800s] Level 5:colcon.colcon_core.verb:set package 'ros_ign_gazebo' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.800s] DEBUG:colcon.colcon_core.verb:Building package 'ros_ign_gazebo' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jacobrod/worms_ws/build/ros_ign_gazebo', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jacobrod/worms_ws/install/ros_ign_gazebo', 'merge_install': False, 'path': '/home/jacobrod/worms_ws/src/ros_gz/ros_ign_gazebo', 'symlink_install': False, 'test_result_base': None}
+[1.821s] Level 5:colcon.colcon_core.verb:set package 'ros_ign_interfaces' build argument 'cmake_args' from command line to 'None'
+[1.821s] Level 5:colcon.colcon_core.verb:set package 'ros_ign_interfaces' build argument 'cmake_target' from command line to 'None'
+[1.821s] Level 5:colcon.colcon_core.verb:set package 'ros_ign_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.821s] Level 5:colcon.colcon_core.verb:set package 'ros_ign_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[1.821s] Level 5:colcon.colcon_core.verb:set package 'ros_ign_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[1.821s] Level 5:colcon.colcon_core.verb:set package 'ros_ign_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[1.822s] Level 5:colcon.colcon_core.verb:set package 'ros_ign_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[1.822s] Level 5:colcon.colcon_core.verb:set package 'ros_ign_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[1.822s] Level 5:colcon.colcon_core.verb:set package 'ros_ign_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.822s] DEBUG:colcon.colcon_core.verb:Building package 'ros_ign_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jacobrod/worms_ws/build/ros_ign_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jacobrod/worms_ws/install/ros_ign_interfaces', 'merge_install': False, 'path': '/home/jacobrod/worms_ws/src/ros_gz/ros_ign_interfaces', 'symlink_install': False, 'test_result_base': None}
+[1.840s] Level 5:colcon.colcon_core.verb:set package 'sdformat_urdf' build argument 'cmake_args' from command line to 'None'
+[1.840s] Level 5:colcon.colcon_core.verb:set package 'sdformat_urdf' build argument 'cmake_target' from command line to 'None'
+[1.840s] Level 5:colcon.colcon_core.verb:set package 'sdformat_urdf' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.840s] Level 5:colcon.colcon_core.verb:set package 'sdformat_urdf' build argument 'cmake_clean_cache' from command line to 'False'
+[1.840s] Level 5:colcon.colcon_core.verb:set package 'sdformat_urdf' build argument 'cmake_clean_first' from command line to 'False'
+[1.840s] Level 5:colcon.colcon_core.verb:set package 'sdformat_urdf' build argument 'cmake_force_configure' from command line to 'False'
+[1.840s] Level 5:colcon.colcon_core.verb:set package 'sdformat_urdf' build argument 'ament_cmake_args' from command line to 'None'
+[1.840s] Level 5:colcon.colcon_core.verb:set package 'sdformat_urdf' build argument 'catkin_cmake_args' from command line to 'None'
+[1.840s] Level 5:colcon.colcon_core.verb:set package 'sdformat_urdf' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.841s] DEBUG:colcon.colcon_core.verb:Building package 'sdformat_urdf' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jacobrod/worms_ws/build/sdformat_urdf', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jacobrod/worms_ws/install/sdformat_urdf', 'merge_install': False, 'path': '/home/jacobrod/worms_ws/src/sdformat_urdf/sdformat_urdf', 'symlink_install': False, 'test_result_base': None}
+[1.859s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_example_bringup' build argument 'cmake_args' from command line to 'None'
+[1.860s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_example_bringup' build argument 'cmake_target' from command line to 'None'
+[1.860s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_example_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.860s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_example_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[1.860s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_example_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[1.860s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_example_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[1.860s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_example_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[1.860s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_example_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[1.860s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_example_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.860s] DEBUG:colcon.colcon_core.verb:Building package 'ros_gz_example_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jacobrod/worms_ws/build/ros_gz_example_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jacobrod/worms_ws/install/ros_gz_example_bringup', 'merge_install': False, 'path': '/home/jacobrod/worms_ws/src/worms_gazebo_sim/worms_bringup', 'symlink_install': False, 'test_result_base': None}
+[1.878s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_image' build argument 'cmake_args' from command line to 'None'
+[1.878s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_image' build argument 'cmake_target' from command line to 'None'
+[1.878s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_image' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.878s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_image' build argument 'cmake_clean_cache' from command line to 'False'
+[1.878s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_image' build argument 'cmake_clean_first' from command line to 'False'
+[1.878s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_image' build argument 'cmake_force_configure' from command line to 'False'
+[1.878s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_image' build argument 'ament_cmake_args' from command line to 'None'
+[1.878s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_image' build argument 'catkin_cmake_args' from command line to 'None'
+[1.878s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_image' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.878s] DEBUG:colcon.colcon_core.verb:Building package 'ros_gz_image' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jacobrod/worms_ws/build/ros_gz_image', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jacobrod/worms_ws/install/ros_gz_image', 'merge_install': False, 'path': '/home/jacobrod/worms_ws/src/ros_gz/ros_gz_image', 'symlink_install': False, 'test_result_base': None}
+[1.898s] Level 5:colcon.colcon_core.verb:set package 'ros_ign_bridge' build argument 'cmake_args' from command line to 'None'
+[1.898s] Level 5:colcon.colcon_core.verb:set package 'ros_ign_bridge' build argument 'cmake_target' from command line to 'None'
+[1.898s] Level 5:colcon.colcon_core.verb:set package 'ros_ign_bridge' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.898s] Level 5:colcon.colcon_core.verb:set package 'ros_ign_bridge' build argument 'cmake_clean_cache' from command line to 'False'
+[1.898s] Level 5:colcon.colcon_core.verb:set package 'ros_ign_bridge' build argument 'cmake_clean_first' from command line to 'False'
+[1.898s] Level 5:colcon.colcon_core.verb:set package 'ros_ign_bridge' build argument 'cmake_force_configure' from command line to 'False'
+[1.898s] Level 5:colcon.colcon_core.verb:set package 'ros_ign_bridge' build argument 'ament_cmake_args' from command line to 'None'
+[1.899s] Level 5:colcon.colcon_core.verb:set package 'ros_ign_bridge' build argument 'catkin_cmake_args' from command line to 'None'
+[1.899s] Level 5:colcon.colcon_core.verb:set package 'ros_ign_bridge' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.899s] DEBUG:colcon.colcon_core.verb:Building package 'ros_ign_bridge' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jacobrod/worms_ws/build/ros_ign_bridge', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jacobrod/worms_ws/install/ros_ign_bridge', 'merge_install': False, 'path': '/home/jacobrod/worms_ws/src/ros_gz/ros_ign_bridge', 'symlink_install': False, 'test_result_base': None}
+[1.918s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_sim_demos' build argument 'cmake_args' from command line to 'None'
+[1.918s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_sim_demos' build argument 'cmake_target' from command line to 'None'
+[1.918s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_sim_demos' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.918s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_sim_demos' build argument 'cmake_clean_cache' from command line to 'False'
+[1.918s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_sim_demos' build argument 'cmake_clean_first' from command line to 'False'
+[1.918s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_sim_demos' build argument 'cmake_force_configure' from command line to 'False'
+[1.918s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_sim_demos' build argument 'ament_cmake_args' from command line to 'None'
+[1.918s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_sim_demos' build argument 'catkin_cmake_args' from command line to 'None'
+[1.918s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_sim_demos' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.918s] DEBUG:colcon.colcon_core.verb:Building package 'ros_gz_sim_demos' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jacobrod/worms_ws/build/ros_gz_sim_demos', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jacobrod/worms_ws/install/ros_gz_sim_demos', 'merge_install': False, 'path': '/home/jacobrod/worms_ws/src/ros_gz/ros_gz_sim_demos', 'symlink_install': False, 'test_result_base': None}
+[1.939s] Level 5:colcon.colcon_core.verb:set package 'ros_ign_image' build argument 'cmake_args' from command line to 'None'
+[1.939s] Level 5:colcon.colcon_core.verb:set package 'ros_ign_image' build argument 'cmake_target' from command line to 'None'
+[1.939s] Level 5:colcon.colcon_core.verb:set package 'ros_ign_image' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.939s] Level 5:colcon.colcon_core.verb:set package 'ros_ign_image' build argument 'cmake_clean_cache' from command line to 'False'
+[1.939s] Level 5:colcon.colcon_core.verb:set package 'ros_ign_image' build argument 'cmake_clean_first' from command line to 'False'
+[1.939s] Level 5:colcon.colcon_core.verb:set package 'ros_ign_image' build argument 'cmake_force_configure' from command line to 'False'
+[1.939s] Level 5:colcon.colcon_core.verb:set package 'ros_ign_image' build argument 'ament_cmake_args' from command line to 'None'
+[1.939s] Level 5:colcon.colcon_core.verb:set package 'ros_ign_image' build argument 'catkin_cmake_args' from command line to 'None'
+[1.939s] Level 5:colcon.colcon_core.verb:set package 'ros_ign_image' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.939s] DEBUG:colcon.colcon_core.verb:Building package 'ros_ign_image' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jacobrod/worms_ws/build/ros_ign_image', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jacobrod/worms_ws/install/ros_ign_image', 'merge_install': False, 'path': '/home/jacobrod/worms_ws/src/ros_gz/ros_ign_image', 'symlink_install': False, 'test_result_base': None}
+[1.959s] Level 5:colcon.colcon_core.verb:set package 'ros_gz' build argument 'cmake_args' from command line to 'None'
+[1.959s] Level 5:colcon.colcon_core.verb:set package 'ros_gz' build argument 'cmake_target' from command line to 'None'
+[1.959s] Level 5:colcon.colcon_core.verb:set package 'ros_gz' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.959s] Level 5:colcon.colcon_core.verb:set package 'ros_gz' build argument 'cmake_clean_cache' from command line to 'False'
+[1.959s] Level 5:colcon.colcon_core.verb:set package 'ros_gz' build argument 'cmake_clean_first' from command line to 'False'
+[1.959s] Level 5:colcon.colcon_core.verb:set package 'ros_gz' build argument 'cmake_force_configure' from command line to 'False'
+[1.959s] Level 5:colcon.colcon_core.verb:set package 'ros_gz' build argument 'ament_cmake_args' from command line to 'None'
+[1.959s] Level 5:colcon.colcon_core.verb:set package 'ros_gz' build argument 'catkin_cmake_args' from command line to 'None'
+[1.959s] Level 5:colcon.colcon_core.verb:set package 'ros_gz' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.959s] DEBUG:colcon.colcon_core.verb:Building package 'ros_gz' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jacobrod/worms_ws/build/ros_gz', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jacobrod/worms_ws/install/ros_gz', 'merge_install': False, 'path': '/home/jacobrod/worms_ws/src/ros_gz/ros_gz', 'symlink_install': False, 'test_result_base': None}
+[1.977s] Level 5:colcon.colcon_core.verb:set package 'ros_ign_gazebo_demos' build argument 'cmake_args' from command line to 'None'
+[1.977s] Level 5:colcon.colcon_core.verb:set package 'ros_ign_gazebo_demos' build argument 'cmake_target' from command line to 'None'
+[1.977s] Level 5:colcon.colcon_core.verb:set package 'ros_ign_gazebo_demos' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.977s] Level 5:colcon.colcon_core.verb:set package 'ros_ign_gazebo_demos' build argument 'cmake_clean_cache' from command line to 'False'
+[1.978s] Level 5:colcon.colcon_core.verb:set package 'ros_ign_gazebo_demos' build argument 'cmake_clean_first' from command line to 'False'
+[1.978s] Level 5:colcon.colcon_core.verb:set package 'ros_ign_gazebo_demos' build argument 'cmake_force_configure' from command line to 'False'
+[1.978s] Level 5:colcon.colcon_core.verb:set package 'ros_ign_gazebo_demos' build argument 'ament_cmake_args' from command line to 'None'
+[1.978s] Level 5:colcon.colcon_core.verb:set package 'ros_ign_gazebo_demos' build argument 'catkin_cmake_args' from command line to 'None'
+[1.978s] Level 5:colcon.colcon_core.verb:set package 'ros_ign_gazebo_demos' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.978s] DEBUG:colcon.colcon_core.verb:Building package 'ros_ign_gazebo_demos' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jacobrod/worms_ws/build/ros_ign_gazebo_demos', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jacobrod/worms_ws/install/ros_ign_gazebo_demos', 'merge_install': False, 'path': '/home/jacobrod/worms_ws/src/ros_gz/ros_ign_gazebo_demos', 'symlink_install': False, 'test_result_base': None}
+[1.995s] Level 5:colcon.colcon_core.verb:set package 'ros_ign' build argument 'cmake_args' from command line to 'None'
+[1.995s] Level 5:colcon.colcon_core.verb:set package 'ros_ign' build argument 'cmake_target' from command line to 'None'
+[1.995s] Level 5:colcon.colcon_core.verb:set package 'ros_ign' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.995s] Level 5:colcon.colcon_core.verb:set package 'ros_ign' build argument 'cmake_clean_cache' from command line to 'False'
+[1.995s] Level 5:colcon.colcon_core.verb:set package 'ros_ign' build argument 'cmake_clean_first' from command line to 'False'
+[1.995s] Level 5:colcon.colcon_core.verb:set package 'ros_ign' build argument 'cmake_force_configure' from command line to 'False'
+[1.995s] Level 5:colcon.colcon_core.verb:set package 'ros_ign' build argument 'ament_cmake_args' from command line to 'None'
+[1.995s] Level 5:colcon.colcon_core.verb:set package 'ros_ign' build argument 'catkin_cmake_args' from command line to 'None'
+[1.995s] Level 5:colcon.colcon_core.verb:set package 'ros_ign' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.995s] DEBUG:colcon.colcon_core.verb:Building package 'ros_ign' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jacobrod/worms_ws/build/ros_ign', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jacobrod/worms_ws/install/ros_ign', 'merge_install': False, 'path': '/home/jacobrod/worms_ws/src/ros_gz/ros_ign', 'symlink_install': False, 'test_result_base': None}
+[2.012s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[2.029s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[2.029s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/jacobrod/worms_ws/src/ros_gz/ros_gz_interfaces' with build type 'ament_cmake'
+[2.030s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/jacobrod/worms_ws/src/ros_gz/ros_gz_interfaces'
+[2.057s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[2.057s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.057s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.095s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/jacobrod/worms_ws/src/ros_gz/ros_gz_sim' with build type 'ament_cmake'
+[2.095s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/jacobrod/worms_ws/src/ros_gz/ros_gz_sim'
+[2.115s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.115s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.153s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/jacobrod/worms_ws/src/worms_gazebo_sim/worms_description' with build type 'ament_cmake'
+[2.153s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/jacobrod/worms_ws/src/worms_gazebo_sim/worms_description'
+[2.176s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.176s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.213s] INFO:colcon.colcon_ros.task.cmake.build:Building ROS package in '/home/jacobrod/worms_ws/src/sdformat_urdf/sdformat_test_files' with build type 'cmake'
+[2.214s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/jacobrod/worms_ws/src/sdformat_urdf/sdformat_test_files'
+[2.235s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.235s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.284s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/jacobrod/worms_ws/src/core_bringup' with build type 'ament_cmake'
+[2.284s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/jacobrod/worms_ws/src/core_bringup'
+[2.305s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.305s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.348s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/jacobrod/worms_ws/src/worms_gazebo_sim/worms_application' with build type 'ament_cmake'
+[2.348s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/jacobrod/worms_ws/src/worms_gazebo_sim/worms_application'
+[2.367s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.367s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.406s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/jacobrod/worms_ws/src/worms_description' with build type 'ament_cmake'
+[2.406s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/jacobrod/worms_ws/src/worms_description'
+[2.428s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.428s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.469s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/jacobrod/worms_ws/src/worms_mech' with build type 'ament_python'
+[2.469s] Level 1:colcon.colcon_core.shell:create_environment_hook('worms_mech', 'ament_prefix_path')
+[2.488s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacobrod/worms_ws/install/worms_mech/share/worms_mech/hook/ament_prefix_path.ps1'
+[2.489s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jacobrod/worms_ws/install/worms_mech/share/worms_mech/hook/ament_prefix_path.dsv'
+[2.489s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacobrod/worms_ws/install/worms_mech/share/worms_mech/hook/ament_prefix_path.sh'
+[2.508s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.508s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.553s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jacobrod/worms_ws/build/ros_gz_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/jacobrod/worms_ws/build/ros_gz_interfaces -- -j8 -l8
+[2.559s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jacobrod/worms_ws/build/ros_gz_sim': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/jacobrod/worms_ws/build/ros_gz_sim -- -j8 -l8
+[2.562s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jacobrod/worms_ws/build/ros_gz_example_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/jacobrod/worms_ws/build/ros_gz_example_description -- -j8 -l8
+[2.566s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jacobrod/worms_ws/build/sdformat_test_files': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/jacobrod/worms_ws/build/sdformat_test_files -- -j8 -l8
+[2.571s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jacobrod/worms_ws/build/core_bringup': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/jacobrod/worms_ws/build/core_bringup -- -j8 -l8
+[2.575s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jacobrod/worms_ws/build/ros_gz_example_application': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/jacobrod/worms_ws/build/ros_gz_example_application -- -j8 -l8
+[2.579s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jacobrod/worms_ws/build/worms_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/jacobrod/worms_ws/build/worms_description -- -j8 -l8
+[2.959s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/jacobrod/worms_ws/src/worms_mech'
+[2.977s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.977s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.031s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jacobrod/worms_ws/build/ros_gz_example_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/jacobrod/worms_ws/build/ros_gz_example_description -- -j8 -l8
+[3.032s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jacobrod/worms_ws/build/core_bringup' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/jacobrod/worms_ws/build/core_bringup -- -j8 -l8
+[3.033s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jacobrod/worms_ws/build/sdformat_test_files' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/jacobrod/worms_ws/build/sdformat_test_files -- -j8 -l8
+[3.033s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jacobrod/worms_ws/build/worms_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/jacobrod/worms_ws/build/worms_description -- -j8 -l8
+[3.034s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jacobrod/worms_ws/build/ros_gz_example_application' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/jacobrod/worms_ws/build/ros_gz_example_application -- -j8 -l8
+[3.038s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jacobrod/worms_ws/build/ros_gz_sim' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/jacobrod/worms_ws/build/ros_gz_sim -- -j8 -l8
+[3.072s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jacobrod/worms_ws/build/ros_gz_example_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/jacobrod/worms_ws/build/ros_gz_example_description
+[3.076s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jacobrod/worms_ws/build/core_bringup': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/jacobrod/worms_ws/build/core_bringup
+[3.078s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jacobrod/worms_ws/build/ros_gz_example_application': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/jacobrod/worms_ws/build/ros_gz_example_application
+[3.081s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jacobrod/worms_ws/build/worms_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/jacobrod/worms_ws/build/worms_description
+[3.083s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jacobrod/worms_ws/build/sdformat_test_files': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/jacobrod/worms_ws/build/sdformat_test_files
+[3.098s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros_gz_example_description)
+[3.133s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jacobrod/worms_ws/build/ros_gz_example_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/jacobrod/worms_ws/build/ros_gz_example_description
+[3.170s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/ros_gz_example_description' for CMake module files
+[3.171s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/ros_gz_example_description' for CMake config files
+[3.171s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros_gz_example_description', 'cmake_prefix_path')
+[3.190s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/hook/cmake_prefix_path.ps1'
+[3.190s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/hook/cmake_prefix_path.dsv'
+[3.191s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/hook/cmake_prefix_path.sh'
+[3.191s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/ros_gz_example_description/bin'
+[3.191s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/ros_gz_example_description/lib/pkgconfig/ros_gz_example_description.pc'
+[3.192s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/ros_gz_example_description/lib/python3.10/site-packages'
+[3.192s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/ros_gz_example_description/bin'
+[3.210s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/package.ps1'
+[3.211s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/package.dsv'
+[3.212s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/package.sh'
+[3.213s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/package.bash'
+[3.214s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/package.zsh'
+[3.214s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jacobrod/worms_ws/install/ros_gz_example_description/share/colcon-core/packages/ros_gz_example_description)
+[3.215s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(core_bringup)
+[3.216s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jacobrod/worms_ws/build/core_bringup' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/jacobrod/worms_ws/build/core_bringup
+[3.249s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/core_bringup' for CMake module files
+[3.250s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/core_bringup' for CMake config files
+[3.250s] Level 1:colcon.colcon_core.shell:create_environment_hook('core_bringup', 'cmake_prefix_path')
+[3.276s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacobrod/worms_ws/install/core_bringup/share/core_bringup/hook/cmake_prefix_path.ps1'
+[3.277s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jacobrod/worms_ws/install/core_bringup/share/core_bringup/hook/cmake_prefix_path.dsv'
+[3.277s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacobrod/worms_ws/install/core_bringup/share/core_bringup/hook/cmake_prefix_path.sh'
+[3.278s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/core_bringup/bin'
+[3.278s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/core_bringup/lib/pkgconfig/core_bringup.pc'
+[3.279s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/core_bringup/lib/python3.10/site-packages'
+[3.279s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/core_bringup/bin'
+[3.298s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/core_bringup/share/core_bringup/package.ps1'
+[3.298s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jacobrod/worms_ws/install/core_bringup/share/core_bringup/package.dsv'
+[3.299s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/core_bringup/share/core_bringup/package.sh'
+[3.299s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/core_bringup/share/core_bringup/package.bash'
+[3.300s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/core_bringup/share/core_bringup/package.zsh'
+[3.300s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jacobrod/worms_ws/install/core_bringup/share/colcon-core/packages/core_bringup)
+[3.301s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros_gz_example_application)
+[3.302s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jacobrod/worms_ws/build/ros_gz_example_application' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/jacobrod/worms_ws/build/ros_gz_example_application
+[3.324s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/ros_gz_example_application' for CMake module files
+[3.324s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/ros_gz_example_application' for CMake config files
+[3.325s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros_gz_example_application', 'cmake_prefix_path')
+[3.345s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacobrod/worms_ws/install/ros_gz_example_application/share/ros_gz_example_application/hook/cmake_prefix_path.ps1'
+[3.345s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jacobrod/worms_ws/install/ros_gz_example_application/share/ros_gz_example_application/hook/cmake_prefix_path.dsv'
+[3.346s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacobrod/worms_ws/install/ros_gz_example_application/share/ros_gz_example_application/hook/cmake_prefix_path.sh'
+[3.346s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/ros_gz_example_application/bin'
+[3.347s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/ros_gz_example_application/lib/pkgconfig/ros_gz_example_application.pc'
+[3.347s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/ros_gz_example_application/lib/python3.10/site-packages'
+[3.347s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/ros_gz_example_application/bin'
+[3.370s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/ros_gz_example_application/share/ros_gz_example_application/package.ps1'
+[3.371s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jacobrod/worms_ws/install/ros_gz_example_application/share/ros_gz_example_application/package.dsv'
+[3.371s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/ros_gz_example_application/share/ros_gz_example_application/package.sh'
+[3.372s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/ros_gz_example_application/share/ros_gz_example_application/package.bash'
+[3.372s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/ros_gz_example_application/share/ros_gz_example_application/package.zsh'
+[3.372s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jacobrod/worms_ws/install/ros_gz_example_application/share/colcon-core/packages/ros_gz_example_application)
+[3.376s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jacobrod/worms_ws/build/ros_gz_sim': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/jacobrod/worms_ws/build/ros_gz_sim
+[3.378s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(worms_description)
+[3.380s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jacobrod/worms_ws/build/worms_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/jacobrod/worms_ws/build/worms_description
+[3.412s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/worms_description' for CMake module files
+[3.413s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/worms_description' for CMake config files
+[3.413s] Level 1:colcon.colcon_core.shell:create_environment_hook('worms_description', 'cmake_prefix_path')
+[3.438s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacobrod/worms_ws/install/worms_description/share/worms_description/hook/cmake_prefix_path.ps1'
+[3.438s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jacobrod/worms_ws/install/worms_description/share/worms_description/hook/cmake_prefix_path.dsv'
+[3.439s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacobrod/worms_ws/install/worms_description/share/worms_description/hook/cmake_prefix_path.sh'
+[3.440s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/worms_description/bin'
+[3.440s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/worms_description/lib/pkgconfig/worms_description.pc'
+[3.440s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/worms_description/lib/python3.10/site-packages'
+[3.440s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/worms_description/bin'
+[3.461s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/worms_description/share/worms_description/package.ps1'
+[3.462s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jacobrod/worms_ws/install/worms_description/share/worms_description/package.dsv'
+[3.462s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/worms_description/share/worms_description/package.sh'
+[3.463s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/worms_description/share/worms_description/package.bash'
+[3.463s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/worms_description/share/worms_description/package.zsh'
+[3.464s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jacobrod/worms_ws/install/worms_description/share/colcon-core/packages/worms_description)
+[3.466s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jacobrod/worms_ws/build/sdformat_test_files' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/jacobrod/worms_ws/build/sdformat_test_files
+[3.468s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jacobrod/worms_ws/build/ros_gz_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/jacobrod/worms_ws/build/ros_gz_interfaces -- -j8 -l8
+[3.495s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros_gz_example_description)
+[3.521s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/ros_gz_example_description' for CMake module files
+[3.522s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/ros_gz_example_description' for CMake config files
+[3.522s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros_gz_example_description', 'cmake_prefix_path')
+[3.549s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/hook/cmake_prefix_path.ps1'
+[3.550s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/hook/cmake_prefix_path.dsv'
+[3.550s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/hook/cmake_prefix_path.sh'
+[3.551s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/ros_gz_example_description/bin'
+[3.552s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/ros_gz_example_description/lib/pkgconfig/ros_gz_example_description.pc'
+[3.552s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/ros_gz_example_description/lib/python3.10/site-packages'
+[3.552s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/ros_gz_example_description/bin'
+[3.578s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/package.ps1'
+[3.578s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/package.dsv'
+[3.579s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/package.sh'
+[3.579s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/package.bash'
+[3.580s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/package.zsh'
+[3.580s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jacobrod/worms_ws/install/ros_gz_example_description/share/colcon-core/packages/ros_gz_example_description)
+[3.603s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(core_bringup)
+[3.627s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/core_bringup' for CMake module files
+[3.627s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/core_bringup' for CMake config files
+[3.628s] Level 1:colcon.colcon_core.shell:create_environment_hook('core_bringup', 'cmake_prefix_path')
+[3.654s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacobrod/worms_ws/install/core_bringup/share/core_bringup/hook/cmake_prefix_path.ps1'
+[3.655s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jacobrod/worms_ws/install/core_bringup/share/core_bringup/hook/cmake_prefix_path.dsv'
+[3.655s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacobrod/worms_ws/install/core_bringup/share/core_bringup/hook/cmake_prefix_path.sh'
+[3.656s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/core_bringup/bin'
+[3.656s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/core_bringup/lib/pkgconfig/core_bringup.pc'
+[3.656s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/core_bringup/lib/python3.10/site-packages'
+[3.657s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/core_bringup/bin'
+[3.682s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/core_bringup/share/core_bringup/package.ps1'
+[3.683s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jacobrod/worms_ws/install/core_bringup/share/core_bringup/package.dsv'
+[3.684s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/core_bringup/share/core_bringup/package.sh'
+[3.684s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/core_bringup/share/core_bringup/package.bash'
+[3.685s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/core_bringup/share/core_bringup/package.zsh'
+[3.686s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jacobrod/worms_ws/install/core_bringup/share/colcon-core/packages/core_bringup)
+[3.688s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/jacobrod/worms_ws/src/worms_gazebo_sim/worms_gazebo' with build type 'ament_cmake'
+[3.688s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/jacobrod/worms_ws/src/worms_gazebo_sim/worms_gazebo'
+[3.717s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.717s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.769s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros_gz_sim)
+[3.769s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jacobrod/worms_ws/build/ros_gz_sim' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/jacobrod/worms_ws/build/ros_gz_sim
+[3.789s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/ros_gz_sim' for CMake module files
+[3.790s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/ros_gz_sim' for CMake config files
+[3.790s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros_gz_sim', 'cmake_prefix_path')
+[3.811s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacobrod/worms_ws/install/ros_gz_sim/share/ros_gz_sim/hook/cmake_prefix_path.ps1'
+[3.811s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jacobrod/worms_ws/install/ros_gz_sim/share/ros_gz_sim/hook/cmake_prefix_path.dsv'
+[3.811s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacobrod/worms_ws/install/ros_gz_sim/share/ros_gz_sim/hook/cmake_prefix_path.sh'
+[3.812s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/ros_gz_sim/lib'
+[3.812s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros_gz_sim', 'ld_library_path_lib')
+[3.831s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacobrod/worms_ws/install/ros_gz_sim/share/ros_gz_sim/hook/ld_library_path_lib.ps1'
+[3.832s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jacobrod/worms_ws/install/ros_gz_sim/share/ros_gz_sim/hook/ld_library_path_lib.dsv'
+[3.832s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacobrod/worms_ws/install/ros_gz_sim/share/ros_gz_sim/hook/ld_library_path_lib.sh'
+[3.833s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/ros_gz_sim/bin'
+[3.833s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/ros_gz_sim/lib/pkgconfig/ros_gz_sim.pc'
+[3.833s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/ros_gz_sim/lib/python3.10/site-packages'
+[3.834s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/ros_gz_sim/bin'
+[3.853s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/ros_gz_sim/share/ros_gz_sim/package.ps1'
+[3.854s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jacobrod/worms_ws/install/ros_gz_sim/share/ros_gz_sim/package.dsv'
+[3.854s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/ros_gz_sim/share/ros_gz_sim/package.sh'
+[3.855s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/ros_gz_sim/share/ros_gz_sim/package.bash'
+[3.855s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/ros_gz_sim/share/ros_gz_sim/package.zsh'
+[3.855s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jacobrod/worms_ws/install/ros_gz_sim/share/colcon-core/packages/ros_gz_sim)
+[3.878s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros_gz_example_application)
+[3.899s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/ros_gz_example_application' for CMake module files
+[3.899s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/ros_gz_example_application' for CMake config files
+[3.900s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros_gz_example_application', 'cmake_prefix_path')
+[3.920s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacobrod/worms_ws/install/ros_gz_example_application/share/ros_gz_example_application/hook/cmake_prefix_path.ps1'
+[3.921s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jacobrod/worms_ws/install/ros_gz_example_application/share/ros_gz_example_application/hook/cmake_prefix_path.dsv'
+[3.921s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacobrod/worms_ws/install/ros_gz_example_application/share/ros_gz_example_application/hook/cmake_prefix_path.sh'
+[3.922s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/ros_gz_example_application/bin'
+[3.922s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/ros_gz_example_application/lib/pkgconfig/ros_gz_example_application.pc'
+[3.922s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/ros_gz_example_application/lib/python3.10/site-packages'
+[3.922s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/ros_gz_example_application/bin'
+[3.944s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/ros_gz_example_application/share/ros_gz_example_application/package.ps1'
+[3.945s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jacobrod/worms_ws/install/ros_gz_example_application/share/ros_gz_example_application/package.dsv'
+[3.946s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/ros_gz_example_application/share/ros_gz_example_application/package.sh'
+[3.946s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/ros_gz_example_application/share/ros_gz_example_application/package.bash'
+[3.947s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/ros_gz_example_application/share/ros_gz_example_application/package.zsh'
+[3.947s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jacobrod/worms_ws/install/ros_gz_example_application/share/colcon-core/packages/ros_gz_example_application)
+[3.949s] Level 1:colcon.colcon_core.shell:create_environment_hook('sdformat_test_files', 'pkg_config_path')
+[3.968s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/hook/pkg_config_path.ps1'
+[3.969s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/hook/pkg_config_path.dsv'
+[3.969s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/hook/pkg_config_path.sh'
+[3.973s] Level 1:colcon.colcon_core.shell:create_environment_hook('sdformat_test_files', 'pkg_config_path_multiarch')
+[3.993s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/hook/pkg_config_path_multiarch.ps1'
+[3.994s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/hook/pkg_config_path_multiarch.dsv'
+[3.994s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/hook/pkg_config_path_multiarch.sh'
+[3.994s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sdformat_test_files)
+[4.012s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/sdformat_test_files' for CMake module files
+[4.012s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/sdformat_test_files' for CMake config files
+[4.012s] Level 1:colcon.colcon_core.shell:create_environment_hook('sdformat_test_files', 'cmake_prefix_path')
+[4.029s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/hook/cmake_prefix_path.ps1'
+[4.030s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/hook/cmake_prefix_path.dsv'
+[4.030s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/hook/cmake_prefix_path.sh'
+[4.030s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/sdformat_test_files/bin'
+[4.031s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/sdformat_test_files/lib/pkgconfig/sdformat_test_files.pc'
+[4.031s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/sdformat_test_files/lib/python3.10/site-packages'
+[4.031s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/sdformat_test_files/bin'
+[4.050s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/package.ps1'
+[4.051s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/package.dsv'
+[4.052s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/package.sh'
+[4.052s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/package.bash'
+[4.052s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/package.zsh'
+[4.053s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jacobrod/worms_ws/install/sdformat_test_files/share/colcon-core/packages/sdformat_test_files)
+[4.073s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(worms_description)
+[4.090s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/worms_description' for CMake module files
+[4.091s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/worms_description' for CMake config files
+[4.091s] Level 1:colcon.colcon_core.shell:create_environment_hook('worms_description', 'cmake_prefix_path')
+[4.109s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacobrod/worms_ws/install/worms_description/share/worms_description/hook/cmake_prefix_path.ps1'
+[4.109s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jacobrod/worms_ws/install/worms_description/share/worms_description/hook/cmake_prefix_path.dsv'
+[4.110s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacobrod/worms_ws/install/worms_description/share/worms_description/hook/cmake_prefix_path.sh'
+[4.110s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/worms_description/bin'
+[4.110s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/worms_description/lib/pkgconfig/worms_description.pc'
+[4.111s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/worms_description/lib/python3.10/site-packages'
+[4.111s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/worms_description/bin'
+[4.129s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/worms_description/share/worms_description/package.ps1'
+[4.130s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jacobrod/worms_ws/install/worms_description/share/worms_description/package.dsv'
+[4.131s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/worms_description/share/worms_description/package.sh'
+[4.131s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/worms_description/share/worms_description/package.bash'
+[4.132s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/worms_description/share/worms_description/package.zsh'
+[4.132s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jacobrod/worms_ws/install/worms_description/share/colcon-core/packages/worms_description)
+[4.136s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/jacobrod/worms_ws/src/sdformat_urdf/sdformat_urdf' with build type 'ament_cmake'
+[4.136s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/jacobrod/worms_ws/src/sdformat_urdf/sdformat_urdf'
+[4.138s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jacobrod/worms_ws/src/worms_mech': PYTHONPATH=/home/jacobrod/worms_ws/build/worms_mech/prefix_override:/home/jacobrod/worms_ws/install/worms_mech/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/worms_mech build --build-base /home/jacobrod/worms_ws/build/worms_mech/build install --record /home/jacobrod/worms_ws/build/worms_mech/install.log --single-version-externally-managed
+[4.158s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.158s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.208s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jacobrod/worms_ws/build/ros_gz_example_gazebo': AMENT_PREFIX_PATH=/home/jacobrod/worms_ws/install/ros_gz_example_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/jacobrod/worms_ws/install/ros_gz_example_description:/opt/ros/humble GZ_SIM_RESOURCE_PATH=/home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/models /usr/bin/cmake /home/jacobrod/worms_ws/src/worms_gazebo_sim/worms_gazebo -DCMAKE_INSTALL_PREFIX=/home/jacobrod/worms_ws/install/ros_gz_example_gazebo
+[4.226s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros_gz_sim)
+[4.252s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/ros_gz_sim' for CMake module files
+[4.253s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/ros_gz_sim' for CMake config files
+[4.253s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros_gz_sim', 'cmake_prefix_path')
+[4.285s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacobrod/worms_ws/install/ros_gz_sim/share/ros_gz_sim/hook/cmake_prefix_path.ps1'
+[4.286s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jacobrod/worms_ws/install/ros_gz_sim/share/ros_gz_sim/hook/cmake_prefix_path.dsv'
+[4.286s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacobrod/worms_ws/install/ros_gz_sim/share/ros_gz_sim/hook/cmake_prefix_path.sh'
+[4.287s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/ros_gz_sim/lib'
+[4.287s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros_gz_sim', 'ld_library_path_lib')
+[4.305s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacobrod/worms_ws/install/ros_gz_sim/share/ros_gz_sim/hook/ld_library_path_lib.ps1'
+[4.306s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jacobrod/worms_ws/install/ros_gz_sim/share/ros_gz_sim/hook/ld_library_path_lib.dsv'
+[4.306s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacobrod/worms_ws/install/ros_gz_sim/share/ros_gz_sim/hook/ld_library_path_lib.sh'
+[4.307s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/ros_gz_sim/bin'
+[4.307s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/ros_gz_sim/lib/pkgconfig/ros_gz_sim.pc'
+[4.307s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/ros_gz_sim/lib/python3.10/site-packages'
+[4.307s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/ros_gz_sim/bin'
+[4.333s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/ros_gz_sim/share/ros_gz_sim/package.ps1'
+[4.333s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jacobrod/worms_ws/install/ros_gz_sim/share/ros_gz_sim/package.dsv'
+[4.334s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/ros_gz_sim/share/ros_gz_sim/package.sh'
+[4.334s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/ros_gz_sim/share/ros_gz_sim/package.bash'
+[4.334s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/ros_gz_sim/share/ros_gz_sim/package.zsh'
+[4.335s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jacobrod/worms_ws/install/ros_gz_sim/share/colcon-core/packages/ros_gz_sim)
+[4.338s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/jacobrod/worms_ws/src/ros_gz/ros_ign_gazebo' with build type 'ament_cmake'
+[4.338s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/jacobrod/worms_ws/src/ros_gz/ros_ign_gazebo'
+[4.339s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jacobrod/worms_ws/build/ros_gz_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/jacobrod/worms_ws/build/ros_gz_interfaces
+[4.363s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.363s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.482s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jacobrod/worms_ws/build/sdformat_urdf': CMAKE_PREFIX_PATH=/home/jacobrod/worms_ws/install/sdformat_test_files:/opt/ros/humble PKG_CONFIG_PATH=/home/jacobrod/worms_ws/install/sdformat_test_files/lib/x86_64-linux-gnu/pkgconfig:/home/jacobrod/worms_ws/install/sdformat_test_files/lib/pkgconfig /usr/bin/cmake --build /home/jacobrod/worms_ws/build/sdformat_urdf -- -j8 -l8
+[4.503s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jacobrod/worms_ws/build/ros_ign_gazebo': AMENT_PREFIX_PATH=/home/jacobrod/worms_ws/install/ros_gz_sim:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/jacobrod/worms_ws/install/ros_gz_sim:/opt/ros/humble LD_LIBRARY_PATH=/home/jacobrod/worms_ws/install/ros_gz_sim/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/jacobrod/worms_ws/build/ros_ign_gazebo -- -j8 -l8
+[4.550s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jacobrod/worms_ws/src/worms_mech' returned '0': PYTHONPATH=/home/jacobrod/worms_ws/build/worms_mech/prefix_override:/home/jacobrod/worms_ws/install/worms_mech/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/worms_mech build --build-base /home/jacobrod/worms_ws/build/worms_mech/build install --record /home/jacobrod/worms_ws/build/worms_mech/install.log --single-version-externally-managed
+[4.589s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/worms_mech' for CMake module files
+[4.592s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/worms_mech' for CMake config files
+[4.594s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/worms_mech/lib'
+[4.595s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/worms_mech/bin'
+[4.595s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/worms_mech/lib/pkgconfig/worms_mech.pc'
+[4.595s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/worms_mech/lib/python3.10/site-packages'
+[4.595s] Level 1:colcon.colcon_core.shell:create_environment_hook('worms_mech', 'pythonpath')
+[4.620s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacobrod/worms_ws/install/worms_mech/share/worms_mech/hook/pythonpath.ps1'
+[4.621s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jacobrod/worms_ws/install/worms_mech/share/worms_mech/hook/pythonpath.dsv'
+[4.621s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacobrod/worms_ws/install/worms_mech/share/worms_mech/hook/pythonpath.sh'
+[4.622s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/worms_mech/bin'
+[4.622s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(worms_mech)
+[4.639s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/worms_mech/share/worms_mech/package.ps1'
+[4.640s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jacobrod/worms_ws/install/worms_mech/share/worms_mech/package.dsv'
+[4.640s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/worms_mech/share/worms_mech/package.sh'
+[4.641s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/worms_mech/share/worms_mech/package.bash'
+[4.641s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/worms_mech/share/worms_mech/package.zsh'
+[4.642s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jacobrod/worms_ws/install/worms_mech/share/colcon-core/packages/worms_mech)
+[4.644s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros_gz_interfaces)
+[4.644s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jacobrod/worms_ws/build/ros_gz_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/jacobrod/worms_ws/build/ros_gz_interfaces
+[4.663s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/ros_gz_interfaces' for CMake module files
+[4.663s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/ros_gz_interfaces' for CMake config files
+[4.664s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros_gz_interfaces', 'cmake_prefix_path')
+[4.683s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/hook/cmake_prefix_path.ps1'
+[4.684s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/hook/cmake_prefix_path.dsv'
+[4.684s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/hook/cmake_prefix_path.sh'
+[4.685s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/ros_gz_interfaces/lib'
+[4.685s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros_gz_interfaces', 'ld_library_path_lib')
+[4.703s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/hook/ld_library_path_lib.ps1'
+[4.704s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/hook/ld_library_path_lib.dsv'
+[4.704s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/hook/ld_library_path_lib.sh'
+[4.705s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/ros_gz_interfaces/bin'
+[4.705s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/ros_gz_interfaces/lib/pkgconfig/ros_gz_interfaces.pc'
+[4.705s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/ros_gz_interfaces/lib/python3.10/site-packages'
+[4.705s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/ros_gz_interfaces/bin'
+[4.723s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/package.ps1'
+[4.724s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/package.dsv'
+[4.724s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/package.sh'
+[4.725s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/package.bash'
+[4.725s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/package.zsh'
+[4.725s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jacobrod/worms_ws/install/ros_gz_interfaces/share/colcon-core/packages/ros_gz_interfaces)
+[4.727s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jacobrod/worms_ws/build/ros_gz_example_gazebo' returned '1': AMENT_PREFIX_PATH=/home/jacobrod/worms_ws/install/ros_gz_example_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/jacobrod/worms_ws/install/ros_gz_example_description:/opt/ros/humble GZ_SIM_RESOURCE_PATH=/home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/models /usr/bin/cmake /home/jacobrod/worms_ws/src/worms_gazebo_sim/worms_gazebo -DCMAKE_INSTALL_PREFIX=/home/jacobrod/worms_ws/install/ros_gz_example_gazebo
+[4.728s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jacobrod/worms_ws/build/ros_ign_gazebo' returned '0': AMENT_PREFIX_PATH=/home/jacobrod/worms_ws/install/ros_gz_sim:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/jacobrod/worms_ws/install/ros_gz_sim:/opt/ros/humble LD_LIBRARY_PATH=/home/jacobrod/worms_ws/install/ros_gz_sim/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/jacobrod/worms_ws/build/ros_ign_gazebo -- -j8 -l8
+[4.730s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jacobrod/worms_ws/build/sdformat_urdf' returned '0': CMAKE_PREFIX_PATH=/home/jacobrod/worms_ws/install/sdformat_test_files:/opt/ros/humble PKG_CONFIG_PATH=/home/jacobrod/worms_ws/install/sdformat_test_files/lib/x86_64-linux-gnu/pkgconfig:/home/jacobrod/worms_ws/install/sdformat_test_files/lib/pkgconfig /usr/bin/cmake --build /home/jacobrod/worms_ws/build/sdformat_urdf -- -j8 -l8
+[4.743s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros_gz_example_gazebo)
+[4.767s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/ros_gz_example_gazebo' for CMake module files
+[4.768s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/ros_gz_example_gazebo' for CMake config files
+[4.769s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/ros_gz_example_gazebo/bin'
+[4.769s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/ros_gz_example_gazebo/lib/pkgconfig/ros_gz_example_gazebo.pc'
+[4.769s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/ros_gz_example_gazebo/lib/python3.10/site-packages'
+[4.769s] Level 1:colcon.colcon_core.environment:checking '/home/jacobrod/worms_ws/install/ros_gz_example_gazebo/bin'
+[4.788s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/ros_gz_example_gazebo/share/ros_gz_example_gazebo/package.ps1'
+[4.789s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jacobrod/worms_ws/install/ros_gz_example_gazebo/share/ros_gz_example_gazebo/package.dsv'
+[4.789s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/ros_gz_example_gazebo/share/ros_gz_example_gazebo/package.sh'
+[4.790s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/ros_gz_example_gazebo/share/ros_gz_example_gazebo/package.bash'
+[4.790s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacobrod/worms_ws/install/ros_gz_example_gazebo/share/ros_gz_example_gazebo/package.zsh'
+[4.790s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jacobrod/worms_ws/install/ros_gz_example_gazebo/share/colcon-core/packages/ros_gz_example_gazebo)
+[5.246s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[5.246s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[5.246s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '1'
+[5.246s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[5.278s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[5.278s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[5.278s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[5.298s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[5.317s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jacobrod/worms_ws/install/local_setup.ps1'
+[5.318s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/jacobrod/worms_ws/install/_local_setup_util_ps1.py'
+[5.320s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jacobrod/worms_ws/install/setup.ps1'
+[5.339s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jacobrod/worms_ws/install/local_setup.sh'
+[5.339s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/jacobrod/worms_ws/install/_local_setup_util_sh.py'
+[5.340s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jacobrod/worms_ws/install/setup.sh'
+[5.359s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jacobrod/worms_ws/install/local_setup.bash'
+[5.359s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jacobrod/worms_ws/install/setup.bash'
+[5.378s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jacobrod/worms_ws/install/local_setup.zsh'
+[5.378s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jacobrod/worms_ws/install/setup.zsh'

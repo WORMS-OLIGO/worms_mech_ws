@@ -1,0 +1,12 @@
+[0.527s] Invoking command in '/home/jacobrod/worms_ws/build/ros_gz_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jacobrod/worms_ws/install/worms_mech:/opt/ros/humble /usr/bin/cmake --build /home/jacobrod/worms_ws/build/ros_gz_sim -- -j8 -l8
+[0.613s] [35m[1mConsolidate compiler generated dependencies of target create[0m
+[0.622s] [35m[1mConsolidate compiler generated dependencies of target gtest_main[0m
+[0.622s] [35m[1mConsolidate compiler generated dependencies of target ros_gz_sim[0m
+[0.634s] [35m[1mConsolidate compiler generated dependencies of target gtest[0m
+[0.661s] [ 20%] Built target gtest
+[0.661s] [ 40%] Built target ros_gz_sim
+[0.664s] [ 60%] Built target gtest_main
+[0.667s] [ 70%] [32m[1mLinking CXX executable create[0m
+[0.759s] [35m[1mConsolidate compiler generated dependencies of target test_stopwatch[0m
+[0.782s] [ 90%] Built target test_stopwatch
+[1.316s] [100%] Built target create

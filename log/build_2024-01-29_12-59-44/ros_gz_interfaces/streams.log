@@ -1,0 +1,216 @@
+[0.559s] Invoking command in '/home/jacobrod/worms_ws/build/ros_gz_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/jacobrod/worms_ws/build/ros_gz_interfaces -- -j8 -l8
+[0.645s] [  0%] [34m[1mGenerating C code for ROS interfaces[0m
+[0.666s] [  0%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[0.678s] [  0%] Built target ament_cmake_python_copy_ros_gz_interfaces
+[1.195s] running egg_info
+[1.196s] creating ros_gz_interfaces.egg-info
+[1.196s] writing ros_gz_interfaces.egg-info/PKG-INFO
+[1.197s] writing dependency_links to ros_gz_interfaces.egg-info/dependency_links.txt
+[1.197s] writing top-level names to ros_gz_interfaces.egg-info/top_level.txt
+[1.198s] writing manifest file 'ros_gz_interfaces.egg-info/SOURCES.txt'
+[1.204s] reading manifest file 'ros_gz_interfaces.egg-info/SOURCES.txt'
+[1.207s] writing manifest file 'ros_gz_interfaces.egg-info/SOURCES.txt'
+[1.269s] [  0%] Built target ament_cmake_python_build_ros_gz_interfaces_egg
+[5.433s] [  0%] Built target ros_gz_interfaces__cpp
+[5.446s] [  1%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[5.449s] [  2%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[5.451s] [  3%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[6.443s] [  4%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ros_gz_interfaces/msg/detail/contacts__functions.c.o[0m
+[6.444s] [  5%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ros_gz_interfaces/msg/detail/altimeter__functions.c.o[0m
+[6.445s] [  5%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ros_gz_interfaces/msg/detail/dataframe__functions.c.o[0m
+[6.457s] [  5%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ros_gz_interfaces/msg/detail/contact__functions.c.o[0m
+[6.461s] [  6%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ros_gz_interfaces/msg/detail/entity__functions.c.o[0m
+[6.594s] [  6%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ros_gz_interfaces/msg/detail/entity_factory__functions.c.o[0m
+[6.598s] [  7%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ros_gz_interfaces/msg/detail/joint_wrench__functions.c.o[0m
+[6.607s] [  7%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ros_gz_interfaces/msg/detail/gui_camera__functions.c.o[0m
+[6.618s] [  7%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ros_gz_interfaces/msg/detail/light__functions.c.o[0m
+[6.625s] [  8%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ros_gz_interfaces/msg/detail/float32_array__functions.c.o[0m
+[6.732s] [  9%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ros_gz_interfaces/msg/detail/param_vec__functions.c.o[0m
+[6.751s] [  9%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ros_gz_interfaces/msg/detail/sensor_noise__functions.c.o[0m
+[6.762s] [  9%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ros_gz_interfaces/msg/detail/track_visual__functions.c.o[0m
+[6.768s] [ 10%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ros_gz_interfaces/msg/detail/string_vec__functions.c.o[0m
+[6.821s] [ 11%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ros_gz_interfaces/msg/detail/video_record__functions.c.o[0m
+[6.863s] [ 11%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ros_gz_interfaces/msg/detail/world_control__functions.c.o[0m
+[6.890s] [ 12%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ros_gz_interfaces/msg/detail/world_reset__functions.c.o[0m
+[6.891s] [ 12%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ros_gz_interfaces/srv/detail/control_world__functions.c.o[0m
+[6.924s] [ 13%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ros_gz_interfaces/srv/detail/delete_entity__functions.c.o[0m
+[7.010s] [ 14%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ros_gz_interfaces/srv/detail/set_entity_pose__functions.c.o[0m
+[7.039s] [ 14%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ros_gz_interfaces/srv/detail/spawn_entity__functions.c.o[0m
+[7.151s] [ 15%] [32m[1mLinking C shared library libros_gz_interfaces__rosidl_generator_c.so[0m
+[7.238s] [ 15%] Built target ros_gz_interfaces__rosidl_generator_c
+[7.259s] [ 16%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[7.261s] [ 17%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[7.273s] [ 18%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[10.080s] [ 18%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ros_gz_interfaces/msg/altimeter__type_support.cpp.o[0m
+[10.129s] [ 19%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ros_gz_interfaces/msg/contact__type_support.cpp.o[0m
+[10.218s] [ 19%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ros_gz_interfaces/msg/contacts__type_support.cpp.o[0m
+[10.860s] [ 20%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ros_gz_interfaces/msg/detail/altimeter__type_support.cpp.o[0m
+[10.867s] [ 21%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ros_gz_interfaces/msg/dataframe__type_support.cpp.o[0m
+[10.925s] [ 21%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ros_gz_interfaces/msg/entity__type_support.cpp.o[0m
+[10.962s] [ 22%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ros_gz_interfaces/msg/entity_factory__type_support.cpp.o[0m
+[11.651s] [ 22%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ros_gz_interfaces/msg/float32_array__type_support.cpp.o[0m
+[11.668s] [ 23%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ros_gz_interfaces/msg/gui_camera__type_support.cpp.o[0m
+[11.854s] [ 23%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ros_gz_interfaces/msg/joint_wrench__type_support.cpp.o[0m
+[11.911s] [ 23%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ros_gz_interfaces/msg/detail/contact__type_support.cpp.o[0m
+[12.046s] [ 23%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ros_gz_interfaces/msg/detail/dds_fastrtps/altimeter__type_support.cpp.o[0m
+[12.246s] [ 23%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ros_gz_interfaces/msg/altimeter__type_support.cpp.o[0m
+[12.315s] [ 24%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ros_gz_interfaces/msg/contact__type_support.cpp.o[0m
+[12.465s] [ 24%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ros_gz_interfaces/msg/contacts__type_support.cpp.o[0m
+[12.519s] [ 25%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ros_gz_interfaces/msg/detail/dds_fastrtps/contact__type_support.cpp.o[0m
+[12.549s] [ 26%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ros_gz_interfaces/msg/detail/contacts__type_support.cpp.o[0m
+[12.643s] [ 27%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ros_gz_interfaces/msg/light__type_support.cpp.o[0m
+[12.655s] [ 28%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ros_gz_interfaces/msg/dataframe__type_support.cpp.o[0m
+[12.829s] [ 28%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ros_gz_interfaces/msg/entity__type_support.cpp.o[0m
+[12.939s] [ 29%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ros_gz_interfaces/msg/entity_factory__type_support.cpp.o[0m
+[13.012s] [ 29%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ros_gz_interfaces/msg/float32_array__type_support.cpp.o[0m
+[13.068s] [ 30%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ros_gz_interfaces/msg/gui_camera__type_support.cpp.o[0m
+[13.139s] [ 30%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ros_gz_interfaces/msg/joint_wrench__type_support.cpp.o[0m
+[13.192s] [ 30%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ros_gz_interfaces/msg/detail/dds_fastrtps/contacts__type_support.cpp.o[0m
+[13.232s] [ 31%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ros_gz_interfaces/msg/light__type_support.cpp.o[0m
+[13.372s] [ 31%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ros_gz_interfaces/msg/param_vec__type_support.cpp.o[0m
+[13.490s] [ 31%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ros_gz_interfaces/msg/param_vec__type_support.cpp.o[0m
+[13.516s] [ 32%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ros_gz_interfaces/msg/sensor_noise__type_support.cpp.o[0m
+[13.577s] [ 32%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ros_gz_interfaces/msg/detail/dataframe__type_support.cpp.o[0m
+[13.595s] [ 32%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ros_gz_interfaces/msg/string_vec__type_support.cpp.o[0m
+[13.713s] [ 33%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ros_gz_interfaces/msg/track_visual__type_support.cpp.o[0m
+[13.834s] [ 34%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ros_gz_interfaces/msg/detail/dds_fastrtps/dataframe__type_support.cpp.o[0m
+[13.834s] [ 34%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ros_gz_interfaces/msg/video_record__type_support.cpp.o[0m
+[13.945s] [ 34%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ros_gz_interfaces/msg/detail/dds_fastrtps/entity__type_support.cpp.o[0m
+[13.975s] [ 35%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ros_gz_interfaces/msg/world_control__type_support.cpp.o[0m
+[14.026s] [ 35%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ros_gz_interfaces/msg/detail/altimeter__type_support.c.o[0m
+[14.037s] [ 36%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ros_gz_interfaces/msg/sensor_noise__type_support.cpp.o[0m
+[14.121s] [ 37%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ros_gz_interfaces/msg/world_reset__type_support.cpp.o[0m
+[14.200s] [ 37%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ros_gz_interfaces/srv/control_world__type_support.cpp.o[0m
+[14.211s] [ 38%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ros_gz_interfaces/msg/detail/contact__type_support.c.o[0m
+[14.236s] [ 39%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ros_gz_interfaces/srv/delete_entity__type_support.cpp.o[0m
+[14.328s] [ 39%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ros_gz_interfaces/srv/set_entity_pose__type_support.cpp.o[0m
+[14.341s] [ 40%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ros_gz_interfaces/msg/string_vec__type_support.cpp.o[0m
+[14.392s] [ 40%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ros_gz_interfaces/msg/detail/contacts__type_support.c.o[0m
+[14.439s] [ 41%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ros_gz_interfaces/srv/spawn_entity__type_support.cpp.o[0m
+[14.521s] [ 42%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ros_gz_interfaces/msg/detail/dataframe__type_support.c.o[0m
+[14.587s] [ 43%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ros_gz_interfaces/msg/detail/dds_fastrtps/entity_factory__type_support.cpp.o[0m
+[14.590s] [ 43%] [32m[1mLinking CXX shared library libros_gz_interfaces__rosidl_typesupport_c.so[0m
+[14.624s] [ 44%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ros_gz_interfaces/msg/detail/entity__type_support.c.o[0m
+[14.691s] [ 44%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ros_gz_interfaces/msg/detail/entity_factory__type_support.c.o[0m
+[14.709s] [ 45%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ros_gz_interfaces/msg/detail/entity__type_support.cpp.o[0m
+[14.795s] [ 45%] Built target ros_gz_interfaces__rosidl_typesupport_c
+[14.816s] [ 45%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ros_gz_interfaces/msg/detail/altimeter__type_support_c.cpp.o[0m
+[14.824s] [ 46%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ros_gz_interfaces/msg/detail/dds_fastrtps/float32_array__type_support.cpp.o[0m
+[14.870s] [ 47%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ros_gz_interfaces/msg/detail/float32_array__type_support.c.o[0m
+[14.886s] [ 48%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ros_gz_interfaces/msg/detail/contact__type_support_c.cpp.o[0m
+[15.019s] [ 48%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ros_gz_interfaces/msg/track_visual__type_support.cpp.o[0m
+[15.034s] [ 48%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ros_gz_interfaces/msg/detail/contacts__type_support_c.cpp.o[0m
+[15.040s] [ 48%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ros_gz_interfaces/msg/detail/gui_camera__type_support.c.o[0m
+[15.285s] [ 49%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ros_gz_interfaces/msg/detail/joint_wrench__type_support.c.o[0m
+[15.409s] [ 50%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ros_gz_interfaces/msg/detail/dataframe__type_support_c.cpp.o[0m
+[15.463s] [ 50%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ros_gz_interfaces/msg/detail/light__type_support.c.o[0m
+[15.666s] [ 51%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ros_gz_interfaces/msg/video_record__type_support.cpp.o[0m
+[15.683s] [ 52%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ros_gz_interfaces/msg/detail/param_vec__type_support.c.o[0m
+[15.776s] [ 52%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ros_gz_interfaces/msg/detail/entity__type_support_c.cpp.o[0m
+[15.784s] [ 53%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ros_gz_interfaces/msg/detail/entity_factory__type_support_c.cpp.o[0m
+[15.799s] [ 53%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ros_gz_interfaces/msg/detail/dds_fastrtps/gui_camera__type_support.cpp.o[0m
+[15.816s] [ 53%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ros_gz_interfaces/msg/detail/entity_factory__type_support.cpp.o[0m
+[15.847s] [ 53%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ros_gz_interfaces/msg/detail/sensor_noise__type_support.c.o[0m
+[15.971s] [ 54%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ros_gz_interfaces/msg/detail/string_vec__type_support.c.o[0m
+[16.054s] [ 54%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ros_gz_interfaces/msg/detail/float32_array__type_support_c.cpp.o[0m
+[16.174s] [ 54%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ros_gz_interfaces/msg/detail/track_visual__type_support.c.o[0m
+[16.373s] [ 55%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ros_gz_interfaces/msg/detail/video_record__type_support.c.o[0m
+[16.388s] [ 56%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ros_gz_interfaces/msg/detail/dds_fastrtps/joint_wrench__type_support.cpp.o[0m
+[16.614s] [ 56%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ros_gz_interfaces/msg/detail/world_control__type_support.c.o[0m
+[16.614s] [ 57%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ros_gz_interfaces/msg/detail/gui_camera__type_support_c.cpp.o[0m
+[16.628s] [ 57%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ros_gz_interfaces/msg/world_control__type_support.cpp.o[0m
+[16.721s] [ 57%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ros_gz_interfaces/msg/detail/joint_wrench__type_support_c.cpp.o[0m
+[16.825s] [ 58%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ros_gz_interfaces/msg/detail/world_reset__type_support.c.o[0m
+[17.026s] [ 58%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ros_gz_interfaces/srv/detail/control_world__type_support.c.o[0m
+[17.031s] [ 59%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ros_gz_interfaces/msg/detail/light__type_support_c.cpp.o[0m
+[17.090s] [ 59%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ros_gz_interfaces/msg/detail/dds_fastrtps/light__type_support.cpp.o[0m
+[17.148s] [ 60%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ros_gz_interfaces/srv/detail/delete_entity__type_support.c.o[0m
+[17.218s] [ 61%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ros_gz_interfaces/msg/detail/float32_array__type_support.cpp.o[0m
+[17.338s] [ 61%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ros_gz_interfaces/srv/detail/set_entity_pose__type_support.c.o[0m
+[17.488s] [ 62%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ros_gz_interfaces/msg/world_reset__type_support.cpp.o[0m
+[17.560s] [ 63%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ros_gz_interfaces/srv/detail/spawn_entity__type_support.c.o[0m
+[17.616s] [ 64%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ros_gz_interfaces/msg/detail/param_vec__type_support_c.cpp.o[0m
+[17.678s] [ 65%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ros_gz_interfaces/msg/detail/dds_fastrtps/param_vec__type_support.cpp.o[0m
+[17.724s] [ 65%] [32m[1mLinking C shared library libros_gz_interfaces__rosidl_typesupport_introspection_c.so[0m
+[17.750s] [ 65%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ros_gz_interfaces/msg/detail/sensor_noise__type_support_c.cpp.o[0m
+[17.931s] [ 65%] Built target ros_gz_interfaces__rosidl_typesupport_introspection_c
+[17.997s] [ 66%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ros_gz_interfaces/msg/detail/string_vec__type_support_c.cpp.o[0m
+[18.024s] [ 66%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ros_gz_interfaces/msg/detail/dds_fastrtps/sensor_noise__type_support.cpp.o[0m
+[18.382s] [ 66%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ros_gz_interfaces/msg/detail/gui_camera__type_support.cpp.o[0m
+[18.485s] [ 66%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ros_gz_interfaces/srv/control_world__type_support.cpp.o[0m
+[18.494s] [ 66%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ros_gz_interfaces/msg/detail/track_visual__type_support_c.cpp.o[0m
+[18.512s] [ 67%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ros_gz_interfaces/msg/detail/joint_wrench__type_support.cpp.o[0m
+[18.809s] [ 68%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ros_gz_interfaces/msg/detail/dds_fastrtps/string_vec__type_support.cpp.o[0m
+[18.901s] [ 69%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ros_gz_interfaces/msg/detail/video_record__type_support_c.cpp.o[0m
+[19.165s] [ 69%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ros_gz_interfaces/msg/detail/dds_fastrtps/track_visual__type_support.cpp.o[0m
+[19.231s] [ 70%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ros_gz_interfaces/msg/detail/dds_fastrtps/video_record__type_support.cpp.o[0m
+[19.353s] [ 71%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ros_gz_interfaces/srv/delete_entity__type_support.cpp.o[0m
+[19.436s] [ 71%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ros_gz_interfaces/msg/detail/world_control__type_support_c.cpp.o[0m
+[19.566s] [ 71%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ros_gz_interfaces/msg/detail/light__type_support.cpp.o[0m
+[19.570s] [ 72%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ros_gz_interfaces/msg/detail/param_vec__type_support.cpp.o[0m
+[19.840s] [ 72%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ros_gz_interfaces/msg/detail/dds_fastrtps/world_control__type_support.cpp.o[0m
+[19.860s] [ 73%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ros_gz_interfaces/msg/detail/world_reset__type_support_c.cpp.o[0m
+[20.152s] [ 73%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ros_gz_interfaces/srv/set_entity_pose__type_support.cpp.o[0m
+[20.326s] [ 73%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ros_gz_interfaces/msg/detail/sensor_noise__type_support.cpp.o[0m
+[20.365s] [ 73%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ros_gz_interfaces/srv/detail/control_world__type_support_c.cpp.o[0m
+[20.494s] [ 74%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ros_gz_interfaces/msg/detail/dds_fastrtps/world_reset__type_support.cpp.o[0m
+[20.568s] [ 75%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ros_gz_interfaces/msg/detail/string_vec__type_support.cpp.o[0m
+[20.756s] [ 76%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ros_gz_interfaces/srv/spawn_entity__type_support.cpp.o[0m
+[20.827s] [ 76%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ros_gz_interfaces/srv/detail/dds_fastrtps/control_world__type_support.cpp.o[0m
+[21.078s] [ 77%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ros_gz_interfaces/srv/detail/dds_fastrtps/delete_entity__type_support.cpp.o[0m
+[21.156s] [ 78%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ros_gz_interfaces/srv/detail/delete_entity__type_support_c.cpp.o[0m
+[21.381s] [ 78%] [32m[1mLinking CXX shared library libros_gz_interfaces__rosidl_typesupport_cpp.so[0m
+[21.415s] [ 78%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ros_gz_interfaces/srv/detail/set_entity_pose__type_support_c.cpp.o[0m
+[21.433s] [ 78%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ros_gz_interfaces/srv/detail/dds_fastrtps/set_entity_pose__type_support.cpp.o[0m
+[21.487s] [ 78%] Built target ros_gz_interfaces__rosidl_typesupport_cpp
+[21.503s] [ 79%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ros_gz_interfaces/srv/detail/dds_fastrtps/spawn_entity__type_support.cpp.o[0m
+[21.585s] [ 79%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ros_gz_interfaces/msg/detail/track_visual__type_support.cpp.o[0m
+[21.595s] [ 80%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ros_gz_interfaces/msg/detail/video_record__type_support.cpp.o[0m
+[21.980s] [ 80%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ros_gz_interfaces/msg/detail/world_control__type_support.cpp.o[0m
+[22.044s] [ 81%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ros_gz_interfaces/msg/detail/world_reset__type_support.cpp.o[0m
+[22.171s] [ 82%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ros_gz_interfaces/srv/detail/spawn_entity__type_support_c.cpp.o[0m
+[22.239s] [ 82%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ros_gz_interfaces/srv/detail/control_world__type_support.cpp.o[0m
+[22.431s] [ 83%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ros_gz_interfaces/srv/detail/delete_entity__type_support.cpp.o[0m
+[22.474s] [ 83%] [32m[1mLinking CXX shared library libros_gz_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[22.554s] [ 83%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ros_gz_interfaces/srv/detail/set_entity_pose__type_support.cpp.o[0m
+[22.639s] [ 84%] [32mBuilding CXX object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ros_gz_interfaces/srv/detail/spawn_entity__type_support.cpp.o[0m
+[22.855s] [ 84%] Built target ros_gz_interfaces__rosidl_typesupport_fastrtps_cpp
+[22.888s] [ 84%] [32m[1mLinking CXX shared library libros_gz_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[23.040s] [ 84%] Built target ros_gz_interfaces__rosidl_typesupport_fastrtps_c
+[23.435s] [ 85%] [32m[1mLinking CXX shared library libros_gz_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[23.572s] [ 85%] Built target ros_gz_interfaces__rosidl_typesupport_introspection_cpp
+[23.598s] [ 85%] Built target ros_gz_interfaces
+[23.625s] [ 86%] [34m[1mGenerating Python code for ROS interfaces[0m
+[29.378s] [ 86%] Built target ros_gz_interfaces__py
+[29.403s] [ 86%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ros_gz_interfaces/msg/_altimeter_s.c.o[0m
+[29.404s] [ 87%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ros_gz_interfaces/msg/_contact_s.c.o[0m
+[29.404s] [ 87%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ros_gz_interfaces/msg/_contacts_s.c.o[0m
+[29.404s] [ 88%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ros_gz_interfaces/msg/_dataframe_s.c.o[0m
+[29.404s] [ 88%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ros_gz_interfaces/msg/_entity_s.c.o[0m
+[29.405s] [ 89%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ros_gz_interfaces/msg/_float32_array_s.c.o[0m
+[29.405s] [ 89%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ros_gz_interfaces/msg/_entity_factory_s.c.o[0m
+[29.406s] [ 90%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ros_gz_interfaces/msg/_gui_camera_s.c.o[0m
+[29.630s] [ 90%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ros_gz_interfaces/msg/_joint_wrench_s.c.o[0m
+[29.644s] [ 90%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ros_gz_interfaces/msg/_string_vec_s.c.o[0m
+[29.644s] [ 91%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ros_gz_interfaces/msg/_sensor_noise_s.c.o[0m
+[29.645s] [ 92%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ros_gz_interfaces/msg/_light_s.c.o[0m
+[29.646s] [ 92%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ros_gz_interfaces/msg/_param_vec_s.c.o[0m
+[29.649s] [ 93%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ros_gz_interfaces/msg/_track_visual_s.c.o[0m
+[29.664s] [ 93%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ros_gz_interfaces/msg/_video_record_s.c.o[0m
+[29.673s] [ 94%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ros_gz_interfaces/msg/_world_control_s.c.o[0m
+[29.852s] [ 94%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ros_gz_interfaces/msg/_world_reset_s.c.o[0m
+[29.890s] [ 95%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ros_gz_interfaces/srv/_control_world_s.c.o[0m
+[29.892s] [ 96%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ros_gz_interfaces/srv/_delete_entity_s.c.o[0m
+[29.895s] [ 96%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ros_gz_interfaces/srv/_set_entity_pose_s.c.o[0m
+[29.900s] [ 97%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ros_gz_interfaces/srv/_spawn_entity_s.c.o[0m
+[30.099s] [ 97%] [32m[1mLinking C shared library rosidl_generator_py/ros_gz_interfaces/libros_gz_interfaces__rosidl_generator_py.so[0m
+[30.163s] [ 97%] Built target ros_gz_interfaces__rosidl_generator_py
+[30.186s] [ 99%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/ros_gz_interfaces/_ros_gz_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[30.186s] [ 99%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/ros_gz_interfaces/_ros_gz_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[30.187s] [100%] [32mBuilding C object CMakeFiles/ros_gz_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/ros_gz_interfaces/_ros_gz_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[30.403s] [100%] [32m[1mLinking C shared library rosidl_generator_py/ros_gz_interfaces/ros_gz_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[30.406s] [100%] [32m[1mLinking C shared library rosidl_generator_py/ros_gz_interfaces/ros_gz_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[30.406s] [100%] [32m[1mLinking C shared library rosidl_generator_py/ros_gz_interfaces/ros_gz_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[30.460s] [100%] Built target ros_gz_interfaces__rosidl_typesupport_introspection_c__pyext
+[30.460s] [100%] Built target ros_gz_interfaces__rosidl_typesupport_c__pyext
+[30.462s] [100%] Built target ros_gz_interfaces__rosidl_typesupport_fastrtps_c__pyext

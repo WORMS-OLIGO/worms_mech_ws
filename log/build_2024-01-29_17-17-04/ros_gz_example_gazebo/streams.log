@@ -1,0 +1,43 @@
+[0.519s] Invoking command in '/home/jacobrod/worms_ws/build/ros_gz_example_gazebo': AMENT_PREFIX_PATH=/home/jacobrod/worms_ws/install/ros_gz_example_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/jacobrod/worms_ws/install/ros_gz_example_description:/opt/ros/humble GZ_SIM_RESOURCE_PATH=/home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/models /usr/bin/cmake /home/jacobrod/worms_ws/src/worms_gazebo_sim/worms_gazebo -DCMAKE_INSTALL_PREFIX=/home/jacobrod/worms_ws/install/ros_gz_example_gazebo
+[0.650s] -- Found ament_cmake: 1.3.6 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.731s] -- Found ros_gz_example_description: 0.0.0 (/home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/cmake)
+[0.732s] -- Looking for gz-plugin2 -- found version 2.0.2
+[0.732s] -- Searching for dependencies of gz-plugin2
+[0.733s] -- Looking for gz-utils2 -- found version 2.2.0
+[0.733s] -- Searching for dependencies of gz-utils2
+[0.734s] -- Searching for <gz-utils2> component [cli]
+[0.734s] -- Looking for gz-utils2-cli -- found version 2.2.0
+[0.736s] -- Searching for dependencies of gz-utils2-cli
+[0.738s] -- Searching for <gz-plugin2> component [register]
+[0.739s] -- Looking for gz-plugin2-register -- found version 2.0.2
+[0.740s] -- Searching for dependencies of gz-plugin2-register
+[0.741s] -- Looking for gz-common5 -- found version 5.4.2
+[0.742s] -- Searching for dependencies of gz-common5
+[0.743s] -- Looking for gz-utils2 -- found version 2.2.0
+[0.743s] -- Looking for dlfcn.h - found
+[0.743s] -- Looking for libdl - found
+[0.769s] -- Checking for module 'uuid'
+[0.823s] --   Found uuid, version 2.37.2
+[0.831s] -- Searching for <gz-common5> component [profiler]
+[0.832s] -- Looking for gz-common5-profiler -- found version 5.4.2
+[0.833s] -- Searching for dependencies of gz-common5-profiler
+[0.864s] -- Configuring incomplete, errors occurred!
+[0.864s] See also "/home/jacobrod/worms_ws/build/ros_gz_example_gazebo/CMakeFiles/CMakeOutput.log".
+[0.864s] [31mCMake Error at CMakeLists.txt:26 (find_package):
+[0.864s]   By not providing "Findgz-sim7.cmake" in CMAKE_MODULE_PATH this project has
+[0.864s]   asked CMake to find a package configuration file provided by "gz-sim7", but
+[0.864s]   CMake did not find one.
+[0.865s] 
+[0.865s]   Could not find a package configuration file provided by "gz-sim7" with any
+[0.865s]   of the following names:
+[0.865s] 
+[0.866s]     gz-sim7Config.cmake
+[0.866s]     gz-sim7-config.cmake
+[0.866s] 
+[0.866s]   Add the installation prefix of "gz-sim7" to CMAKE_PREFIX_PATH or set
+[0.866s]   "gz-sim7_DIR" to a directory containing one of the above files.  If
+[0.866s]   "gz-sim7" provides a separate development package or SDK, be sure it has
+[0.866s]   been installed.
+[0.866s] 
+[0.867s] [0m
+[1.039s] Invoked command in '/home/jacobrod/worms_ws/build/ros_gz_example_gazebo' returned '1': AMENT_PREFIX_PATH=/home/jacobrod/worms_ws/install/ros_gz_example_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/jacobrod/worms_ws/install/ros_gz_example_description:/opt/ros/humble GZ_SIM_RESOURCE_PATH=/home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/models /usr/bin/cmake /home/jacobrod/worms_ws/src/worms_gazebo_sim/worms_gazebo -DCMAKE_INSTALL_PREFIX=/home/jacobrod/worms_ws/install/ros_gz_example_gazebo

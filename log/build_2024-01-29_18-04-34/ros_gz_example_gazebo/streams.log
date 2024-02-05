@@ -1,0 +1,43 @@
+[0.483s] Invoking command in '/home/jacobrod/worms_ws/build/ros_gz_example_gazebo': CMAKE_PREFIX_PATH=/home/jacobrod/worms_ws/install/ros_gz_example_description:/home/jacobrod/worms_ws/install/ros_ign_gazebo:/home/jacobrod/worms_ws/install/worms_description:/home/jacobrod/worms_ws/install/sdformat_urdf:/home/jacobrod/worms_ws/install/sdformat_test_files:/home/jacobrod/worms_ws/install/ros_gz_sim:/home/jacobrod/worms_ws/install/ros_gz_interfaces:/home/jacobrod/worms_ws/install/ros_gz_example_application:/home/jacobrod/worms_ws/install/core_bringup:/home/jacobrod/worms_ws/install/worms_mech:/opt/ros/humble GZ_SIM_RESOURCE_PATH=/home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/models:${GZ_SIM_RESOURCE_PATH} /usr/bin/cmake /home/jacobrod/worms_ws/src/worms_gazebo_sim/worms_gazebo -DCMAKE_INSTALL_PREFIX=/home/jacobrod/worms_ws/install/ros_gz_example_gazebo
+[0.595s] -- Found ament_cmake: 1.3.6 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.694s] -- Found ros_gz_example_description: 0.0.0 (/home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/cmake)
+[0.700s] -- Looking for gz-plugin2 -- found version 2.0.2
+[0.700s] -- Searching for dependencies of gz-plugin2
+[0.701s] -- Looking for gz-utils2 -- found version 2.2.0
+[0.702s] -- Searching for dependencies of gz-utils2
+[0.703s] -- Searching for <gz-utils2> component [cli]
+[0.703s] -- Looking for gz-utils2-cli -- found version 2.2.0
+[0.704s] -- Searching for dependencies of gz-utils2-cli
+[0.706s] -- Searching for <gz-plugin2> component [register]
+[0.707s] -- Looking for gz-plugin2-register -- found version 2.0.2
+[0.707s] -- Searching for dependencies of gz-plugin2-register
+[0.708s] -- Looking for gz-common5 -- found version 5.4.2
+[0.709s] -- Searching for dependencies of gz-common5
+[0.710s] -- Looking for gz-utils2 -- found version 2.2.0
+[0.711s] -- Looking for dlfcn.h - found
+[0.711s] -- Looking for libdl - found
+[0.718s] -- Checking for module 'uuid'
+[0.735s] --   Found uuid, version 2.37.2
+[0.776s] -- Searching for <gz-common5> component [profiler]
+[0.776s] -- Looking for gz-common5-profiler -- found version 5.4.2
+[0.778s] -- Searching for dependencies of gz-common5-profiler
+[0.802s] [31mCMake Error at CMakeLists.txt:26 (find_package):
+[0.802s]   By not providing "Findgz-sim7.cmake" in CMAKE_MODULE_PATH this project has
+[0.802s]   asked CMake to find a package configuration file provided by "gz-sim7", but
+[0.802s]   CMake did not find one.
+[0.802s] 
+[0.803s]   Could not find a package configuration file provided by "gz-sim7" with any
+[0.803s]   of the following names:
+[0.803s] 
+[0.804s]     gz-sim7Config.cmake
+[0.804s]     gz-sim7-config.cmake
+[0.804s] 
+[0.804s]   Add the installation prefix of "gz-sim7" to CMAKE_PREFIX_PATH or set
+[0.805s]   "gz-sim7_DIR" to a directory containing one of the above files.  If
+[0.805s]   "gz-sim7" provides a separate development package or SDK, be sure it has
+[0.805s]   been installed.
+[0.806s] 
+[0.806s] [0m
+[0.807s] -- Configuring incomplete, errors occurred!
+[0.807s] See also "/home/jacobrod/worms_ws/build/ros_gz_example_gazebo/CMakeFiles/CMakeOutput.log".
+[0.821s] Invoked command in '/home/jacobrod/worms_ws/build/ros_gz_example_gazebo' returned '1': CMAKE_PREFIX_PATH=/home/jacobrod/worms_ws/install/ros_gz_example_description:/home/jacobrod/worms_ws/install/ros_ign_gazebo:/home/jacobrod/worms_ws/install/worms_description:/home/jacobrod/worms_ws/install/sdformat_urdf:/home/jacobrod/worms_ws/install/sdformat_test_files:/home/jacobrod/worms_ws/install/ros_gz_sim:/home/jacobrod/worms_ws/install/ros_gz_interfaces:/home/jacobrod/worms_ws/install/ros_gz_example_application:/home/jacobrod/worms_ws/install/core_bringup:/home/jacobrod/worms_ws/install/worms_mech:/opt/ros/humble GZ_SIM_RESOURCE_PATH=/home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/models:${GZ_SIM_RESOURCE_PATH} /usr/bin/cmake /home/jacobrod/worms_ws/src/worms_gazebo_sim/worms_gazebo -DCMAKE_INSTALL_PREFIX=/home/jacobrod/worms_ws/install/ros_gz_example_gazebo

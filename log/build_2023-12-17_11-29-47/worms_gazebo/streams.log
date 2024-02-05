@@ -1,0 +1,34 @@
+[0.136s] Invoking command in '/home/jacobrod/worms_ws/build/worms_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jacobrod/worms_ws/install/worms_mech:/opt/ros/humble /usr/bin/cmake --build /home/jacobrod/worms_ws/build/worms_gazebo -- -j8 -l8
+[0.261s] [35m[1mConsolidate compiler generated dependencies of target BasicSystem[0m
+[0.268s] [35m[1mConsolidate compiler generated dependencies of target FullSystem[0m
+[0.324s] [ 50%] Built target BasicSystem
+[0.340s] [100%] Built target FullSystem
+[0.508s] Invoked command in '/home/jacobrod/worms_ws/build/worms_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jacobrod/worms_ws/install/worms_mech:/opt/ros/humble /usr/bin/cmake --build /home/jacobrod/worms_ws/build/worms_gazebo -- -j8 -l8
+[0.952s] Invoking command in '/home/jacobrod/worms_ws/build/worms_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jacobrod/worms_ws/install/worms_mech:/opt/ros/humble /usr/bin/cmake --install /home/jacobrod/worms_ws/build/worms_gazebo
+[1.067s] -- Install configuration: ""
+[1.067s] -- Up-to-date: /home/jacobrod/worms_ws/install/worms_gazebo/lib/worms_gazebo/libBasicSystem.so
+[1.067s] -- Up-to-date: /home/jacobrod/worms_ws/install/worms_gazebo/lib/worms_gazebo/libFullSystem.so
+[1.068s] -- Up-to-date: /home/jacobrod/worms_ws/install/worms_gazebo/share/worms_gazebo/worlds
+[1.068s] -- Up-to-date: /home/jacobrod/worms_ws/install/worms_gazebo/share/worms_gazebo/worlds/model.config
+[1.068s] -- Up-to-date: /home/jacobrod/worms_ws/install/worms_gazebo/share/worms_gazebo/worlds/model.sdf
+[1.068s] -- Up-to-date: /home/jacobrod/worms_ws/install/worms_gazebo/share/worms_gazebo/worlds/worms.sdf
+[1.068s] -- Up-to-date: /home/jacobrod/worms_ws/install/worms_gazebo/share/worms_gazebo/worlds/moon_dem.sdf
+[1.068s] -- Up-to-date: /home/jacobrod/worms_ws/install/worms_gazebo/share/worms_gazebo/worlds/diff_drive.sdf
+[1.068s] -- Up-to-date: /home/jacobrod/worms_ws/install/worms_gazebo/share/worms_gazebo/environment/worms_gazebo.dsv
+[1.069s] -- Up-to-date: /home/jacobrod/worms_ws/install/worms_gazebo/share/worms_gazebo/environment/worms_gazebo.sh
+[1.069s] -- Up-to-date: /home/jacobrod/worms_ws/install/worms_gazebo/share/ament_index/resource_index/package_run_dependencies/worms_gazebo
+[1.069s] -- Up-to-date: /home/jacobrod/worms_ws/install/worms_gazebo/share/ament_index/resource_index/parent_prefix_path/worms_gazebo
+[1.069s] -- Up-to-date: /home/jacobrod/worms_ws/install/worms_gazebo/share/worms_gazebo/environment/ament_prefix_path.sh
+[1.070s] -- Up-to-date: /home/jacobrod/worms_ws/install/worms_gazebo/share/worms_gazebo/environment/ament_prefix_path.dsv
+[1.070s] -- Up-to-date: /home/jacobrod/worms_ws/install/worms_gazebo/share/worms_gazebo/environment/path.sh
+[1.070s] -- Up-to-date: /home/jacobrod/worms_ws/install/worms_gazebo/share/worms_gazebo/environment/path.dsv
+[1.070s] -- Up-to-date: /home/jacobrod/worms_ws/install/worms_gazebo/share/worms_gazebo/local_setup.bash
+[1.070s] -- Up-to-date: /home/jacobrod/worms_ws/install/worms_gazebo/share/worms_gazebo/local_setup.sh
+[1.071s] -- Up-to-date: /home/jacobrod/worms_ws/install/worms_gazebo/share/worms_gazebo/local_setup.zsh
+[1.071s] -- Up-to-date: /home/jacobrod/worms_ws/install/worms_gazebo/share/worms_gazebo/local_setup.dsv
+[1.071s] -- Installing: /home/jacobrod/worms_ws/install/worms_gazebo/share/worms_gazebo/package.dsv
+[1.071s] -- Up-to-date: /home/jacobrod/worms_ws/install/worms_gazebo/share/ament_index/resource_index/packages/worms_gazebo
+[1.071s] -- Up-to-date: /home/jacobrod/worms_ws/install/worms_gazebo/share/worms_gazebo/cmake/worms_gazeboConfig.cmake
+[1.072s] -- Up-to-date: /home/jacobrod/worms_ws/install/worms_gazebo/share/worms_gazebo/cmake/worms_gazeboConfig-version.cmake
+[1.072s] -- Up-to-date: /home/jacobrod/worms_ws/install/worms_gazebo/share/worms_gazebo/package.xml
+[1.541s] Invoked command in '/home/jacobrod/worms_ws/build/worms_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jacobrod/worms_ws/install/worms_mech:/opt/ros/humble /usr/bin/cmake --install /home/jacobrod/worms_ws/build/worms_gazebo
