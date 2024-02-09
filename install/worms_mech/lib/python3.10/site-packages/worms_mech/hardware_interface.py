@@ -15,6 +15,10 @@ class MotorControllerNode(Node):
         can_device = 'can0'
         motor_ids = [1, 2, 3]
 
+        self.pos1 = 0
+        self.pos2 = 0
+        self.pos3 = 0
+
         for motor_id in motor_ids:
             self.motor_controller_dict[motor_id] = CanMotorController(can_device, motor_id, motor_type="AK80_6_V2")
 
@@ -42,19 +46,41 @@ class MotorControllerNode(Node):
             Kp = 15
             Kd = 2
 
-            pos_command = msg.position[idx]
+            joint_state_msg = JointState()
+
+
             vel_command = msg.velocity[idx]
             K_ff = msg.effort[idx]
-            print(pos_command)
+            print(K_ff)
 
-            pos, vel, curr = motor_controller.send_deg_command(pos_command, vel_command, Kp, Kd, K_ff)
+            if(motor_id == 1):
+                pos_command = self.pos1
+                self.pos1, self.vel1, self.curr1 = motor_controller.send_deg_command(pos_command, vel_command, Kp, Kd, K_ff)
+                joint_state_msg.position.append(self.pos1)
+                joint_state_msg.velocity.append(self.vel1)
+                joint_state_msg.effort.append(self.curr1)  # Using effort to represent torque/acc. Adjust as needed.
+
             
-            joint_state_msg = JointState()
+            elif(motor_id == 2):
+                pos_command = self.pos1
+                self.pos2, self.vel2, self.curr2 = motor_controller.send_deg_command(pos_command, vel_command, Kp, Kd, K_ff)
+                joint_state_msg.position.append(self.pos2)
+                joint_state_msg.velocity.append(self.vel2)
+                joint_state_msg.effort.append(self.curr2)  # Using effort to represent torque/acc. Adjust as needed.
+
+            elif(motor_id == 3):
+                pos_command = self.pos1
+                self.pos3, self.vel3, self.curr3 = motor_controller.send_deg_command(pos_command, vel_command, Kp, Kd, K_ff)
+                joint_state_msg.position.append(self.pos3)
+                joint_state_msg.velocity.append(self.vel3)
+                joint_state_msg.effort.append(self.curr3)  # Using effort to represent torque/acc. Adjust as needed.
+
+            else:
+                print("Motor Identification Error")
+            
             joint_state_msg.header.stamp = self.get_clock().now().to_msg()
             joint_state_msg.name.append(f"motor_{motor_id}")
-            joint_state_msg.position.append(pos)
-            joint_state_msg.velocity.append(vel)
-            joint_state_msg.effort.append(curr)  # Using effort to represent torque/acc. Adjust as needed.
+
 
             self.publisher.publish(joint_state_msg)
 

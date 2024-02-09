@@ -21,6 +21,7 @@ setup(
     entry_points={
         'console_scripts': [
             'hardware_interface = worms_mech.hardware_interface:main',
+            'testbed_interface = worms_mech.testbed_interface:main',
             'joint_command_publisher = worms_mech.joint_command_publisher:main',
             'joystick_control = worms_mech.joystick_control:main'
         ],

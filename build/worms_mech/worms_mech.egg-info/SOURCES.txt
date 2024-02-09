@@ -16,3 +16,4 @@ worms_mech/__init__.py
 worms_mech/hardware_interface.py
 worms_mech/joint_command_publisher.py
 worms_mech/joystick_control.py
+worms_mech/testbed_interface.py

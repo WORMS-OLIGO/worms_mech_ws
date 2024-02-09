@@ -33,6 +33,7 @@ class JoystickControlNode(Node):
 
         # Current motor positions
         self.current_motor_positions = [0, 0, 0]  # Three motors
+        self.commanded_motor_velocity = [0, 0, 0]  # Three motors
         self.commanded_motor_effort = [0, 0, 0]  # Three motors
 
 
@@ -49,21 +50,56 @@ class JoystickControlNode(Node):
 
         # 1) Read in Joystick Messages and extract axis values
 
+        self.current_motor_positions = [0, 0, 0]  # Three motors
+        self.commanded_motor_velocity = [0, 0, 0]  # Three motors
         self.commanded_motor_effort = [0, 0, 0]  # Three motors
-
 
         if abs(msg.axes[6])>self.threshold:
             if msg.axes[6]>0:
                 increment = 1
                 print("Positive Motion Triggered")
-                self.commanded_motor_effort = [5, 0, 0]  # Three motors
+                self.commanded_motor_velocity = [50, 0, 0]  # Three motors
+                self.commanded_motor_effort = [2, 0, 0]  # Three motors
+                
 
             else:
                 increment = -1
                 print("Negative Motion Triggered")
                 self.current_motor_positions[0] += increment
-                self.commanded_motor_effort = [-5, 0, 0]  # Three motors
+                self.commanded_motor_velocity = [-50, 0, 0]  # Three motors
+                self.commanded_motor_effort = [-2, 0, 0]  # Three motors
 
+        if abs(msg.axes[3])>self.threshold:
+            if msg.axes[3]>0:
+                increment = 1
+                print("Positive Motion Triggered")
+                self.commanded_motor_velocity = [0, 50, 0]  # Three motors
+                self.commanded_motor_effort = [0, 2, 0]  # Three motors
+                
+
+            else:
+                increment = -1
+                print("Negative Motion Triggered")
+                self.current_motor_positions[0] += increment
+                self.commanded_motor_velocity = [0, -50, 0]  # Three motors
+                self.commanded_motor_effort = [0, -2, 0]  # Three motors
+
+        if abs(msg.axes[1])>self.threshold:
+            if msg.axes[1]>0:
+                increment = 1
+                print("Positive Motion Triggered")
+                self.commanded_motor_velocity = [0, 0, 50]  # Three motors
+                self.commanded_motor_effort = [0, 0, 2]  # Three motors
+                
+
+            else:
+                increment = -1
+                print("Negative Motion Triggered")
+                self.current_motor_positions[0] += increment
+                self.commanded_motor_velocity = [0, 0, -50]  # Three motors
+                self.commanded_motor_effort = [0, 0, -2]  # Three motors
+
+               
         
         else:
             print("Not Active")
