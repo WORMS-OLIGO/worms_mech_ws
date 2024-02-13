@@ -43,46 +43,36 @@ class MotorControllerNode(Node):
         # Assuming the JointState message will have as many entries as there are motors
         for idx, (motor_id, motor_controller) in enumerate(self.motor_controller_dict.items()):
             # Assuming Kp and Kd as constants for this example
-            Kp = 15
+            Kp = 45
             Kd = 2
 
             joint_state_msg = JointState()
 
-
             vel_command = msg.velocity[idx]
             K_ff = msg.effort[idx]
-            print(K_ff)
+            pos_command = msg.position[idx]
+
 
             if(motor_id == 1):
-                pos_command = self.pos1
                 self.pos1, self.vel1, self.curr1 = motor_controller.send_deg_command(pos_command, vel_command, Kp, Kd, K_ff)
-                joint_state_msg.position.append(self.pos1)
-                joint_state_msg.velocity.append(self.vel1)
-                joint_state_msg.effort.append(self.curr1)  # Using effort to represent torque/acc. Adjust as needed.
-
-            
+                
             elif(motor_id == 2):
-                pos_command = self.pos1
                 self.pos2, self.vel2, self.curr2 = motor_controller.send_deg_command(pos_command, vel_command, Kp, Kd, K_ff)
-                joint_state_msg.position.append(self.pos2)
-                joint_state_msg.velocity.append(self.vel2)
-                joint_state_msg.effort.append(self.curr2)  # Using effort to represent torque/acc. Adjust as needed.
-
+            
             elif(motor_id == 3):
-                pos_command = self.pos1
                 self.pos3, self.vel3, self.curr3 = motor_controller.send_deg_command(pos_command, vel_command, Kp, Kd, K_ff)
-                joint_state_msg.position.append(self.pos3)
-                joint_state_msg.velocity.append(self.vel3)
-                joint_state_msg.effort.append(self.curr3)  # Using effort to represent torque/acc. Adjust as needed.
 
             else:
                 print("Motor Identification Error")
-            
-            joint_state_msg.header.stamp = self.get_clock().now().to_msg()
-            joint_state_msg.name.append(f"motor_{motor_id}")
 
+        
+        joint_state_msg.header.stamp = self.get_clock().now().to_msg()
+        joint_state_msg.name = ["motor_1", "motor_2", "motor_3"]
+        joint_state_msg.position = [self.pos1, self.pos2, self.pos3]
+        joint_state_msg.velocity = [self.vel1, self.vel2, self.vel3]
+        joint_state_msg.effort = [self.curr1, self.curr2, self.curr3]
 
-            self.publisher.publish(joint_state_msg)
+        self.publisher.publish(joint_state_msg)
 
     def set_zero_position(self, motor):
         motor.set_zero_position()
