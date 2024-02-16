@@ -84,8 +84,8 @@ class JoystickControlNode(Node):
                 self.commanded_motor_velocity = [0, -50, 0]  # Three motors
                 self.commanded_motor_effort = [0, -2, 0]  # Three motors
 
-        if abs(msg.axes[1])>self.threshold:
-            if msg.axes[1]>0:
+        if abs(msg.axes[2])>self.threshold:
+            if msg.axes[2]>0:
                 increment = 1
                 print("Positive Motion Triggered")
                 self.commanded_motor_velocity = [0, 0, 50]  # Three motors
