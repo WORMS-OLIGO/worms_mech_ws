@@ -12,7 +12,9 @@ class JointCommandPublisher(Node):
 
         self.state_subscriber = self.create_subscription(JointState, 'joint_states', self.joint_state_callback, 10)
 
-        self.command_subscriber = self.create_subscription(JointState, 'gait_commands', self.gait_command_callback, 10)
+        self.gait_command_subscriber = self.create_subscription(JointState, 'gait_commands', self.gait_command_callback, 10)
+
+        self.joystick_command_subscriber = self.create_subscription(JointState, 'joystick_commands', self.joystick_command_callback, 10)
 
         # MORE FOR OTHER INPUT METHODS: JOYSTICK ETC.
 
@@ -23,6 +25,9 @@ class JointCommandPublisher(Node):
         # Update the first waypoint with the current position
         self.current_pose = msg
 
+    def joystick_command_callback(self, msg):
+        self.joystick_command = msg
+
     def gait_command_callback(self, msg):
         
         # Update the first waypoint with the current command
@@ -31,28 +36,22 @@ class JointCommandPublisher(Node):
         pos_error = self.current_pose.position - self.gait_command.position
 
         # GIVEN SOME POSE ERROR CALCULATE THE NECCESARY 
-        # FORCE NEEDED AND DIRECTION OF FORCE TO CORRECT POSITION ####################################################
+        k_p = 1.0  
 
-        pos_error = self.current_pose.position - self.gait_command.position
+        # Calculate the force needed
+        force = [pos_error[0] * k_p, pos_error[1] * k_p, pos_error[2] * k_p]
 
+        # Direction of force is the sign of position error
+        direction = [1 if e > 0 else -1 if e < 0 else 0 for e in pos_error]
 
+        # Apply force direction to force vector
+        force = [f * d for f, d in zip(force, direction)]
 
-
-
-
-
-
-
-        force = [ff1, ff2, ff3]
-
-        ###############################################################################################################
- 
+        # Publish the force as joint efforts
         joint_state_msg = JointState()
         joint_state_msg.position = self.gait_command.position
-
-        joint_state_msg.velocity = [0.0, 0.0, 0.0]  # Ensuring these are also floats
+        joint_state_msg.velocity = [0.0, 0.0, 0.0] 
         joint_state_msg.effort = force
-        
 
         self.publisher.publish(joint_state_msg)
 
