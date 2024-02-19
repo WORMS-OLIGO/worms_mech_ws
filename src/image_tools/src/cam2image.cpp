@@ -149,10 +149,11 @@ private:
     // Publish the image message and increment the publish_number_.
     RCLCPP_INFO(get_logger(), "Publishing image #%zd", publish_number_++);
 
-    if(this->is_active_)
-    {
-      pub_->publish(std::move(container));
-    }
+    pub_->publish(std::move(container));
+    // if(this->is_active_)
+    // {
+    //   pub_->publish(std::move(container));
+    // }
 
   }
 
