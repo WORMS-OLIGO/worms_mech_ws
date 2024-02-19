@@ -16,12 +16,11 @@ class JointCommandPublisher(Node):
 
         # Define waypoints (motor commands as positions here)
         self.waypoints = [
-            [0, 0, 0],
-            [0, -170, 115]
+            [0, 0, 0], [0, 170, 115], [30, 170, 115], [30, 45, 45], [0, 45, 45], [0, 0, 0]
         ]
 
         # Interpolate waypoints
-        self.interpolated_positions = self.interpolate_waypoints(self.waypoints, 1)
+        self.interpolated_positions = self.interpolate_waypoints(self.waypoints, .5)
 
         # Initialize index for interpolated positions
         self.position_index = 0
