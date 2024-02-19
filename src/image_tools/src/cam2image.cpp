@@ -82,30 +82,31 @@ private:
     // makes no guarantees about the order or reliability of delivery.
     qos.reliability(reliability_policy_);
     pub_ = create_publisher<image_tools::ROSCvMatContainer>("image", qos);
+   
 
     // Subscribe to a message that will toggle flipping or not flipping, and manage the state in a
     // callback
-    auto callback = [this](std_msgs::msg::Bool::ConstSharedPtr msg) -> void
+    auto camera_callback = [this](std_msgs::msg::Bool msg) -> void
       {
-        this->is_flipped_ = msg->data;
-        RCLCPP_INFO(this->get_logger(), "Set flip mode to: %s", this->is_flipped_ ? "on" : "off");
+        this->is_active_ = msg->data;
+        RCLCPP_INFO(this->get_logger(), "Camera is Actively Publishing!");
       };
-    // Set the QoS profile for the subscription to the flip message.
-    sub_ = create_subscription<std_msgs::msg::Bool>(
-      "flip_image", rclcpp::SensorDataQoS(), callback);
 
-    if (!burger_mode_) {
-      // Initialize OpenCV video capture stream.
-      cap.open(device_id_);
+    // Set the QoS profile for the subscription to the camera message.
+    sub_ = create_subscription<std_msgs::msg::Bool>("camera_trigger", rclcpp::SensorDataQoS(), camera_callback);
 
-      // Set the width and height based on command line arguments.
-      cap.set(cv::CAP_PROP_FRAME_WIDTH, static_cast<double>(width_));
-      cap.set(cv::CAP_PROP_FRAME_HEIGHT, static_cast<double>(height_));
-      if (!cap.isOpened()) {
-        RCLCPP_ERROR(this->get_logger(), "Could not open video stream");
-        throw std::runtime_error("Could not open video stream");
-      }
+    
+    // Initialize OpenCV video capture stream.
+    cap.open(device_id_);
+
+    // Set the width and height based on command line arguments.
+    cap.set(cv::CAP_PROP_FRAME_WIDTH, static_cast<double>(width_));
+    cap.set(cv::CAP_PROP_FRAME_HEIGHT, static_cast<double>(height_));
+    if (!cap.isOpened()) {
+      RCLCPP_ERROR(this->get_logger(), "Could not open video stream");
+      throw std::runtime_error("Could not open video stream");
     }
+    
 
     // Start main timer loop
     timer_ = this->create_wall_timer(
@@ -152,7 +153,12 @@ private:
 
     // Publish the image message and increment the publish_number_.
     RCLCPP_INFO(get_logger(), "Publishing image #%zd", publish_number_++);
-    pub_->publish(std::move(container));
+
+    if(this->_is_active_)
+    {
+      pub_->publish(std::move(container));
+    }
+    
   }
 
   IMAGE_TOOLS_LOCAL
@@ -271,7 +277,7 @@ private:
   int device_id_;
 
   /// If true, will cause the incoming camera image message to flip about the y-axis.
-  bool is_flipped_;
+  bool is_active_;
   /// The number of images published.
   size_t publish_number_;
 };
