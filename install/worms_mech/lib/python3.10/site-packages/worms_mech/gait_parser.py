@@ -8,7 +8,7 @@ class JointCommandPublisher(Node):
     def __init__(self):
         super().__init__('gait_parser')
 
-        self.publisher = self.create_publisher(JointState, 'joint_commands', 10)
+        self.publisher = self.create_publisher(JointState, 'gait_commands', 10)
 
         self.subscription = self.create_subscription(JointState, 'joint_states', self.joint_state_callback, 10)
 

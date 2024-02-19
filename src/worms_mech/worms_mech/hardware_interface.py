@@ -52,7 +52,6 @@ class MotorControllerNode(Node):
             K_ff = msg.effort[idx]
             pos_command = msg.position[idx]
 
-
             if(motor_id == 1):
                 self.pos1, self.vel1, self.curr1 = motor_controller.send_deg_command(pos_command, vel_command, Kp, Kd, K_ff)
                 

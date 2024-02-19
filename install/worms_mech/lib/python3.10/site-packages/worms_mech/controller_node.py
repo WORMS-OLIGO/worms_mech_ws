@@ -10,75 +10,50 @@ class JointCommandPublisher(Node):
 
         self.publisher = self.create_publisher(JointState, 'joint_commands', 10)
 
-        self.subscription = self.create_subscription(JointState, 'joint_states', self.joint_state_callback, 10)
+        self.state_subscriber = self.create_subscription(JointState, 'joint_states', self.joint_state_callback, 10)
+
+        self.gait_command_subscriber = self.create_subscription(JointState, 'gait_commands', self.gait_command_callback, 10)
+
+        self.joystick_command_subscriber = self.create_subscription(JointState, 'joystick_commands', self.joystick_command_callback, 10)
+
+        # MORE FOR OTHER INPUT METHODS: JOYSTICK ETC.
 
 
-
-        # Define waypoints (motor commands as positions here)
-        self.waypoints = [
-            [0, 0, 0],
-            [0, -170, 115]
-        ]
-
-        # Interpolate waypoints
-        self.interpolated_positions = self.interpolate_waypoints(self.waypoints, 1)
-
-        # Initialize index for interpolated positions
-        self.position_index = 0
-
-        # Timer for sending commands at each interval (adjust time as needed)
-        self.timer = self.create_timer(0.1, self.timer_callback)
 
     def joint_state_callback(self, msg):
         
         # Update the first waypoint with the current position
         self.current_pose = msg
 
-        if hasattr(self, 'current_pose') and self.current_pose is not None:
-            position_str = ', '.join([f"{p:.2f}" for p in self.current_pose.position])
-            self.get_logger().info(f'Path complete. Holding Position at: [{position_str}]')
+    def joystick_command_callback(self, msg):
+        self.joystick_command = msg
 
-    def interpolate_waypoints(self, waypoints, interval_degrees):
-        interpolated = []
-        for i in range(len(waypoints) - 1):
-            start = waypoints[i]
-            end = waypoints[i + 1]
-            distance = np.linalg.norm(np.array(end) - np.array(start))
-            steps = int(distance / interval_degrees)
-            for step in range(steps + 1):
-                interpolated.append(np.array(start) + (np.array(end) - np.array(start)) * step / steps)
-        return interpolated
+    def gait_command_callback(self, msg):
+        
+        # Update the first waypoint with the current command
+        self.gait_command = msg
 
-    def timer_callback(self):
+        pos_error = self.current_pose.position - self.gait_command.position
 
-        if self.position_index < len(self.interpolated_positions):
-            # Ensure the position command is a list of floats
-            self.position_command = list(map(float, self.interpolated_positions[self.position_index]))
+        # GIVEN SOME POSE ERROR CALCULATE THE NECCESARY 
+        k_p = 1.0  
 
-            self.get_logger().info(f"Publishing command: {self.position_command}")
+        # Calculate the force needed
+        force = [pos_error[0] * k_p, pos_error[1] * k_p, pos_error[2] * k_p]
 
-            joint_state_msg = JointState()
-            joint_state_msg.header.stamp = self.get_clock().now().to_msg()
-            joint_state_msg.position = self.position_command
-            joint_state_msg.velocity = [0.0, 0.0, 0.0]  # Ensuring these are also floats
-            joint_state_msg.effort = [0.0, 0.0, 0.0]
-            self.publisher.publish(joint_state_msg)
+        # Direction of force is the sign of position error
+        direction = [1 if e > 0 else -1 if e < 0 else 0 for e in pos_error]
 
-            self.position_index += 1
+        # Apply force direction to force vector
+        force = [f * d for f, d in zip(force, direction)]
 
-        else:
+        # Publish the force as joint efforts
+        joint_state_msg = JointState()
+        joint_state_msg.position = self.gait_command.position
+        joint_state_msg.velocity = [0.0, 0.0, 0.0] 
+        joint_state_msg.effort = force
 
-            joint_state_msg = JointState()
-
-            joint_state_msg.position = self.position_command
-            joint_state_msg.velocity = [0.0, 0.0, 0.0]  # Ensuring these are also floats
-            joint_state_msg.effort = [0.0, 0.0, 0.0]
-            
-            if hasattr(self, 'current_pose') and self.current_pose is not None:
-                position_str = ', '.join([f"{p:.2f}" for p in self.current_pose.position])
-                self.get_logger().info(f'Path complete. Holding Position at: [{position_str}]')
-
-            self.publisher.publish(joint_state_msg)
+        self.publisher.publish(joint_state_msg)
 
 def main(args=None):
     rclpy.init(args=args)
