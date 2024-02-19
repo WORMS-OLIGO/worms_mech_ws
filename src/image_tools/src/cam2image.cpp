@@ -47,9 +47,11 @@ public:
   IMAGE_TOOLS_PUBLIC
   explicit Cam2Image(const rclcpp::NodeOptions & options)
   : Node("cam2image", options),
-    is_flipped_(false),
+    is_active_(false),
     publish_number_(1u)
   {
+    std::cout<<"NEW CODE BEING RUN. NOT OLD COLD YUHHHHH" << std::endl;
+
     setvbuf(stdout, NULL, _IONBF, BUFSIZ);
     // Do not execute if a --help option was provided
     if (help(options.arguments())) {
@@ -82,7 +84,6 @@ private:
     // makes no guarantees about the order or reliability of delivery.
     qos.reliability(reliability_policy_);
     pub_ = create_publisher<image_tools::ROSCvMatContainer>("image", qos);
-   
 
     // Subscribe to a message that will toggle flipping or not flipping, and manage the state in a
     // callback
@@ -95,7 +96,6 @@ private:
     // Set the QoS profile for the subscription to the camera message.
     sub_ = create_subscription<std_msgs::msg::Bool>("camera_trigger", rclcpp::SensorDataQoS(), camera_callback);
 
-    
     // Initialize OpenCV video capture stream.
     cap.open(device_id_);
 
@@ -133,11 +133,6 @@ private:
       return;
     }
 
-    // Conditionally flip the image
-    if (is_flipped_) {
-      cv::flip(frame, frame, 1);
-    }
-
     // Conditionally show image
     if (show_camera_) {
       // Show the image in a window called "cam2image".
@@ -158,7 +153,7 @@ private:
     {
       pub_->publish(std::move(container));
     }
-    
+
   }
 
   IMAGE_TOOLS_LOCAL
