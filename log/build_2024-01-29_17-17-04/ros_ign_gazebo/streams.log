@@ -1,4 +1,0 @@
-[0.163s] Invoking command in '/home/jacobrod/worms_ws/build/ros_ign_gazebo': AMENT_PREFIX_PATH=/home/jacobrod/worms_ws/install/ros_gz_sim:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/jacobrod/worms_ws/install/ros_gz_sim:/opt/ros/humble LD_LIBRARY_PATH=/home/jacobrod/worms_ws/install/ros_gz_sim/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/jacobrod/worms_ws/build/ros_ign_gazebo -- -j8 -l8
-[0.189s] [35m[1mConsolidate compiler generated dependencies of target create[0m
-[0.216s] [100%] Built target create
-[0.389s] Invoked command in '/home/jacobrod/worms_ws/build/ros_ign_gazebo' returned '0': AMENT_PREFIX_PATH=/home/jacobrod/worms_ws/install/ros_gz_sim:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/jacobrod/worms_ws/install/ros_gz_sim:/opt/ros/humble LD_LIBRARY_PATH=/home/jacobrod/worms_ws/install/ros_gz_sim/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/jacobrod/worms_ws/build/ros_ign_gazebo -- -j8 -l8
