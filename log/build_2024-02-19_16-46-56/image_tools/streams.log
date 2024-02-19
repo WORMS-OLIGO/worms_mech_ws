@@ -1,0 +1,42 @@
+[0.066s] Invoking command in '/home/worm6/worms_mech_ws/build/image_tools': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/worm6/worms_mech_ws/install/worms_mech:/opt/ros/humble /usr/bin/cmake --build /home/worm6/worms_mech_ws/build/image_tools -- -j4 -l4
+[0.290s] [35m[1mConsolidate compiler generated dependencies of target image_tools[0m
+[0.376s] [ 22%] Built target cam2image
+[0.384s] [ 44%] Built target showimage
+[0.443s] [ 55%] [32mBuilding CXX object CMakeFiles/image_tools.dir/src/cam2image.cpp.o[0m
+[62.656s] [ 66%] [32m[1mLinking CXX shared library libimage_tools.so[0m
+[66.740s] [100%] Built target image_tools
+[66.782s] Invoked command in '/home/worm6/worms_mech_ws/build/image_tools' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/worm6/worms_mech_ws/install/worms_mech:/opt/ros/humble /usr/bin/cmake --build /home/worm6/worms_mech_ws/build/image_tools -- -j4 -l4
+[67.020s] Invoking command in '/home/worm6/worms_mech_ws/build/image_tools': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/worm6/worms_mech_ws/install/worms_mech:/opt/ros/humble /usr/bin/cmake --install /home/worm6/worms_mech_ws/build/image_tools
+[67.048s] -- Install configuration: ""
+[67.049s] -- Up-to-date: /home/worm6/worms_mech_ws/install/image_tools/lib/image_tools/cam2image
+[67.052s] -- Up-to-date: /home/worm6/worms_mech_ws/install/image_tools/lib/image_tools/showimage
+[67.055s] -- Installing: /home/worm6/worms_mech_ws/install/image_tools/lib/libimage_tools.so
+[67.151s] -- Set runtime path of "/home/worm6/worms_mech_ws/install/image_tools/lib/libimage_tools.so" to ""
+[67.151s] -- Up-to-date: /home/worm6/worms_mech_ws/install/image_tools/include/image_tools
+[67.152s] -- Up-to-date: /home/worm6/worms_mech_ws/install/image_tools/include/image_tools/image_tools
+[67.152s] -- Up-to-date: /home/worm6/worms_mech_ws/install/image_tools/include/image_tools/image_tools/cv_mat_sensor_msgs_image_type_adapter.hpp
+[67.153s] -- Up-to-date: /home/worm6/worms_mech_ws/install/image_tools/include/image_tools/image_tools/visibility_control.h
+[67.153s] -- Up-to-date: /home/worm6/worms_mech_ws/install/image_tools/share/image_tools/environment/library_path.sh
+[67.154s] -- Up-to-date: /home/worm6/worms_mech_ws/install/image_tools/share/image_tools/environment/library_path.dsv
+[67.154s] -- Up-to-date: /home/worm6/worms_mech_ws/install/image_tools/share/ament_index/resource_index/package_run_dependencies/image_tools
+[67.155s] -- Up-to-date: /home/worm6/worms_mech_ws/install/image_tools/share/ament_index/resource_index/parent_prefix_path/image_tools
+[67.156s] -- Up-to-date: /home/worm6/worms_mech_ws/install/image_tools/share/image_tools/environment/ament_prefix_path.sh
+[67.156s] -- Up-to-date: /home/worm6/worms_mech_ws/install/image_tools/share/image_tools/environment/ament_prefix_path.dsv
+[67.157s] -- Up-to-date: /home/worm6/worms_mech_ws/install/image_tools/share/image_tools/environment/path.sh
+[67.157s] -- Up-to-date: /home/worm6/worms_mech_ws/install/image_tools/share/image_tools/environment/path.dsv
+[67.159s] -- Up-to-date: /home/worm6/worms_mech_ws/install/image_tools/share/image_tools/local_setup.bash
+[67.159s] -- Up-to-date: /home/worm6/worms_mech_ws/install/image_tools/share/image_tools/local_setup.sh
+[67.160s] -- Up-to-date: /home/worm6/worms_mech_ws/install/image_tools/share/image_tools/local_setup.zsh
+[67.160s] -- Up-to-date: /home/worm6/worms_mech_ws/install/image_tools/share/image_tools/local_setup.dsv
+[67.161s] -- Installing: /home/worm6/worms_mech_ws/install/image_tools/share/image_tools/package.dsv
+[67.162s] -- Up-to-date: /home/worm6/worms_mech_ws/install/image_tools/share/ament_index/resource_index/packages/image_tools
+[67.162s] -- Up-to-date: /home/worm6/worms_mech_ws/install/image_tools/share/ament_index/resource_index/rclcpp_components/image_tools
+[67.163s] -- Up-to-date: /home/worm6/worms_mech_ws/install/image_tools/share/image_tools/cmake/image_toolsExport.cmake
+[67.163s] -- Up-to-date: /home/worm6/worms_mech_ws/install/image_tools/share/image_tools/cmake/image_toolsExport-noconfig.cmake
+[67.164s] -- Up-to-date: /home/worm6/worms_mech_ws/install/image_tools/share/image_tools/cmake/ament_cmake_export_libraries-extras.cmake
+[67.164s] -- Up-to-date: /home/worm6/worms_mech_ws/install/image_tools/share/image_tools/cmake/ament_cmake_export_targets-extras.cmake
+[67.165s] -- Up-to-date: /home/worm6/worms_mech_ws/install/image_tools/share/image_tools/cmake/ament_cmake_export_dependencies-extras.cmake
+[67.165s] -- Up-to-date: /home/worm6/worms_mech_ws/install/image_tools/share/image_tools/cmake/image_toolsConfig.cmake
+[67.166s] -- Up-to-date: /home/worm6/worms_mech_ws/install/image_tools/share/image_tools/cmake/image_toolsConfig-version.cmake
+[67.166s] -- Up-to-date: /home/worm6/worms_mech_ws/install/image_tools/share/image_tools/package.xml
+[67.171s] Invoked command in '/home/worm6/worms_mech_ws/build/image_tools' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/worm6/worms_mech_ws/install/worms_mech:/opt/ros/humble /usr/bin/cmake --install /home/worm6/worms_mech_ws/build/image_tools

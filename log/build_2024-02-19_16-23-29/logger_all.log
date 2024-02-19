@@ -1,0 +1,170 @@
+[1.639s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'image_tools']
+[1.639s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['image_tools'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0xffffb2092380>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffffb2a85750>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffffb2a85750>>)
+[1.757s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[1.758s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[1.758s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[1.758s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[1.758s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[1.759s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[1.759s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/worm6/worms_mech_ws'
+[1.759s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[1.760s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[1.760s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[1.760s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[1.761s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[1.761s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[1.761s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[1.761s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[1.761s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[1.848s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[1.848s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[1.848s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[1.848s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[1.849s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[1.849s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[1.850s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[1.850s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[1.851s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[1.851s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[1.851s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[1.852s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[1.852s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[1.853s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[1.853s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[1.854s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[1.854s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[1.854s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[1.854s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[1.855s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[1.855s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[1.855s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[1.855s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[1.856s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[1.856s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[1.856s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[1.856s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[1.856s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[1.857s] Level 1:colcon.colcon_core.package_identification:_identify(src/image_tools) by extensions ['ignore', 'ignore_ament_install']
+[1.857s] Level 1:colcon.colcon_core.package_identification:_identify(src/image_tools) by extension 'ignore'
+[1.858s] Level 1:colcon.colcon_core.package_identification:_identify(src/image_tools) by extension 'ignore_ament_install'
+[1.858s] Level 1:colcon.colcon_core.package_identification:_identify(src/image_tools) by extensions ['colcon_pkg']
+[1.858s] Level 1:colcon.colcon_core.package_identification:_identify(src/image_tools) by extension 'colcon_pkg'
+[1.858s] Level 1:colcon.colcon_core.package_identification:_identify(src/image_tools) by extensions ['colcon_meta']
+[1.858s] Level 1:colcon.colcon_core.package_identification:_identify(src/image_tools) by extension 'colcon_meta'
+[1.859s] Level 1:colcon.colcon_core.package_identification:_identify(src/image_tools) by extensions ['ros']
+[1.859s] Level 1:colcon.colcon_core.package_identification:_identify(src/image_tools) by extension 'ros'
+[1.870s] DEBUG:colcon.colcon_core.package_identification:Package 'src/image_tools' with type 'ros.ament_cmake' and name 'image_tools'
+[1.871s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_mech) by extensions ['ignore', 'ignore_ament_install']
+[1.871s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_mech) by extension 'ignore'
+[1.871s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_mech) by extension 'ignore_ament_install'
+[1.872s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_mech) by extensions ['colcon_pkg']
+[1.872s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_mech) by extension 'colcon_pkg'
+[1.872s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_mech) by extensions ['colcon_meta']
+[1.872s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_mech) by extension 'colcon_meta'
+[1.873s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_mech) by extensions ['ros']
+[1.873s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_mech) by extension 'ros'
+[1.875s] DEBUG:colcon.colcon_core.package_identification:Package 'src/worms_mech' with type 'ros.ament_python' and name 'worms_mech'
+[1.875s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[1.875s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[1.876s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[1.876s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[1.876s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[1.986s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'worms_mech' in 'src/worms_mech'
+[1.989s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[1.990s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[2.003s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 2 installed packages in /home/worm6/worms_mech_ws/install
+[2.014s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 270 installed packages in /opt/ros/humble
+[2.021s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[2.331s] WARNING:colcon.colcon_core.package_selection:Some selected packages are already built in one or more underlay workspaces:
+	'image_tools' is in: /home/worm6/worms_mech_ws/install/image_tools, /opt/ros/humble
+If a package in a merged underlay workspace is overridden and it installs headers, then all packages in the overlay must sort their include directories by workspace order. Failure to do so may result in build failures or undefined behavior at run time.
+If the overridden package is used by another package in any underlay, then the overriding package in the overlay must be API and ABI compatible or undefined behavior at run time may occur.
+
+If you understand the risks and want to override a package anyways, add the following to the command line:
+	--allow-overriding image_tools
+
+This may be promoted to an error in a future release of colcon-override-check.
+[2.339s] Level 5:colcon.colcon_core.verb:set package 'image_tools' build argument 'cmake_args' from command line to 'None'
+[2.339s] Level 5:colcon.colcon_core.verb:set package 'image_tools' build argument 'cmake_target' from command line to 'None'
+[2.340s] Level 5:colcon.colcon_core.verb:set package 'image_tools' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.340s] Level 5:colcon.colcon_core.verb:set package 'image_tools' build argument 'cmake_clean_cache' from command line to 'False'
+[2.340s] Level 5:colcon.colcon_core.verb:set package 'image_tools' build argument 'cmake_clean_first' from command line to 'False'
+[2.340s] Level 5:colcon.colcon_core.verb:set package 'image_tools' build argument 'cmake_force_configure' from command line to 'False'
+[2.340s] Level 5:colcon.colcon_core.verb:set package 'image_tools' build argument 'ament_cmake_args' from command line to 'None'
+[2.340s] Level 5:colcon.colcon_core.verb:set package 'image_tools' build argument 'catkin_cmake_args' from command line to 'None'
+[2.340s] Level 5:colcon.colcon_core.verb:set package 'image_tools' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.340s] DEBUG:colcon.colcon_core.verb:Building package 'image_tools' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/worm6/worms_mech_ws/build/image_tools', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/worm6/worms_mech_ws/install/image_tools', 'merge_install': False, 'path': '/home/worm6/worms_mech_ws/src/image_tools', 'symlink_install': False, 'test_result_base': None}
+[2.343s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[2.360s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[2.362s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/worm6/worms_mech_ws/src/image_tools' with build type 'ament_cmake'
+[2.362s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/worm6/worms_mech_ws/src/image_tools'
+[2.390s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[2.391s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.392s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.437s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/worm6/worms_mech_ws/build/image_tools': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/worm6/worms_mech_ws/install/worms_mech:/opt/ros/humble /usr/bin/cmake --build /home/worm6/worms_mech_ws/build/image_tools -- -j4 -l4
+[2.770s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/worm6/worms_mech_ws/build/image_tools' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/worm6/worms_mech_ws/install/worms_mech:/opt/ros/humble /usr/bin/cmake --build /home/worm6/worms_mech_ws/build/image_tools -- -j4 -l4
+[3.010s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/worm6/worms_mech_ws/build/image_tools': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/worm6/worms_mech_ws/install/worms_mech:/opt/ros/humble /usr/bin/cmake --install /home/worm6/worms_mech_ws/build/image_tools
+[3.075s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(image_tools)
+[3.080s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/worm6/worms_mech_ws/build/image_tools' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/worm6/worms_mech_ws/install/worms_mech:/opt/ros/humble /usr/bin/cmake --install /home/worm6/worms_mech_ws/build/image_tools
+[3.101s] Level 1:colcon.colcon_core.environment:checking '/home/worm6/worms_mech_ws/install/image_tools' for CMake module files
+[3.104s] Level 1:colcon.colcon_core.environment:checking '/home/worm6/worms_mech_ws/install/image_tools' for CMake config files
+[3.106s] Level 1:colcon.colcon_core.shell:create_environment_hook('image_tools', 'cmake_prefix_path')
+[3.113s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/worm6/worms_mech_ws/install/image_tools/share/image_tools/hook/cmake_prefix_path.ps1'
+[3.116s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/worm6/worms_mech_ws/install/image_tools/share/image_tools/hook/cmake_prefix_path.dsv'
+[3.118s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/worm6/worms_mech_ws/install/image_tools/share/image_tools/hook/cmake_prefix_path.sh'
+[3.122s] Level 1:colcon.colcon_core.environment:checking '/home/worm6/worms_mech_ws/install/image_tools/lib'
+[3.123s] Level 1:colcon.colcon_core.shell:create_environment_hook('image_tools', 'ld_library_path_lib')
+[3.129s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/worm6/worms_mech_ws/install/image_tools/share/image_tools/hook/ld_library_path_lib.ps1'
+[3.131s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/worm6/worms_mech_ws/install/image_tools/share/image_tools/hook/ld_library_path_lib.dsv'
+[3.133s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/worm6/worms_mech_ws/install/image_tools/share/image_tools/hook/ld_library_path_lib.sh'
+[3.136s] Level 1:colcon.colcon_core.environment:checking '/home/worm6/worms_mech_ws/install/image_tools/bin'
+[3.137s] Level 1:colcon.colcon_core.environment:checking '/home/worm6/worms_mech_ws/install/image_tools/lib/pkgconfig/image_tools.pc'
+[3.139s] Level 1:colcon.colcon_core.environment:checking '/home/worm6/worms_mech_ws/install/image_tools/lib/python3.10/site-packages'
+[3.140s] Level 1:colcon.colcon_core.environment:checking '/home/worm6/worms_mech_ws/install/image_tools/bin'
+[3.145s] INFO:colcon.colcon_core.shell:Creating package script '/home/worm6/worms_mech_ws/install/image_tools/share/image_tools/package.ps1'
+[3.149s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/worm6/worms_mech_ws/install/image_tools/share/image_tools/package.dsv'
+[3.152s] INFO:colcon.colcon_core.shell:Creating package script '/home/worm6/worms_mech_ws/install/image_tools/share/image_tools/package.sh'
+[3.156s] INFO:colcon.colcon_core.shell:Creating package script '/home/worm6/worms_mech_ws/install/image_tools/share/image_tools/package.bash'
+[3.159s] INFO:colcon.colcon_core.shell:Creating package script '/home/worm6/worms_mech_ws/install/image_tools/share/image_tools/package.zsh'
+[3.162s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/worm6/worms_mech_ws/install/image_tools/share/colcon-core/packages/image_tools)
+[3.368s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(image_tools)
+[3.377s] Level 1:colcon.colcon_core.environment:checking '/home/worm6/worms_mech_ws/install/image_tools' for CMake module files
+[3.381s] Level 1:colcon.colcon_core.environment:checking '/home/worm6/worms_mech_ws/install/image_tools' for CMake config files
+[3.385s] Level 1:colcon.colcon_core.shell:create_environment_hook('image_tools', 'cmake_prefix_path')
+[3.393s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/worm6/worms_mech_ws/install/image_tools/share/image_tools/hook/cmake_prefix_path.ps1'
+[3.397s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/worm6/worms_mech_ws/install/image_tools/share/image_tools/hook/cmake_prefix_path.dsv'
+[3.400s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/worm6/worms_mech_ws/install/image_tools/share/image_tools/hook/cmake_prefix_path.sh'
+[3.404s] Level 1:colcon.colcon_core.environment:checking '/home/worm6/worms_mech_ws/install/image_tools/lib'
+[3.404s] Level 1:colcon.colcon_core.shell:create_environment_hook('image_tools', 'ld_library_path_lib')
+[3.410s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/worm6/worms_mech_ws/install/image_tools/share/image_tools/hook/ld_library_path_lib.ps1'
+[3.412s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/worm6/worms_mech_ws/install/image_tools/share/image_tools/hook/ld_library_path_lib.dsv'
+[3.415s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/worm6/worms_mech_ws/install/image_tools/share/image_tools/hook/ld_library_path_lib.sh'
+[3.417s] Level 1:colcon.colcon_core.environment:checking '/home/worm6/worms_mech_ws/install/image_tools/bin'
+[3.418s] Level 1:colcon.colcon_core.environment:checking '/home/worm6/worms_mech_ws/install/image_tools/lib/pkgconfig/image_tools.pc'
+[3.419s] Level 1:colcon.colcon_core.environment:checking '/home/worm6/worms_mech_ws/install/image_tools/lib/python3.10/site-packages'
+[3.420s] Level 1:colcon.colcon_core.environment:checking '/home/worm6/worms_mech_ws/install/image_tools/bin'
+[3.426s] INFO:colcon.colcon_core.shell:Creating package script '/home/worm6/worms_mech_ws/install/image_tools/share/image_tools/package.ps1'
+[3.428s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/worm6/worms_mech_ws/install/image_tools/share/image_tools/package.dsv'
+[3.431s] INFO:colcon.colcon_core.shell:Creating package script '/home/worm6/worms_mech_ws/install/image_tools/share/image_tools/package.sh'
+[3.434s] INFO:colcon.colcon_core.shell:Creating package script '/home/worm6/worms_mech_ws/install/image_tools/share/image_tools/package.bash'
+[3.436s] INFO:colcon.colcon_core.shell:Creating package script '/home/worm6/worms_mech_ws/install/image_tools/share/image_tools/package.zsh'
+[3.439s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/worm6/worms_mech_ws/install/image_tools/share/colcon-core/packages/image_tools)
+[3.441s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[3.442s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[3.442s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[3.443s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[3.472s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[3.472s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[3.472s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[3.478s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Notifications was not provided by any .service files
+[3.478s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[3.483s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/worm6/worms_mech_ws/install/local_setup.ps1'
+[3.487s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/worm6/worms_mech_ws/install/_local_setup_util_ps1.py'
+[3.492s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/worm6/worms_mech_ws/install/setup.ps1'
+[3.499s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/worm6/worms_mech_ws/install/local_setup.sh'
+[3.502s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/worm6/worms_mech_ws/install/_local_setup_util_sh.py'
+[3.505s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/worm6/worms_mech_ws/install/setup.sh'
+[3.512s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/worm6/worms_mech_ws/install/local_setup.bash'
+[3.514s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/worm6/worms_mech_ws/install/setup.bash'
+[3.521s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/worm6/worms_mech_ws/install/local_setup.zsh'
+[3.524s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/worm6/worms_mech_ws/install/setup.zsh'

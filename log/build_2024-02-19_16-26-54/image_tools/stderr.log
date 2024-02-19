@@ -1,0 +1,12 @@
+[01m[K/home/worm6/worms_mech_ws/src/image_tools/src/cam2image.cpp:[m[K In lambda function:
+[01m[K/home/worm6/worms_mech_ws/src/image_tools/src/cam2image.cpp:92:31:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kstd_msgs::msg::Bool[m[K’ {aka ‘[01m[Kstd_msgs::msg::Bool_<std::allocator<void> >[m[K’}
+   92 |         this->is_active_ = msg[01;31m[K->[m[Kdata;
+      |                               [01;31m[K^~[m[K
+[01m[K/home/worm6/worms_mech_ws/src/image_tools/src/cam2image.cpp:[m[K In member function ‘[01m[Kvoid image_tools::Cam2Image::timerCallback()[m[K’:
+[01m[K/home/worm6/worms_mech_ws/src/image_tools/src/cam2image.cpp:152:14:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass image_tools::Cam2Image[m[K’ has no member named ‘[01m[K_is_active_[m[K’; did you mean ‘[01m[Kis_active_[m[K’?
+  152 |     if(this->[01;31m[K_is_active_[m[K)
+      |              [01;31m[K^~~~~~~~~~~[m[K
+      |              [32m[Kis_active_[m[K
+gmake[2]: *** [CMakeFiles/image_tools.dir/build.make:90: CMakeFiles/image_tools.dir/src/cam2image.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:141: CMakeFiles/image_tools.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
