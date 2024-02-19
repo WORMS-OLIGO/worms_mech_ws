@@ -87,7 +87,7 @@ private:
 
     // Subscribe to a message that will toggle flipping or not flipping, and manage the state in a
     // callback
-    auto camera_callback = [this](std_msgs::msg::BoolConstSharedPtr msg) -> void
+    auto camera_callback = [this](std_msgs::msg::Bool::ConstSharedPt msg) -> void
       {
         this->is_active_ = msg->data;
         RCLCPP_INFO(this->get_logger(), "Camera is Actively Publishing!");
