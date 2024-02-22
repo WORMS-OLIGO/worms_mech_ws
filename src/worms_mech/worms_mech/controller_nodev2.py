@@ -1,3 +1,5 @@
+# JointCommandPublisher
+
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import JointState
@@ -6,7 +8,7 @@ import numpy as np
 
 class JointCommandPublisher(Node):
     def __init__(self):
-        super().__init__('controller_node')
+        super().__init__('controller_nodev2')
 
         self.publisher = self.create_publisher(JointState, 'joint_commands', 10)
 
@@ -18,10 +20,7 @@ class JointCommandPublisher(Node):
 
         # MORE FOR OTHER INPUT METHODS: JOYSTICK ETC.
 
-
-
     def joint_state_callback(self, msg):
-        
         # Update the first waypoint with the current position
         self.current_pose = msg
 
@@ -29,13 +28,12 @@ class JointCommandPublisher(Node):
         self.joystick_command = msg
 
     def gait_command_callback(self, msg):
-        
         # Update the first waypoint with the current command
         self.gait_command = msg
 
         pos_error = self.current_pose.position - self.gait_command.position
 
-        # GIVEN SOME POSE ERROR CALCULATE THE NECCESARY 
+        # GIVEN SOME POSE ERROR CALCULATE THE NECESSARY 
         k_p = 1.0  
 
         # Calculate the force needed
@@ -53,8 +51,7 @@ class JointCommandPublisher(Node):
         joint_state_msg.velocity = [0.0, 0.0, 0.0] 
         joint_state_msg.effort = force
 
-        #self.publisher.publish(joint_state_msg)
-        print(joint_state_msg)
+        self.publisher.publish(joint_state_msg)
 
 def main(args=None):
     rclpy.init(args=args)
