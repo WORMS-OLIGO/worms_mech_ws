@@ -25,7 +25,8 @@ setup(
             'controller_node = worms_mech.controller_node:main',
             'testbed_interface = worms_mech.testbed_interface:main',
             'joint_command_publisher = worms_mech.joint_command_publisher:main',
-            'joystick_control = worms_mech.joystick_control:main'
+            'joystick_control = worms_mech.joystick_control:main',
+            'stand_node = worms_mech.stand_node:main'
         ],
     },
 )
