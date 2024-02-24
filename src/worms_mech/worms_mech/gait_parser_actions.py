@@ -1,6 +1,6 @@
 import rclpy
 from rclpy.node import Node
-from sensor_msgs.msg import JointState
+from sensor_msgs.msg import JointState, String
 from rclpy.executors import MultiThreadedExecutor
 import numpy as np
 
@@ -11,20 +11,31 @@ class JointCommandPublisher(Node):
         self.publisher = self.create_publisher(JointState, 'joint_commands', 10)
 
         self.subscription = self.create_subscription(JointState, 'joint_states', self.joint_state_callback, 10)
-        self.subscription = self.create_subscription(String, 'actions', self.joint_state_callback, 10)
+        self.subscription = self.create_subscription(String, 'actions', self.actions_callback, 10)
 
-
+        self.execute_timer_callback = False
 
         # Define waypoints (motor commands as positions here)
-        self.waypoints = [
+        self.br_step_waypoints = [
             [0, -145, -175], 
             [30, -145, -175], #Dead Position to Prob Position
             [30, -135, -175],
               
         ]
+        self.br_prone_waypoints = [
+            [0, -135, -175]
+        ]
+
+        self.br_lift_waypoints = [
+            [30, -45, -35]
+        ]
+
+        # PROPEL?????
 
         # Interpolate waypoints
-        self.interpolated_positions = self.interpolate_waypoints(self.waypoints, .5)
+        self.br_step_interpolated_positions = self.interpolate_waypoints(self.br_step_waypoints, .5)
+        self.br_prone_interpolated_positions = self.interpolate_waypoints(self.br_prone_waypoints, .5)
+        self.br_lift_interpolated_positions = self.interpolate_waypoints(self.br_lift_waypoints, .5)
 
         # Initialize index for interpolated positions
         self.position_index = 0
@@ -71,6 +82,7 @@ class JointCommandPublisher(Node):
                 self.position_index += 1
 
             else:
+                
 
                 joint_state_msg = JointState()
 
@@ -84,13 +96,23 @@ class JointCommandPublisher(Node):
 
                 self.publisher.publish(joint_state_msg)
         else:
+            self.execute_timer_callback = False
             self.timer.cancel()
 
     def actions_callback(self, msg):
         if msg.data == "step":
             self.execute_timer_callback = True
+            self.interpolated_positions = self.br_step_interpolated_positions
             self.timer_callback()
-
+            self.action = "step"
+        if msg.data == "lift":
+            self.execute_timer_callback = True
+            self.interpolated_positions = self.br_lift_interpolated_positions
+            self.timer_callback()            
+        if msg.data == "prone":
+            self.execute_timer_callback = True
+            self.interpolated_positions = self.br_prone_interpolated_positions
+            self.timer_callback()
 
 def main(args=None):
     rclpy.init(args=args)
