@@ -26,7 +26,7 @@ setup(
             'testbed_interface = worms_mech.testbed_interface:main',
             'joint_command_publisher = worms_mech.joint_command_publisher:main',
             'joystick_control = worms_mech.joystick_control:main',
-            'gait_parser_step = worms_mech.gait_parser_step:main',
+            'gait_parser_actions = worms_mech.gait_parser_actions:main',
             
             
         ],
