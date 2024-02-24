@@ -11,6 +11,7 @@ class JointCommandPublisher(Node):
         self.publisher = self.create_publisher(JointState, 'joint_commands', 10)
 
         self.subscription = self.create_subscription(JointState, 'joint_states', self.joint_state_callback, 10)
+        self.subscription = self.create_subscription(String, 'actions', self.joint_state_callback, 10)
 
 
 
@@ -53,34 +54,43 @@ class JointCommandPublisher(Node):
 
     def timer_callback(self):
 
-        if self.position_index < len(self.interpolated_positions):
-            # Ensure the position command is a list of floats
-            self.position_command = list(map(float, self.interpolated_positions[self.position_index]))
+        if self.execute_timer_callback:
+            if self.position_index < len(self.interpolated_positions):
+                # Ensure the position command is a list of floats
+                self.position_command = list(map(float, self.interpolated_positions[self.position_index]))
 
-            self.get_logger().info(f"Publishing command: {self.position_command}")
+                self.get_logger().info(f"Publishing command: {self.position_command}")
 
-            joint_state_msg = JointState()
-            joint_state_msg.header.stamp = self.get_clock().now().to_msg()
-            joint_state_msg.position = self.position_command
-            joint_state_msg.velocity = [0.0, 0.0, 0.0]  # Ensuring these are also floats
-            joint_state_msg.effort = [0.0, 0.0, 0.0]
-            self.publisher.publish(joint_state_msg)
+                joint_state_msg = JointState()
+                joint_state_msg.header.stamp = self.get_clock().now().to_msg()
+                joint_state_msg.position = self.position_command
+                joint_state_msg.velocity = [0.0, 0.0, 0.0]  # Ensuring these are also floats
+                joint_state_msg.effort = [0.0, 0.0, 0.0]
+                self.publisher.publish(joint_state_msg)
 
-            self.position_index += 1
+                self.position_index += 1
 
+            else:
+
+                joint_state_msg = JointState()
+
+                joint_state_msg.position = self.position_command
+                joint_state_msg.velocity = [0.0, 0.0, 0.0]  # Ensuring these are also floats
+                joint_state_msg.effort = [0.0, 0.0, 0.0]
+                
+                if hasattr(self, 'current_pose') and self.current_pose is not None:
+                    position_str = ', '.join([f"{p:.2f}" for p in self.current_pose.position])
+                    self.get_logger().info(f'Path complete. Holding Position at: [{position_str}]')
+
+                self.publisher.publish(joint_state_msg)
         else:
+            self.timer.cancel()
 
-            joint_state_msg = JointState()
+    def actions_callback(self, msg):
+        if msg.data == "step":
+            self.execute_timer_callback = True
+            self.timer_callback()
 
-            joint_state_msg.position = self.position_command
-            joint_state_msg.velocity = [0.0, 0.0, 0.0]  # Ensuring these are also floats
-            joint_state_msg.effort = [0.0, 0.0, 0.0]
-            
-            if hasattr(self, 'current_pose') and self.current_pose is not None:
-                position_str = ', '.join([f"{p:.2f}" for p in self.current_pose.position])
-                self.get_logger().info(f'Path complete. Holding Position at: [{position_str}]')
-
-            self.publisher.publish(joint_state_msg)
 
 def main(args=None):
     rclpy.init(args=args)
