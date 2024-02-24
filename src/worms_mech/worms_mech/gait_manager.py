@@ -8,7 +8,7 @@ import subprocess
 import platform
 
 def get_mac_address():
-    # This command should work on Linux, including Ubuntu on Raspberry Pi
+    # This command should work on Linux
     try:
         # Tries to get the MAC address of the first network interface
         interface = subprocess.check_output("ls /sys/class/net | head -n 1", shell=True).decode().strip()
@@ -20,7 +20,7 @@ def get_mac_address():
 
 def find_robot_name(mac_address, spreadsheet_path):
     df = pd.read_csv(spreadsheet_path)
-    match = df.loc[df['MAC'] == mac_address, 'RobotName']
+    match = df.loc[df['MAC Address'] == mac_address, 'Species']
     if not match.empty:
         return match.iloc[0]
     else:
@@ -28,7 +28,7 @@ def find_robot_name(mac_address, spreadsheet_path):
 
 class JointCommandPublisher(Node):
     def __init__(self):
-        super().__init__('gait_parser')
+        super().__init__('gait_manager')
 
         # Move MAC address retrieval and robot name finding into the class initializer
         spreadsheet_path = 'database.csv'  # Update this path
@@ -41,16 +41,19 @@ class JointCommandPublisher(Node):
         joint_commands_topic = f'/{species}_joint_commands'
         joint_states_topic = f'/{species}_joint_states'
 
-        self.publisher = self.create_publisher(JointState, joint_commands_topic, 10)
-        self.subscription = self.create_subscription(JointState, joint_states_topic, self.joint_state_callback, 10)
+        print(joint_commands_topic)
+        print(joint_states_topic)
 
-        self.waypoints = [
-            [0, 0, 0], [0, -170, 115], [30, -170, 115], [30, -45, 45], [0, -45, 45], [0, 0, 0]
-        ]
+        # self.publisher = self.create_publisher(JointState, joint_commands_topic, 10)
+        # self.subscription = self.create_subscription(JointState, joint_states_topic, self.joint_state_callback, 10)
 
-        self.interpolated_positions = self.interpolate_waypoints(self.waypoints, .5)
-        self.position_index = 0
-        self.timer = self.create_timer(0.1, self.timer_callback)
+        # self.waypoints = [
+        #     [0, 0, 0], [0, -170, 115], [30, -170, 115], [30, -45, 45], [0, -45, 45], [0, 0, 0]
+        # ]
+
+        # self.interpolated_positions = self.interpolate_waypoints(self.waypoints, .5)
+        # self.position_index = 0
+        # self.timer = self.create_timer(0.1, self.timer_callback)
 
     # Remaining class methods unchanged...
 
