@@ -27,6 +27,7 @@ setup(
             'joint_command_publisher = worms_mech.joint_command_publisher:main',
             'joystick_control = worms_mech.joystick_control:main',
             'gait_parser_actions = worms_mech.gait_parser_actions:main',
+            'action_node = worms_mech.action_node:main',
             
             
         ],
