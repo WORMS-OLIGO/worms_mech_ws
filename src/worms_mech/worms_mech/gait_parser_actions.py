@@ -110,11 +110,13 @@ class JointCommandPublisher(Node):
         if msg.data == "lift":
             self.execute_timer_callback = True
             self.interpolated_positions = self.br_lift_interpolated_positions
-            self.timer_callback()            
+            self.timer_callback()  
+            print("heard lift")          
         if msg.data == "prone":
             self.execute_timer_callback = True
             self.interpolated_positions = self.br_prone_interpolated_positions
             self.timer_callback()
+            print("heard prone")
 
 def main(args=None):
     rclpy.init(args=args)
