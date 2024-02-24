@@ -16,15 +16,10 @@ class JointCommandPublisher(Node):
 
         # Define waypoints (motor commands as positions here)
         self.waypoints = [
-            [0, 0, 0], [0, -170, 115], #Dead Position to Prob Position
-            
-            [30, -170, 115], # Move Hip Forward
-            
-            [30, -45, 45], #
-            
-            [0, -45, 45], 
-            
-            [0, 0, 0]
+            [0, -145, -175], 
+            [30, -145, -175], #Dead Position to Prob Position
+            [30, -135, -175],
+              
         ]
 
         # Interpolate waypoints

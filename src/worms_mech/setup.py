@@ -26,7 +26,9 @@ setup(
             'testbed_interface = worms_mech.testbed_interface:main',
             'joint_command_publisher = worms_mech.joint_command_publisher:main',
             'joystick_control = worms_mech.joystick_control:main',
-            'stand_node = worms_mech.stand_node:main'
+            'gait_parser_step = worms_mech.gait_parser_step:main',
+            
+            
         ],
     },
 )
