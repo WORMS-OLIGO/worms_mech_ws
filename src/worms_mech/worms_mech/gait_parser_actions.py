@@ -16,18 +16,19 @@ class JointCommandPublisher(Node):
         self.execute_timer_callback = False
 
         # Define waypoints (motor commands as positions here)
+        # TODO: NEGATE EVERYTHING BC IT IS NOW RUNNING ON FR
         self.br_step_waypoints = [
-            [0, -145, -175], 
-            [-30, -145, -175], #Dead Position to Prob Position
-            [-30, -135, -175],
+            [0, 145, 175], 
+            [30, 145, 175], #Dead Position to Prob Position
+            [30, 135, 175],
               
         ]
         self.br_prone_waypoints = [
-            [0, 135, -175]
+            [0, -135, 175]
         ]
 
         self.br_lift_waypoints = [
-            [-30, 45, -35]
+            [30, -45, 35]
         ]
 
         # PROPEL?????
