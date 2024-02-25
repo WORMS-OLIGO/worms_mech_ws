@@ -42,18 +42,19 @@ class MotorControllerNode(Node):
 
         worm_info = find_robot_info(mac_address, spreadsheet_path)
 
-        species = worm_info[0]
-        
-        print(worm_info[1])
+        # Check if worm_info is not None
+        if worm_info is not None:
+            species = worm_info['Species']
+            motor1_direction = worm_info['Motor1_Direction']
+            motor2_direction = worm_info['Motor2_Direction']
+            motor3_direction = worm_info['Motor3_Direction']
 
-        print(species + " HAS BEEN INTITIALIZED")
-        print("Motor Direction 1: " + motor_direction[0])
-
-        joint_commands_topic = f'{species}_joint_commands'
-        joint_states_topic = f'{species}_joint_states'
-
-        print("Recieving Commands From: /" + joint_commands_callback)
-        print("Sending States To: /" + joint_states_topic)
+            print(f"{species} Has Been Initialized")
+            print(f"Motor Direction 1: {motor1_direction}")
+            print(f"Motor Direction 2: {motor2_direction}")
+            print(f"Motor Direction 3: {motor3_direction}")
+        else:
+            print("No matching robot found for the given MAC address.")
         
         self.motor_controller_dict = {}
         
