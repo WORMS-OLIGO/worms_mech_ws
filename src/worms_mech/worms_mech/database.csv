@@ -1,7 +1,7 @@
-Species,MAC Address
-Duck,DC-A6-32-C4-51-3B
-Frog,E4-5F-01-B2-DA-B8
-Goat,E4-5F-01-B2-CE-8B
-Lion,E4-5F-01-B2-DD-B5
-Pony,E4-5F-01-B2-DB-3A
-Swan,E4-5F-01-B2-DD-8C
+MAC Address,Species
+DC-A6-32-C4-51-3B,Duck
+E4-5F-01-B2-DA-B8,Frog
+E4-5F-01-B2-CE-8B,Goat
+E4-5F-01-B2-DD-B5,Lion
+E4-5F-01-B2-DB-3A,Pony
+E4-5F-01-B2-DD-8C,Swan

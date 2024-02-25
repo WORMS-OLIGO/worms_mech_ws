@@ -58,7 +58,7 @@ class JointCommandPublisher(Node):
 
     def timer_callback(self):
 
-        if self.position_index < len(self.interpolated_positions):
+        if self.position_index < len(self.interpolated_positions + self.current_pose):
             # Ensure the position command is a list of floats
             self.position_command = list(map(float, self.interpolated_positions[self.position_index]))
 
