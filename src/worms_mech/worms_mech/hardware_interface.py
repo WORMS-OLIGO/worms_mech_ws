@@ -6,8 +6,57 @@ from sensor_msgs.msg import JointState
 
 class MotorControllerNode(Node):
 
+
+    def get_mac_address():
+    
+        mac_address = subprocess.check_output(f"cat /sys/class/net/wlan0/address", shell=True).decode().strip()
+        
+        if mac_address:
+            return mac_address
+            
+        print("Error getting MAC address: No suitable interface found")
+        return None
+
+    def find_robot_name(mac_address, spreadsheet_path):
+        df = pd.read_csv(spreadsheet_path)
+        print(df)
+        match = df.loc[df['MAC Address'] == mac_address, 'Species']
+        if not match.empty:
+            return match.iloc[0]
+        else:
+            return None
+
+    def set_standard_directions(mac_address, spreadsheet_path):
+        df = pd.read_csv(spreadsheet_path)
+        print(df)
+        match = df.loc[df['MAC Address'] == mac_address, ['Species', 'Motor1_Direction', 'Motor2_Direction', 'Motor3_Direction']]
+        if not match.empty:
+            return match.iloc
+        else:
+            return None
+            
+
     def __init__(self):
         super().__init__('hardware_interface')
+
+        # Construct the path to the CSV file
+        spreadsheet_path = os.path.expanduser('~/worms_mech_ws/src/worms_mech/worms_mech/database.csv')
+
+        mac_address = get_mac_address()
+
+        worm_info = find_robot_info(mac_address, spreadsheet_path)
+
+        species = match.iloc[0]
+        motor_direction = [match.iloc[1], match.iloc[2], match.iloc[3]]
+
+        print(species + " HAS BEEN INTITIALIZED")
+        print("Directions are: " + motor_direction)
+
+        joint_commands_topic = f'{species}_joint_commands'
+        joint_states_topic = f'{species}_joint_states'
+
+        print("Recieving Commands From: /" + joint_commands_callback)
+        print("Sending States To: /" + joint_states_topic)
         
         self.motor_controller_dict = {}
         
@@ -25,13 +74,11 @@ class MotorControllerNode(Node):
         print("Creating Subscriber")
         self.subscription = self.create_subscription(
             JointState,
-            'joint_commands',
+            joint_commands_topic,
             self.joint_commands_callback,
             10)
-        
-        print("Subscriber Made")
 
-        self.publisher = self.create_publisher(JointState, 'joint_states', 10)
+        self.publisher = self.create_publisher(JointState, joint_states_topic, 10)
 
         self.get_logger().info("Enabling Motors...")
         for motor_id, motor_controller in self.motor_controller_dict.items():
@@ -53,14 +100,14 @@ class MotorControllerNode(Node):
             pos_command = msg.position[idx]
 
 
-            if(motor_id == 1):
-                self.pos1, self.vel1, self.curr1 = motor_controller.send_deg_command(pos_command, vel_command, Kp, Kd, K_ff)
+            if(motor_id == 1 and (abs(self.pos1 - pos_command) < 10)):
+                self.pos1 * motor_direction[0], self.vel1 * motor_direction[0], self.curr1  * motor_direction[0] = motor_controller.send_deg_command(pos_command  * motor_direction[0], vel_command  * motor_direction[0], Kp, Kd, K_ff  * motor_direction[0])
                 
-            elif(motor_id == 2):
-                self.pos2, self.vel2, self.curr2 = motor_controller.send_deg_command(pos_command, vel_command, Kp, Kd, K_ff)
+            elif(motor_id == 2  and (abs(self.pos1 - pos_command) < 10)):
+                self.pos2  * motor_direction[1], self.vel2 * motor_direction[1], self.curr2 * motor_direction[1] = motor_controller.send_deg_command(pos_command * motor_direction[1], vel_command * motor_direction[1], Kp, Kd, K_ff * motor_direction[1])
             
-            elif(motor_id == 3):
-                self.pos3, self.vel3, self.curr3 = motor_controller.send_deg_command(pos_command, vel_command, Kp, Kd, K_ff)
+            elif(motor_id == 3  and (abs(self.pos1 - pos_command) < 10)):
+                self.pos3 * motor_direction[2], self.vel3 * motor_direction[2], self.curr3 * motor_direction[2] = motor_controller.send_deg_command(pos_command * motor_direction[2], vel_command * motor_direction[2], Kp, Kd, K_ff * motor_direction[2])
 
             else:
                 print("Motor Identification Error")
