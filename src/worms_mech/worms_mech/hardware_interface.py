@@ -9,10 +9,7 @@ import platform
 import os
 
 
-class MotorControllerNode(Node):
-
-
-    def get_mac_address():
+def get_mac_address():
     
         mac_address = subprocess.check_output(f"cat /sys/class/net/wlan0/address", shell=True).decode().strip()
         
@@ -22,23 +19,17 @@ class MotorControllerNode(Node):
         print("Error getting MAC address: No suitable interface found")
         return None
 
-    def find_robot_name(mac_address, spreadsheet_path):
-        df = pd.read_csv(spreadsheet_path)
-        print(df)
-        match = df.loc[df['MAC Address'] == mac_address, 'Species']
-        if not match.empty:
-            return match.iloc[0]
-        else:
-            return None
+def find_robot_info(mac_address, spreadsheet_path):
+    df = pd.read_csv(spreadsheet_path)
+    print(df)
+    match = df.loc[df['MAC Address'] == mac_address, ['Species', 'Motor1_Direction', 'Motor2_Direction', 'Motor3_Direction']]
+    if not match.empty:
+        return match.iloc
+    else:
+        return None
 
-    def set_standard_directions(mac_address, spreadsheet_path):
-        df = pd.read_csv(spreadsheet_path)
-        print(df)
-        match = df.loc[df['MAC Address'] == mac_address, ['Species', 'Motor1_Direction', 'Motor2_Direction', 'Motor3_Direction']]
-        if not match.empty:
-            return match.iloc
-        else:
-            return None
+
+class MotorControllerNode(Node):
             
 
     def __init__(self):
