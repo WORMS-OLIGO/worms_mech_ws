@@ -53,7 +53,8 @@ class JointCommandPublisher(Node):
         joint_state_msg.velocity = [0.0, 0.0, 0.0] 
         joint_state_msg.effort = force
 
-        self.publisher.publish(joint_state_msg)
+        #self.publisher.publish(joint_state_msg)
+        print(joint_state_msg)
 
 def main(args=None):
     rclpy.init(args=args)
