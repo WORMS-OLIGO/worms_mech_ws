@@ -42,6 +42,8 @@ class MotorControllerNode(Node):
 
         worm_info = find_robot_info(mac_address, spreadsheet_path)
 
+        print(worm_info)
+
         species = worm_info[0]
         motor_direction = [worm_info[1], worm_info[2], worm_info[3]]
 
