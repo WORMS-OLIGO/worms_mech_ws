@@ -116,7 +116,10 @@ class JointCommandPublisher(Node):
             self.execute_timer_callback = True
             self.interpolated_positions = self.br_prone_interpolated_positions
             self.timer_callback()
+            self.get_logger().info(f"Heard command: {self.msg.data}")
             print("heard prone")
+
+    
 
 def main(args=None):
     rclpy.init(args=args)
