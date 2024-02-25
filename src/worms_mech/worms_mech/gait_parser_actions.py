@@ -25,7 +25,9 @@ class JointCommandPublisher(Node):
               
         ]
         self.br_prone_waypoints = [
-            [0, -135, 175]
+            [0, -135, 175],
+            #delete later
+            [1, -135, 175],
         ]
 
         self.br_lift_waypoints = [
