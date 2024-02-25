@@ -83,7 +83,9 @@ class JointCommandPublisher(Node):
                 joint_state_msg.position = self.position_command
                 joint_state_msg.velocity = [0.0, 0.0, 0.0]  # Ensuring these are also floats
                 joint_state_msg.effort = [0.0, 0.0, 0.0]
+                print(joint_state_msg)
                 self.publisher.publish(joint_state_msg)
+
 
                 self.position_index += 1
 
