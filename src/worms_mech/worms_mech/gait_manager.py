@@ -40,7 +40,7 @@ class JointCommandPublisher(Node):
 
         mac_address = get_mac_address()
 
-        print(mac_address)
+        print("Mac Address: " + mac_address)
         species = find_robot_name(mac_address, spreadsheet_path)
 
         if species is None:
