@@ -104,7 +104,7 @@ class JointCommandPublisher(Node):
 
                 self.publisher.publish(joint_state_msg)
         else:
-            self.execute_timer_callback = False
+            #self.execute_timer_callback = False
             self.timer.cancel()
 
     def actions_callback(self, msg):
