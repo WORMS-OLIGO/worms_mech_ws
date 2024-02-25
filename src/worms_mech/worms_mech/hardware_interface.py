@@ -24,7 +24,7 @@ def find_robot_info(mac_address, spreadsheet_path):
     print(df)
     match = df.loc[df['MAC Address'] == mac_address, ['Species', 'Motor1_Direction', 'Motor2_Direction', 'Motor3_Direction']]
     if not match.empty:
-        return match.iloc
+        return match.iloc[0]
     else:
         return None
 
