@@ -31,7 +31,7 @@ class JointCommandPublisher(Node):
         super().__init__('gait_manager')
 
         # Move MAC address retrieval and robot name finding into the class initializer
-        spreadsheet_path = 'database.csv'  # Update this path
+        spreadsheet_path = '$HOME/worms_mech_ws/src/worms_mech/worms_mech/database.csv'  # Update this path
         mac_address = get_mac_address()
         species = find_robot_name(mac_address, spreadsheet_path)
 
