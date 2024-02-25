@@ -7,7 +7,7 @@ import numpy as np
 
 class JointCommandPublisher(Node):
     def __init__(self):
-        super().__init__('gait_parser')
+        super().__init__('gait_parser_actions')
 
         self.publisher = self.create_publisher(JointState, 'joint_commands', 10)
 
