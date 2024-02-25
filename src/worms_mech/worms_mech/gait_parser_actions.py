@@ -72,6 +72,7 @@ class JointCommandPublisher(Node):
     def timer_callback(self):
 
         if self.execute_timer_callback:
+            
             if self.position_index < len(self.interpolated_positions):
                 # Ensure the position command is a list of floats
                 self.position_command = list(map(float, self.interpolated_positions[self.position_index]))
@@ -103,9 +104,9 @@ class JointCommandPublisher(Node):
                     self.get_logger().info(f'Path complete. Holding Position at: [{position_str}]')
 
                 self.publisher.publish(joint_state_msg)
-        else:
-            self.execute_timer_callback = False
-            self.timer.cancel()
+        #else:
+            # self.execute_timer_callback = False
+            # self.timer.cancel()
 
     def actions_callback(self, msg):
         if msg.data == "step":
