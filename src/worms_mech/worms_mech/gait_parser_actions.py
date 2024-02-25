@@ -104,14 +104,14 @@ class JointCommandPublisher(Node):
 
                 self.publisher.publish(joint_state_msg)
         else:
-            #self.execute_timer_callback = False
+            self.execute_timer_callback = False
             self.timer.cancel()
 
     def actions_callback(self, msg):
         if msg.data == "step":
             self.execute_timer_callback = True
             self.interpolated_positions = self.br_step_interpolated_positions
-            self.timer_callback()
+            #self.timer_callback()
             self.action = "step"
         if msg.data == "lift":
             self.execute_timer_callback = True
