@@ -42,8 +42,8 @@ class MotorControllerNode(Node):
 
         worm_info = find_robot_info(mac_address, spreadsheet_path)
 
-        species = match.iloc[0]
-        motor_direction = [match.iloc[1], match.iloc[2], match.iloc[3]]
+        species = worm_info[0]
+        motor_direction = [worm_info[1], worm_info[2], worm_info[3]]
 
         print(species + " HAS BEEN INTITIALIZED")
         print("Directions are: " + motor_direction)
