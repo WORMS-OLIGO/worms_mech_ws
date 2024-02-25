@@ -21,19 +21,19 @@ class JointCommandPublisher(Node):
         self.br_step_waypoints = [
             [0, 145, 175], 
             [30, 145, 175], #Dead Position to Prob Position
-            [30, 135, 175],
+            [30, 135, 175]
               
         ]
-        self.br_prone_waypoints = [
-            [0, -135, 175],
-            #delete later
-            [1, -135, 175],
+        self.br_prone_waypoints = ['
+            [0, 0, 0],
+            [0, -135, 175]
+            
         ]
 
         self.br_lift_waypoints = [
-            [30, -45, 35],
-            #delete later
-            [0, 145, 175]
+            [0, 0, 0],
+            [30, -45, 35]
+            
         ]
 
         # PROPEL?????
@@ -104,28 +104,25 @@ class JointCommandPublisher(Node):
                     self.get_logger().info(f'Path complete. Holding Position at: [{position_str}]')
 
                 self.publisher.publish(joint_state_msg)
-        #else:
-            # self.execute_timer_callback = False
-            # self.timer.cancel()
+        else:
+            self.execute_timer_callback = False
+            
 
     def actions_callback(self, msg):
         if msg.data == "step":
             self.execute_timer_callback = True
             self.interpolated_positions = self.br_step_interpolated_positions
-            #self.timer_callback()
             self.action = "step"
+
         if msg.data == "lift":
             self.execute_timer_callback = True
             self.interpolated_positions = self.br_lift_interpolated_positions
-            self.timer_callback()  
-            print("heard lift")          
+            print("heard lift")  
+
         if msg.data == "prone":
             self.execute_timer_callback = True
             self.interpolated_positions = self.br_prone_interpolated_positions
-            self.timer_callback()
-            print("heard prone")
-            self.get_logger().info(f"Heard command: {self.msg.data}")
-            
+            print("heard prone")            
 
     
 
