@@ -1,7 +1,7 @@
 MAC Address,Species
-DC-A6-32-C4-51-3B,Duck
-E4-5F-01-B2-DA-B8,Frog
-e4-5f-01-b2-ce-8b,Goat
-E4-5F-01-B2-DD-B5,Lion
-E4-5F-01-B2-DB-3A,Pony
-E4-5F-01-B2-DD-8C,Swan
+dc:a6:32:c4:51:3b,Duck
+e4:5f:01:b2:da:b8,Frog
+e4:5f:01:b2:ce:8b,Goat
+e4:5f:01:b2:dd:b5,Lion
+e4:5f:01:b2:db:3a,Pony
+e4:5f:01:b2:dd:8c,Swan
