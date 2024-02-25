@@ -9,17 +9,12 @@ import platform
 import os
 
 def get_mac_address():
-    # Define a list of common physical network interfaces
-    interfaces = ['eth0', 'wlan0']
-    for interface in interfaces:
-        try:
-            # Check if the interface has a MAC address
-            mac_address = subprocess.check_output(f"cat /sys/class/net/{interface}/address", shell=True).decode().strip()
-            if mac_address:
-                return mac_address
-        except Exception as e:
-            # If an error occurred with the current interface, continue to the next
-            continue
+    
+    mac_address = subprocess.check_output(f"cat /sys/class/net/{interface}/address", shell=True).decode().strip()
+    
+    if mac_address:
+        return mac_address
+        
     print("Error getting MAC address: No suitable interface found")
     return None
 
