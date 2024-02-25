@@ -10,7 +10,7 @@ import os
 
 def get_mac_address():
     
-    mac_address = subprocess.check_output(f"cat /sys/class/net/{interface}/address", shell=True).decode().strip()
+    mac_address = subprocess.check_output(f"cat /sys/class/net/wlan0/address", shell=True).decode().strip()
     
     if mac_address:
         return mac_address
