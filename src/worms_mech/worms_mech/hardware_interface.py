@@ -44,7 +44,7 @@ class MotorControllerNode(Node):
 
         species = worm_info[0]
         
-        print(worms_info[1])
+        print(worm_info[1])
 
         print(species + " HAS BEEN INTITIALIZED")
         print("Motor Direction 1: " + motor_direction[0])
