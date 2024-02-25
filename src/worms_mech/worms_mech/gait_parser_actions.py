@@ -26,7 +26,7 @@ class JointCommandPublisher(Node):
         ]
         self.br_prone_waypoints = [
             [0, 0, 0],
-            [0, -135, 175]
+            [0, -120, 175]
             
         ]
 
