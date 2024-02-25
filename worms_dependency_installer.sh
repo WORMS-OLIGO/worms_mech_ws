@@ -24,38 +24,17 @@ toilet -f smblock -w 150 "WORMS Dependency Installer"
 # Update package lists
 apt update 
 
-# System libraries to install with apt-get
-system_libraries=(
-    "curl"
-    "git"
-    # Add more system packages here
-)
-
-# Python libraries to install with pip
-python_libraries=(
-    "serial"
-    # Add more Python libraries here
-)
-
-# Install system libraries
-for lib in "${system_libraries[@]}"; do
-    echo -e "\e[34m[INFO]\e[0m Installing system library: $lib..."
-    apt-get install -y $lib > /dev/null 2>&1 || {
-        echo -e "\e[31m[ERROR]\e[0m Failed to install $lib. Exiting."
-        exit 1
-    }
-done
+apt-get install ros-humble-joy-node
 
 # Ensure pip is installed
-apt-get install -y python3-pip > /dev/null 2>&1
+apt-get install -y python3-pip 
 
-# Install Python libraries
-for lib in "${python_libraries[@]}"; do
-    echo -e "\e[34m[INFO]\e[0m Installing Python library: $lib..."
-    pip3 install $lib > /dev/null 2>&1 || {
-        echo -e "\e[31m[ERROR]\e[0m Failed to install $lib. Exiting."
-        exit 1
-    }
-done
+pip install serial
+pip install pandas
+
+cd src/worms_mech/mini-cheetah-tmotor-python-can
+pip install .
+
+cd 
 
 echo -e "\e[32m[SUCCESS]\e[0m All libraries have been installed!"
