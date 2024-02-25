@@ -9,15 +9,19 @@ import platform
 import os
 
 def get_mac_address():
-    # This command should work on Linux
-    try:
-        # Tries to get the MAC address of the first network interface
-        interface = subprocess.check_output("ls /sys/class/net | head -n 1", shell=True).decode().strip()
-        mac_address = subprocess.check_output(f"cat /sys/class/net/{interface}/address", shell=True).decode().strip()
-        return mac_address
-    except Exception as e:
-        print(f"Error getting MAC address: {e}")
-        return None
+    # Define a list of common physical network interfaces
+    interfaces = ['eth0', 'wlan0']
+    for interface in interfaces:
+        try:
+            # Check if the interface has a MAC address
+            mac_address = subprocess.check_output(f"cat /sys/class/net/{interface}/address", shell=True).decode().strip()
+            if mac_address:
+                return mac_address
+        except Exception as e:
+            # If an error occurred with the current interface, continue to the next
+            continue
+    print("Error getting MAC address: No suitable interface found")
+    return None
 
 def find_robot_name(mac_address, spreadsheet_path):
     df = pd.read_csv(spreadsheet_path)
