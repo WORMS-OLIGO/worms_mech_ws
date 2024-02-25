@@ -42,13 +42,11 @@ class MotorControllerNode(Node):
 
         worm_info = find_robot_info(mac_address, spreadsheet_path)
 
-        print(worm_info)
-
         species = worm_info[0]
         motor_direction = [worm_info[1], worm_info[2], worm_info[3]]
 
         print(species + " HAS BEEN INTITIALIZED")
-        print("Directions are: " + motor_direction)
+        print("Motor Direction 1: " + motor_direction[0])
 
         joint_commands_topic = f'{species}_joint_commands'
         joint_states_topic = f'{species}_joint_states'
