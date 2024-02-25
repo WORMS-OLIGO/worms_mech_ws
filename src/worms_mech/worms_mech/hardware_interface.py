@@ -2,6 +2,11 @@ import rclpy
 from rclpy.node import Node
 from motor_driver.canmotorlib import CanMotorController
 from sensor_msgs.msg import JointState
+import numpy as np
+import pandas as pd
+import subprocess
+import platform
+import os
 
 
 class MotorControllerNode(Node):
@@ -101,13 +106,13 @@ class MotorControllerNode(Node):
 
 
             if(motor_id == 1 and (abs(self.pos1 - pos_command) < 10)):
-                self.pos1 * motor_direction[0], self.vel1 * motor_direction[0], self.curr1  * motor_direction[0] = motor_controller.send_deg_command(pos_command  * motor_direction[0], vel_command  * motor_direction[0], Kp, Kd, K_ff  * motor_direction[0])
+                self.pos1, self.vel1, self.curr1 = motor_direction[0] * motor_controller.send_deg_command(pos_command  * motor_direction[0], vel_command  * motor_direction[0], Kp, Kd, K_ff  * motor_direction[0])
                 
             elif(motor_id == 2  and (abs(self.pos1 - pos_command) < 10)):
-                self.pos2  * motor_direction[1], self.vel2 * motor_direction[1], self.curr2 * motor_direction[1] = motor_controller.send_deg_command(pos_command * motor_direction[1], vel_command * motor_direction[1], Kp, Kd, K_ff * motor_direction[1])
+                self.pos2, self.vel2, self.curr2 = motor_direction[1] * motor_controller.send_deg_command(pos_command * motor_direction[1], vel_command * motor_direction[1], Kp, Kd, K_ff * motor_direction[1])
             
             elif(motor_id == 3  and (abs(self.pos1 - pos_command) < 10)):
-                self.pos3 * motor_direction[2], self.vel3 * motor_direction[2], self.curr3 * motor_direction[2] = motor_controller.send_deg_command(pos_command * motor_direction[2], vel_command * motor_direction[2], Kp, Kd, K_ff * motor_direction[2])
+                self.pos3, self.vel3, self.curr3 = motor_direction[2] * motor_controller.send_deg_command(pos_command * motor_direction[2], vel_command * motor_direction[2], Kp, Kd, K_ff * motor_direction[2])
 
             else:
                 print("Motor Identification Error")
