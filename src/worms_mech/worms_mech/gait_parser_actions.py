@@ -29,7 +29,9 @@ class JointCommandPublisher(Node):
         ]
 
         self.br_lift_waypoints = [
-            [30, -45, 35]
+            [30, -45, 35],
+            #delete later
+            [0, 145, 175]
         ]
 
         # PROPEL?????
@@ -116,8 +118,9 @@ class JointCommandPublisher(Node):
             self.execute_timer_callback = True
             self.interpolated_positions = self.br_prone_interpolated_positions
             self.timer_callback()
-            self.get_logger().info(f"Heard command: {self.msg.data}")
             print("heard prone")
+            self.get_logger().info(f"Heard command: {self.msg.data}")
+            
 
     
 
