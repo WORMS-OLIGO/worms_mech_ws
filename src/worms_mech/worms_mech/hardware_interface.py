@@ -68,6 +68,9 @@ class MotorControllerNode(Node):
 
         self.worm_heartbeat = None
         
+        self.head_connection = None
+        self.tail_connection = None
+        
         # Hardcoded to match pican board
         can_device = 'can0'
         motor_ids = [1, 2, 3]
@@ -91,6 +94,7 @@ class MotorControllerNode(Node):
         self.heartbeat_publisher = self.create_publisher(String, worm_heartbeat_topic, 10)
 
         self.get_logger().info("Enabling Motors...")
+
         for motor_id, motor_controller in self.motor_controller_dict.items():
             state = motor_controller.enable_motor()
 

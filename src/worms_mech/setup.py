@@ -22,6 +22,7 @@ setup(
         'console_scripts': [
             'hardware_interface = worms_mech.hardware_interface:main',
             'gait_parser = worms_mech.gait_parser:main',
+            'camera_scanner = worms_mech.camera_scanner:main',
             'gait_action_node = worms_mech.gait_action_node:main',
             'gait_manager = worms_mech.gait_manager:main',
             'controller_node = worms_mech.controller_node:main',
