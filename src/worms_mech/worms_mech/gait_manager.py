@@ -28,7 +28,7 @@ def find_robot_name(mac_address, spreadsheet_path):
 
 def find_species(head, spreadsheet_path):
     df = pd.read_csv(spreadsheet_path)
-    match = df.loc[df['Species'] == head, ['Specialization', 'Motor1_Direction', 'Motor2_Direction', 'Motor3_Direction']]
+    match = df.loc[df['Specialization'] == head, ['Motor1_Direction', 'Motor2_Direction', 'Motor3_Direction']]
     if not match.empty:
         return match.iloc[0]
     else:
