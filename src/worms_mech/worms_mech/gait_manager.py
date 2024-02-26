@@ -52,6 +52,8 @@ class JointCommandPublisher(Node):
         with open(head_connection_path, 'r') as file:
             head = file.read()
 
+        print("HEAD CONNECTOR: " + head)
+
         mac_address = get_mac_address()
 
         worm_id = find_robot_name(mac_address, spreadsheet_path)
