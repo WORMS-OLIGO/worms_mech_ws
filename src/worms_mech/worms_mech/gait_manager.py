@@ -70,9 +70,9 @@ class JointCommandPublisher(Node):
             self.motor3_direction = configuration_info['Motor3_Direction']
 
             print(f"{worm_id} Has Been Connected to Accessory Port {self.species}")
-            print(f"Motor Direction 1: {motor1_direction}")
-            print(f"Motor Direction 2: {motor2_direction}")
-            print(f"Motor Direction 3: {motor3_direction}")
+            print(f"Motor Direction 1: {self.motor1_direction}")
+            print(f"Motor Direction 2: {self.motor2_direction}")
+            print(f"Motor Direction 3: {self.motor3_direction}")
         else:
             print("No matching robot found for the given MAC address.")
 
