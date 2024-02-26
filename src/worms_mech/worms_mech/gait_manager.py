@@ -60,6 +60,8 @@ class JointCommandPublisher(Node):
 
         configuration_info = find_species(head, specialization_path)
 
+        print(configuration_info)
+
         # Check if worm_info is not None
         if configuration_info is not None:
             self.species = configuration_info['Head']
