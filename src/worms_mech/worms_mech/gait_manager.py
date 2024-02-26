@@ -58,14 +58,13 @@ class JointCommandPublisher(Node):
 
         # WAYPOINTS FOR EACH DISCRETE GAIT ACTION
         self.br_step_waypoints = [
-            [0, 0, 0],  # DEAD POSITION - L SHAPE WHEN TESTING ON TABLE
+            
             [0, 145, 175], # LIFTED LEG POSITION WHEN ON THE FLOOR
             [15, 145, 175], # TAKING STEP WITH SHOE ELEVATED - 15 DEGREE MOTION
             [15, 135, 175]  # BRING SHOE DOWN WHEN ON FLOOR
         ]
 
         self.br_prone_waypoints = [
-            [0, 0, 0],  # DEAD POSITION - L SHAPE WHEN TESTING ON TABLE
             [0, -120, 175]  
         ]
 
@@ -92,17 +91,17 @@ class JointCommandPublisher(Node):
         if hasattr(self, 'current_pose') and self.current_pose is not None:
             position_str = ', '.join([f"{p:.2f}" for p in self.current_pose.position])
             self.get_logger().info(f'Path complete. Holding Position at: [{position_str}]')
+            self.current_position = self.current_pose.position
 
 
-    def interpolate_waypoints(self, waypoints, interval_degrees):
-        interpolated = []
-        for i in range(len(waypoints) - 1):
-            start = waypoints[i]
-            end = waypoints[i + 1]
-            distance = np.linalg.norm(np.array(end) - np.array(start))
+    def interpolate_waypoints(self, waypoints, interval_degrees=1):
+        interpolated = [self.current_position]
+        for waypoint in waypoints:
+            distance = np.linalg.norm(np.array(waypoint) - np.array(interpolated[-1]))
             steps = int(distance / interval_degrees)
-            for step in range(steps + 1):
-                interpolated.append(np.array(start) + (np.array(end) - np.array(start)) * step / steps)
+            for step in range(1, steps + 1):
+                interpolated_point = interpolated[-1] + (np.array(waypoint) - np.array(interpolated[-1])) * (step / steps)
+                interpolated.append(interpolated_point)
         return interpolated
 
     def timer_callback(self):
@@ -149,30 +148,21 @@ class JointCommandPublisher(Node):
             self.execute_timer_callback = True
 
             # Interpolate Positions from Current Position to Start of the Desired Action
-            current_state_interpolation = self.interpolate_waypoints([[self.current_pose.position], br_step_interpolated_positions[0]])
-
-            self.interpolated_positions = current_state_interpolation + self.br_step_interpolated_positions
-
+            self.interpolated_positions = self.interpolate_waypoints(br_step_waypoints)
             self.action = "step"
 
         if msg.data == "lift":
             self.execute_timer_callback = True
 
             # Interpolate Positions from Current Position to Start of the Desired Action
-            current_state_interpolation = self.interpolate_waypoints([[self.current_pose.position], br_lift_interpolated_positions[0]])
-
-            self.interpolated_positions = current_state_interpolation + self.br_lift_interpolated_positions
-
+            self.interpolated_positions = self.interpolate_waypoints(br_lift_waypoints)
             self.action = "lift"
 
         if msg.data == "prone":
             self.execute_timer_callback = True
 
             # Interpolate Positions from Current Position to Start of the Desired Action
-            current_state_interpolation = self.interpolate_waypoints([[self.current_pose.position], br_prone_interpolated_positions[0]])
-
-            self.interpolated_positions = current_state_interpolation + self.br_prone_interpolated_positions
-
+            self.interpolated_positions = self.interpolate_waypoints(br_prone_waypoints)
             self.action = "prone"
 
 def main(args=None):

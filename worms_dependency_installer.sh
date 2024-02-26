@@ -24,16 +24,19 @@ echo "Updating Debian/APT Packages"
 # Update package lists
 apt update 
 
-echo "Installing Joy"
+echo "Installing Joy:"
 apt-get install ros-humble-joy-node
 
-echo "Installing pip"
+echo "Installing pip:"
 # Ensure pip is installed
 apt-get install -y python3-pip 
 
-echo "Installing python libraries"
+echo "Installing python libraries:"
 pip install serial
 pip install pandas
+pip install pyzbar
+pip install opencv-python
+
 
 echo "Installing motor library"
 cd src/worms_mech/mini-cheetah-tmotor-python-can
