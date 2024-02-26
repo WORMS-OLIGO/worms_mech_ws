@@ -53,9 +53,6 @@ class JointCommandPublisher(Node):
         with open(head_conenction_path, 'r') as file:
             head = file.read()
 
-        # Optionally, print the contents to verify
-        print(head)
-
         mac_address = get_mac_address()
 
         worm_id = find_robot_name(mac_address, spreadsheet_path)
@@ -84,6 +81,9 @@ class JointCommandPublisher(Node):
         joint_states_topic = f'/{worm_id}_joint_states'
         worm_action = 'action'
 
+        print("Recieving Commands From: " + joint_commands_topic)
+        print("Joint States Publishing To: " + joint_states_topic)
+        
 
         self.command_publisher = self.create_publisher(JointState, joint_commands_topic, 10)
 
@@ -95,17 +95,17 @@ class JointCommandPublisher(Node):
         self.execute_timer_callback = False
 
         # WAYPOINTS FOR EACH DISCRETE GAIT ACTION
-        self.br_step_waypoints = [
+        self.step_waypoints = [
             [0, 145, 175], # LIFTED LEG POSITION WHEN ON THE FLOOR
             [15, 145, 175], # TAKING STEP WITH SHOE ELEVATED - 15 DEGREE MOTION
             [15, 135, 175]  # BRING SHOE DOWN WHEN ON FLOOR
         ]
 
-        self.br_prone_waypoints = [
+        self.prone_waypoints = [
             [0, -120, 175]  
         ]
 
-        self.br_lift_waypoints = [
+        self.stand_waypoints = [
             [15, -45, 35]
         ]
 
@@ -115,13 +115,9 @@ class JointCommandPublisher(Node):
             [-10, -10, -10]
         ]
 
-        # INTERPOLATE DISCRETE ACTIONS
-        self.br_step_interpolated_positions = self.interpolate_waypoints(self.br_step_waypoints, .1)
-        self.br_prone_interpolated_positions = self.interpolate_waypoints(self.br_prone_waypoints, .1)
-        self.br_lift_interpolated_positions = self.interpolate_waypoints(self.br_lift_waypoints, .1)
-
-
+        
         self.position_index = 0
+        self.current_position = [0, 0, 0]
 
         self.timer = self.create_timer(0.1, self.timer_callback)
 
@@ -156,15 +152,10 @@ class JointCommandPublisher(Node):
 
                 self.get_logger().info(f"Publishing command: {self.position_command}")
 
-                if(self.species == "BOAR"):
-                    # SWITCH DIRECTIONS HERE BASED ON INFORMATION FROM SPECIES INFORMATION
-                    self.position_command[0] *= self.motor1_direction
-                    self.position_command[0] *= self.motor2_direction
-                    self.position_command[0] *= self.motor3_direction
-
-                else if(self.species == "BIRD"):
-                    # SWITCH DIRECTIONS HERE BASED ON INFORMATION FROM SPECIES INFORMATION
-
+                # POSITION_COMMAND[0] IS GETTING SENT TO HIP
+                self.position_command[0] *= self.motor1_direction
+                self.position_command[1] *= self.motor2_direction
+                self.position_command[2] *= self.motor3_direction
 
                 joint_state_msg = JointState()
                 joint_state_msg.header.stamp = self.get_clock().now().to_msg()
@@ -172,7 +163,7 @@ class JointCommandPublisher(Node):
                 joint_state_msg.velocity = [0.0, 0.0, 0.0]  # Ensuring these are also floats
                 joint_state_msg.effort = [0.0, 0.0, 0.0]
                 print(joint_state_msg)
-                self.publisher.publish(joint_state_msg)
+                #self.publisher.publish(joint_state_msg)
 
 
                 self.position_index += 1
@@ -190,7 +181,7 @@ class JointCommandPublisher(Node):
                     position_str = ', '.join([f"{p:.2f}" for p in self.current_pose.position])
                     self.get_logger().info(f'Path complete. Holding Position at: [{position_str}]')
 
-                self.publisher.publish(joint_state_msg)
+                #self.publisher.publish(joint_state_msg)
         else:
             self.execute_timer_callback = False
             
@@ -203,12 +194,12 @@ class JointCommandPublisher(Node):
             self.interpolated_positions = self.interpolate_waypoints(br_step_waypoints)
             self.action = "step"
 
-        if msg.data == "lift":
+        if msg.data == "stand":
             self.execute_timer_callback = True
 
             # Interpolate Positions from Current Position to Start of the Desired Action
-            self.interpolated_positions = self.interpolate_waypoints(br_lift_waypoints)
-            self.action = "lift"
+            self.interpolated_positions = self.interpolate_waypoints(br_stand_waypoints)
+            self.action = "stand"
 
         if msg.data == "prone":
             self.execute_timer_callback = True

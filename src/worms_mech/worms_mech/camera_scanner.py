@@ -36,7 +36,7 @@ class QRScannerNode(Node):
 
         # Check if worm_info is not None
         if worm_info is not None:
-            species = worm_info['Species']
+            worm_id = worm_info['Species']
         else: 
             print("No WORM Detected")
 
@@ -65,15 +65,19 @@ class QRScannerNode(Node):
             decoded_objects = decode(frame)
             for obj in decoded_objects:
                 self.get_logger().info(f"QR Code detected: {obj.data.decode('utf-8')}")
-                with open("qr_code_content.txt", "w") as file:
+                with open("head.txt", "w") as file:
                     file.write(obj.data.decode('utf-8'))
                 self.qr_scanned = True
                 break
             if self.qr_scanned:
                 break
             cv2.imshow('Scan QR Code', frame)
+
+
             if cv2.waitKey(1) & 0xFF == ord('q'):  # Press 'q' to quit the scanning loop
                 break
+
+
         cap.release()
         cv2.destroyAllWindows()
 
