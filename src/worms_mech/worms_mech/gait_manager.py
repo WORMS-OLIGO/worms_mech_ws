@@ -62,7 +62,7 @@ class JointCommandPublisher(Node):
 
         # Check if worm_info is not None
         if configuration_info is not None:
-            self.species = configuration_info['Species']
+            self.species = configuration_info['Specialization']
             self.motor1_direction = configuration_info['Motor1_Direction']
             self.motor2_direction = configuration_info['Motor2_Direction']
             self.motor3_direction = configuration_info['Motor3_Direction']
