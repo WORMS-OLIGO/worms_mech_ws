@@ -50,7 +50,7 @@ class JointCommandPublisher(Node):
         head_connection_path = os.path.expanduser('~/worms_mech_ws/src/worms_mech/worms_mech/head.txt')
 
         # Open the file and read its contents
-        with open(head_conenction_path, 'r') as file:
+        with open(head_connection_path, 'r') as file:
             head = file.read()
 
         mac_address = get_mac_address()
