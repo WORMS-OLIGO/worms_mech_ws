@@ -28,7 +28,7 @@ def find_robot_name(mac_address, spreadsheet_path):
 
 def find_species(head, spreadsheet_path):
     df = pd.read_csv(spreadsheet_path)
-    match = df.loc[df['Head'] == head, ['Motor1_Direction', 'Motor2_Direction', 'Motor3_Direction']]
+    match = df.loc[df['Head'] == head, ['Specialization', 'Motor1_Direction', 'Motor2_Direction', 'Motor3_Direction']]
     if not match.empty:
         return match.iloc[0]
     else:
@@ -62,7 +62,7 @@ class JointCommandPublisher(Node):
 
         # Check if worm_info is not None
         if configuration_info is not None:
-            self.species = configuration_info['Specialization']
+            self.species = configuration_info['Head']
             self.motor1_direction = configuration_info['Motor1_Direction']
             self.motor2_direction = configuration_info['Motor2_Direction']
             self.motor3_direction = configuration_info['Motor3_Direction']
