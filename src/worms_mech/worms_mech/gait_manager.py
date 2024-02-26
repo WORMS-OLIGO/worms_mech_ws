@@ -75,7 +75,7 @@ class JointCommandPublisher(Node):
             print("No matching robot found for the given MAC address.")
 
 
-        if species is None:
+        if self.species is None:
             raise ValueError("Robot species not found. Please check the camera node and text file created.")
 
         joint_commands_topic = f'/{worm_id}_joint_commands'
