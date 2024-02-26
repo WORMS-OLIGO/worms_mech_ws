@@ -286,6 +286,7 @@ class CanMotorController:
         except Exception as e:
             print("Error Enabling Motor!")
             print("Error: ", e)
+            return None
 
     def disable_motor(self):
         """
