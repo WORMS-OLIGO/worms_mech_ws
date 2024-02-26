@@ -83,10 +83,10 @@ class JointCommandPublisher(Node):
 
         joint_commands_topic = f'/{worm_id}_joint_commands'
         joint_states_topic = f'/{worm_id}_joint_states'
-        worm_action = 'action'
+        worm_action = 'actions'
 
-        print("Recieving Commands From: " + joint_commands_topic)
-        print("Joint States Publishing To: " + joint_states_topic)
+        print("Sending Commands To: " + joint_commands_topic)
+        print("Getting Joint States From: " + joint_states_topic)
         
 
         self.command_publisher = self.create_publisher(JointState, joint_commands_topic, 10)
@@ -195,21 +195,21 @@ class JointCommandPublisher(Node):
             self.execute_timer_callback = True
 
             # Interpolate Positions from Current Position to Start of the Desired Action
-            self.interpolated_positions = self.interpolate_waypoints(br_step_waypoints)
+            self.interpolated_positions = self.interpolate_waypoints(step_waypoints)
             self.action = "step"
 
         if msg.data == "stand":
             self.execute_timer_callback = True
 
             # Interpolate Positions from Current Position to Start of the Desired Action
-            self.interpolated_positions = self.interpolate_waypoints(br_stand_waypoints)
+            self.interpolated_positions = self.interpolate_waypoints(stand_waypoints)
             self.action = "stand"
 
         if msg.data == "prone":
             self.execute_timer_callback = True
 
             # Interpolate Positions from Current Position to Start of the Desired Action
-            self.interpolated_positions = self.interpolate_waypoints(br_prone_waypoints)
+            self.interpolated_positions = self.interpolate_waypoints(prone_waypoints)
             self.action = "prone"
 
 
