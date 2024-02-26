@@ -209,7 +209,7 @@ class JointCommandPublisher(Node):
             self.action = "prone"
 
 
-        if msg.data == "test_gait"
+        if msg.data == "test_gait":
             self.execute_timer_callback = True
 
             # Interpolate Positions from Current Position to Start of the Desired Action

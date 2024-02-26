@@ -2,14 +2,74 @@ import rclpy
 from rclpy.node import Node
 from motor_driver.canmotorlib import CanMotorController
 from sensor_msgs.msg import JointState
+from std_msgs.msg import String
+import numpy as np
+import pandas as pd
+import subprocess
+import platform
+import os
+
+
+def get_mac_address():
+    
+        mac_address = subprocess.check_output(f"cat /sys/class/net/wlan0/address", shell=True).decode().strip()
+        
+        if mac_address:
+            return mac_address
+            
+        print("Error getting MAC address: No suitable interface found")
+        return None
+
+def find_robot_info(mac_address, spreadsheet_path):
+    df = pd.read_csv(spreadsheet_path)
+    match = df.loc[df['MAC Address'] == mac_address, ['Species', 'Motor1_Direction', 'Motor2_Direction', 'Motor3_Direction']]
+    if not match.empty:
+        return match.iloc[0]
+    else:
+        return None
 
 
 class MotorControllerNode(Node):
+            
 
     def __init__(self):
         super().__init__('hardware_interface')
+
+        # Construct the path to the CSV file
+        spreadsheet_path = os.path.expanduser('~/worms_mech_ws/src/worms_mech/worms_mech/database.csv')
+
+        mac_address = get_mac_address()
+
+        worm_info = find_robot_info(mac_address, spreadsheet_path)
+
+        # Check if worm_info is not None
+        if worm_info is not None:
+            worm_id = worm_info['Species']
+            motor1_direction = worm_info['Motor1_Direction']
+            motor2_direction = worm_info['Motor2_Direction']
+            motor3_direction = worm_info['Motor3_Direction']
+
+            print(f"{worm_id} Has Been Initialized")
+            print(f"Motor Direction 1: {motor1_direction}")
+            print(f"Motor Direction 2: {motor2_direction}")
+            print(f"Motor Direction 3: {motor3_direction}")
+        else:
+            print("No matching robot found for the given MAC address.")
+
+        joint_commands_topic = f'{worm_id}_joint_commands'
+        joint_states_topic = f'{worm_id}_joint_states'
+        worm_heartbeat_topic = f'{worm_id}_heartbeat'
+
+        print("Recieving Commands From: " + joint_commands_topic)
+        print("Joint States Publishing To: " + joint_states_topic)
+
         
         self.motor_controller_dict = {}
+
+        self.worm_heartbeat = None
+        
+        self.head_connection = None
+        self.tail_connection = None
         
         # Hardcoded to match pican board
         can_device = 'can0'
@@ -25,17 +85,24 @@ class MotorControllerNode(Node):
         print("Creating Subscriber")
         self.subscription = self.create_subscription(
             JointState,
-            'joint_commands',
+            joint_commands_topic,
             self.joint_commands_callback,
             10)
-        
-        print("Subscriber Made")
 
-        self.publisher = self.create_publisher(JointState, 'joint_states', 10)
+        self.publisher = self.create_publisher(JointState, joint_states_topic, 10)
+
+        self.heartbeat_publisher = self.create_publisher(String, worm_heartbeat_topic, 10)
 
         self.get_logger().info("Enabling Motors...")
+
         for motor_id, motor_controller in self.motor_controller_dict.items():
-            motor_controller.enable_motor()
+            state = motor_controller.enable_motor()
+
+            if(state == None):
+                self.worm_heartbeat = "Disabled"
+            else:
+                self.worm_heartbeat = "Enabled"
+
 
     def joint_commands_callback(self, msg):
         # Handle the incoming joint state command messages here
@@ -53,17 +120,33 @@ class MotorControllerNode(Node):
             pos_command = msg.position[idx]
 
 
-            if(motor_id == 1):
-                self.pos1, self.vel1, self.curr1 = motor_controller.send_deg_command(pos_command, vel_command, Kp, Kd, K_ff)
-                
-            elif(motor_id == 2):
-                self.pos2, self.vel2, self.curr2 = motor_controller.send_deg_command(pos_command, vel_command, Kp, Kd, K_ff)
-            
-            elif(motor_id == 3):
-                self.pos3, self.vel3, self.curr3 = motor_controller.send_deg_command(pos_command, vel_command, Kp, Kd, K_ff)
+            if(motor_id == 1 and (abs(self.pos1 - pos_command) < 10)):
+                    self.pos1, self.vel1, self.curr1 = motor_direction[0] * motor_controller.send_deg_command(pos_command  * motor_direction[0], vel_command  * motor_direction[0], Kp, Kd, K_ff  * motor_direction[0])
+                    
+                    if(self.pos1 == None):
+                        self.worm_heartbeat = "Disabled"
+                    else: 
+                        self.worm_heartbeat = "Enabled"
 
+            elif(motor_id == 2  and (abs(self.pos1 - pos_command) < 10)):
+                    self.pos2, self.vel2, self.curr2 = motor_direction[1] * motor_controller.send_deg_command(pos_command * motor_direction[1], vel_command * motor_direction[1], Kp, Kd, K_ff * motor_direction[1])
+                    
+                    if(self.pos1 == None):
+                        self.worm_heartbeat = "Disabled"
+                    else: 
+                        self.worm_heartbeat = "Enabled"
+
+            elif(motor_id == 3  and (abs(self.pos1 - pos_command) < 10)):
+                    self.pos3, self.vel3, self.curr3 = motor_direction[2] * motor_controller.send_deg_command(pos_command * motor_direction[2], vel_command * motor_direction[2], Kp, Kd, K_ff * motor_direction[2])
+
+                    if(self.pos1 == None):
+                        self.worm_heartbeat = "Disabled"
+                    else: 
+                        self.worm_heartbeat = "Enabled"
             else:
-                print("Motor Identification Error")
+                print("YOUR COMMANDED POSITION IS STRAYED TOO FAR AWAY FROM THE ROBOT'S CURRENT CONFIGURATION! PLEASE COMMAND A POSITION BETWEEN 10 DEGREES OF YOUR CURRENT STATE")
+
+           
 
         
         joint_state_msg.header.stamp = self.get_clock().now().to_msg()
@@ -73,6 +156,7 @@ class MotorControllerNode(Node):
         joint_state_msg.effort = [self.curr1, self.curr2, self.curr3]
 
         self.publisher.publish(joint_state_msg)
+        self.heartbeat_publisher(self.worm_heartbeat)
 
     def set_zero_position(self, motor):
         motor.set_zero_position()

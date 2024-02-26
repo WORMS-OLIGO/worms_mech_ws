@@ -14,8 +14,10 @@ test/test_flake8.py
 test/test_pep257.py
 worms_mech/__init__.py
 worms_mech/action_node.py
+worms_mech/camera_scanner.py
 worms_mech/controller_node.py
 worms_mech/controller_nodev2.py
+worms_mech/gait_action_node.py
 worms_mech/gait_manager.py
 worms_mech/gait_parser.py
 worms_mech/hardware_interface.py
