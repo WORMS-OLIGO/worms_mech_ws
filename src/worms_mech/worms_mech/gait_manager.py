@@ -20,7 +20,6 @@ def get_mac_address():
 
 def find_robot_name(mac_address, spreadsheet_path):
     df = pd.read_csv(spreadsheet_path)
-    print(df)
     match = df.loc[df['MAC Address'] == mac_address, 'Species']
     if not match.empty:
         return match.iloc[0]
@@ -44,7 +43,7 @@ class JointCommandPublisher(Node):
         spreadsheet_path = os.path.expanduser('~/worms_mech_ws/src/worms_mech/worms_mech/database.csv')
 
         # Construct the path to the CSV file that holds specialization data
-        specialization_path = os.path.expanduser('~/worms_mech_ws/src/worms_mech/worms_mech/specialization.csv')
+        specialization_path = os.path.expanduser('~/worms_mech_ws/src/worms_mech/worms_mech/specialization_table.csv')
 
         # Define the path to the file that contains head information from camera node
         head_connection_path = os.path.expanduser('~/worms_mech_ws/src/worms_mech/worms_mech/head.txt')
