@@ -44,21 +44,21 @@ class MotorControllerNode(Node):
 
         # Check if worm_info is not None
         if worm_info is not None:
-            species = worm_info['Species']
+            worm_id = worm_info['Species']
             motor1_direction = worm_info['Motor1_Direction']
             motor2_direction = worm_info['Motor2_Direction']
             motor3_direction = worm_info['Motor3_Direction']
 
-            print(f"{species} Has Been Initialized")
+            print(f"{worm_id} Has Been Initialized")
             print(f"Motor Direction 1: {motor1_direction}")
             print(f"Motor Direction 2: {motor2_direction}")
             print(f"Motor Direction 3: {motor3_direction}")
         else:
             print("No matching robot found for the given MAC address.")
 
-        joint_commands_topic = f'{species}_joint_commands'
-        joint_states_topic = f'{species}_joint_states'
-        worm_heartbeat_topic = f'{species}_heartbeat'
+        joint_commands_topic = f'{worm_id}_joint_commands'
+        joint_states_topic = f'{worm_id}_joint_states'
+        worm_heartbeat_topic = f'{worm_id}_heartbeat'
 
         print("Recieving Commands From: " + joint_commands_topic)
         print("Joint States Publishing To: " + joint_states_topic)

@@ -27,24 +27,62 @@ def find_robot_name(mac_address, spreadsheet_path):
     else:
         return None
 
+def find_species(head, spreadsheet_path):
+    df = pd.read_csv(spreadsheet_path)
+    match = df.loc[df['Species'] == head, ['Specialization', 'Motor1_Direction', 'Motor2_Direction', 'Motor3_Direction']]
+    if not match.empty:
+        return match.iloc[0]
+    else:
+        return None
+
 class JointCommandPublisher(Node):
     def __init__(self):
         super().__init__('gait_manager')
 
 
-        # Construct the path to the CSV file
+        # Construct the path to the CSV file for worm info
         spreadsheet_path = os.path.expanduser('~/worms_mech_ws/src/worms_mech/worms_mech/database.csv')
+
+        # Construct the path to the CSV file that holds specialization data
+        specialization_path = os.path.expanduser('~/worms_mech_ws/src/worms_mech/worms_mech/specialization.csv')
+
+        # Define the path to the file that contains head information from camera node
+        head_connection_path = os.path.expanduser('~/worms_mech_ws/src/worms_mech/worms_mech/head.txt')
+
+        # Open the file and read its contents
+        with open(head_conenction_path, 'r') as file:
+            head = file.read()
+
+        # Optionally, print the contents to verify
+        print(head)
 
         mac_address = get_mac_address()
 
-        species = find_robot_name(mac_address, spreadsheet_path)
+        worm_id = find_robot_name(mac_address, spreadsheet_path)
+
+        configuration_info = find_species(head, specialization_path)
+
+        # Check if worm_info is not None
+        if configuration_info is not None:
+            self.species = configuration_info['Species']
+            self.motor1_direction = configuration_info['Motor1_Direction']
+            self.motor2_direction = configuration_info['Motor2_Direction']
+            self.motor3_direction = configuration_info['Motor3_Direction']
+
+            print(f"{worm_id} Has Been Connected to Accessory Port {self.species}")
+            print(f"Motor Direction 1: {motor1_direction}")
+            print(f"Motor Direction 2: {motor2_direction}")
+            print(f"Motor Direction 3: {motor3_direction}")
+        else:
+            print("No matching robot found for the given MAC address.")
+
 
         if species is None:
-            raise ValueError("Robot species not found. Please check the MAC address and spreadsheet.")
+            raise ValueError("Robot species not found. Please check the camera node and text file created.")
 
-        joint_commands_topic = f'/{species}_joint_commands'
-        joint_states_topic = f'/{species}_joint_states'
-        worm_action = f'/{species}_action'
+        joint_commands_topic = f'/{worm_id}_joint_commands'
+        joint_states_topic = f'/{worm_id}_joint_states'
+        worm_action = 'action'
 
 
         self.command_publisher = self.create_publisher(JointState, joint_commands_topic, 10)
@@ -58,7 +96,6 @@ class JointCommandPublisher(Node):
 
         # WAYPOINTS FOR EACH DISCRETE GAIT ACTION
         self.br_step_waypoints = [
-            
             [0, 145, 175], # LIFTED LEG POSITION WHEN ON THE FLOOR
             [15, 145, 175], # TAKING STEP WITH SHOE ELEVATED - 15 DEGREE MOTION
             [15, 135, 175]  # BRING SHOE DOWN WHEN ON FLOOR
@@ -69,14 +106,19 @@ class JointCommandPublisher(Node):
         ]
 
         self.br_lift_waypoints = [
-            [0, 0, 0],
             [15, -45, 35]
         ]
 
+        self.test_gait = [
+            [10, 10, 10],
+            [0, 0, 0],
+            [-10, -10, -10]
+        ]
+
         # INTERPOLATE DISCRETE ACTIONS
-        self.br_step_interpolated_positions = self.interpolate_waypoints(self.br_step_waypoints, .5)
-        self.br_prone_interpolated_positions = self.interpolate_waypoints(self.br_prone_waypoints, .5)
-        self.br_lift_interpolated_positions = self.interpolate_waypoints(self.br_lift_waypoints, .5)
+        self.br_step_interpolated_positions = self.interpolate_waypoints(self.br_step_waypoints, .1)
+        self.br_prone_interpolated_positions = self.interpolate_waypoints(self.br_prone_waypoints, .1)
+        self.br_lift_interpolated_positions = self.interpolate_waypoints(self.br_lift_waypoints, .1)
 
 
         self.position_index = 0
@@ -113,6 +155,16 @@ class JointCommandPublisher(Node):
                 self.position_command = list(map(float, self.interpolated_positions[self.position_index]))
 
                 self.get_logger().info(f"Publishing command: {self.position_command}")
+
+                if(self.species == "BOAR"):
+                    # SWITCH DIRECTIONS HERE BASED ON INFORMATION FROM SPECIES INFORMATION
+                    self.position_command[0] *= self.motor1_direction
+                    self.position_command[0] *= self.motor2_direction
+                    self.position_command[0] *= self.motor3_direction
+
+                else if(self.species == "BIRD"):
+                    # SWITCH DIRECTIONS HERE BASED ON INFORMATION FROM SPECIES INFORMATION
+
 
                 joint_state_msg = JointState()
                 joint_state_msg.header.stamp = self.get_clock().now().to_msg()
@@ -164,6 +216,14 @@ class JointCommandPublisher(Node):
             # Interpolate Positions from Current Position to Start of the Desired Action
             self.interpolated_positions = self.interpolate_waypoints(br_prone_waypoints)
             self.action = "prone"
+
+
+        if msg.data == "test_gait"
+            self.execute_timer_callback = True
+
+            # Interpolate Positions from Current Position to Start of the Desired Action
+            self.interpolated_positions = self.interpolate_waypoints(test_gait_waypoints)
+            self.action = "test_gait"
 
 def main(args=None):
     rclpy.init(args=args)
