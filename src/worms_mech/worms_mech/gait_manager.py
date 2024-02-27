@@ -11,8 +11,9 @@ import os
 
 def get_mac_address():
     
-    mac_address = subprocess.check_output(f"cat /sys/class/net/wlan0/address", shell=True).decode().strip()
     
+    mac_address = subprocess.check_output(f"cat /sys/class/net/wlan0/address", shell=True).decode().strip()
+
     if mac_address:
         return mac_address
         
@@ -167,7 +168,7 @@ class JointCommandPublisher(Node):
                 joint_state_msg.velocity = [0.0, 0.0, 0.0]  # Ensuring these are also floats
                 joint_state_msg.effort = [0.0, 0.0, 0.0]
                 print(joint_state_msg)
-                #self.publisher.publish(joint_state_msg)
+                self.publisher.publish(joint_state_msg)
 
 
                 self.position_index += 1
@@ -185,7 +186,7 @@ class JointCommandPublisher(Node):
                     position_str = ', '.join([f"{p:.2f}" for p in self.current_pose.position])
                     self.get_logger().info(f'Path complete. Holding Position at: [{position_str}]')
 
-                #self.publisher.publish(joint_state_msg)
+                self.publisher.publish(joint_state_msg)
         else:
             self.execute_timer_callback = False
             

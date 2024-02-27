@@ -1,6 +1,7 @@
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import JointState
+from std_msgs.msg import String
 from rclpy.executors import MultiThreadedExecutor
 import numpy as np
 import pandas as pd
@@ -10,8 +11,12 @@ import os
 
 def get_mac_address():
     
-    mac_address = subprocess.check_output(f"cat /sys/class/net/wlan0/address", shell=True).decode().strip()
-    
+    try:
+        mac_address = subprocess.check_output(f"cat /sys/class/net/wlan0/address", shell=True).decode().strip()
+    except error as e:
+        print("Not compatible with that subprocess")
+
+
     if mac_address:
         return mac_address
         
@@ -20,7 +25,6 @@ def get_mac_address():
 
 def find_robot_name(mac_address, spreadsheet_path):
     df = pd.read_csv(spreadsheet_path)
-    print(df)
     match = df.loc[df['MAC Address'] == mac_address, 'Species']
     if not match.empty:
         return match.iloc[0]
@@ -29,7 +33,7 @@ def find_robot_name(mac_address, spreadsheet_path):
 
 def find_species(head, spreadsheet_path):
     df = pd.read_csv(spreadsheet_path)
-    match = df.loc[df['Species'] == head, ['Specialization', 'Motor1_Direction', 'Motor2_Direction', 'Motor3_Direction']]
+    match = df.loc[df['Head'] == head, ['Specialization', 'Motor1_Direction', 'Motor2_Direction', 'Motor3_Direction']]
     if not match.empty:
         return match.iloc[0]
     else:
@@ -44,7 +48,7 @@ class JointCommandPublisher(Node):
         spreadsheet_path = os.path.expanduser('~/worms_mech_ws/src/worms_mech/worms_mech/database.csv')
 
         # Construct the path to the CSV file that holds specialization data
-        specialization_path = os.path.expanduser('~/worms_mech_ws/src/worms_mech/worms_mech/specialization.csv')
+        specialization_path = os.path.expanduser('~/worms_mech_ws/src/worms_mech/worms_mech/specialization_table.csv')
 
         # Define the path to the file that contains head information from camera node
         head_connection_path = os.path.expanduser('~/worms_mech_ws/src/worms_mech/worms_mech/head.txt')
@@ -53,36 +57,40 @@ class JointCommandPublisher(Node):
         with open(head_connection_path, 'r') as file:
             head = file.read()
 
+        print("HEAD CONNECTOR: " + head)
+
         mac_address = get_mac_address()
 
         worm_id = find_robot_name(mac_address, spreadsheet_path)
 
         configuration_info = find_species(head, specialization_path)
 
+        print(configuration_info)
+
         # Check if worm_info is not None
         if configuration_info is not None:
-            self.species = configuration_info['Species']
+            self.species = head
             self.motor1_direction = configuration_info['Motor1_Direction']
             self.motor2_direction = configuration_info['Motor2_Direction']
             self.motor3_direction = configuration_info['Motor3_Direction']
 
             print(f"{worm_id} Has Been Connected to Accessory Port {self.species}")
-            print(f"Motor Direction 1: {motor1_direction}")
-            print(f"Motor Direction 2: {motor2_direction}")
-            print(f"Motor Direction 3: {motor3_direction}")
+            print(f"Motor Direction 1: {self.motor1_direction}")
+            print(f"Motor Direction 2: {self.motor2_direction}")
+            print(f"Motor Direction 3: {self.motor3_direction}")
         else:
             print("No matching robot found for the given MAC address.")
 
 
-        if species is None:
+        if self.species is None:
             raise ValueError("Robot species not found. Please check the camera node and text file created.")
 
         joint_commands_topic = f'/{worm_id}_joint_commands'
         joint_states_topic = f'/{worm_id}_joint_states'
-        worm_action = 'action'
+        worm_action = 'actions'
 
-        print("Recieving Commands From: " + joint_commands_topic)
-        print("Joint States Publishing To: " + joint_states_topic)
+        print("Sending Commands To: " + joint_commands_topic)
+        print("Getting Joint States From: " + joint_states_topic)
         
 
         self.command_publisher = self.create_publisher(JointState, joint_commands_topic, 10)
@@ -163,7 +171,7 @@ class JointCommandPublisher(Node):
                 joint_state_msg.velocity = [0.0, 0.0, 0.0]  # Ensuring these are also floats
                 joint_state_msg.effort = [0.0, 0.0, 0.0]
                 print(joint_state_msg)
-                #self.publisher.publish(joint_state_msg)
+                self.publisher.publish(joint_state_msg)
 
 
                 self.position_index += 1
@@ -181,7 +189,7 @@ class JointCommandPublisher(Node):
                     position_str = ', '.join([f"{p:.2f}" for p in self.current_pose.position])
                     self.get_logger().info(f'Path complete. Holding Position at: [{position_str}]')
 
-                #self.publisher.publish(joint_state_msg)
+                self.publisher.publish(joint_state_msg)
         else:
             self.execute_timer_callback = False
             
@@ -191,21 +199,21 @@ class JointCommandPublisher(Node):
             self.execute_timer_callback = True
 
             # Interpolate Positions from Current Position to Start of the Desired Action
-            self.interpolated_positions = self.interpolate_waypoints(br_step_waypoints)
+            self.interpolated_positions = self.interpolate_waypoints(step_waypoints)
             self.action = "step"
 
         if msg.data == "stand":
             self.execute_timer_callback = True
 
             # Interpolate Positions from Current Position to Start of the Desired Action
-            self.interpolated_positions = self.interpolate_waypoints(br_stand_waypoints)
+            self.interpolated_positions = self.interpolate_waypoints(self.stand_waypoints)
             self.action = "stand"
 
         if msg.data == "prone":
             self.execute_timer_callback = True
 
             # Interpolate Positions from Current Position to Start of the Desired Action
-            self.interpolated_positions = self.interpolate_waypoints(br_prone_waypoints)
+            self.interpolated_positions = self.interpolate_waypoints(self.prone_waypoints)
             self.action = "prone"
 
 
@@ -213,7 +221,7 @@ class JointCommandPublisher(Node):
             self.execute_timer_callback = True
 
             # Interpolate Positions from Current Position to Start of the Desired Action
-            self.interpolated_positions = self.interpolate_waypoints(test_gait_waypoints)
+            self.interpolated_positions = self.interpolate_waypoints(self.test_gait_waypoints)
             self.action = "test_gait"
 
 def main(args=None):
