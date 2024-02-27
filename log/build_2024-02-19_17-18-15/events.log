@@ -1,0 +1,938 @@
+[0.000000] (-) TimerEvent: {}
+[0.001752] (-) JobUnselected: {'identifier': 'worms_mech'}
+[0.002310] (image_tools) JobQueued: {'identifier': 'image_tools', 'dependencies': OrderedDict()}
+[0.002404] (image_tools) JobStarted: {'identifier': 'image_tools'}
+[0.087556] (image_tools) JobProgress: {'identifier': 'image_tools', 'progress': 'cmake'}
+[0.088425] (image_tools) Command: {'cmd': ['/usr/bin/cmake', '/home/worm7/worms_mech_ws/src/image_tools', '-DCMAKE_INSTALL_PREFIX=/home/worm7/worms_mech_ws/install/image_tools'], 'cwd': '/home/worm7/worms_mech_ws/build/image_tools', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'worm7'), ('SSH_CLIENT', '192.168.42.215 64619 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/worm7/worms_ws/install/tracetools_image_pipeline/lib:/home/worm7/worms_ws/install/opencv_cam/lib:/home/worm7/worms_ws/install/motor_debug/lib:/home/worm7/worms_ws/install/image_transport/lib:/home/worm7/worms_ws/install/camera_info_manager/lib:/home/worm7/worms_ws/install/camera_calibration_parsers/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/worm7'), ('OLDPWD', '/home/worm7/worms_mech_ws/src'), ('SSH_TTY', '/dev/pts/2'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/worm7/worms_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'worm7'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '6'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/home/worm7/worms_ws/install/worms_interfaces:/home/worm7/worms_ws/install/walking_gait_sync:/home/worm7/worms_ws/install/tracetools_image_pipeline:/home/worm7/worms_ws/install/startup:/home/worm7/worms_ws/install/opencv_cam:/home/worm7/worms_ws/install/ros2_shared:/home/worm7/worms_ws/install/py_srvcli:/home/worm7/worms_ws/install/py_pubsub:/home/worm7/worms_ws/install/motor_readout:/home/worm7/worms_ws/install/motor_debug:/home/worm7/worms_ws/install/image_transport:/home/worm7/worms_ws/install/heart_beat_pub:/home/worm7/worms_ws/install/camera_info_manager:/home/worm7/worms_ws/install/camera_calibration_parsers:/home/worm7/worms_ws/install/camera_calibration:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/worm7/worms_mech_ws/build/image_tools'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.42.215 64619 192.168.42.100 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/worm7/worms_ws/install/walking_gait_sync/lib/python3.10/site-packages:/home/worm7/worms_ws/install/startup/lib/python3.10/site-packages:/home/worm7/worms_ws/install/py_srvcli/lib/python3.10/site-packages:/home/worm7/worms_ws/install/py_pubsub/lib/python3.10/site-packages:/home/worm7/worms_ws/install/motor_readout/lib/python3.10/site-packages:/home/worm7/worms_ws/install/motor_debug/local/lib/python3.10/dist-packages:/home/worm7/worms_ws/install/heart_beat_pub/lib/python3.10/site-packages:/home/worm7/worms_ws/install/camera_calibration/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('EDITOR', 'vi'), ('CMAKE_PREFIX_PATH', '/home/worm7/worms_ws/install/worms_interfaces:/home/worm7/worms_ws/install/tracetools_image_pipeline:/home/worm7/worms_ws/install/opencv_cam:/home/worm7/worms_ws/install/ros2_shared:/home/worm7/worms_ws/install/motor_debug:/home/worm7/worms_ws/install/walking_gait_sync:/home/worm7/worms_ws/install/startup:/home/worm7/worms_ws/install/py_srvcli:/home/worm7/worms_ws/install/py_pubsub:/home/worm7/worms_ws/install/motor_readout:/home/worm7/worms_ws/install/heart_beat_pub:/home/worm7/worms_ws/install/camera_calibration:/opt/ros/humble:/home/worm7/worms_ws/install/image_transport:/home/worm7/worms_ws/install/camera_info_manager:/home/worm7/worms_ws/install/camera_calibration_parsers')]), 'shell': False}
+[0.108083] (-) TimerEvent: {}
+[0.210633] (-) TimerEvent: {}
+[0.311647] (-) TimerEvent: {}
+[0.412607] (-) TimerEvent: {}
+[0.513664] (-) TimerEvent: {}
+[0.614774] (-) TimerEvent: {}
+[0.715832] (-) TimerEvent: {}
+[0.816806] (-) TimerEvent: {}
+[0.918130] (-) TimerEvent: {}
+[1.019228] (-) TimerEvent: {}
+[1.120351] (-) TimerEvent: {}
+[1.221523] (-) TimerEvent: {}
+[1.319659] (image_tools) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[1.321615] (-) TimerEvent: {}
+[1.422335] (-) TimerEvent: {}
+[1.523390] (-) TimerEvent: {}
+[1.624549] (-) TimerEvent: {}
+[1.725522] (-) TimerEvent: {}
+[1.826464] (-) TimerEvent: {}
+[1.927290] (-) TimerEvent: {}
+[2.028339] (-) TimerEvent: {}
+[2.097679] (image_tools) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[2.128504] (-) TimerEvent: {}
+[2.155764] (image_tools) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[2.228697] (-) TimerEvent: {}
+[2.329486] (-) TimerEvent: {}
+[2.430247] (-) TimerEvent: {}
+[2.531160] (-) TimerEvent: {}
+[2.551442] (image_tools) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[2.576738] (image_tools) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[2.578872] (image_tools) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[2.582077] (image_tools) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[2.598255] (image_tools) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[2.631340] (-) TimerEvent: {}
+[2.732026] (-) TimerEvent: {}
+[2.832872] (-) TimerEvent: {}
+[2.933880] (-) TimerEvent: {}
+[2.995899] (image_tools) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[3.022767] (image_tools) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[3.023719] (image_tools) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[3.025281] (image_tools) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[3.033898] (-) TimerEvent: {}
+[3.071654] (image_tools) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.2 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[3.134069] (-) TimerEvent: {}
+[3.234777] (-) TimerEvent: {}
+[3.335572] (-) TimerEvent: {}
+[3.437516] (-) TimerEvent: {}
+[3.538373] (-) TimerEvent: {}
+[3.639060] (-) TimerEvent: {}
+[3.739795] (-) TimerEvent: {}
+[3.840444] (-) TimerEvent: {}
+[3.941140] (-) TimerEvent: {}
+[4.042241] (-) TimerEvent: {}
+[4.104989] (image_tools) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter \n'}
+[4.142649] (-) TimerEvent: {}
+[4.244017] (-) TimerEvent: {}
+[4.345237] (-) TimerEvent: {}
+[4.446547] (-) TimerEvent: {}
+[4.547418] (-) TimerEvent: {}
+[4.648056] (-) TimerEvent: {}
+[4.748756] (-) TimerEvent: {}
+[4.849577] (-) TimerEvent: {}
+[4.950264] (-) TimerEvent: {}
+[5.050912] (-) TimerEvent: {}
+[5.151578] (-) TimerEvent: {}
+[5.252359] (-) TimerEvent: {}
+[5.327227] (image_tools) StdoutLine: {'line': b'-- Found rclcpp: 16.0.1 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[5.352517] (-) TimerEvent: {}
+[5.453202] (-) TimerEvent: {}
+[5.553872] (-) TimerEvent: {}
+[5.654575] (-) TimerEvent: {}
+[5.755245] (-) TimerEvent: {}
+[5.855929] (-) TimerEvent: {}
+[5.956664] (-) TimerEvent: {}
+[6.003526] (image_tools) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.3 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[6.056849] (-) TimerEvent: {}
+[6.085369] (image_tools) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.3 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[6.157013] (-) TimerEvent: {}
+[6.186073] (image_tools) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.3 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[6.257198] (-) TimerEvent: {}
+[6.318055] (image_tools) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[6.357397] (-) TimerEvent: {}
+[6.458330] (-) TimerEvent: {}
+[6.506392] (image_tools) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[6.558525] (-) TimerEvent: {}
+[6.659312] (-) TimerEvent: {}
+[6.760088] (-) TimerEvent: {}
+[6.860852] (-) TimerEvent: {}
+[6.961525] (-) TimerEvent: {}
+[7.017544] (image_tools) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.0 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[7.060801] (image_tools) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.1 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[7.061626] (-) TimerEvent: {}
+[7.162249] (-) TimerEvent: {}
+[7.263015] (-) TimerEvent: {}
+[7.363693] (-) TimerEvent: {}
+[7.464545] (-) TimerEvent: {}
+[7.565291] (-) TimerEvent: {}
+[7.666016] (-) TimerEvent: {}
+[7.766733] (-) TimerEvent: {}
+[7.867483] (-) TimerEvent: {}
+[7.898210] (image_tools) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[7.967658] (-) TimerEvent: {}
+[8.068352] (-) TimerEvent: {}
+[8.169054] (-) TimerEvent: {}
+[8.185497] (image_tools) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[8.269228] (-) TimerEvent: {}
+[8.370017] (-) TimerEvent: {}
+[8.470947] (-) TimerEvent: {}
+[8.571624] (-) TimerEvent: {}
+[8.663150] (image_tools) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[8.671789] (-) TimerEvent: {}
+[8.772474] (-) TimerEvent: {}
+[8.873189] (-) TimerEvent: {}
+[8.973908] (-) TimerEvent: {}
+[9.074617] (-) TimerEvent: {}
+[9.181627] (-) TimerEvent: {}
+[9.282354] (-) TimerEvent: {}
+[9.383041] (-) TimerEvent: {}
+[9.483925] (-) TimerEvent: {}
+[9.487079] (image_tools) StdoutLine: {'line': b'-- Found rclcpp_components: 16.0.1 (/opt/ros/humble/share/rclcpp_components/cmake)\n'}
+[9.584126] (-) TimerEvent: {}
+[9.684806] (-) TimerEvent: {}
+[9.785489] (-) TimerEvent: {}
+[9.886204] (-) TimerEvent: {}
+[9.941264] (image_tools) StdoutLine: {'line': b'-- Found sensor_msgs: 4.2.2 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[9.986379] (-) TimerEvent: {}
+[10.087096] (-) TimerEvent: {}
+[10.187779] (-) TimerEvent: {}
+[10.288519] (-) TimerEvent: {}
+[10.389260] (-) TimerEvent: {}
+[10.490003] (-) TimerEvent: {}
+[10.556863] (image_tools) StdoutLine: {'line': b'-- Found OpenCV: /usr (found version "4.5.4") found components: core highgui imgcodecs imgproc videoio \n'}
+[10.590183] (-) TimerEvent: {}
+[10.614530] (image_tools) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.4 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[10.690349] (-) TimerEvent: {}
+[10.791039] (-) TimerEvent: {}
+[10.891866] (-) TimerEvent: {}
+[10.992903] (-) TimerEvent: {}
+[11.093598] (-) TimerEvent: {}
+[11.194290] (-) TimerEvent: {}
+[11.295042] (-) TimerEvent: {}
+[11.395739] (-) TimerEvent: {}
+[11.496430] (-) TimerEvent: {}
+[11.597098] (-) TimerEvent: {}
+[11.697820] (-) TimerEvent: {}
+[11.798467] (-) TimerEvent: {}
+[11.899127] (-) TimerEvent: {}
+[11.904909] (image_tools) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[11.999297] (-) TimerEvent: {}
+[12.027196] (image_tools) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[12.062417] (image_tools) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/aarch64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") \n'}
+[12.063256] (image_tools) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[12.063745] (image_tools) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[12.064188] (image_tools) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.10.so\n'}
+[12.099468] (-) TimerEvent: {}
+[12.178892] (image_tools) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[12.199636] (-) TimerEvent: {}
+[12.300309] (-) TimerEvent: {}
+[12.400985] (-) TimerEvent: {}
+[12.415007] (image_tools) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[12.435205] (image_tools) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[12.436293] (image_tools) StdoutLine: {'line': b'-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/worm7/worms_mech_ws/src/image_tools/include>\n'}
+[12.436941] (image_tools) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[12.453040] (image_tools) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[12.453631] (image_tools) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[12.463893] (image_tools) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[12.483689] (image_tools) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[12.484247] (image_tools) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[12.490206] (image_tools) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[12.501147] (-) TimerEvent: {}
+[12.509043] (image_tools) StdoutLine: {'line': b'-- Configuring done\n'}
+[12.601347] (-) TimerEvent: {}
+[12.604581] (image_tools) StdoutLine: {'line': b'-- Generating done\n'}
+[12.612525] (image_tools) StdoutLine: {'line': b'-- Build files have been written to: /home/worm7/worms_mech_ws/build/image_tools\n'}
+[12.658347] (image_tools) CommandEnded: {'returncode': 0}
+[12.660175] (image_tools) JobProgress: {'identifier': 'image_tools', 'progress': 'build'}
+[12.662843] (image_tools) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/worm7/worms_mech_ws/build/image_tools', '--', '-j4', '-l4'], 'cwd': '/home/worm7/worms_mech_ws/build/image_tools', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'worm7'), ('SSH_CLIENT', '192.168.42.215 64619 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/worm7/worms_ws/install/tracetools_image_pipeline/lib:/home/worm7/worms_ws/install/opencv_cam/lib:/home/worm7/worms_ws/install/motor_debug/lib:/home/worm7/worms_ws/install/image_transport/lib:/home/worm7/worms_ws/install/camera_info_manager/lib:/home/worm7/worms_ws/install/camera_calibration_parsers/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/worm7'), ('OLDPWD', '/home/worm7/worms_mech_ws/src'), ('SSH_TTY', '/dev/pts/2'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/worm7/worms_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'worm7'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '6'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/home/worm7/worms_ws/install/worms_interfaces:/home/worm7/worms_ws/install/walking_gait_sync:/home/worm7/worms_ws/install/tracetools_image_pipeline:/home/worm7/worms_ws/install/startup:/home/worm7/worms_ws/install/opencv_cam:/home/worm7/worms_ws/install/ros2_shared:/home/worm7/worms_ws/install/py_srvcli:/home/worm7/worms_ws/install/py_pubsub:/home/worm7/worms_ws/install/motor_readout:/home/worm7/worms_ws/install/motor_debug:/home/worm7/worms_ws/install/image_transport:/home/worm7/worms_ws/install/heart_beat_pub:/home/worm7/worms_ws/install/camera_info_manager:/home/worm7/worms_ws/install/camera_calibration_parsers:/home/worm7/worms_ws/install/camera_calibration:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/worm7/worms_mech_ws/build/image_tools'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.42.215 64619 192.168.42.100 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/worm7/worms_ws/install/walking_gait_sync/lib/python3.10/site-packages:/home/worm7/worms_ws/install/startup/lib/python3.10/site-packages:/home/worm7/worms_ws/install/py_srvcli/lib/python3.10/site-packages:/home/worm7/worms_ws/install/py_pubsub/lib/python3.10/site-packages:/home/worm7/worms_ws/install/motor_readout/lib/python3.10/site-packages:/home/worm7/worms_ws/install/motor_debug/local/lib/python3.10/dist-packages:/home/worm7/worms_ws/install/heart_beat_pub/lib/python3.10/site-packages:/home/worm7/worms_ws/install/camera_calibration/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('EDITOR', 'vi'), ('CMAKE_PREFIX_PATH', '/home/worm7/worms_ws/install/worms_interfaces:/home/worm7/worms_ws/install/tracetools_image_pipeline:/home/worm7/worms_ws/install/opencv_cam:/home/worm7/worms_ws/install/ros2_shared:/home/worm7/worms_ws/install/motor_debug:/home/worm7/worms_ws/install/walking_gait_sync:/home/worm7/worms_ws/install/startup:/home/worm7/worms_ws/install/py_srvcli:/home/worm7/worms_ws/install/py_pubsub:/home/worm7/worms_ws/install/motor_readout:/home/worm7/worms_ws/install/heart_beat_pub:/home/worm7/worms_ws/install/camera_calibration:/opt/ros/humble:/home/worm7/worms_ws/install/image_transport:/home/worm7/worms_ws/install/camera_info_manager:/home/worm7/worms_ws/install/camera_calibration_parsers')]), 'shell': False}
+[12.701578] (-) TimerEvent: {}
+[12.802343] (-) TimerEvent: {}
+[12.903121] (-) TimerEvent: {}
+[12.927512] (image_tools) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding CXX object CMakeFiles/image_tools.dir/src/burger.cpp.o\x1b[0m\n'}
+[12.929865] (image_tools) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding CXX object CMakeFiles/cam2image.dir/rclcpp_components/node_main_cam2image.cpp.o\x1b[0m\n'}
+[12.941131] (image_tools) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/showimage.dir/rclcpp_components/node_main_showimage.cpp.o\x1b[0m\n'}
+[12.942417] (image_tools) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding CXX object CMakeFiles/image_tools.dir/src/cam2image.cpp.o\x1b[0m\n'}
+[13.003306] (-) TimerEvent: {}
+[13.104046] (-) TimerEvent: {}
+[13.204942] (-) TimerEvent: {}
+[13.305868] (-) TimerEvent: {}
+[13.406652] (-) TimerEvent: {}
+[13.507363] (-) TimerEvent: {}
+[13.608175] (-) TimerEvent: {}
+[13.708978] (-) TimerEvent: {}
+[13.809834] (-) TimerEvent: {}
+[13.911020] (-) TimerEvent: {}
+[14.012406] (-) TimerEvent: {}
+[14.113828] (-) TimerEvent: {}
+[14.214756] (-) TimerEvent: {}
+[14.315517] (-) TimerEvent: {}
+[14.416794] (-) TimerEvent: {}
+[14.518455] (-) TimerEvent: {}
+[14.619819] (-) TimerEvent: {}
+[14.720629] (-) TimerEvent: {}
+[14.821992] (-) TimerEvent: {}
+[14.923768] (-) TimerEvent: {}
+[15.027293] (-) TimerEvent: {}
+[15.128773] (-) TimerEvent: {}
+[15.230527] (-) TimerEvent: {}
+[15.332803] (-) TimerEvent: {}
+[15.435486] (-) TimerEvent: {}
+[15.536350] (-) TimerEvent: {}
+[15.637397] (-) TimerEvent: {}
+[15.738711] (-) TimerEvent: {}
+[15.839747] (-) TimerEvent: {}
+[15.941644] (-) TimerEvent: {}
+[16.043385] (-) TimerEvent: {}
+[16.145238] (-) TimerEvent: {}
+[16.247330] (-) TimerEvent: {}
+[16.349931] (-) TimerEvent: {}
+[16.452858] (-) TimerEvent: {}
+[16.553947] (-) TimerEvent: {}
+[16.655130] (-) TimerEvent: {}
+[16.756357] (-) TimerEvent: {}
+[16.857457] (-) TimerEvent: {}
+[16.958694] (-) TimerEvent: {}
+[17.061072] (-) TimerEvent: {}
+[17.163574] (-) TimerEvent: {}
+[17.265559] (-) TimerEvent: {}
+[17.367284] (-) TimerEvent: {}
+[17.469055] (-) TimerEvent: {}
+[17.570796] (-) TimerEvent: {}
+[17.672660] (-) TimerEvent: {}
+[17.774718] (-) TimerEvent: {}
+[17.876953] (-) TimerEvent: {}
+[17.978993] (-) TimerEvent: {}
+[18.080751] (-) TimerEvent: {}
+[18.182758] (-) TimerEvent: {}
+[18.293363] (-) TimerEvent: {}
+[18.395501] (-) TimerEvent: {}
+[18.496573] (-) TimerEvent: {}
+[18.598635] (-) TimerEvent: {}
+[18.700515] (-) TimerEvent: {}
+[18.802541] (-) TimerEvent: {}
+[18.904753] (-) TimerEvent: {}
+[19.008103] (-) TimerEvent: {}
+[19.110161] (-) TimerEvent: {}
+[19.211963] (-) TimerEvent: {}
+[19.314303] (-) TimerEvent: {}
+[19.416357] (-) TimerEvent: {}
+[19.518028] (-) TimerEvent: {}
+[19.620421] (-) TimerEvent: {}
+[19.722719] (-) TimerEvent: {}
+[19.825083] (-) TimerEvent: {}
+[19.927460] (-) TimerEvent: {}
+[20.028492] (-) TimerEvent: {}
+[20.129551] (-) TimerEvent: {}
+[20.231966] (-) TimerEvent: {}
+[20.333912] (-) TimerEvent: {}
+[20.435711] (-) TimerEvent: {}
+[20.537172] (-) TimerEvent: {}
+[20.639007] (-) TimerEvent: {}
+[20.740957] (-) TimerEvent: {}
+[20.842746] (-) TimerEvent: {}
+[20.944540] (-) TimerEvent: {}
+[21.046521] (-) TimerEvent: {}
+[21.148218] (-) TimerEvent: {}
+[21.249954] (-) TimerEvent: {}
+[21.351813] (-) TimerEvent: {}
+[21.453650] (-) TimerEvent: {}
+[21.555830] (-) TimerEvent: {}
+[21.657156] (-) TimerEvent: {}
+[21.758490] (-) TimerEvent: {}
+[21.860096] (-) TimerEvent: {}
+[21.961461] (-) TimerEvent: {}
+[22.055141] (image_tools) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding CXX object CMakeFiles/image_tools.dir/src/cv_mat_sensor_msgs_image_type_adapter.cpp.o\x1b[0m\n'}
+[22.061825] (-) TimerEvent: {}
+[22.163188] (-) TimerEvent: {}
+[22.265006] (-) TimerEvent: {}
+[22.366800] (-) TimerEvent: {}
+[22.468739] (-) TimerEvent: {}
+[22.570639] (-) TimerEvent: {}
+[22.672564] (-) TimerEvent: {}
+[22.774380] (-) TimerEvent: {}
+[22.876179] (-) TimerEvent: {}
+[22.977963] (-) TimerEvent: {}
+[23.079817] (-) TimerEvent: {}
+[23.181755] (-) TimerEvent: {}
+[23.283575] (-) TimerEvent: {}
+[23.385468] (-) TimerEvent: {}
+[23.487477] (-) TimerEvent: {}
+[23.589558] (-) TimerEvent: {}
+[23.694395] (-) TimerEvent: {}
+[23.796231] (-) TimerEvent: {}
+[23.897949] (-) TimerEvent: {}
+[23.999718] (-) TimerEvent: {}
+[24.101491] (-) TimerEvent: {}
+[24.203276] (-) TimerEvent: {}
+[24.305057] (-) TimerEvent: {}
+[24.406838] (-) TimerEvent: {}
+[24.508744] (-) TimerEvent: {}
+[24.610530] (-) TimerEvent: {}
+[24.712304] (-) TimerEvent: {}
+[24.814046] (-) TimerEvent: {}
+[24.915943] (-) TimerEvent: {}
+[25.017686] (-) TimerEvent: {}
+[25.119501] (-) TimerEvent: {}
+[25.221506] (-) TimerEvent: {}
+[25.323298] (-) TimerEvent: {}
+[25.425193] (-) TimerEvent: {}
+[25.526694] (-) TimerEvent: {}
+[25.627736] (-) TimerEvent: {}
+[25.728981] (-) TimerEvent: {}
+[25.830136] (-) TimerEvent: {}
+[25.931262] (-) TimerEvent: {}
+[26.032444] (-) TimerEvent: {}
+[26.133640] (-) TimerEvent: {}
+[26.234663] (-) TimerEvent: {}
+[26.335735] (-) TimerEvent: {}
+[26.436848] (-) TimerEvent: {}
+[26.537903] (-) TimerEvent: {}
+[26.639184] (-) TimerEvent: {}
+[26.740542] (-) TimerEvent: {}
+[26.841900] (-) TimerEvent: {}
+[26.943249] (-) TimerEvent: {}
+[27.045100] (-) TimerEvent: {}
+[27.147795] (-) TimerEvent: {}
+[27.249837] (-) TimerEvent: {}
+[27.351886] (-) TimerEvent: {}
+[27.454042] (-) TimerEvent: {}
+[27.555966] (-) TimerEvent: {}
+[27.657901] (-) TimerEvent: {}
+[27.759635] (-) TimerEvent: {}
+[27.861411] (-) TimerEvent: {}
+[27.963463] (-) TimerEvent: {}
+[28.065627] (-) TimerEvent: {}
+[28.167591] (-) TimerEvent: {}
+[28.269397] (-) TimerEvent: {}
+[28.371647] (-) TimerEvent: {}
+[28.473679] (-) TimerEvent: {}
+[28.575975] (-) TimerEvent: {}
+[28.677757] (-) TimerEvent: {}
+[28.779537] (-) TimerEvent: {}
+[28.881373] (-) TimerEvent: {}
+[28.983169] (-) TimerEvent: {}
+[29.085025] (-) TimerEvent: {}
+[29.186807] (-) TimerEvent: {}
+[29.288741] (-) TimerEvent: {}
+[29.390772] (-) TimerEvent: {}
+[29.491910] (-) TimerEvent: {}
+[29.592978] (-) TimerEvent: {}
+[29.710350] (-) TimerEvent: {}
+[29.817898] (-) TimerEvent: {}
+[29.918974] (-) TimerEvent: {}
+[30.020116] (-) TimerEvent: {}
+[30.121498] (-) TimerEvent: {}
+[30.222973] (-) TimerEvent: {}
+[30.327431] (-) TimerEvent: {}
+[30.428480] (-) TimerEvent: {}
+[30.529650] (-) TimerEvent: {}
+[30.630796] (-) TimerEvent: {}
+[30.731960] (-) TimerEvent: {}
+[30.840958] (-) TimerEvent: {}
+[30.942087] (-) TimerEvent: {}
+[31.043112] (-) TimerEvent: {}
+[31.144890] (-) TimerEvent: {}
+[31.246909] (-) TimerEvent: {}
+[31.349398] (-) TimerEvent: {}
+[31.452181] (-) TimerEvent: {}
+[31.554217] (-) TimerEvent: {}
+[31.576551] (image_tools) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/image_tools.dir/src/showimage.cpp.o\x1b[0m\n'}
+[31.654427] (-) TimerEvent: {}
+[31.756372] (-) TimerEvent: {}
+[31.857297] (-) TimerEvent: {}
+[31.958242] (-) TimerEvent: {}
+[32.059859] (-) TimerEvent: {}
+[32.161657] (-) TimerEvent: {}
+[32.263309] (-) TimerEvent: {}
+[32.365112] (-) TimerEvent: {}
+[32.467432] (-) TimerEvent: {}
+[32.568387] (-) TimerEvent: {}
+[32.669401] (-) TimerEvent: {}
+[32.770985] (-) TimerEvent: {}
+[32.872046] (-) TimerEvent: {}
+[32.973508] (-) TimerEvent: {}
+[33.059035] (image_tools) StdoutLine: {'line': b'[ 77%] \x1b[32m\x1b[1mLinking CXX executable cam2image\x1b[0m\n'}
+[33.073769] (-) TimerEvent: {}
+[33.175442] (-) TimerEvent: {}
+[33.277391] (-) TimerEvent: {}
+[33.379429] (-) TimerEvent: {}
+[33.480382] (-) TimerEvent: {}
+[33.585991] (-) TimerEvent: {}
+[33.690089] (-) TimerEvent: {}
+[33.793964] (-) TimerEvent: {}
+[33.816414] (image_tools) StdoutLine: {'line': b'[ 88%] \x1b[32m\x1b[1mLinking CXX executable showimage\x1b[0m\n'}
+[33.894185] (-) TimerEvent: {}
+[33.996325] (-) TimerEvent: {}
+[34.099176] (-) TimerEvent: {}
+[34.201582] (-) TimerEvent: {}
+[34.303875] (-) TimerEvent: {}
+[34.343074] (image_tools) StdoutLine: {'line': b'[ 88%] Built target cam2image\n'}
+[34.404225] (-) TimerEvent: {}
+[34.505587] (-) TimerEvent: {}
+[34.608726] (-) TimerEvent: {}
+[34.710957] (-) TimerEvent: {}
+[34.813136] (-) TimerEvent: {}
+[34.863296] (image_tools) StdoutLine: {'line': b'[ 88%] Built target showimage\n'}
+[34.913420] (-) TimerEvent: {}
+[35.014481] (-) TimerEvent: {}
+[35.115410] (-) TimerEvent: {}
+[35.216340] (-) TimerEvent: {}
+[35.317287] (-) TimerEvent: {}
+[35.418337] (-) TimerEvent: {}
+[35.519214] (-) TimerEvent: {}
+[35.620084] (-) TimerEvent: {}
+[35.721914] (-) TimerEvent: {}
+[35.823609] (-) TimerEvent: {}
+[35.925348] (-) TimerEvent: {}
+[36.027142] (-) TimerEvent: {}
+[36.129389] (-) TimerEvent: {}
+[36.230968] (-) TimerEvent: {}
+[36.332454] (-) TimerEvent: {}
+[36.433923] (-) TimerEvent: {}
+[36.534859] (-) TimerEvent: {}
+[36.635692] (-) TimerEvent: {}
+[36.736561] (-) TimerEvent: {}
+[36.837449] (-) TimerEvent: {}
+[36.938306] (-) TimerEvent: {}
+[37.039207] (-) TimerEvent: {}
+[37.140017] (-) TimerEvent: {}
+[37.240935] (-) TimerEvent: {}
+[37.341867] (-) TimerEvent: {}
+[37.442843] (-) TimerEvent: {}
+[37.543780] (-) TimerEvent: {}
+[37.644761] (-) TimerEvent: {}
+[37.745599] (-) TimerEvent: {}
+[37.846470] (-) TimerEvent: {}
+[37.947317] (-) TimerEvent: {}
+[38.048355] (-) TimerEvent: {}
+[38.149214] (-) TimerEvent: {}
+[38.250356] (-) TimerEvent: {}
+[38.351290] (-) TimerEvent: {}
+[38.452175] (-) TimerEvent: {}
+[38.553015] (-) TimerEvent: {}
+[38.653880] (-) TimerEvent: {}
+[38.754749] (-) TimerEvent: {}
+[38.855830] (-) TimerEvent: {}
+[38.956897] (-) TimerEvent: {}
+[39.057874] (-) TimerEvent: {}
+[39.158715] (-) TimerEvent: {}
+[39.259594] (-) TimerEvent: {}
+[39.360589] (-) TimerEvent: {}
+[39.461582] (-) TimerEvent: {}
+[39.562558] (-) TimerEvent: {}
+[39.663384] (-) TimerEvent: {}
+[39.764267] (-) TimerEvent: {}
+[39.865102] (-) TimerEvent: {}
+[39.966037] (-) TimerEvent: {}
+[40.066929] (-) TimerEvent: {}
+[40.167889] (-) TimerEvent: {}
+[40.268949] (-) TimerEvent: {}
+[40.370127] (-) TimerEvent: {}
+[40.474535] (-) TimerEvent: {}
+[40.575362] (-) TimerEvent: {}
+[40.676211] (-) TimerEvent: {}
+[40.777061] (-) TimerEvent: {}
+[40.877902] (-) TimerEvent: {}
+[40.978754] (-) TimerEvent: {}
+[41.079686] (-) TimerEvent: {}
+[41.180674] (-) TimerEvent: {}
+[41.282237] (-) TimerEvent: {}
+[41.383345] (-) TimerEvent: {}
+[41.484519] (-) TimerEvent: {}
+[41.585852] (-) TimerEvent: {}
+[41.686964] (-) TimerEvent: {}
+[41.788139] (-) TimerEvent: {}
+[41.889077] (-) TimerEvent: {}
+[41.990095] (-) TimerEvent: {}
+[42.091284] (-) TimerEvent: {}
+[42.192146] (-) TimerEvent: {}
+[42.293070] (-) TimerEvent: {}
+[42.393964] (-) TimerEvent: {}
+[42.495169] (-) TimerEvent: {}
+[42.596372] (-) TimerEvent: {}
+[42.697585] (-) TimerEvent: {}
+[42.801475] (-) TimerEvent: {}
+[42.902441] (-) TimerEvent: {}
+[43.003254] (-) TimerEvent: {}
+[43.104078] (-) TimerEvent: {}
+[43.204931] (-) TimerEvent: {}
+[43.305779] (-) TimerEvent: {}
+[43.406655] (-) TimerEvent: {}
+[43.507530] (-) TimerEvent: {}
+[43.608379] (-) TimerEvent: {}
+[43.710068] (-) TimerEvent: {}
+[43.811687] (-) TimerEvent: {}
+[43.913445] (-) TimerEvent: {}
+[44.015190] (-) TimerEvent: {}
+[44.116094] (-) TimerEvent: {}
+[44.217906] (-) TimerEvent: {}
+[44.319711] (-) TimerEvent: {}
+[44.421875] (-) TimerEvent: {}
+[44.523679] (-) TimerEvent: {}
+[44.624609] (-) TimerEvent: {}
+[44.726497] (-) TimerEvent: {}
+[44.829148] (-) TimerEvent: {}
+[44.933161] (-) TimerEvent: {}
+[45.034083] (-) TimerEvent: {}
+[45.135293] (-) TimerEvent: {}
+[45.236533] (-) TimerEvent: {}
+[45.337765] (-) TimerEvent: {}
+[45.439752] (-) TimerEvent: {}
+[45.541285] (-) TimerEvent: {}
+[45.642768] (-) TimerEvent: {}
+[45.744341] (-) TimerEvent: {}
+[45.846401] (-) TimerEvent: {}
+[45.947965] (-) TimerEvent: {}
+[46.049189] (-) TimerEvent: {}
+[46.150447] (-) TimerEvent: {}
+[46.251654] (-) TimerEvent: {}
+[46.353043] (-) TimerEvent: {}
+[46.454290] (-) TimerEvent: {}
+[46.555557] (-) TimerEvent: {}
+[46.656555] (-) TimerEvent: {}
+[46.757531] (-) TimerEvent: {}
+[46.858552] (-) TimerEvent: {}
+[46.959587] (-) TimerEvent: {}
+[47.060436] (-) TimerEvent: {}
+[47.161385] (-) TimerEvent: {}
+[47.262445] (-) TimerEvent: {}
+[47.363441] (-) TimerEvent: {}
+[47.464596] (-) TimerEvent: {}
+[47.565504] (-) TimerEvent: {}
+[47.666585] (-) TimerEvent: {}
+[47.767656] (-) TimerEvent: {}
+[47.868815] (-) TimerEvent: {}
+[47.969994] (-) TimerEvent: {}
+[48.071063] (-) TimerEvent: {}
+[48.172046] (-) TimerEvent: {}
+[48.273082] (-) TimerEvent: {}
+[48.374108] (-) TimerEvent: {}
+[48.475115] (-) TimerEvent: {}
+[48.576311] (-) TimerEvent: {}
+[48.677299] (-) TimerEvent: {}
+[48.778232] (-) TimerEvent: {}
+[48.879178] (-) TimerEvent: {}
+[48.980144] (-) TimerEvent: {}
+[49.081093] (-) TimerEvent: {}
+[49.182020] (-) TimerEvent: {}
+[49.282892] (-) TimerEvent: {}
+[49.383834] (-) TimerEvent: {}
+[49.484714] (-) TimerEvent: {}
+[49.585608] (-) TimerEvent: {}
+[49.686540] (-) TimerEvent: {}
+[49.787406] (-) TimerEvent: {}
+[49.888267] (-) TimerEvent: {}
+[49.989147] (-) TimerEvent: {}
+[50.090048] (-) TimerEvent: {}
+[50.190994] (-) TimerEvent: {}
+[50.291851] (-) TimerEvent: {}
+[50.392706] (-) TimerEvent: {}
+[50.493593] (-) TimerEvent: {}
+[50.594437] (-) TimerEvent: {}
+[50.695357] (-) TimerEvent: {}
+[50.796216] (-) TimerEvent: {}
+[50.897107] (-) TimerEvent: {}
+[50.998010] (-) TimerEvent: {}
+[51.098916] (-) TimerEvent: {}
+[51.199901] (-) TimerEvent: {}
+[51.300801] (-) TimerEvent: {}
+[51.401636] (-) TimerEvent: {}
+[51.502586] (-) TimerEvent: {}
+[51.603435] (-) TimerEvent: {}
+[51.704330] (-) TimerEvent: {}
+[51.805189] (-) TimerEvent: {}
+[51.906090] (-) TimerEvent: {}
+[52.006938] (-) TimerEvent: {}
+[52.107814] (-) TimerEvent: {}
+[52.208657] (-) TimerEvent: {}
+[52.309536] (-) TimerEvent: {}
+[52.410380] (-) TimerEvent: {}
+[52.511225] (-) TimerEvent: {}
+[52.612055] (-) TimerEvent: {}
+[52.713079] (-) TimerEvent: {}
+[52.814115] (-) TimerEvent: {}
+[52.914979] (-) TimerEvent: {}
+[53.015928] (-) TimerEvent: {}
+[53.116881] (-) TimerEvent: {}
+[53.217777] (-) TimerEvent: {}
+[53.318630] (-) TimerEvent: {}
+[53.419501] (-) TimerEvent: {}
+[53.520446] (-) TimerEvent: {}
+[53.621392] (-) TimerEvent: {}
+[53.722342] (-) TimerEvent: {}
+[53.823301] (-) TimerEvent: {}
+[53.924303] (-) TimerEvent: {}
+[54.025290] (-) TimerEvent: {}
+[54.126274] (-) TimerEvent: {}
+[54.227232] (-) TimerEvent: {}
+[54.328267] (-) TimerEvent: {}
+[54.429189] (-) TimerEvent: {}
+[54.530251] (-) TimerEvent: {}
+[54.638186] (-) TimerEvent: {}
+[54.739393] (-) TimerEvent: {}
+[54.840584] (-) TimerEvent: {}
+[54.941849] (-) TimerEvent: {}
+[55.042782] (-) TimerEvent: {}
+[55.143621] (-) TimerEvent: {}
+[55.244402] (-) TimerEvent: {}
+[55.345252] (-) TimerEvent: {}
+[55.446248] (-) TimerEvent: {}
+[55.547210] (-) TimerEvent: {}
+[55.648195] (-) TimerEvent: {}
+[55.749163] (-) TimerEvent: {}
+[55.850179] (-) TimerEvent: {}
+[55.951137] (-) TimerEvent: {}
+[56.052120] (-) TimerEvent: {}
+[56.153128] (-) TimerEvent: {}
+[56.254184] (-) TimerEvent: {}
+[56.355135] (-) TimerEvent: {}
+[56.456132] (-) TimerEvent: {}
+[56.557038] (-) TimerEvent: {}
+[56.658240] (-) TimerEvent: {}
+[56.759381] (-) TimerEvent: {}
+[56.860499] (-) TimerEvent: {}
+[56.961792] (-) TimerEvent: {}
+[57.062984] (-) TimerEvent: {}
+[57.164185] (-) TimerEvent: {}
+[57.265385] (-) TimerEvent: {}
+[57.366578] (-) TimerEvent: {}
+[57.467873] (-) TimerEvent: {}
+[57.570790] (-) TimerEvent: {}
+[57.672072] (-) TimerEvent: {}
+[57.773759] (-) TimerEvent: {}
+[57.874841] (-) TimerEvent: {}
+[57.975895] (-) TimerEvent: {}
+[58.076982] (-) TimerEvent: {}
+[58.178076] (-) TimerEvent: {}
+[58.279134] (-) TimerEvent: {}
+[58.380215] (-) TimerEvent: {}
+[58.481351] (-) TimerEvent: {}
+[58.582522] (-) TimerEvent: {}
+[58.683685] (-) TimerEvent: {}
+[58.784860] (-) TimerEvent: {}
+[58.886065] (-) TimerEvent: {}
+[58.987256] (-) TimerEvent: {}
+[59.088402] (-) TimerEvent: {}
+[59.189657] (-) TimerEvent: {}
+[59.290879] (-) TimerEvent: {}
+[59.392077] (-) TimerEvent: {}
+[59.493462] (-) TimerEvent: {}
+[59.594911] (-) TimerEvent: {}
+[59.696135] (-) TimerEvent: {}
+[59.797405] (-) TimerEvent: {}
+[59.898619] (-) TimerEvent: {}
+[59.999872] (-) TimerEvent: {}
+[60.101091] (-) TimerEvent: {}
+[60.202295] (-) TimerEvent: {}
+[60.303537] (-) TimerEvent: {}
+[60.404736] (-) TimerEvent: {}
+[60.506042] (-) TimerEvent: {}
+[60.607312] (-) TimerEvent: {}
+[60.708599] (-) TimerEvent: {}
+[60.810016] (-) TimerEvent: {}
+[60.911315] (-) TimerEvent: {}
+[61.012715] (-) TimerEvent: {}
+[61.114073] (-) TimerEvent: {}
+[61.215304] (-) TimerEvent: {}
+[61.316661] (-) TimerEvent: {}
+[61.419043] (-) TimerEvent: {}
+[61.520613] (-) TimerEvent: {}
+[61.621889] (-) TimerEvent: {}
+[61.723057] (-) TimerEvent: {}
+[61.824209] (-) TimerEvent: {}
+[61.925463] (-) TimerEvent: {}
+[62.026751] (-) TimerEvent: {}
+[62.127845] (-) TimerEvent: {}
+[62.229158] (-) TimerEvent: {}
+[62.330545] (-) TimerEvent: {}
+[62.432018] (-) TimerEvent: {}
+[62.532928] (-) TimerEvent: {}
+[62.633929] (-) TimerEvent: {}
+[62.734734] (-) TimerEvent: {}
+[62.835631] (-) TimerEvent: {}
+[62.938174] (-) TimerEvent: {}
+[63.040276] (-) TimerEvent: {}
+[63.141485] (-) TimerEvent: {}
+[63.242902] (-) TimerEvent: {}
+[63.344157] (-) TimerEvent: {}
+[63.445396] (-) TimerEvent: {}
+[63.546612] (-) TimerEvent: {}
+[63.647879] (-) TimerEvent: {}
+[63.749095] (-) TimerEvent: {}
+[63.850326] (-) TimerEvent: {}
+[63.951637] (-) TimerEvent: {}
+[64.052885] (-) TimerEvent: {}
+[64.154113] (-) TimerEvent: {}
+[64.255334] (-) TimerEvent: {}
+[64.356543] (-) TimerEvent: {}
+[64.457489] (-) TimerEvent: {}
+[64.558416] (-) TimerEvent: {}
+[64.659423] (-) TimerEvent: {}
+[64.760348] (-) TimerEvent: {}
+[64.861904] (-) TimerEvent: {}
+[64.964056] (-) TimerEvent: {}
+[65.065381] (-) TimerEvent: {}
+[65.166325] (-) TimerEvent: {}
+[65.267491] (-) TimerEvent: {}
+[65.368655] (-) TimerEvent: {}
+[65.470333] (-) TimerEvent: {}
+[65.571216] (-) TimerEvent: {}
+[65.672318] (-) TimerEvent: {}
+[65.773111] (-) TimerEvent: {}
+[65.873902] (-) TimerEvent: {}
+[65.974635] (-) TimerEvent: {}
+[66.075379] (-) TimerEvent: {}
+[66.176140] (-) TimerEvent: {}
+[66.276846] (-) TimerEvent: {}
+[66.377506] (-) TimerEvent: {}
+[66.478409] (-) TimerEvent: {}
+[66.579188] (-) TimerEvent: {}
+[66.679922] (-) TimerEvent: {}
+[66.780669] (-) TimerEvent: {}
+[66.881375] (-) TimerEvent: {}
+[66.982152] (-) TimerEvent: {}
+[67.082945] (-) TimerEvent: {}
+[67.183640] (-) TimerEvent: {}
+[67.284373] (-) TimerEvent: {}
+[67.385100] (-) TimerEvent: {}
+[67.485908] (-) TimerEvent: {}
+[67.586691] (-) TimerEvent: {}
+[67.687440] (-) TimerEvent: {}
+[67.788160] (-) TimerEvent: {}
+[67.888868] (-) TimerEvent: {}
+[67.989610] (-) TimerEvent: {}
+[68.090393] (-) TimerEvent: {}
+[68.191133] (-) TimerEvent: {}
+[68.291863] (-) TimerEvent: {}
+[68.392578] (-) TimerEvent: {}
+[68.493336] (-) TimerEvent: {}
+[68.594109] (-) TimerEvent: {}
+[68.694922] (-) TimerEvent: {}
+[68.795660] (-) TimerEvent: {}
+[68.896422] (-) TimerEvent: {}
+[68.997177] (-) TimerEvent: {}
+[69.097912] (-) TimerEvent: {}
+[69.198648] (-) TimerEvent: {}
+[69.299403] (-) TimerEvent: {}
+[69.400126] (-) TimerEvent: {}
+[69.500899] (-) TimerEvent: {}
+[69.601669] (-) TimerEvent: {}
+[69.702538] (-) TimerEvent: {}
+[69.803325] (-) TimerEvent: {}
+[69.904094] (-) TimerEvent: {}
+[70.004828] (-) TimerEvent: {}
+[70.105594] (-) TimerEvent: {}
+[70.206371] (-) TimerEvent: {}
+[70.307096] (-) TimerEvent: {}
+[70.407825] (-) TimerEvent: {}
+[70.508624] (-) TimerEvent: {}
+[70.609386] (-) TimerEvent: {}
+[70.710194] (-) TimerEvent: {}
+[70.810893] (-) TimerEvent: {}
+[70.911687] (-) TimerEvent: {}
+[71.012431] (-) TimerEvent: {}
+[71.113178] (-) TimerEvent: {}
+[71.213892] (-) TimerEvent: {}
+[71.314583] (-) TimerEvent: {}
+[71.415317] (-) TimerEvent: {}
+[71.516155] (-) TimerEvent: {}
+[71.616892] (-) TimerEvent: {}
+[71.717646] (-) TimerEvent: {}
+[71.818413] (-) TimerEvent: {}
+[71.919157] (-) TimerEvent: {}
+[72.019953] (-) TimerEvent: {}
+[72.120731] (-) TimerEvent: {}
+[72.221460] (-) TimerEvent: {}
+[72.322219] (-) TimerEvent: {}
+[72.422931] (-) TimerEvent: {}
+[72.523695] (-) TimerEvent: {}
+[72.624467] (-) TimerEvent: {}
+[72.725250] (-) TimerEvent: {}
+[72.825980] (-) TimerEvent: {}
+[72.926713] (-) TimerEvent: {}
+[73.027437] (-) TimerEvent: {}
+[73.128173] (-) TimerEvent: {}
+[73.228983] (-) TimerEvent: {}
+[73.329679] (-) TimerEvent: {}
+[73.430439] (-) TimerEvent: {}
+[73.531181] (-) TimerEvent: {}
+[73.631995] (-) TimerEvent: {}
+[73.732782] (-) TimerEvent: {}
+[73.833513] (-) TimerEvent: {}
+[73.934304] (-) TimerEvent: {}
+[74.035134] (-) TimerEvent: {}
+[74.135893] (-) TimerEvent: {}
+[74.236809] (-) TimerEvent: {}
+[74.337520] (-) TimerEvent: {}
+[74.438290] (-) TimerEvent: {}
+[74.539172] (-) TimerEvent: {}
+[74.639912] (-) TimerEvent: {}
+[74.740712] (-) TimerEvent: {}
+[74.841433] (-) TimerEvent: {}
+[74.942210] (-) TimerEvent: {}
+[75.042949] (-) TimerEvent: {}
+[75.143653] (-) TimerEvent: {}
+[75.244378] (-) TimerEvent: {}
+[75.345127] (-) TimerEvent: {}
+[75.445895] (-) TimerEvent: {}
+[75.546665] (-) TimerEvent: {}
+[75.647536] (-) TimerEvent: {}
+[75.748854] (-) TimerEvent: {}
+[75.849800] (-) TimerEvent: {}
+[75.950558] (-) TimerEvent: {}
+[76.051469] (-) TimerEvent: {}
+[76.152434] (-) TimerEvent: {}
+[76.253201] (-) TimerEvent: {}
+[76.354018] (-) TimerEvent: {}
+[76.454758] (-) TimerEvent: {}
+[76.555480] (-) TimerEvent: {}
+[76.656243] (-) TimerEvent: {}
+[76.757019] (-) TimerEvent: {}
+[76.857833] (-) TimerEvent: {}
+[76.958575] (-) TimerEvent: {}
+[77.059304] (-) TimerEvent: {}
+[77.160020] (-) TimerEvent: {}
+[77.260795] (-) TimerEvent: {}
+[77.361492] (-) TimerEvent: {}
+[77.462235] (-) TimerEvent: {}
+[77.562946] (-) TimerEvent: {}
+[77.663669] (-) TimerEvent: {}
+[77.764380] (-) TimerEvent: {}
+[77.865138] (-) TimerEvent: {}
+[77.965905] (-) TimerEvent: {}
+[78.066623] (-) TimerEvent: {}
+[78.167359] (-) TimerEvent: {}
+[78.268145] (-) TimerEvent: {}
+[78.369326] (-) TimerEvent: {}
+[78.471356] (-) TimerEvent: {}
+[78.572588] (-) TimerEvent: {}
+[78.673390] (-) TimerEvent: {}
+[78.774365] (-) TimerEvent: {}
+[78.875246] (-) TimerEvent: {}
+[78.976172] (-) TimerEvent: {}
+[79.076910] (-) TimerEvent: {}
+[79.177803] (-) TimerEvent: {}
+[79.278549] (-) TimerEvent: {}
+[79.285138] (image_tools) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX shared library libimage_tools.so\x1b[0m\n'}
+[79.378786] (-) TimerEvent: {}
+[79.479655] (-) TimerEvent: {}
+[79.580550] (-) TimerEvent: {}
+[79.681425] (-) TimerEvent: {}
+[79.782373] (-) TimerEvent: {}
+[79.884278] (-) TimerEvent: {}
+[79.985232] (-) TimerEvent: {}
+[80.086206] (-) TimerEvent: {}
+[80.187020] (-) TimerEvent: {}
+[80.287955] (-) TimerEvent: {}
+[80.388851] (-) TimerEvent: {}
+[80.489945] (-) TimerEvent: {}
+[80.591110] (-) TimerEvent: {}
+[80.692014] (-) TimerEvent: {}
+[80.792872] (-) TimerEvent: {}
+[80.893750] (-) TimerEvent: {}
+[80.994650] (-) TimerEvent: {}
+[81.095535] (-) TimerEvent: {}
+[81.196348] (-) TimerEvent: {}
+[81.297153] (-) TimerEvent: {}
+[81.398144] (-) TimerEvent: {}
+[81.498843] (-) TimerEvent: {}
+[81.599516] (-) TimerEvent: {}
+[81.700334] (-) TimerEvent: {}
+[81.801538] (-) TimerEvent: {}
+[81.902292] (-) TimerEvent: {}
+[82.003315] (-) TimerEvent: {}
+[82.103987] (-) TimerEvent: {}
+[82.204665] (-) TimerEvent: {}
+[82.305421] (-) TimerEvent: {}
+[82.406327] (-) TimerEvent: {}
+[82.507148] (-) TimerEvent: {}
+[82.607905] (-) TimerEvent: {}
+[82.708882] (-) TimerEvent: {}
+[82.809803] (-) TimerEvent: {}
+[82.910475] (-) TimerEvent: {}
+[82.942998] (image_tools) StdoutLine: {'line': b'[100%] Built target image_tools\n'}
+[82.994485] (image_tools) CommandEnded: {'returncode': 0}
+[83.010751] (-) TimerEvent: {}
+[83.111501] (-) TimerEvent: {}
+[83.212201] (-) TimerEvent: {}
+[83.243103] (image_tools) JobProgress: {'identifier': 'image_tools', 'progress': 'install'}
+[83.290551] (image_tools) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/worm7/worms_mech_ws/build/image_tools'], 'cwd': '/home/worm7/worms_mech_ws/build/image_tools', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'worm7'), ('SSH_CLIENT', '192.168.42.215 64619 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/worm7/worms_ws/install/tracetools_image_pipeline/lib:/home/worm7/worms_ws/install/opencv_cam/lib:/home/worm7/worms_ws/install/motor_debug/lib:/home/worm7/worms_ws/install/image_transport/lib:/home/worm7/worms_ws/install/camera_info_manager/lib:/home/worm7/worms_ws/install/camera_calibration_parsers/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/worm7'), ('OLDPWD', '/home/worm7/worms_mech_ws/src'), ('SSH_TTY', '/dev/pts/2'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/worm7/worms_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'worm7'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '6'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/home/worm7/worms_ws/install/worms_interfaces:/home/worm7/worms_ws/install/walking_gait_sync:/home/worm7/worms_ws/install/tracetools_image_pipeline:/home/worm7/worms_ws/install/startup:/home/worm7/worms_ws/install/opencv_cam:/home/worm7/worms_ws/install/ros2_shared:/home/worm7/worms_ws/install/py_srvcli:/home/worm7/worms_ws/install/py_pubsub:/home/worm7/worms_ws/install/motor_readout:/home/worm7/worms_ws/install/motor_debug:/home/worm7/worms_ws/install/image_transport:/home/worm7/worms_ws/install/heart_beat_pub:/home/worm7/worms_ws/install/camera_info_manager:/home/worm7/worms_ws/install/camera_calibration_parsers:/home/worm7/worms_ws/install/camera_calibration:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/worm7/worms_mech_ws/build/image_tools'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.42.215 64619 192.168.42.100 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/worm7/worms_ws/install/walking_gait_sync/lib/python3.10/site-packages:/home/worm7/worms_ws/install/startup/lib/python3.10/site-packages:/home/worm7/worms_ws/install/py_srvcli/lib/python3.10/site-packages:/home/worm7/worms_ws/install/py_pubsub/lib/python3.10/site-packages:/home/worm7/worms_ws/install/motor_readout/lib/python3.10/site-packages:/home/worm7/worms_ws/install/motor_debug/local/lib/python3.10/dist-packages:/home/worm7/worms_ws/install/heart_beat_pub/lib/python3.10/site-packages:/home/worm7/worms_ws/install/camera_calibration/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('EDITOR', 'vi'), ('CMAKE_PREFIX_PATH', '/home/worm7/worms_ws/install/worms_interfaces:/home/worm7/worms_ws/install/tracetools_image_pipeline:/home/worm7/worms_ws/install/opencv_cam:/home/worm7/worms_ws/install/ros2_shared:/home/worm7/worms_ws/install/motor_debug:/home/worm7/worms_ws/install/walking_gait_sync:/home/worm7/worms_ws/install/startup:/home/worm7/worms_ws/install/py_srvcli:/home/worm7/worms_ws/install/py_pubsub:/home/worm7/worms_ws/install/motor_readout:/home/worm7/worms_ws/install/heart_beat_pub:/home/worm7/worms_ws/install/camera_calibration:/opt/ros/humble:/home/worm7/worms_ws/install/image_transport:/home/worm7/worms_ws/install/camera_info_manager:/home/worm7/worms_ws/install/camera_calibration_parsers')]), 'shell': False}
+[83.312420] (-) TimerEvent: {}
+[83.330096] (image_tools) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[83.333848] (image_tools) StdoutLine: {'line': b'-- Installing: /home/worm7/worms_mech_ws/install/image_tools/lib/image_tools/cam2image\n'}
+[83.340866] (image_tools) StdoutLine: {'line': b'-- Set runtime path of "/home/worm7/worms_mech_ws/install/image_tools/lib/image_tools/cam2image" to ""\n'}
+[83.341671] (image_tools) StdoutLine: {'line': b'-- Installing: /home/worm7/worms_mech_ws/install/image_tools/lib/image_tools/showimage\n'}
+[83.347697] (image_tools) StdoutLine: {'line': b'-- Set runtime path of "/home/worm7/worms_mech_ws/install/image_tools/lib/image_tools/showimage" to ""\n'}
+[83.348512] (image_tools) StdoutLine: {'line': b'-- Installing: /home/worm7/worms_mech_ws/install/image_tools/lib/libimage_tools.so\n'}
+[83.412639] (-) TimerEvent: {}
+[83.433070] (image_tools) StdoutLine: {'line': b'-- Set runtime path of "/home/worm7/worms_mech_ws/install/image_tools/lib/libimage_tools.so" to ""\n'}
+[83.433997] (image_tools) StdoutLine: {'line': b'-- Installing: /home/worm7/worms_mech_ws/install/image_tools/include/image_tools\n'}
+[83.434882] (image_tools) StdoutLine: {'line': b'-- Installing: /home/worm7/worms_mech_ws/install/image_tools/include/image_tools/image_tools\n'}
+[83.436223] (image_tools) StdoutLine: {'line': b'-- Installing: /home/worm7/worms_mech_ws/install/image_tools/include/image_tools/image_tools/cv_mat_sensor_msgs_image_type_adapter.hpp\n'}
+[83.440033] (image_tools) StdoutLine: {'line': b'-- Installing: /home/worm7/worms_mech_ws/install/image_tools/include/image_tools/image_tools/visibility_control.h\n'}
+[83.440493] (image_tools) StdoutLine: {'line': b'-- Installing: /home/worm7/worms_mech_ws/install/image_tools/share/image_tools/environment/library_path.sh\n'}
+[83.440959] (image_tools) StdoutLine: {'line': b'-- Installing: /home/worm7/worms_mech_ws/install/image_tools/share/image_tools/environment/library_path.dsv\n'}
+[83.442266] (image_tools) StdoutLine: {'line': b'-- Installing: /home/worm7/worms_mech_ws/install/image_tools/share/ament_index/resource_index/package_run_dependencies/image_tools\n'}
+[83.443814] (image_tools) StdoutLine: {'line': b'-- Installing: /home/worm7/worms_mech_ws/install/image_tools/share/ament_index/resource_index/parent_prefix_path/image_tools\n'}
+[83.445036] (image_tools) StdoutLine: {'line': b'-- Installing: /home/worm7/worms_mech_ws/install/image_tools/share/image_tools/environment/ament_prefix_path.sh\n'}
+[83.446135] (image_tools) StdoutLine: {'line': b'-- Installing: /home/worm7/worms_mech_ws/install/image_tools/share/image_tools/environment/ament_prefix_path.dsv\n'}
+[83.447231] (image_tools) StdoutLine: {'line': b'-- Installing: /home/worm7/worms_mech_ws/install/image_tools/share/image_tools/environment/path.sh\n'}
+[83.448327] (image_tools) StdoutLine: {'line': b'-- Installing: /home/worm7/worms_mech_ws/install/image_tools/share/image_tools/environment/path.dsv\n'}
+[83.449335] (image_tools) StdoutLine: {'line': b'-- Installing: /home/worm7/worms_mech_ws/install/image_tools/share/image_tools/local_setup.bash\n'}
+[83.450411] (image_tools) StdoutLine: {'line': b'-- Installing: /home/worm7/worms_mech_ws/install/image_tools/share/image_tools/local_setup.sh\n'}
+[83.451484] (image_tools) StdoutLine: {'line': b'-- Installing: /home/worm7/worms_mech_ws/install/image_tools/share/image_tools/local_setup.zsh\n'}
+[83.452479] (image_tools) StdoutLine: {'line': b'-- Installing: /home/worm7/worms_mech_ws/install/image_tools/share/image_tools/local_setup.dsv\n'}
+[83.453498] (image_tools) StdoutLine: {'line': b'-- Installing: /home/worm7/worms_mech_ws/install/image_tools/share/image_tools/package.dsv\n'}
+[83.454867] (image_tools) StdoutLine: {'line': b'-- Installing: /home/worm7/worms_mech_ws/install/image_tools/share/ament_index/resource_index/packages/image_tools\n'}
+[83.456260] (image_tools) StdoutLine: {'line': b'-- Installing: /home/worm7/worms_mech_ws/install/image_tools/share/ament_index/resource_index/rclcpp_components/image_tools\n'}
+[83.457687] (image_tools) StdoutLine: {'line': b'-- Installing: /home/worm7/worms_mech_ws/install/image_tools/share/image_tools/cmake/image_toolsExport.cmake\n'}
+[83.459001] (image_tools) StdoutLine: {'line': b'-- Installing: /home/worm7/worms_mech_ws/install/image_tools/share/image_tools/cmake/image_toolsExport-noconfig.cmake\n'}
+[83.460159] (image_tools) StdoutLine: {'line': b'-- Installing: /home/worm7/worms_mech_ws/install/image_tools/share/image_tools/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[83.461352] (image_tools) StdoutLine: {'line': b'-- Installing: /home/worm7/worms_mech_ws/install/image_tools/share/image_tools/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[83.462510] (image_tools) StdoutLine: {'line': b'-- Installing: /home/worm7/worms_mech_ws/install/image_tools/share/image_tools/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[83.463715] (image_tools) StdoutLine: {'line': b'-- Installing: /home/worm7/worms_mech_ws/install/image_tools/share/image_tools/cmake/image_toolsConfig.cmake\n'}
+[83.464615] (image_tools) StdoutLine: {'line': b'-- Installing: /home/worm7/worms_mech_ws/install/image_tools/share/image_tools/cmake/image_toolsConfig-version.cmake\n'}
+[83.465632] (image_tools) StdoutLine: {'line': b'-- Installing: /home/worm7/worms_mech_ws/install/image_tools/share/image_tools/package.xml\n'}
+[83.471657] (image_tools) CommandEnded: {'returncode': 0}
+[83.512765] (-) TimerEvent: {}
+[83.613572] (-) TimerEvent: {}
+[83.714350] (-) TimerEvent: {}
+[83.814973] (-) TimerEvent: {}
+[83.896712] (image_tools) JobEnded: {'identifier': 'image_tools', 'rc': 0}
+[83.899463] (-) EventReactorShutdown: {}

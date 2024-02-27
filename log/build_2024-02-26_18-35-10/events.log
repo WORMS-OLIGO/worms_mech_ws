@@ -1,0 +1,167 @@
+[0.000000] (-) TimerEvent: {}
+[0.003257] (worms_mech) JobQueued: {'identifier': 'worms_mech', 'dependencies': OrderedDict()}
+[0.008166] (worms_mech) JobStarted: {'identifier': 'worms_mech'}
+[0.097971] (-) TimerEvent: {}
+[0.199448] (-) TimerEvent: {}
+[0.302144] (-) TimerEvent: {}
+[0.405519] (-) TimerEvent: {}
+[0.506571] (-) TimerEvent: {}
+[0.607948] (-) TimerEvent: {}
+[0.717371] (-) TimerEvent: {}
+[0.819323] (-) TimerEvent: {}
+[0.928252] (-) TimerEvent: {}
+[1.029900] (-) TimerEvent: {}
+[1.134876] (-) TimerEvent: {}
+[1.236043] (-) TimerEvent: {}
+[1.339225] (-) TimerEvent: {}
+[1.443729] (-) TimerEvent: {}
+[1.547981] (-) TimerEvent: {}
+[1.652743] (-) TimerEvent: {}
+[1.759611] (-) TimerEvent: {}
+[1.862787] (-) TimerEvent: {}
+[1.966433] (-) TimerEvent: {}
+[2.071846] (-) TimerEvent: {}
+[2.173254] (-) TimerEvent: {}
+[2.277246] (-) TimerEvent: {}
+[2.378239] (-) TimerEvent: {}
+[2.479594] (-) TimerEvent: {}
+[2.580757] (-) TimerEvent: {}
+[2.682952] (-) TimerEvent: {}
+[2.783974] (-) TimerEvent: {}
+[2.885014] (-) TimerEvent: {}
+[2.985813] (-) TimerEvent: {}
+[3.087356] (-) TimerEvent: {}
+[3.190704] (-) TimerEvent: {}
+[3.291582] (-) TimerEvent: {}
+[3.392412] (-) TimerEvent: {}
+[3.493656] (-) TimerEvent: {}
+[3.597410] (-) TimerEvent: {}
+[3.701459] (-) TimerEvent: {}
+[3.803693] (-) TimerEvent: {}
+[3.906166] (-) TimerEvent: {}
+[4.007034] (-) TimerEvent: {}
+[4.117429] (-) TimerEvent: {}
+[4.221364] (-) TimerEvent: {}
+[4.322382] (-) TimerEvent: {}
+[4.423375] (-) TimerEvent: {}
+[4.525462] (-) TimerEvent: {}
+[4.628122] (-) TimerEvent: {}
+[4.729939] (-) TimerEvent: {}
+[4.831733] (-) TimerEvent: {}
+[4.934918] (-) TimerEvent: {}
+[5.036734] (-) TimerEvent: {}
+[5.141115] (-) TimerEvent: {}
+[5.242566] (-) TimerEvent: {}
+[5.344492] (-) TimerEvent: {}
+[5.447665] (-) TimerEvent: {}
+[5.551086] (-) TimerEvent: {}
+[5.653399] (-) TimerEvent: {}
+[5.756955] (-) TimerEvent: {}
+[5.858725] (-) TimerEvent: {}
+[5.961161] (-) TimerEvent: {}
+[6.062502] (-) TimerEvent: {}
+[6.164287] (-) TimerEvent: {}
+[6.266367] (-) TimerEvent: {}
+[6.371412] (-) TimerEvent: {}
+[6.475077] (-) TimerEvent: {}
+[6.577251] (-) TimerEvent: {}
+[6.680902] (-) TimerEvent: {}
+[6.783880] (-) TimerEvent: {}
+[6.887810] (-) TimerEvent: {}
+[6.990673] (-) TimerEvent: {}
+[7.092545] (-) TimerEvent: {}
+[7.195268] (-) TimerEvent: {}
+[7.297157] (-) TimerEvent: {}
+[7.400292] (-) TimerEvent: {}
+[7.503284] (-) TimerEvent: {}
+[7.605251] (-) TimerEvent: {}
+[7.707945] (-) TimerEvent: {}
+[7.813827] (-) TimerEvent: {}
+[7.917841] (-) TimerEvent: {}
+[8.021900] (-) TimerEvent: {}
+[8.123930] (-) TimerEvent: {}
+[8.227810] (-) TimerEvent: {}
+[8.331108] (-) TimerEvent: {}
+[8.435361] (-) TimerEvent: {}
+[8.537741] (-) TimerEvent: {}
+[8.641326] (-) TimerEvent: {}
+[8.666980] (worms_mech) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/worms_mech', 'build', '--build-base', '/home/worm7/worms_mech_ws/build/worms_mech/build', 'install', '--prefix', '/home/worm7/worms_mech_ws/install/worms_mech', '--record', '/home/worm7/worms_mech_ws/build/worms_mech/install.log', '--single-version-externally-managed'], 'cwd': '/home/worm7/worms_mech_ws/src/worms_mech', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'worm7', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/worm7/worms_mech_ws/install/image_tools/lib:/home/worm7/worms_ws/install/tracetools_image_pipeline/lib:/home/worm7/worms_ws/install/opencv_cam/lib:/home/worm7/worms_ws/install/motor_debug/lib:/home/worm7/worms_ws/install/image_transport/lib:/home/worm7/worms_ws/install/camera_info_manager/lib:/home/worm7/worms_ws/install/camera_calibration_parsers/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/worm7', 'OLDPWD': '/home/worm7/worms_mech_ws/src', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '2095', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/worm7/worms_mech_ws/install:/home/worm7/worms_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'worm7', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'worm7', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/worm7-desktop:@/tmp/.ICE-unix/2064,unix/worm7-desktop:/tmp/.ICE-unix/2064', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/826ea0aa_635e_40ba_93de_cf18e010fa18', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.3I9TJ2', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.126', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '0', 'AMENT_PREFIX_PATH': '/home/worm7/worms_mech_ws/install/worms_mech:/home/worm7/worms_mech_ws/install/image_tools:/home/worm7/worms_ws/install/worms_interfaces:/home/worm7/worms_ws/install/walking_gait_sync:/home/worm7/worms_ws/install/tracetools_image_pipeline:/home/worm7/worms_ws/install/startup:/home/worm7/worms_ws/install/opencv_cam:/home/worm7/worms_ws/install/ros2_shared:/home/worm7/worms_ws/install/py_srvcli:/home/worm7/worms_ws/install/py_pubsub:/home/worm7/worms_ws/install/motor_readout:/home/worm7/worms_ws/install/motor_debug:/home/worm7/worms_ws/install/image_transport:/home/worm7/worms_ws/install/heart_beat_pub:/home/worm7/worms_ws/install/camera_info_manager:/home/worm7/worms_ws/install/camera_calibration_parsers:/home/worm7/worms_ws/install/camera_calibration:/opt/ros/humble', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/worm7/worms_mech_ws/build/worms_mech', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/worm7/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages:/home/worm7/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages:/home/worm7/worms_ws/install/walking_gait_sync/lib/python3.10/site-packages:/home/worm7/worms_ws/install/startup/lib/python3.10/site-packages:/home/worm7/worms_ws/install/py_srvcli/lib/python3.10/site-packages:/home/worm7/worms_ws/install/py_pubsub/lib/python3.10/site-packages:/home/worm7/worms_ws/install/motor_readout/lib/python3.10/site-packages:/home/worm7/worms_ws/install/motor_debug/local/lib/python3.10/dist-packages:/home/worm7/worms_ws/install/heart_beat_pub/lib/python3.10/site-packages:/home/worm7/worms_ws/install/camera_calibration/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800', 'EDITOR': 'vi', 'CMAKE_PREFIX_PATH': '/home/worm7/worms_mech_ws/install/image_tools:/home/worm7/worms_ws/install/worms_interfaces:/home/worm7/worms_ws/install/tracetools_image_pipeline:/home/worm7/worms_ws/install/opencv_cam:/home/worm7/worms_ws/install/ros2_shared:/home/worm7/worms_ws/install/motor_debug:/home/worm7/worms_ws/install/image_transport:/home/worm7/worms_ws/install/camera_info_manager:/home/worm7/worms_ws/install/camera_calibration_parsers'}, 'shell': False}
+[8.743393] (-) TimerEvent: {}
+[8.845449] (-) TimerEvent: {}
+[8.951309] (-) TimerEvent: {}
+[9.053586] (-) TimerEvent: {}
+[9.155812] (-) TimerEvent: {}
+[9.257939] (-) TimerEvent: {}
+[9.360526] (-) TimerEvent: {}
+[9.462230] (-) TimerEvent: {}
+[9.563457] (-) TimerEvent: {}
+[9.664490] (-) TimerEvent: {}
+[9.765401] (-) TimerEvent: {}
+[9.866773] (-) TimerEvent: {}
+[9.967759] (-) TimerEvent: {}
+[10.069366] (-) TimerEvent: {}
+[10.171303] (-) TimerEvent: {}
+[10.273976] (-) TimerEvent: {}
+[10.375738] (-) TimerEvent: {}
+[10.478071] (-) TimerEvent: {}
+[10.578980] (-) TimerEvent: {}
+[10.680629] (-) TimerEvent: {}
+[10.783593] (-) TimerEvent: {}
+[10.886634] (-) TimerEvent: {}
+[10.987731] (-) TimerEvent: {}
+[11.090276] (-) TimerEvent: {}
+[11.191849] (-) TimerEvent: {}
+[11.294496] (-) TimerEvent: {}
+[11.395712] (-) TimerEvent: {}
+[11.497394] (-) TimerEvent: {}
+[11.599449] (-) TimerEvent: {}
+[11.703800] (-) TimerEvent: {}
+[11.805990] (-) TimerEvent: {}
+[11.907317] (-) TimerEvent: {}
+[12.008531] (-) TimerEvent: {}
+[12.110245] (-) TimerEvent: {}
+[12.212667] (-) TimerEvent: {}
+[12.247809] (worms_mech) StdoutLine: {'line': b'running egg_info\n'}
+[12.259086] (worms_mech) StdoutLine: {'line': b'writing ../../build/worms_mech/worms_mech.egg-info/PKG-INFO\n'}
+[12.266334] (worms_mech) StdoutLine: {'line': b'writing dependency_links to ../../build/worms_mech/worms_mech.egg-info/dependency_links.txt\n'}
+[12.269336] (worms_mech) StdoutLine: {'line': b'writing entry points to ../../build/worms_mech/worms_mech.egg-info/entry_points.txt\n'}
+[12.274043] (worms_mech) StdoutLine: {'line': b'writing requirements to ../../build/worms_mech/worms_mech.egg-info/requires.txt\n'}
+[12.277025] (worms_mech) StdoutLine: {'line': b'writing top-level names to ../../build/worms_mech/worms_mech.egg-info/top_level.txt\n'}
+[12.307134] (worms_mech) StdoutLine: {'line': b"reading manifest file '../../build/worms_mech/worms_mech.egg-info/SOURCES.txt'\n"}
+[12.313622] (-) TimerEvent: {}
+[12.323328] (worms_mech) StdoutLine: {'line': b"writing manifest file '../../build/worms_mech/worms_mech.egg-info/SOURCES.txt'\n"}
+[12.330847] (worms_mech) StdoutLine: {'line': b'running build\n'}
+[12.334041] (worms_mech) StdoutLine: {'line': b'running build_py\n'}
+[12.335381] (worms_mech) StdoutLine: {'line': b'copying worms_mech/camera_scanner.py -> /home/worm7/worms_mech_ws/build/worms_mech/build/lib/worms_mech\n'}
+[12.343081] (worms_mech) StdoutLine: {'line': b'running install\n'}
+[12.347155] (worms_mech) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.\n'}
+[12.348021] (worms_mech) StderrLine: {'line': b'  warnings.warn(\n'}
+[12.348728] (worms_mech) StdoutLine: {'line': b'running install_lib\n'}
+[12.357944] (worms_mech) StdoutLine: {'line': b'copying /home/worm7/worms_mech_ws/build/worms_mech/build/lib/worms_mech/camera_scanner.py -> /home/worm7/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages/worms_mech\n'}
+[12.364605] (worms_mech) StdoutLine: {'line': b'byte-compiling /home/worm7/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages/worms_mech/camera_scanner.py to camera_scanner.cpython-310.pyc\n'}
+[12.374747] (worms_mech) StdoutLine: {'line': b'running install_data\n'}
+[12.380145] (worms_mech) StdoutLine: {'line': b'running install_egg_info\n'}
+[12.393506] (worms_mech) StdoutLine: {'line': b"removing '/home/worm7/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages/worms_mech-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[12.409870] (worms_mech) StdoutLine: {'line': b'Copying ../../build/worms_mech/worms_mech.egg-info to /home/worm7/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages/worms_mech-0.0.0-py3.10.egg-info\n'}
+[12.413688] (-) TimerEvent: {}
+[12.419956] (worms_mech) StdoutLine: {'line': b'running install_scripts\n'}
+[12.513907] (-) TimerEvent: {}
+[12.611200] (worms_mech) StdoutLine: {'line': b'Installing camera_scanner script to /home/worm7/worms_mech_ws/install/worms_mech/lib/worms_mech\n'}
+[12.613079] (worms_mech) StdoutLine: {'line': b'Installing controller_node script to /home/worm7/worms_mech_ws/install/worms_mech/lib/worms_mech\n'}
+[12.614346] (-) TimerEvent: {}
+[12.615980] (worms_mech) StdoutLine: {'line': b'Installing gait_action_node script to /home/worm7/worms_mech_ws/install/worms_mech/lib/worms_mech\n'}
+[12.619378] (worms_mech) StdoutLine: {'line': b'Installing gait_manager script to /home/worm7/worms_mech_ws/install/worms_mech/lib/worms_mech\n'}
+[12.625506] (worms_mech) StdoutLine: {'line': b'Installing gait_parser script to /home/worm7/worms_mech_ws/install/worms_mech/lib/worms_mech\n'}
+[12.629173] (worms_mech) StdoutLine: {'line': b'Installing hardware_interface script to /home/worm7/worms_mech_ws/install/worms_mech/lib/worms_mech\n'}
+[12.629812] (worms_mech) StdoutLine: {'line': b'Installing joint_command_publisher script to /home/worm7/worms_mech_ws/install/worms_mech/lib/worms_mech\n'}
+[12.641265] (worms_mech) StdoutLine: {'line': b'Installing joystick_control script to /home/worm7/worms_mech_ws/install/worms_mech/lib/worms_mech\n'}
+[12.642826] (worms_mech) StdoutLine: {'line': b'Installing stand_node script to /home/worm7/worms_mech_ws/install/worms_mech/lib/worms_mech\n'}
+[12.644166] (worms_mech) StdoutLine: {'line': b'Installing testbed_interface script to /home/worm7/worms_mech_ws/install/worms_mech/lib/worms_mech\n'}
+[12.645553] (worms_mech) StdoutLine: {'line': b"writing list of installed files to '/home/worm7/worms_mech_ws/build/worms_mech/install.log'\n"}
+[12.715216] (-) TimerEvent: {}
+[12.829651] (-) TimerEvent: {}
+[12.876151] (worms_mech) CommandEnded: {'returncode': 0}
+[12.930242] (-) TimerEvent: {}
+[13.034558] (-) TimerEvent: {}
+[13.040424] (worms_mech) JobEnded: {'identifier': 'worms_mech', 'rc': 0}
+[13.052913] (-) EventReactorShutdown: {}

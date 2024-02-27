@@ -1,0 +1,292 @@
+[0.000000] (-) TimerEvent: {}
+[0.004017] (-) JobUnselected: {'identifier': 'worms_mech'}
+[0.005387] (image_tools) JobQueued: {'identifier': 'image_tools', 'dependencies': OrderedDict()}
+[0.008290] (image_tools) JobStarted: {'identifier': 'image_tools'}
+[0.097957] (-) TimerEvent: {}
+[0.106642] (image_tools) JobProgress: {'identifier': 'image_tools', 'progress': 'cmake'}
+[0.113605] (image_tools) JobProgress: {'identifier': 'image_tools', 'progress': 'build'}
+[0.116987] (image_tools) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/worm7/worms_mech_ws/build/image_tools', '--', '-j4', '-l4'], 'cwd': '/home/worm7/worms_mech_ws/build/image_tools', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'worm7'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/worm7/worms_mech_ws/install/image_tools/lib:/home/worm7/worms_ws/install/tracetools_image_pipeline/lib:/home/worm7/worms_ws/install/opencv_cam/lib:/home/worm7/worms_ws/install/motor_debug/lib:/home/worm7/worms_ws/install/image_transport/lib:/home/worm7/worms_ws/install/camera_info_manager/lib:/home/worm7/worms_ws/install/camera_calibration_parsers/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/worm7'), ('OLDPWD', '/home/worm7'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2081'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/worm7/worms_mech_ws/install:/home/worm7/worms_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'worm7'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'worm7'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/worm7-desktop:@/tmp/.ICE-unix/2052,unix/worm7-desktop:/tmp/.ICE-unix/2052'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/ac45d962_ca83_483a_9415_8ece3b961d9a'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.JS7UJ2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.151'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/home/worm7/worms_mech_ws/install/image_tools:/home/worm7/worms_ws/install/worms_interfaces:/home/worm7/worms_ws/install/walking_gait_sync:/home/worm7/worms_ws/install/tracetools_image_pipeline:/home/worm7/worms_ws/install/startup:/home/worm7/worms_ws/install/opencv_cam:/home/worm7/worms_ws/install/ros2_shared:/home/worm7/worms_ws/install/py_srvcli:/home/worm7/worms_ws/install/py_pubsub:/home/worm7/worms_ws/install/motor_readout:/home/worm7/worms_ws/install/motor_debug:/home/worm7/worms_ws/install/image_transport:/home/worm7/worms_ws/install/heart_beat_pub:/home/worm7/worms_ws/install/camera_info_manager:/home/worm7/worms_ws/install/camera_calibration_parsers:/home/worm7/worms_ws/install/camera_calibration:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/worm7/worms_mech_ws/build/image_tools'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/worm7/worms_ws/install/walking_gait_sync/lib/python3.10/site-packages:/home/worm7/worms_ws/install/startup/lib/python3.10/site-packages:/home/worm7/worms_ws/install/py_srvcli/lib/python3.10/site-packages:/home/worm7/worms_ws/install/py_pubsub/lib/python3.10/site-packages:/home/worm7/worms_ws/install/motor_readout/lib/python3.10/site-packages:/home/worm7/worms_ws/install/motor_debug/local/lib/python3.10/dist-packages:/home/worm7/worms_ws/install/heart_beat_pub/lib/python3.10/site-packages:/home/worm7/worms_ws/install/camera_calibration/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('EDITOR', 'vi'), ('CMAKE_PREFIX_PATH', '/home/worm7/worms_mech_ws/install/image_tools:/home/worm7/worms_ws/install/worms_interfaces:/home/worm7/worms_ws/install/tracetools_image_pipeline:/home/worm7/worms_ws/install/opencv_cam:/home/worm7/worms_ws/install/ros2_shared:/home/worm7/worms_ws/install/motor_debug:/home/worm7/worms_ws/install/walking_gait_sync:/home/worm7/worms_ws/install/startup:/home/worm7/worms_ws/install/py_srvcli:/home/worm7/worms_ws/install/py_pubsub:/home/worm7/worms_ws/install/motor_readout:/home/worm7/worms_ws/install/heart_beat_pub:/home/worm7/worms_ws/install/camera_calibration:/opt/ros/humble:/home/worm7/worms_ws/install/image_transport:/home/worm7/worms_ws/install/camera_info_manager:/home/worm7/worms_ws/install/camera_calibration_parsers')]), 'shell': False}
+[0.198333] (-) TimerEvent: {}
+[0.299567] (-) TimerEvent: {}
+[0.400683] (-) TimerEvent: {}
+[0.501683] (-) TimerEvent: {}
+[0.603381] (-) TimerEvent: {}
+[0.704387] (-) TimerEvent: {}
+[0.800512] (image_tools) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target image_tools\x1b[0m\n'}
+[0.804531] (-) TimerEvent: {}
+[0.905803] (-) TimerEvent: {}
+[1.007747] (-) TimerEvent: {}
+[1.022465] (image_tools) StdoutLine: {'line': b'[ 22%] Built target showimage\n'}
+[1.025923] (image_tools) StdoutLine: {'line': b'[ 44%] Built target cam2image\n'}
+[1.034430] (image_tools) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding CXX object CMakeFiles/image_tools.dir/src/cam2image.cpp.o\x1b[0m\n'}
+[1.107987] (-) TimerEvent: {}
+[1.209035] (-) TimerEvent: {}
+[1.310532] (-) TimerEvent: {}
+[1.411555] (-) TimerEvent: {}
+[1.512557] (-) TimerEvent: {}
+[1.613385] (-) TimerEvent: {}
+[1.714258] (-) TimerEvent: {}
+[1.815021] (-) TimerEvent: {}
+[1.915870] (-) TimerEvent: {}
+[2.016734] (-) TimerEvent: {}
+[2.117608] (-) TimerEvent: {}
+[2.218791] (-) TimerEvent: {}
+[2.319586] (-) TimerEvent: {}
+[2.420484] (-) TimerEvent: {}
+[2.521342] (-) TimerEvent: {}
+[2.622281] (-) TimerEvent: {}
+[2.723169] (-) TimerEvent: {}
+[2.824005] (-) TimerEvent: {}
+[2.924884] (-) TimerEvent: {}
+[3.025698] (-) TimerEvent: {}
+[3.126570] (-) TimerEvent: {}
+[3.227398] (-) TimerEvent: {}
+[3.328343] (-) TimerEvent: {}
+[3.429149] (-) TimerEvent: {}
+[3.530004] (-) TimerEvent: {}
+[3.630892] (-) TimerEvent: {}
+[3.731997] (-) TimerEvent: {}
+[3.833020] (-) TimerEvent: {}
+[3.933817] (-) TimerEvent: {}
+[4.034803] (-) TimerEvent: {}
+[4.135947] (-) TimerEvent: {}
+[4.236952] (-) TimerEvent: {}
+[4.337775] (-) TimerEvent: {}
+[4.438826] (-) TimerEvent: {}
+[4.539718] (-) TimerEvent: {}
+[4.640552] (-) TimerEvent: {}
+[4.741385] (-) TimerEvent: {}
+[4.842292] (-) TimerEvent: {}
+[4.943220] (-) TimerEvent: {}
+[5.044113] (-) TimerEvent: {}
+[5.144996] (-) TimerEvent: {}
+[5.245856] (-) TimerEvent: {}
+[5.346923] (-) TimerEvent: {}
+[5.447891] (-) TimerEvent: {}
+[5.548744] (-) TimerEvent: {}
+[5.649589] (-) TimerEvent: {}
+[5.750523] (-) TimerEvent: {}
+[5.851381] (-) TimerEvent: {}
+[5.952229] (-) TimerEvent: {}
+[6.053107] (-) TimerEvent: {}
+[6.154040] (-) TimerEvent: {}
+[6.254898] (-) TimerEvent: {}
+[6.355749] (-) TimerEvent: {}
+[6.456825] (-) TimerEvent: {}
+[6.558306] (-) TimerEvent: {}
+[6.659185] (-) TimerEvent: {}
+[6.760052] (-) TimerEvent: {}
+[6.860890] (-) TimerEvent: {}
+[6.961779] (-) TimerEvent: {}
+[7.062688] (-) TimerEvent: {}
+[7.163679] (-) TimerEvent: {}
+[7.264561] (-) TimerEvent: {}
+[7.365427] (-) TimerEvent: {}
+[7.466339] (-) TimerEvent: {}
+[7.567269] (-) TimerEvent: {}
+[7.668132] (-) TimerEvent: {}
+[7.769061] (-) TimerEvent: {}
+[7.870096] (-) TimerEvent: {}
+[7.971225] (-) TimerEvent: {}
+[8.072105] (-) TimerEvent: {}
+[8.172941] (-) TimerEvent: {}
+[8.273885] (-) TimerEvent: {}
+[8.374749] (-) TimerEvent: {}
+[8.475637] (-) TimerEvent: {}
+[8.576650] (-) TimerEvent: {}
+[8.677539] (-) TimerEvent: {}
+[8.778403] (-) TimerEvent: {}
+[8.879314] (-) TimerEvent: {}
+[8.980303] (-) TimerEvent: {}
+[9.081180] (-) TimerEvent: {}
+[9.182186] (-) TimerEvent: {}
+[9.283146] (-) TimerEvent: {}
+[9.384362] (-) TimerEvent: {}
+[9.485344] (-) TimerEvent: {}
+[9.586312] (-) TimerEvent: {}
+[9.687202] (-) TimerEvent: {}
+[9.788053] (-) TimerEvent: {}
+[9.888929] (-) TimerEvent: {}
+[9.989834] (-) TimerEvent: {}
+[10.090758] (-) TimerEvent: {}
+[10.191655] (-) TimerEvent: {}
+[10.292520] (-) TimerEvent: {}
+[10.393375] (-) TimerEvent: {}
+[10.494253] (-) TimerEvent: {}
+[10.595114] (-) TimerEvent: {}
+[10.695962] (-) TimerEvent: {}
+[10.796836] (-) TimerEvent: {}
+[10.897723] (-) TimerEvent: {}
+[10.998716] (-) TimerEvent: {}
+[11.099616] (-) TimerEvent: {}
+[11.200525] (-) TimerEvent: {}
+[11.301427] (-) TimerEvent: {}
+[11.402379] (-) TimerEvent: {}
+[11.503337] (-) TimerEvent: {}
+[11.604897] (-) TimerEvent: {}
+[11.705831] (-) TimerEvent: {}
+[11.806749] (-) TimerEvent: {}
+[11.907620] (-) TimerEvent: {}
+[12.008484] (-) TimerEvent: {}
+[12.109414] (-) TimerEvent: {}
+[12.210275] (-) TimerEvent: {}
+[12.311107] (-) TimerEvent: {}
+[12.411988] (-) TimerEvent: {}
+[12.512836] (-) TimerEvent: {}
+[12.613752] (-) TimerEvent: {}
+[12.714638] (-) TimerEvent: {}
+[12.815571] (-) TimerEvent: {}
+[12.916442] (-) TimerEvent: {}
+[13.017309] (-) TimerEvent: {}
+[13.118316] (-) TimerEvent: {}
+[13.219197] (-) TimerEvent: {}
+[13.320084] (-) TimerEvent: {}
+[13.421054] (-) TimerEvent: {}
+[13.521892] (-) TimerEvent: {}
+[13.622781] (-) TimerEvent: {}
+[13.723638] (-) TimerEvent: {}
+[13.824564] (-) TimerEvent: {}
+[13.925423] (-) TimerEvent: {}
+[14.026303] (-) TimerEvent: {}
+[14.127110] (-) TimerEvent: {}
+[14.227939] (-) TimerEvent: {}
+[14.328892] (-) TimerEvent: {}
+[14.429767] (-) TimerEvent: {}
+[14.530668] (-) TimerEvent: {}
+[14.631590] (-) TimerEvent: {}
+[14.732644] (-) TimerEvent: {}
+[14.833661] (-) TimerEvent: {}
+[14.934542] (-) TimerEvent: {}
+[15.035400] (-) TimerEvent: {}
+[15.136249] (-) TimerEvent: {}
+[15.237119] (-) TimerEvent: {}
+[15.338013] (-) TimerEvent: {}
+[15.403961] (image_tools) StderrLine: {'line': b'\x1b[01m\x1b[K/home/worm7/worms_mech_ws/src/image_tools/src/cam2image.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[Kimage_tools::Cam2Image::Cam2Image(const rclcpp::NodeOptions&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[15.405574] (image_tools) StderrLine: {'line': b'\x1b[01m\x1b[K/home/worm7/worms_mech_ws/src/image_tools/src/cam2image.cpp:57:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Khelp\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[15.406362] (image_tools) StderrLine: {'line': b'   57 |     if (\x1b[01;31m\x1b[Khelp\x1b[m\x1b[K(options.arguments())) {\n'}
+[15.406860] (image_tools) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[15.438260] (-) TimerEvent: {}
+[15.516395] (image_tools) StderrLine: {'line': b'\x1b[01m\x1b[K/home/worm7/worms_mech_ws/src/image_tools/src/cam2image.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kint main(int, char**)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[15.517596] (image_tools) StderrLine: {'line': b'\x1b[01m\x1b[K/home/worm7/worms_mech_ws/src/image_tools/src/cam2image.cpp:285:33:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KCam2Image\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kimage_tools::Cam2Image\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[15.518521] (image_tools) StderrLine: {'line': b'  285 |   rclcpp::spin(std::make_shared<\x1b[01;31m\x1b[KCam2Image\x1b[m\x1b[K>());\n'}
+[15.519309] (image_tools) StderrLine: {'line': b'      |                                 \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[15.519787] (image_tools) StderrLine: {'line': b'      |                                 \x1b[32m\x1b[Kimage_tools::Cam2Image\x1b[m\x1b[K\n'}
+[15.520197] (image_tools) StderrLine: {'line': b'\x1b[01m\x1b[K/home/worm7/worms_mech_ws/src/image_tools/src/cam2image.cpp:44:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kimage_tools::Cam2Image\x1b[m\x1b[K\xe2\x80\x99 declared here\n'}
+[15.520793] (image_tools) StderrLine: {'line': b'   44 | class \x1b[01;36m\x1b[KCam2Image\x1b[m\x1b[K : public rclcpp::Node\n'}
+[15.521264] (image_tools) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[15.521630] (image_tools) StderrLine: {'line': b'\x1b[01m\x1b[K/home/worm7/worms_mech_ws/src/image_tools/src/cam2image.cpp:285:43:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[Kmake_shared<<expression error> >()\x1b[m\x1b[K\xe2\x80\x99\n'}
+[15.522030] (image_tools) StderrLine: {'line': b'  285 |   rclcpp::spin(\x1b[01;31m\x1b[Kstd::make_shared<Cam2Image>()\x1b[m\x1b[K);\n'}
+[15.522624] (image_tools) StderrLine: {'line': b'      |                \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~^~\x1b[m\x1b[K\n'}
+[15.523076] (image_tools) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/memory:77\x1b[m\x1b[K,\n'}
+[15.523492] (image_tools) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/worm7/worms_mech_ws/src/image_tools/src/cam2image.cpp:16\x1b[m\x1b[K:\n'}
+[15.523907] (image_tools) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/shared_ptr.h:875:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _Tp, class ... _Args> std::shared_ptr<_Tp> std::make_shared(_Args&& ...)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[15.524320] (image_tools) StderrLine: {'line': b'  875 |     \x1b[01;36m\x1b[Kmake_shared\x1b[m\x1b[K(_Args&&... __args)\n'}
+[15.524714] (image_tools) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.525144] (image_tools) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/shared_ptr.h:875:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[15.525544] (image_tools) StderrLine: {'line': b'\x1b[01m\x1b[K/home/worm7/worms_mech_ws/src/image_tools/src/cam2image.cpp:285:43:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[15.525960] (image_tools) StderrLine: {'line': b'  285 |   rclcpp::spin(\x1b[01;31m\x1b[Kstd::make_shared<Cam2Image>()\x1b[m\x1b[K);\n'}
+[15.526472] (image_tools) StderrLine: {'line': b'      |                \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~^~\x1b[m\x1b[K\n'}
+[15.538446] (-) TimerEvent: {}
+[15.639279] (-) TimerEvent: {}
+[15.740203] (-) TimerEvent: {}
+[15.841341] (-) TimerEvent: {}
+[15.942274] (-) TimerEvent: {}
+[16.043142] (-) TimerEvent: {}
+[16.144031] (-) TimerEvent: {}
+[16.244880] (-) TimerEvent: {}
+[16.345737] (-) TimerEvent: {}
+[16.446633] (-) TimerEvent: {}
+[16.547549] (-) TimerEvent: {}
+[16.648456] (-) TimerEvent: {}
+[16.749331] (-) TimerEvent: {}
+[16.850227] (-) TimerEvent: {}
+[16.951095] (-) TimerEvent: {}
+[17.052121] (-) TimerEvent: {}
+[17.152996] (-) TimerEvent: {}
+[17.253871] (-) TimerEvent: {}
+[17.354751] (-) TimerEvent: {}
+[17.455591] (-) TimerEvent: {}
+[17.556457] (-) TimerEvent: {}
+[17.657311] (-) TimerEvent: {}
+[17.758230] (-) TimerEvent: {}
+[17.859133] (-) TimerEvent: {}
+[17.959990] (-) TimerEvent: {}
+[18.060832] (-) TimerEvent: {}
+[18.161708] (-) TimerEvent: {}
+[18.262731] (-) TimerEvent: {}
+[18.363612] (-) TimerEvent: {}
+[18.464478] (-) TimerEvent: {}
+[18.565363] (-) TimerEvent: {}
+[18.666280] (-) TimerEvent: {}
+[18.767132] (-) TimerEvent: {}
+[18.868001] (-) TimerEvent: {}
+[18.968880] (-) TimerEvent: {}
+[19.069795] (-) TimerEvent: {}
+[19.170737] (-) TimerEvent: {}
+[19.271591] (-) TimerEvent: {}
+[19.372469] (-) TimerEvent: {}
+[19.473336] (-) TimerEvent: {}
+[19.574375] (-) TimerEvent: {}
+[19.675230] (-) TimerEvent: {}
+[19.776076] (-) TimerEvent: {}
+[19.876868] (-) TimerEvent: {}
+[19.977691] (-) TimerEvent: {}
+[20.078589] (-) TimerEvent: {}
+[20.179442] (-) TimerEvent: {}
+[20.280382] (-) TimerEvent: {}
+[20.381212] (-) TimerEvent: {}
+[20.482100] (-) TimerEvent: {}
+[20.582979] (-) TimerEvent: {}
+[20.683827] (-) TimerEvent: {}
+[20.784723] (-) TimerEvent: {}
+[20.885676] (-) TimerEvent: {}
+[20.986584] (-) TimerEvent: {}
+[21.087531] (-) TimerEvent: {}
+[21.188465] (-) TimerEvent: {}
+[21.289430] (-) TimerEvent: {}
+[21.390338] (-) TimerEvent: {}
+[21.491193] (-) TimerEvent: {}
+[21.592045] (-) TimerEvent: {}
+[21.692995] (-) TimerEvent: {}
+[21.793824] (-) TimerEvent: {}
+[21.894809] (-) TimerEvent: {}
+[21.995928] (-) TimerEvent: {}
+[22.096872] (-) TimerEvent: {}
+[22.197745] (-) TimerEvent: {}
+[22.298635] (-) TimerEvent: {}
+[22.399510] (-) TimerEvent: {}
+[22.500450] (-) TimerEvent: {}
+[22.601904] (-) TimerEvent: {}
+[22.702896] (-) TimerEvent: {}
+[22.804056] (-) TimerEvent: {}
+[22.904966] (-) TimerEvent: {}
+[23.006056] (-) TimerEvent: {}
+[23.107271] (-) TimerEvent: {}
+[23.208644] (-) TimerEvent: {}
+[23.309516] (-) TimerEvent: {}
+[23.410395] (-) TimerEvent: {}
+[23.511266] (-) TimerEvent: {}
+[23.612102] (-) TimerEvent: {}
+[23.712970] (-) TimerEvent: {}
+[23.815714] (-) TimerEvent: {}
+[23.916924] (-) TimerEvent: {}
+[24.017990] (-) TimerEvent: {}
+[24.118995] (-) TimerEvent: {}
+[24.219759] (-) TimerEvent: {}
+[24.320647] (-) TimerEvent: {}
+[24.422197] (-) TimerEvent: {}
+[24.523316] (-) TimerEvent: {}
+[24.624339] (-) TimerEvent: {}
+[24.725635] (-) TimerEvent: {}
+[24.745845] (image_tools) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/image_tools.dir/build.make:90: CMakeFiles/image_tools.dir/src/cam2image.cpp.o] Error 1\n'}
+[24.747012] (image_tools) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:141: CMakeFiles/image_tools.dir/all] Error 2\n'}
+[24.748145] (image_tools) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[24.767097] (image_tools) CommandEnded: {'returncode': 2}
+[24.825842] (-) TimerEvent: {}
+[24.927091] (-) TimerEvent: {}
+[25.027916] (-) TimerEvent: {}
+[25.130253] (-) TimerEvent: {}
+[25.231982] (-) TimerEvent: {}
+[25.333027] (-) TimerEvent: {}
+[25.336584] (image_tools) JobEnded: {'identifier': 'image_tools', 'rc': 2}
+[25.343077] (-) EventReactorShutdown: {}

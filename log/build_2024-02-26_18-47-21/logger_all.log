@@ -1,0 +1,137 @@
+[2.450s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[2.451s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0xffff978efa90>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffff9834fe80>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffff9834fe80>>)
+[2.602s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[2.603s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[2.604s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[2.605s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[2.605s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[2.606s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[2.607s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/worm7/worms_mech_ws'
+[2.609s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[2.611s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[2.612s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[2.613s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[2.614s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[2.615s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[2.616s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[2.616s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[2.617s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[2.722s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[2.723s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[2.723s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[2.723s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[2.724s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[2.724s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[2.725s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[2.725s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[2.726s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[2.726s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[2.726s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[2.729s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[2.730s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[2.730s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[2.731s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[2.731s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[2.732s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[2.733s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[2.733s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[2.734s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[2.734s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[2.734s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[2.735s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[2.735s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[2.736s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[2.736s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[2.736s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[2.737s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[2.737s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) by extensions ['ignore', 'ignore_ament_install']
+[2.738s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) by extension 'ignore'
+[2.738s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) ignored
+[2.739s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) by extensions ['ignore', 'ignore_ament_install']
+[2.740s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) by extension 'ignore'
+[2.740s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) ignored
+[2.741s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extensions ['ignore', 'ignore_ament_install']
+[2.741s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extension 'ignore'
+[2.741s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) ignored
+[2.742s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_mech) by extensions ['ignore', 'ignore_ament_install']
+[2.743s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_mech) by extension 'ignore'
+[2.743s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_mech) by extension 'ignore_ament_install'
+[2.743s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_mech) by extensions ['colcon_pkg']
+[2.744s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_mech) by extension 'colcon_pkg'
+[2.744s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_mech) by extensions ['colcon_meta']
+[2.744s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_mech) by extension 'colcon_meta'
+[2.744s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_mech) by extensions ['ros']
+[2.745s] Level 1:colcon.colcon_core.package_identification:_identify(src/worms_mech) by extension 'ros'
+[2.756s] DEBUG:colcon.colcon_core.package_identification:Package 'src/worms_mech' with type 'ros.ament_python' and name 'worms_mech'
+[2.756s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[2.757s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[2.757s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[2.757s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[2.757s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[2.907s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[2.907s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[2.931s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 2 installed packages in /home/worm7/worms_mech_ws/install
+[2.938s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 16 installed packages in /home/worm7/worms_ws/install
+[2.950s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 275 installed packages in /opt/ros/humble
+[2.959s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[3.470s] Level 5:colcon.colcon_core.verb:set package 'worms_mech' build argument 'cmake_args' from command line to 'None'
+[3.470s] Level 5:colcon.colcon_core.verb:set package 'worms_mech' build argument 'cmake_target' from command line to 'None'
+[3.471s] Level 5:colcon.colcon_core.verb:set package 'worms_mech' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[3.471s] Level 5:colcon.colcon_core.verb:set package 'worms_mech' build argument 'cmake_clean_cache' from command line to 'False'
+[3.471s] Level 5:colcon.colcon_core.verb:set package 'worms_mech' build argument 'cmake_clean_first' from command line to 'False'
+[3.472s] Level 5:colcon.colcon_core.verb:set package 'worms_mech' build argument 'cmake_force_configure' from command line to 'False'
+[3.472s] Level 5:colcon.colcon_core.verb:set package 'worms_mech' build argument 'ament_cmake_args' from command line to 'None'
+[3.472s] Level 5:colcon.colcon_core.verb:set package 'worms_mech' build argument 'catkin_cmake_args' from command line to 'None'
+[3.474s] Level 5:colcon.colcon_core.verb:set package 'worms_mech' build argument 'catkin_skip_building_tests' from command line to 'False'
+[3.475s] DEBUG:colcon.colcon_core.verb:Building package 'worms_mech' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/worm7/worms_mech_ws/build/worms_mech', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/worm7/worms_mech_ws/install/worms_mech', 'merge_install': False, 'path': '/home/worm7/worms_mech_ws/src/worms_mech', 'symlink_install': False, 'test_result_base': None}
+[3.482s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[3.539s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[3.542s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/worm7/worms_mech_ws/src/worms_mech' with build type 'ament_python'
+[3.543s] Level 1:colcon.colcon_core.shell:create_environment_hook('worms_mech', 'ament_prefix_path')
+[3.599s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[3.601s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/worm7/worms_mech_ws/install/worms_mech/share/worms_mech/hook/ament_prefix_path.ps1'
+[3.609s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/worm7/worms_mech_ws/install/worms_mech/share/worms_mech/hook/ament_prefix_path.dsv'
+[3.616s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/worm7/worms_mech_ws/install/worms_mech/share/worms_mech/hook/ament_prefix_path.sh'
+[3.630s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.631s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[5.835s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/worm7/worms_mech_ws/src/worms_mech'
+[5.842s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[5.843s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[8.463s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/worm7/worms_mech_ws/src/worms_mech': PYTHONPATH=/home/worm7/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/worms_mech build --build-base /home/worm7/worms_mech_ws/build/worms_mech/build install --prefix /home/worm7/worms_mech_ws/install/worms_mech --record /home/worm7/worms_mech_ws/build/worms_mech/install.log --single-version-externally-managed
+[10.946s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/worm7/worms_mech_ws/src/worms_mech' returned '0': PYTHONPATH=/home/worm7/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/worms_mech build --build-base /home/worm7/worms_mech_ws/build/worms_mech/build install --prefix /home/worm7/worms_mech_ws/install/worms_mech --record /home/worm7/worms_mech_ws/build/worms_mech/install.log --single-version-externally-managed
+[10.957s] Level 1:colcon.colcon_core.environment:checking '/home/worm7/worms_mech_ws/install/worms_mech' for CMake module files
+[10.961s] Level 1:colcon.colcon_core.environment:checking '/home/worm7/worms_mech_ws/install/worms_mech' for CMake config files
+[10.971s] Level 1:colcon.colcon_core.environment:checking '/home/worm7/worms_mech_ws/install/worms_mech/lib'
+[10.973s] Level 1:colcon.colcon_core.environment:checking '/home/worm7/worms_mech_ws/install/worms_mech/bin'
+[10.974s] Level 1:colcon.colcon_core.environment:checking '/home/worm7/worms_mech_ws/install/worms_mech/lib/pkgconfig/worms_mech.pc'
+[10.976s] Level 1:colcon.colcon_core.environment:checking '/home/worm7/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages'
+[10.977s] Level 1:colcon.colcon_core.shell:create_environment_hook('worms_mech', 'pythonpath')
+[10.984s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/worm7/worms_mech_ws/install/worms_mech/share/worms_mech/hook/pythonpath.ps1'
+[10.990s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/worm7/worms_mech_ws/install/worms_mech/share/worms_mech/hook/pythonpath.dsv'
+[10.995s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/worm7/worms_mech_ws/install/worms_mech/share/worms_mech/hook/pythonpath.sh'
+[11.002s] Level 1:colcon.colcon_core.environment:checking '/home/worm7/worms_mech_ws/install/worms_mech/bin'
+[11.005s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(worms_mech)
+[11.015s] INFO:colcon.colcon_core.shell:Creating package script '/home/worm7/worms_mech_ws/install/worms_mech/share/worms_mech/package.ps1'
+[11.026s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/worm7/worms_mech_ws/install/worms_mech/share/worms_mech/package.dsv'
+[11.031s] INFO:colcon.colcon_core.shell:Creating package script '/home/worm7/worms_mech_ws/install/worms_mech/share/worms_mech/package.sh'
+[11.039s] INFO:colcon.colcon_core.shell:Creating package script '/home/worm7/worms_mech_ws/install/worms_mech/share/worms_mech/package.bash'
+[11.047s] INFO:colcon.colcon_core.shell:Creating package script '/home/worm7/worms_mech_ws/install/worms_mech/share/worms_mech/package.zsh'
+[11.056s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/worm7/worms_mech_ws/install/worms_mech/share/colcon-core/packages/worms_mech)
+[11.064s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[11.066s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[11.069s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[11.070s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[11.116s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[11.117s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[11.118s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[11.209s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[11.217s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/worm7/worms_mech_ws/install/local_setup.ps1'
+[11.224s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/worm7/worms_mech_ws/install/_local_setup_util_ps1.py'
+[11.240s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/worm7/worms_mech_ws/install/setup.ps1'
+[11.275s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/worm7/worms_mech_ws/install/local_setup.sh'
+[11.280s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/worm7/worms_mech_ws/install/_local_setup_util_sh.py'
+[11.285s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/worm7/worms_mech_ws/install/setup.sh'
+[11.316s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/worm7/worms_mech_ws/install/local_setup.bash'
+[11.324s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/worm7/worms_mech_ws/install/setup.bash'
+[11.343s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/worm7/worms_mech_ws/install/local_setup.zsh'
+[11.348s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/worm7/worms_mech_ws/install/setup.zsh'

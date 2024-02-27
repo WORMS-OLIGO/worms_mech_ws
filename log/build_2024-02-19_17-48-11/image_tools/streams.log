@@ -1,0 +1,44 @@
+[0.153s] Invoking command in '/home/worm7/worms_mech_ws/build/image_tools': CMAKE_PREFIX_PATH=/home/worm7/worms_ws/install/worms_interfaces:/home/worm7/worms_ws/install/tracetools_image_pipeline:/home/worm7/worms_ws/install/opencv_cam:/home/worm7/worms_ws/install/ros2_shared:/home/worm7/worms_ws/install/motor_debug:/home/worm7/worms_ws/install/walking_gait_sync:/home/worm7/worms_ws/install/startup:/home/worm7/worms_ws/install/py_srvcli:/home/worm7/worms_ws/install/py_pubsub:/home/worm7/worms_ws/install/motor_readout:/home/worm7/worms_ws/install/heart_beat_pub:/home/worm7/worms_ws/install/camera_calibration:/opt/ros/humble:/home/worm7/worms_ws/install/image_transport:/home/worm7/worms_ws/install/camera_info_manager:/home/worm7/worms_ws/install/camera_calibration_parsers /usr/bin/cmake --build /home/worm7/worms_mech_ws/build/image_tools -- -j4 -l4
+[0.538s] [35m[1mConsolidate compiler generated dependencies of target cam2image[0m
+[0.549s] [35m[1mConsolidate compiler generated dependencies of target showimage[0m
+[0.565s] [35m[1mConsolidate compiler generated dependencies of target image_tools[0m
+[0.700s] [ 22%] Built target cam2image
+[0.708s] [ 44%] Built target showimage
+[0.762s] [ 55%] [32mBuilding CXX object CMakeFiles/image_tools.dir/src/cam2image.cpp.o[0m
+[84.484s] [ 66%] [32m[1mLinking CXX shared library libimage_tools.so[0m
+[91.540s] [100%] Built target image_tools
+[91.630s] Invoked command in '/home/worm7/worms_mech_ws/build/image_tools' returned '0': CMAKE_PREFIX_PATH=/home/worm7/worms_ws/install/worms_interfaces:/home/worm7/worms_ws/install/tracetools_image_pipeline:/home/worm7/worms_ws/install/opencv_cam:/home/worm7/worms_ws/install/ros2_shared:/home/worm7/worms_ws/install/motor_debug:/home/worm7/worms_ws/install/walking_gait_sync:/home/worm7/worms_ws/install/startup:/home/worm7/worms_ws/install/py_srvcli:/home/worm7/worms_ws/install/py_pubsub:/home/worm7/worms_ws/install/motor_readout:/home/worm7/worms_ws/install/heart_beat_pub:/home/worm7/worms_ws/install/camera_calibration:/opt/ros/humble:/home/worm7/worms_ws/install/image_transport:/home/worm7/worms_ws/install/camera_info_manager:/home/worm7/worms_ws/install/camera_calibration_parsers /usr/bin/cmake --build /home/worm7/worms_mech_ws/build/image_tools -- -j4 -l4
+[92.102s] Invoking command in '/home/worm7/worms_mech_ws/build/image_tools': CMAKE_PREFIX_PATH=/home/worm7/worms_ws/install/worms_interfaces:/home/worm7/worms_ws/install/tracetools_image_pipeline:/home/worm7/worms_ws/install/opencv_cam:/home/worm7/worms_ws/install/ros2_shared:/home/worm7/worms_ws/install/motor_debug:/home/worm7/worms_ws/install/walking_gait_sync:/home/worm7/worms_ws/install/startup:/home/worm7/worms_ws/install/py_srvcli:/home/worm7/worms_ws/install/py_pubsub:/home/worm7/worms_ws/install/motor_readout:/home/worm7/worms_ws/install/heart_beat_pub:/home/worm7/worms_ws/install/camera_calibration:/opt/ros/humble:/home/worm7/worms_ws/install/image_transport:/home/worm7/worms_ws/install/camera_info_manager:/home/worm7/worms_ws/install/camera_calibration_parsers /usr/bin/cmake --install /home/worm7/worms_mech_ws/build/image_tools
+[92.165s] -- Install configuration: ""
+[92.167s] -- Up-to-date: /home/worm7/worms_mech_ws/install/image_tools/lib/image_tools/cam2image
+[92.170s] -- Up-to-date: /home/worm7/worms_mech_ws/install/image_tools/lib/image_tools/showimage
+[92.173s] -- Installing: /home/worm7/worms_mech_ws/install/image_tools/lib/libimage_tools.so
+[92.288s] -- Set runtime path of "/home/worm7/worms_mech_ws/install/image_tools/lib/libimage_tools.so" to ""
+[92.290s] -- Up-to-date: /home/worm7/worms_mech_ws/install/image_tools/include/image_tools
+[92.292s] -- Up-to-date: /home/worm7/worms_mech_ws/install/image_tools/include/image_tools/image_tools
+[92.294s] -- Up-to-date: /home/worm7/worms_mech_ws/install/image_tools/include/image_tools/image_tools/cv_mat_sensor_msgs_image_type_adapter.hpp
+[92.296s] -- Up-to-date: /home/worm7/worms_mech_ws/install/image_tools/include/image_tools/image_tools/visibility_control.h
+[92.298s] -- Up-to-date: /home/worm7/worms_mech_ws/install/image_tools/share/image_tools/environment/library_path.sh
+[92.300s] -- Up-to-date: /home/worm7/worms_mech_ws/install/image_tools/share/image_tools/environment/library_path.dsv
+[92.300s] -- Up-to-date: /home/worm7/worms_mech_ws/install/image_tools/share/ament_index/resource_index/package_run_dependencies/image_tools
+[92.301s] -- Up-to-date: /home/worm7/worms_mech_ws/install/image_tools/share/ament_index/resource_index/parent_prefix_path/image_tools
+[92.302s] -- Up-to-date: /home/worm7/worms_mech_ws/install/image_tools/share/image_tools/environment/ament_prefix_path.sh
+[92.302s] -- Up-to-date: /home/worm7/worms_mech_ws/install/image_tools/share/image_tools/environment/ament_prefix_path.dsv
+[92.304s] -- Up-to-date: /home/worm7/worms_mech_ws/install/image_tools/share/image_tools/environment/path.sh
+[92.306s] -- Up-to-date: /home/worm7/worms_mech_ws/install/image_tools/share/image_tools/environment/path.dsv
+[92.307s] -- Up-to-date: /home/worm7/worms_mech_ws/install/image_tools/share/image_tools/local_setup.bash
+[92.310s] -- Up-to-date: /home/worm7/worms_mech_ws/install/image_tools/share/image_tools/local_setup.sh
+[92.312s] -- Up-to-date: /home/worm7/worms_mech_ws/install/image_tools/share/image_tools/local_setup.zsh
+[92.313s] -- Up-to-date: /home/worm7/worms_mech_ws/install/image_tools/share/image_tools/local_setup.dsv
+[92.315s] -- Installing: /home/worm7/worms_mech_ws/install/image_tools/share/image_tools/package.dsv
+[92.316s] -- Up-to-date: /home/worm7/worms_mech_ws/install/image_tools/share/ament_index/resource_index/packages/image_tools
+[92.318s] -- Up-to-date: /home/worm7/worms_mech_ws/install/image_tools/share/ament_index/resource_index/rclcpp_components/image_tools
+[92.318s] -- Up-to-date: /home/worm7/worms_mech_ws/install/image_tools/share/image_tools/cmake/image_toolsExport.cmake
+[92.320s] -- Up-to-date: /home/worm7/worms_mech_ws/install/image_tools/share/image_tools/cmake/image_toolsExport-noconfig.cmake
+[92.320s] -- Up-to-date: /home/worm7/worms_mech_ws/install/image_tools/share/image_tools/cmake/ament_cmake_export_libraries-extras.cmake
+[92.321s] -- Up-to-date: /home/worm7/worms_mech_ws/install/image_tools/share/image_tools/cmake/ament_cmake_export_targets-extras.cmake
+[92.322s] -- Up-to-date: /home/worm7/worms_mech_ws/install/image_tools/share/image_tools/cmake/ament_cmake_export_dependencies-extras.cmake
+[92.325s] -- Up-to-date: /home/worm7/worms_mech_ws/install/image_tools/share/image_tools/cmake/image_toolsConfig.cmake
+[92.328s] -- Up-to-date: /home/worm7/worms_mech_ws/install/image_tools/share/image_tools/cmake/image_toolsConfig-version.cmake
+[92.341s] -- Up-to-date: /home/worm7/worms_mech_ws/install/image_tools/share/image_tools/package.xml
+[92.343s] Invoked command in '/home/worm7/worms_mech_ws/build/image_tools' returned '0': CMAKE_PREFIX_PATH=/home/worm7/worms_ws/install/worms_interfaces:/home/worm7/worms_ws/install/tracetools_image_pipeline:/home/worm7/worms_ws/install/opencv_cam:/home/worm7/worms_ws/install/ros2_shared:/home/worm7/worms_ws/install/motor_debug:/home/worm7/worms_ws/install/walking_gait_sync:/home/worm7/worms_ws/install/startup:/home/worm7/worms_ws/install/py_srvcli:/home/worm7/worms_ws/install/py_pubsub:/home/worm7/worms_ws/install/motor_readout:/home/worm7/worms_ws/install/heart_beat_pub:/home/worm7/worms_ws/install/camera_calibration:/opt/ros/humble:/home/worm7/worms_ws/install/image_transport:/home/worm7/worms_ws/install/camera_info_manager:/home/worm7/worms_ws/install/camera_calibration_parsers /usr/bin/cmake --install /home/worm7/worms_mech_ws/build/image_tools
