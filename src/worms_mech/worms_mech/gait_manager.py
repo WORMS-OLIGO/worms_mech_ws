@@ -202,14 +202,14 @@ class JointCommandPublisher(Node):
             self.execute_timer_callback = True
 
             # Interpolate Positions from Current Position to Start of the Desired Action
-            self.interpolated_positions = self.interpolate_waypoints(stand_waypoints)
+            self.interpolated_positions = self.interpolate_waypoints(self.stand_waypoints)
             self.action = "stand"
 
         if msg.data == "prone":
             self.execute_timer_callback = True
 
             # Interpolate Positions from Current Position to Start of the Desired Action
-            self.interpolated_positions = self.interpolate_waypoints(prone_waypoints)
+            self.interpolated_positions = self.interpolate_waypoints(self.prone_waypoints)
             self.action = "prone"
 
 
@@ -217,7 +217,7 @@ class JointCommandPublisher(Node):
             self.execute_timer_callback = True
 
             # Interpolate Positions from Current Position to Start of the Desired Action
-            self.interpolated_positions = self.interpolate_waypoints(test_gait_waypoints)
+            self.interpolated_positions = self.interpolate_waypoints(self.test_gait_waypoints)
             self.action = "test_gait"
 
 def main(args=None):
