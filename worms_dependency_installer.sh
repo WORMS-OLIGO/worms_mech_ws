@@ -44,6 +44,6 @@ pip install .
 
 cd 
 
-export ROS_DOMAIN_ID = "42"
+source export ROS_DOMAIN_ID = 42
 
 echo -e "\e[32m[SUCCESS]\e[0m All libraries have been installed!"
