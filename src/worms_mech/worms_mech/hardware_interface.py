@@ -44,10 +44,10 @@ class MotorControllerNode(Node):
 
         # Check if worm_info is not None
         if worm_info is not None:
-            worm_id = worm_info['Species']
-            motor1_direction = worm_info['Motor1_Direction']
-            motor2_direction = worm_info['Motor2_Direction']
-            motor3_direction = worm_info['Motor3_Direction']
+            self.worm_id = worm_info['Species']
+            self.motor1_direction = worm_info['Motor1_Direction']
+            self.motor2_direction = worm_info['Motor2_Direction']
+            self.motor3_direction = worm_info['Motor3_Direction']
 
             print(f"{worm_id} Has Been Initialized")
             print(f"Motor Direction 1: {motor1_direction}")
@@ -56,12 +56,12 @@ class MotorControllerNode(Node):
         else:
             print("No matching robot found for the given MAC address.")
 
-        joint_commands_topic = f'{worm_id}_joint_commands'
-        joint_states_topic = f'{worm_id}_joint_states'
-        worm_heartbeat_topic = f'{worm_id}_heartbeat'
+        self.joint_commands_topic = f'{worm_id}_joint_commands'
+        self.joint_states_topic = f'{worm_id}_joint_states'
+        self.worm_heartbeat_topic = f'{worm_id}_heartbeat'
 
-        print("Recieving Commands From: " + joint_commands_topic)
-        print("Joint States Publishing To: " + joint_states_topic)
+        print("Recieving Commands From: " + self.joint_commands_topic)
+        print("Joint States Publishing To: " + self.joint_states_topic)
 
         
         self.motor_controller_dict = {}
@@ -89,9 +89,9 @@ class MotorControllerNode(Node):
             self.joint_commands_callback,
             10)
 
-        self.publisher = self.create_publisher(JointState, joint_states_topic, 10)
+        self.publisher = self.create_publisher(JointState, self.joint_states_topic, 10)
 
-        self.heartbeat_publisher = self.create_publisher(String, worm_heartbeat_topic, 10)
+        self.heartbeat_publisher = self.create_publisher(String, self.worm_heartbeat_topic, 10)
 
         self.get_logger().info("Enabling Motors...")
 
@@ -121,7 +121,7 @@ class MotorControllerNode(Node):
 
 
             if(motor_id == 1 and (abs(self.pos1 - pos_command) < 10)):
-                    self.pos1, self.vel1, self.curr1 = motor_direction[0] * motor_controller.send_deg_command(pos_command  * motor_direction[0], vel_command  * motor_direction[0], Kp, Kd, K_ff  * motor_direction[0])
+                    self.pos1, self.vel1, self.curr1 = self.motor1_direction * motor_controller.send_deg_command(pos_command, vel_command, Kp, Kd, K_ff)
                     
                     if(self.pos1 == None):
                         self.worm_heartbeat = "Disabled"
@@ -129,7 +129,7 @@ class MotorControllerNode(Node):
                         self.worm_heartbeat = "Enabled"
 
             elif(motor_id == 2  and (abs(self.pos1 - pos_command) < 10)):
-                    self.pos2, self.vel2, self.curr2 = motor_direction[1] * motor_controller.send_deg_command(pos_command * motor_direction[1], vel_command * motor_direction[1], Kp, Kd, K_ff * motor_direction[1])
+                    self.pos2, self.vel2, self.curr2 = self.motor2_direction * motor_controller.send_deg_command(pos_command, vel_command, Kp, Kd, K_ff)
                     
                     if(self.pos1 == None):
                         self.worm_heartbeat = "Disabled"
@@ -137,7 +137,7 @@ class MotorControllerNode(Node):
                         self.worm_heartbeat = "Enabled"
 
             elif(motor_id == 3  and (abs(self.pos1 - pos_command) < 10)):
-                    self.pos3, self.vel3, self.curr3 = motor_direction[2] * motor_controller.send_deg_command(pos_command * motor_direction[2], vel_command * motor_direction[2], Kp, Kd, K_ff * motor_direction[2])
+                    self.pos3, self.vel3, self.curr3 = self.motor3_direction * motor_controller.send_deg_command(pos_command, vel_command, Kp, Kd, K_ff)
 
                     if(self.pos1 == None):
                         self.worm_heartbeat = "Disabled"
