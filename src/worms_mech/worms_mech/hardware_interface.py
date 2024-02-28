@@ -156,7 +156,7 @@ class MotorControllerNode(Node):
         joint_state_msg.effort = [self.curr1, self.curr2, self.curr3]
 
         self.publisher.publish(joint_state_msg)
-        self.heartbeat_publisher(self.worm_heartbeat)
+        self.heartbeat_publisher.publish(self.worm_heartbeat)
 
     def set_zero_position(self, motor):
         motor.set_zero_position()
