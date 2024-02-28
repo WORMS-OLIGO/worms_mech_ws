@@ -132,7 +132,7 @@ class MotorControllerNode(Node):
                         self.worm_heartbeat.data = "Enabled"
 
             elif(motor_id == 2  and (abs((self.pos2 * self.motor2_direction) - (pos_command * self.motor2_direction)) < 10)):
-                    self.pos2, self.vel2, self.curr2 = self.motor2_direction * motor_controller.send_deg_command(pos_command * self.motor1_direction, vel_command, Kp, Kd, K_ff)
+                    self.pos2, self.vel2, self.curr2 = self.motor2_direction * motor_controller.send_deg_command(pos_command * self.motor2_direction, vel_command, Kp, Kd, K_ff)
                     
                     if(self.pos1 == None):
                         self.worm_heartbeat.data = "Disabled"
@@ -140,15 +140,15 @@ class MotorControllerNode(Node):
                         self.worm_heartbeat.data = "Enabled"
 
             elif(motor_id == 3  and (abs((self.pos3 * self.motor3_direction) - (pos_command * self.motor3_direction)) < 10)):
-                    self.pos3, self.vel3, self.curr3 = self.motor3_direction * motor_controller.send_deg_command(pos_command * self.motor1_direction, vel_command, Kp, Kd, K_ff)
+                    self.pos3, self.vel3, self.curr3 = self.motor3_direction * motor_controller.send_deg_command(pos_command * self.motor3_direction, vel_command, Kp, Kd, K_ff)
 
                     if(self.pos1 == None):
                         self.worm_heartbeat.data = "Disabled"
                     else: 
                         self.worm_heartbeat.data = "Enabled"
 
-            elif(abs((self.pos1 * self.motor1_direction) - (pos_command * self.motor1_direction)) > 10):
-                print("Commanded Position is Over Threshold. Value is: " + abs((self.pos1 * self.motor1_direction) - (pos_command * self.motor1_direction)))
+            elif(abs((self.pos3 * self.motor3_direction) - (pos_command * self.motor3_direction)) > 10):
+                print("Commanded Position is Over Threshold. Value is: " + str(abs((self.pos1 * self.motor1_direction) - (pos_command * self.motor1_direction))))
 
            
 
