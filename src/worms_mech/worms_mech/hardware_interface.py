@@ -123,7 +123,7 @@ class MotorControllerNode(Node):
             pos_command = msg.position[idx]
 
 
-            if(motor_id == 1 and (abs(self.pos1 - pos_command) < 10)):
+            if(motor_id == 1 and (abs((self.pos1 * self.motor1_direction) - (pos_command * self.motor1_direction)) < 10)):
                     self.pos1, self.vel1, self.curr1 = motor_controller.send_deg_command(pos_command * self.motor1_direction, vel_command, Kp, Kd, K_ff)
                     
                     if(self.pos1 == None):
@@ -131,7 +131,7 @@ class MotorControllerNode(Node):
                     else: 
                         self.worm_heartbeat.data = "Enabled"
 
-            elif(motor_id == 2  and (abs(self.pos1 - pos_command) < 10)):
+            elif(motor_id == 2  and (abs((self.pos2 * self.motor2_direction) - (pos_command * self.motor2_direction)) < 10)):
                     self.pos2, self.vel2, self.curr2 = self.motor2_direction * motor_controller.send_deg_command(pos_command * self.motor1_direction, vel_command, Kp, Kd, K_ff)
                     
                     if(self.pos1 == None):
@@ -139,15 +139,16 @@ class MotorControllerNode(Node):
                     else: 
                         self.worm_heartbeat.data = "Enabled"
 
-            elif(motor_id == 3  and (abs(self.pos1 - pos_command) < 10)):
+            elif(motor_id == 3  and (abs((self.pos3 * self.motor3_direction) - (pos_command * self.motor3_direction)) < 10)):
                     self.pos3, self.vel3, self.curr3 = self.motor3_direction * motor_controller.send_deg_command(pos_command * self.motor1_direction, vel_command, Kp, Kd, K_ff)
 
                     if(self.pos1 == None):
                         self.worm_heartbeat.data = "Disabled"
                     else: 
                         self.worm_heartbeat.data = "Enabled"
-            else:
-                print("YOUR COMMANDED POSITION IS STRAYED TOO FAR AWAY FROM THE ROBOT'S CURRENT CONFIGURATION! PLEASE COMMAND A POSITION BETWEEN 10 DEGREES OF YOUR CURRENT STATE")
+
+            elif(abs((self.pos1 * self.motor1_direction) - (pos_command * self.motor1_direction)) > 10):
+                print("Commanded Position is Over Threshold. Value is: " + abs((self.pos1 * self.motor1_direction) - (pos_command * self.motor1_direction)))
 
            
 
