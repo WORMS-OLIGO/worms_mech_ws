@@ -93,15 +93,18 @@ class MotorControllerNode(Node):
 
         self.heartbeat_publisher = self.create_publisher(String, self.worm_heartbeat_topic, 10)
 
+        self.worm_heartbeat = String()
+        self.worm_heartbeat.data = "Disabled"
+
         self.get_logger().info("Enabling Motors...")
 
         for motor_id, motor_controller in self.motor_controller_dict.items():
             state = motor_controller.enable_motor()
 
             if(state == None):
-                self.worm_heartbeat = "Disabled"
+                self.worm_heartbeat.data = "Disabled"
             else:
-                self.worm_heartbeat = "Enabled"
+                self.worm_heartbeat.data = "Enabled"
 
 
     def joint_commands_callback(self, msg):
@@ -124,25 +127,25 @@ class MotorControllerNode(Node):
                     self.pos1, self.vel1, self.curr1 = self.motor1_direction * motor_controller.send_deg_command(pos_command, vel_command, Kp, Kd, K_ff)
                     
                     if(self.pos1 == None):
-                        self.worm_heartbeat = "Disabled"
+                        self.worm_heartbeat.data = "Disabled"
                     else: 
-                        self.worm_heartbeat = "Enabled"
+                        self.worm_heartbeat.data = "Enabled"
 
             elif(motor_id == 2  and (abs(self.pos1 - pos_command) < 10)):
                     self.pos2, self.vel2, self.curr2 = self.motor2_direction * motor_controller.send_deg_command(pos_command, vel_command, Kp, Kd, K_ff)
                     
                     if(self.pos1 == None):
-                        self.worm_heartbeat = "Disabled"
+                        self.worm_heartbeat.data = "Disabled"
                     else: 
-                        self.worm_heartbeat = "Enabled"
+                        self.worm_heartbeat.data = "Enabled"
 
             elif(motor_id == 3  and (abs(self.pos1 - pos_command) < 10)):
                     self.pos3, self.vel3, self.curr3 = self.motor3_direction * motor_controller.send_deg_command(pos_command, vel_command, Kp, Kd, K_ff)
 
                     if(self.pos1 == None):
-                        self.worm_heartbeat = "Disabled"
+                        self.worm_heartbeat.data = "Disabled"
                     else: 
-                        self.worm_heartbeat = "Enabled"
+                        self.worm_heartbeat.data = "Enabled"
             else:
                 print("YOUR COMMANDED POSITION IS STRAYED TOO FAR AWAY FROM THE ROBOT'S CURRENT CONFIGURATION! PLEASE COMMAND A POSITION BETWEEN 10 DEGREES OF YOUR CURRENT STATE")
 
