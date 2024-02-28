@@ -85,7 +85,7 @@ class MotorControllerNode(Node):
         print("Creating Subscriber")
         self.subscription = self.create_subscription(
             JointState,
-            joint_commands_topic,
+            self.joint_commands_topic,
             self.joint_commands_callback,
             10)
 
