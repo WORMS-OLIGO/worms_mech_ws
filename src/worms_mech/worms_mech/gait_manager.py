@@ -170,7 +170,7 @@ class JointCommandPublisher(Node):
                 joint_state_msg.velocity = [0.0, 0.0, 0.0]  # Ensuring these are also floats
                 joint_state_msg.effort = [0.0, 0.0, 0.0]
                 print(joint_state_msg)
-                self.publisher.publish(joint_state_msg)
+                self.command_publisher.publish(joint_state_msg)
 
 
                 self.position_index += 1
@@ -188,7 +188,7 @@ class JointCommandPublisher(Node):
                     position_str = ', '.join([f"{p:.2f}" for p in self.current_pose.position])
                     self.get_logger().info(f'Path complete. Holding Position at: [{position_str}]')
 
-                self.publisher.publish(joint_state_msg)
+                self.command_publisher.publish(joint_state_msg)
         else:
             msg = String ()
             msg.data = "done"
