@@ -49,16 +49,16 @@ class MotorControllerNode(Node):
             self.motor2_direction = worm_info['Motor2_Direction']
             self.motor3_direction = worm_info['Motor3_Direction']
 
-            print(f"{worm_id} Has Been Initialized")
-            print(f"Motor Direction 1: {motor1_direction}")
-            print(f"Motor Direction 2: {motor2_direction}")
-            print(f"Motor Direction 3: {motor3_direction}")
+            print(f"{self.worm_id} Has Been Initialized")
+            print(f"Motor Direction 1: {self.motor1_direction}")
+            print(f"Motor Direction 2: {self.motor2_direction}")
+            print(f"Motor Direction 3: {self.motor3_direction}")
         else:
             print("No matching robot found for the given MAC address.")
 
-        self.joint_commands_topic = f'{worm_id}_joint_commands'
-        self.joint_states_topic = f'{worm_id}_joint_states'
-        self.worm_heartbeat_topic = f'{worm_id}_heartbeat'
+        self.joint_commands_topic = f'{self.worm_id}_joint_commands'
+        self.joint_states_topic = f'{self.worm_id}_joint_states'
+        self.worm_heartbeat_topic = f'{self.worm_id}_heartbeat'
 
         print("Recieving Commands From: " + self.joint_commands_topic)
         print("Joint States Publishing To: " + self.joint_states_topic)
