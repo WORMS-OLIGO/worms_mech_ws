@@ -116,7 +116,7 @@ class JointCommandPublisher(Node):
             [15, -45, 35]
         ]
 
-        self.test_gait = [
+        self.test_gait_waypoints = [
             [10, 10, 10],
             [0, 0, 0],
             [-10, -10, -10]
@@ -201,7 +201,7 @@ class JointCommandPublisher(Node):
             self.execute_timer_callback = True
 
             # Interpolate Positions from Current Position to Start of the Desired Action
-            self.interpolated_positions = self.interpolate_waypoints(step_waypoints)
+            self.interpolated_positions = self.interpolate_waypoints(self.step_waypoints)
             self.action = "step"
 
         if msg.data == "stand":
