@@ -56,9 +56,9 @@ class JointCommandPublisher(Node):
         # Define motor command sequences
         self.motor_commands = [
 
-            {'position': [20, 0, 0], 'velocity': [0, 0, 0], 'effort': [0, 0, 0]},  # First set of commands
-            {'position': [20, 20, 0], 'velocity': [0, 0, 0], 'effort': [0, 0, 0]},  # Second set
-            {'position': [20, 20, 20], 'velocity': [0, 0, 0], 'effort': [0, 0, 0]}   # Third set
+            {'position': [0, 0, 20], 'velocity': [0, 0, 0], 'effort': [0, 0, 0]},  # First set of commands
+            # {'position': [20, 20, 0], 'velocity': [0, 0, 0], 'effort': [0, 0, 0]},  # Second set
+            # {'position': [20, 20, 20], 'velocity': [0, 0, 0], 'effort': [0, 0, 0]}   # Third set
             
         ]
 
