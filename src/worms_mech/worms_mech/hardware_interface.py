@@ -124,7 +124,7 @@ class MotorControllerNode(Node):
 
 
             if(motor_id == 1 and (abs((self.pos1 * self.motor1_direction) - (pos_command * self.motor1_direction)) < 10)):
-                    self.pos1, self.vel1, self.curr1 = motor_controller.send_deg_command(pos_command * self.motor1_direction, vel_command, Kp, Kd, K_ff)
+                    self.pos1, self.vel1, self.curr1 = self.motor1_direction * motor_controller.send_deg_command(pos_command * self.motor1_direction, vel_command, Kp, Kd, K_ff)
                     
                     if(self.pos1 == None):
                         self.worm_heartbeat.data = "Disabled"
