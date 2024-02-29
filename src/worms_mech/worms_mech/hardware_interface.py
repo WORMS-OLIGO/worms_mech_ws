@@ -124,8 +124,9 @@ class MotorControllerNode(Node):
 
 
             if(motor_id == 1 and (abs((self.pos1 * self.motor1_direction) - (pos_command * self.motor1_direction)) < 25)):
-                    self.pos1, self.vel1, self.curr1 = self.motor1_direction * motor_controller.send_deg_command(pos_command * self.motor1_direction, vel_command, Kp, Kd, K_ff)
-                    
+                    self.pos1, self.vel1, self.curr1 = motor_controller.send_deg_command(pos_command * self.motor1_direction, vel_command, Kp, Kd, K_ff)
+                    self.pos1 = self.pos1 * self.motor1_direction
+
                     if(self.pos1 == None):
                         self.worm_heartbeat.data = "Disabled"
                     else: 
@@ -133,7 +134,7 @@ class MotorControllerNode(Node):
 
             elif(motor_id == 2  and (abs((self.pos2 * self.motor2_direction) - (pos_command * self.motor2_direction)) < 25)):
                     self.pos2, self.vel2, self.curr2 = self.motor2_direction * motor_controller.send_deg_command(pos_command * self.motor2_direction, vel_command, Kp, Kd, K_ff)
-                    
+                    self.pos2 = self.pos2 * self.motor2_direction
                     if(self.pos1 == None):
                         self.worm_heartbeat.data = "Disabled"
                     else: 
@@ -141,6 +142,7 @@ class MotorControllerNode(Node):
 
             elif(motor_id == 3  and (abs((self.pos3 * self.motor3_direction) - (pos_command * self.motor3_direction)) < 25)):
                     self.pos3, self.vel3, self.curr3 = self.motor3_direction * motor_controller.send_deg_command(pos_command * self.motor3_direction, vel_command, Kp, Kd, K_ff)
+                    self.pos3 = self.pos3 * self.motor3_direction
 
                     if(self.pos1 == None):
                         self.worm_heartbeat.data = "Disabled"
