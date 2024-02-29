@@ -1,3 +1,4 @@
+/home/oligo/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages/worms_mech/simple_hardware_interface.py
 /home/oligo/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages/worms_mech/action_node.py
 /home/oligo/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages/worms_mech/hardware_interface.py
 /home/oligo/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages/worms_mech/controller_node.py
@@ -5,12 +6,14 @@
 /home/oligo/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages/worms_mech/testbed_interface.py
 /home/oligo/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages/worms_mech/controller_nodev2.py
 /home/oligo/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages/worms_mech/gait_parser.py
+/home/oligo/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages/worms_mech/gait_parser_actions.py
 /home/oligo/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages/worms_mech/__init__.py
 /home/oligo/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages/worms_mech/gait_action_node.py
 /home/oligo/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages/worms_mech/gait_manager.py
 /home/oligo/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages/worms_mech/joystick_control.py
 /home/oligo/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages/worms_mech/joint_command_publisher.py
 /home/oligo/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages/worms_mech/camera_scanner.py
+/home/oligo/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages/worms_mech/__pycache__/simple_hardware_interface.cpython-310.pyc
 /home/oligo/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages/worms_mech/__pycache__/action_node.cpython-310.pyc
 /home/oligo/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages/worms_mech/__pycache__/hardware_interface.cpython-310.pyc
 /home/oligo/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages/worms_mech/__pycache__/controller_node.cpython-310.pyc
@@ -18,6 +21,7 @@
 /home/oligo/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages/worms_mech/__pycache__/testbed_interface.cpython-310.pyc
 /home/oligo/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages/worms_mech/__pycache__/controller_nodev2.cpython-310.pyc
 /home/oligo/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages/worms_mech/__pycache__/gait_parser.cpython-310.pyc
+/home/oligo/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages/worms_mech/__pycache__/gait_parser_actions.cpython-310.pyc
 /home/oligo/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages/worms_mech/__pycache__/__init__.cpython-310.pyc
 /home/oligo/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages/worms_mech/__pycache__/gait_action_node.cpython-310.pyc
 /home/oligo/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages/worms_mech/__pycache__/gait_manager.cpython-310.pyc
@@ -41,5 +45,6 @@
 /home/oligo/worms_mech_ws/install/worms_mech/lib/worms_mech/hardware_interface
 /home/oligo/worms_mech_ws/install/worms_mech/lib/worms_mech/joint_command_publisher
 /home/oligo/worms_mech_ws/install/worms_mech/lib/worms_mech/joystick_control
+/home/oligo/worms_mech_ws/install/worms_mech/lib/worms_mech/simple_hardware_interface
 /home/oligo/worms_mech_ws/install/worms_mech/lib/worms_mech/stand_node
 /home/oligo/worms_mech_ws/install/worms_mech/lib/worms_mech/testbed_interface

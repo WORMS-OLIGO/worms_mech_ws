@@ -44,24 +44,24 @@ class MotorControllerNode(Node):
 
         # Check if worm_info is not None
         if worm_info is not None:
-            worm_id = worm_info['Species']
-            motor1_direction = worm_info['Motor1_Direction']
-            motor2_direction = worm_info['Motor2_Direction']
-            motor3_direction = worm_info['Motor3_Direction']
+            self.worm_id = worm_info['Species']
+            self.motor1_direction = worm_info['Motor1_Direction']
+            self.motor2_direction = worm_info['Motor2_Direction']
+            self.motor3_direction = worm_info['Motor3_Direction']
 
-            print(f"{worm_id} Has Been Initialized")
-            print(f"Motor Direction 1: {motor1_direction}")
-            print(f"Motor Direction 2: {motor2_direction}")
-            print(f"Motor Direction 3: {motor3_direction}")
+            print(f"{self.worm_id} Has Been Initialized")
+            print(f"Motor Direction 1: {self.motor1_direction}")
+            print(f"Motor Direction 2: {self.motor2_direction}")
+            print(f"Motor Direction 3: {self.motor3_direction}")
         else:
             print("No matching robot found for the given MAC address.")
 
-        joint_commands_topic = f'{worm_id}_joint_commands'
-        joint_states_topic = f'{worm_id}_joint_states'
-        worm_heartbeat_topic = f'{worm_id}_heartbeat'
+        self.joint_commands_topic = f'{self.worm_id}_joint_commands'
+        self.joint_states_topic = f'{self.worm_id}_joint_states'
+        self.worm_heartbeat_topic = f'{self.worm_id}_heartbeat'
 
-        print("Recieving Commands From: " + joint_commands_topic)
-        print("Joint States Publishing To: " + joint_states_topic)
+        print("Recieving Commands From: " + self.joint_commands_topic)
+        print("Joint States Publishing To: " + self.joint_states_topic)
 
         
         self.motor_controller_dict = {}
@@ -85,13 +85,16 @@ class MotorControllerNode(Node):
         print("Creating Subscriber")
         self.subscription = self.create_subscription(
             JointState,
-            joint_commands_topic,
+            self.joint_commands_topic,
             self.joint_commands_callback,
             10)
 
-        self.publisher = self.create_publisher(JointState, joint_states_topic, 10)
+        self.publisher = self.create_publisher(JointState, self.joint_states_topic, 10)
 
-        self.heartbeat_publisher = self.create_publisher(String, worm_heartbeat_topic, 10)
+        self.heartbeat_publisher = self.create_publisher(String, self.worm_heartbeat_topic, 10)
+
+        self.worm_heartbeat = String()
+        self.worm_heartbeat.data = "Disabled"
 
         self.get_logger().info("Enabling Motors...")
 
@@ -99,9 +102,9 @@ class MotorControllerNode(Node):
             state = motor_controller.enable_motor()
 
             if(state == None):
-                self.worm_heartbeat = "Disabled"
+                self.worm_heartbeat.data = "Disabled"
             else:
-                self.worm_heartbeat = "Enabled"
+                self.worm_heartbeat.data = "Enabled"
 
 
     def joint_commands_callback(self, msg):
@@ -120,31 +123,32 @@ class MotorControllerNode(Node):
             pos_command = msg.position[idx]
 
 
-            if(motor_id == 1 and (abs(self.pos1 - pos_command) < 10)):
-                    self.pos1, self.vel1, self.curr1 = motor_direction[0] * motor_controller.send_deg_command(pos_command  * motor_direction[0], vel_command  * motor_direction[0], Kp, Kd, K_ff  * motor_direction[0])
+            if(motor_id == 1 and (abs((self.pos1 * self.motor1_direction) - (pos_command * self.motor1_direction)) < 10)):
+                    self.pos1, self.vel1, self.curr1 = self.motor1_direction * motor_controller.send_deg_command(pos_command * self.motor1_direction, vel_command, Kp, Kd, K_ff)
                     
                     if(self.pos1 == None):
-                        self.worm_heartbeat = "Disabled"
+                        self.worm_heartbeat.data = "Disabled"
                     else: 
-                        self.worm_heartbeat = "Enabled"
+                        self.worm_heartbeat.data = "Enabled"
 
-            elif(motor_id == 2  and (abs(self.pos1 - pos_command) < 10)):
-                    self.pos2, self.vel2, self.curr2 = motor_direction[1] * motor_controller.send_deg_command(pos_command * motor_direction[1], vel_command * motor_direction[1], Kp, Kd, K_ff * motor_direction[1])
+            elif(motor_id == 2  and (abs((self.pos2 * self.motor2_direction) - (pos_command * self.motor2_direction)) < 10)):
+                    self.pos2, self.vel2, self.curr2 = self.motor2_direction * motor_controller.send_deg_command(pos_command * self.motor2_direction, vel_command, Kp, Kd, K_ff)
                     
                     if(self.pos1 == None):
-                        self.worm_heartbeat = "Disabled"
+                        self.worm_heartbeat.data = "Disabled"
                     else: 
-                        self.worm_heartbeat = "Enabled"
+                        self.worm_heartbeat.data = "Enabled"
 
-            elif(motor_id == 3  and (abs(self.pos1 - pos_command) < 10)):
-                    self.pos3, self.vel3, self.curr3 = motor_direction[2] * motor_controller.send_deg_command(pos_command * motor_direction[2], vel_command * motor_direction[2], Kp, Kd, K_ff * motor_direction[2])
+            elif(motor_id == 3  and (abs((self.pos3 * self.motor3_direction) - (pos_command * self.motor3_direction)) < 10)):
+                    self.pos3, self.vel3, self.curr3 = self.motor3_direction * motor_controller.send_deg_command(pos_command * self.motor3_direction, vel_command, Kp, Kd, K_ff)
 
                     if(self.pos1 == None):
-                        self.worm_heartbeat = "Disabled"
+                        self.worm_heartbeat.data = "Disabled"
                     else: 
-                        self.worm_heartbeat = "Enabled"
-            else:
-                print("YOUR COMMANDED POSITION IS STRAYED TOO FAR AWAY FROM THE ROBOT'S CURRENT CONFIGURATION! PLEASE COMMAND A POSITION BETWEEN 10 DEGREES OF YOUR CURRENT STATE")
+                        self.worm_heartbeat.data = "Enabled"
+
+            elif(abs((self.pos3 * self.motor3_direction) - (pos_command * self.motor3_direction)) > 10):
+                print("Commanded Position is Over Threshold. Value is: " + str(abs((self.pos1 * self.motor1_direction) - (pos_command * self.motor1_direction))))
 
            
 
@@ -156,7 +160,7 @@ class MotorControllerNode(Node):
         joint_state_msg.effort = [self.curr1, self.curr2, self.curr3]
 
         self.publisher.publish(joint_state_msg)
-        self.heartbeat_publisher(self.worm_heartbeat)
+        self.heartbeat_publisher.publish(self.worm_heartbeat)
 
     def set_zero_position(self, motor):
         motor.set_zero_position()

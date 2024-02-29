@@ -11,11 +11,8 @@ import os
 
 def get_mac_address():
     
-    try:
-        mac_address = subprocess.check_output(f"cat /sys/class/net/wlan0/address", shell=True).decode().strip()
-    except error as e:
-        print("Not compatible with that subprocess")
-
+    
+    mac_address = subprocess.check_output(f"cat /sys/class/net/wlan0/address", shell=True).decode().strip()
 
     if mac_address:
         return mac_address
@@ -95,6 +92,8 @@ class JointCommandPublisher(Node):
 
         self.command_publisher = self.create_publisher(JointState, joint_commands_topic, 10)
 
+        self.coordination_publisher = self.create_publisher(String, "/coordination", 10)
+
         self.state_subscriber = self.create_subscription(JointState, joint_states_topic, self.joint_state_callback, 10)
 
         self.action_subscriber = self.create_subscription(String, worm_action, self.actions_callback, 10)
@@ -117,10 +116,9 @@ class JointCommandPublisher(Node):
             [15, -45, 35]
         ]
 
-        self.test_gait = [
-            [10, 10, 10],
-            [0, 0, 0],
-            [-10, -10, -10]
+        self.test_gait_waypoints = [
+            [20, 20, 20],
+            
         ]
 
         
@@ -171,7 +169,7 @@ class JointCommandPublisher(Node):
                 joint_state_msg.velocity = [0.0, 0.0, 0.0]  # Ensuring these are also floats
                 joint_state_msg.effort = [0.0, 0.0, 0.0]
                 print(joint_state_msg)
-                self.publisher.publish(joint_state_msg)
+                self.command_publisher.publish(joint_state_msg)
 
 
                 self.position_index += 1
@@ -189,8 +187,11 @@ class JointCommandPublisher(Node):
                     position_str = ', '.join([f"{p:.2f}" for p in self.current_pose.position])
                     self.get_logger().info(f'Path complete. Holding Position at: [{position_str}]')
 
-                self.publisher.publish(joint_state_msg)
+                self.command_publisher.publish(joint_state_msg)
         else:
+            msg = String ()
+            msg.data = "done"
+            self.coordination_publisher.publish(msg)
             self.execute_timer_callback = False
             
 
@@ -199,7 +200,7 @@ class JointCommandPublisher(Node):
             self.execute_timer_callback = True
 
             # Interpolate Positions from Current Position to Start of the Desired Action
-            self.interpolated_positions = self.interpolate_waypoints(step_waypoints)
+            self.interpolated_positions = self.interpolate_waypoints(self.step_waypoints)
             self.action = "step"
 
         if msg.data == "stand":

@@ -20,8 +20,10 @@ worms_mech/controller_nodev2.py
 worms_mech/gait_action_node.py
 worms_mech/gait_manager.py
 worms_mech/gait_parser.py
+worms_mech/gait_parser_actions.py
 worms_mech/hardware_interface.py
 worms_mech/hardware_interfacev2.py
 worms_mech/joint_command_publisher.py
 worms_mech/joystick_control.py
+worms_mech/simple_hardware_interface.py
 worms_mech/testbed_interface.py
