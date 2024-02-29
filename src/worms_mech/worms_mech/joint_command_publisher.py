@@ -65,7 +65,7 @@ class JointCommandPublisher(Node):
         # Initialize command index
         self.command_index = 0
 
-        # Timer for sending commands every 2 seconds
+        # Timer for sending commands every 4 seconds
         self.timer = self.create_timer(4.0, self.timer_callback)
 
     def timer_callback(self):
