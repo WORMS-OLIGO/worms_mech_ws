@@ -1,6 +1,7 @@
 import rclpy
 from rclpy.node import Node
 from motor_driver.canmotorlib import CanMotorController
+from rclpy.executors import MultiThreadedExecutor
 from sensor_msgs.msg import JointState
 from std_msgs.msg import String
 import numpy as np
