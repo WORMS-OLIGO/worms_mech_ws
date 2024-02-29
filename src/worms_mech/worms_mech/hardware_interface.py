@@ -75,9 +75,9 @@ class MotorControllerNode(Node):
         can_device = 'can0'
         motor_ids = [1, 2, 3]
 
-        self.pos1 = 0
-        self.pos2 = 0
-        self.pos3 = 0
+        self.logical_pos1 = 0
+        self.logical_pos2 = 0
+        self.logical_pos3 = 0
 
         for motor_id in motor_ids:
             self.motor_controller_dict[motor_id] = CanMotorController(can_device, motor_id, motor_type="AK80_6_V2")
@@ -120,44 +120,48 @@ class MotorControllerNode(Node):
 
             vel_command = msg.velocity[idx]
             K_ff = msg.effort[idx]
-            pos_command = msg.position[idx]
+            logic_pose_command = msg.position[idx]
 
 
-            if(motor_id == 1 and (abs((self.pos1 * self.motor1_direction) - (pos_command * self.motor1_direction)) < 25)):
-                    self.pos1, self.vel1, self.curr1 = motor_controller.send_deg_command(pos_command * self.motor1_direction, vel_command, Kp, Kd, K_ff)
-                    self.pos1 = self.pos1 * self.motor1_direction
+            if(motor_id == 1 and (abs((self.logical_pos1 - logic_pose_command) < 25))):
+                    
+                    self.motor_reported_pos1, self.vel1, self.curr1 = motor_controller.send_deg_command(logic_pose_command * self.motor1_direction, vel_command, Kp, Kd, K_ff)
+                    self.logical_pos1 = self.motor_reported_pos1 * self.motor1_direction
 
-                    if(self.pos1 == None):
+                    if(self.logical_pos1 == None):
                         self.worm_heartbeat.data = "Disabled"
                     else: 
                         self.worm_heartbeat.data = "Enabled"
 
-            elif(motor_id == 2  and (abs((self.pos2 * self.motor2_direction) - (pos_command * self.motor2_direction)) < 25)):
-                    self.pos2, self.vel2, self.curr2 = self.motor2_direction * motor_controller.send_deg_command(pos_command * self.motor2_direction, vel_command, Kp, Kd, K_ff)
-                    self.pos2 = self.pos2 * self.motor2_direction
-                    if(self.pos1 == None):
+
+            elif(motor_id == 2  and (abs((self.logical_pos2 - logic_pose_command) < 25))):
+                    
+                    self.motor_reported_pos2, self.vel2, self.curr2 = motor_controller.send_deg_command(logic_pose_command * self.motor2_direction, vel_command, Kp, Kd, K_ff)
+                    self.logical_pos2 = self.motor_reported_pos2 * self.motor2_direction
+                    
+                    if(self.logical_pos2 == None):
                         self.worm_heartbeat.data = "Disabled"
                     else: 
                         self.worm_heartbeat.data = "Enabled"
 
-            elif(motor_id == 3  and (abs((self.pos3 * self.motor3_direction) - (pos_command * self.motor3_direction)) < 25)):
-                    self.pos3, self.vel3, self.curr3 = self.motor3_direction * motor_controller.send_deg_command(pos_command * self.motor3_direction, vel_command, Kp, Kd, K_ff)
-                    self.pos3 = self.pos3 * self.motor3_direction
+            elif(motor_id == 3  and (abs((self.logical_pos3 - logic_pose_command) < 25))):
+                    
+                    self.motor_reported_pos3, self.vel3, self.curr3 = motor_controller.send_deg_command(logic_pose_command * self.motor3_direction, vel_command, Kp, Kd, K_ff)
+                    self.logical_pos3 = self.motor_reported_pos3 * self.motor3_direction
 
-                    if(self.pos1 == None):
+                    if(self.logical_pos3 == None):
                         self.worm_heartbeat.data = "Disabled"
                     else: 
                         self.worm_heartbeat.data = "Enabled"
 
-            elif(abs((self.pos3 * self.motor3_direction) - (pos_command * self.motor3_direction)) > 25):
-                print("Commanded Position is Over Threshold. Value is: " + str(abs((self.pos1 * self.motor1_direction) - (pos_command * self.motor1_direction))))
+    
 
            
 
         
         joint_state_msg.header.stamp = self.get_clock().now().to_msg()
         joint_state_msg.name = ["motor_1", "motor_2", "motor_3"]
-        joint_state_msg.position = [self.pos1, self.pos2, self.pos3]
+        joint_state_msg.position = [self.logical_pos1, self.logical_pos2, self.logical_pos3]
         joint_state_msg.velocity = [self.vel1, self.vel2, self.vel3]
         joint_state_msg.effort = [self.curr1, self.curr2, self.curr3]
 
