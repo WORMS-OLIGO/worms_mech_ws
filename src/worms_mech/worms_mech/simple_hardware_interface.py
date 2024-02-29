@@ -43,6 +43,8 @@ class MotorControllerNode(Node):
 
         worm_info = find_robot_info(mac_address, spreadsheet_path)
 
+        self.worm_id = "None"
+
          # Check if worm_info is not None
         if worm_info is not None:
             self.worm_id = worm_info['Species']
