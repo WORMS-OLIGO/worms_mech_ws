@@ -34,24 +34,14 @@ class JointCommandPublisher(Node):
     def __init__(self):
         super().__init__('group_joint_controller')
 
-         # Construct the path to the CSV file
-        spreadsheet_path = os.path.expanduser('~/worms_mech_ws/src/worms_mech/worms_mech/database.csv')
-
-        mac_address = get_mac_address()
-
-        worm_info = find_robot_info(mac_address, spreadsheet_path)
-
-         # Check if worm_info is not None
-        if worm_info is not None:
-            self.worm_id = worm_info['Species']
-
-        print(f"{self.worm_id} Has Been Initialized")
-
-        self.joint_commands_topic = f'{self.worm_id}_joint_commands'
-        self.joint_states_topic = f'{self.worm_id}_joint_states'
-
-        # Initialize publisher
-        self.publisher = self.create_publisher(JointState, self.joint_commands_topic, 10)
+        
+        # Initialize publishers
+        self.goat_publisher = self.create_publisher(JointState, "/Goat_joint_commands", 10)
+        self.duck_publisher = self.create_publisher(JointState, "/Duck_joint_commands", 10)
+        self.pony_publisher = self.create_publisher(JointState, "/Pony_joint_commands", 10)
+        self.swan_publisher = self.create_publisher(JointState, "/Swan_joint_commands", 10)
+        self.frog_publisher = self.create_publisher(JointState, "/Frog_joint_commands", 10)
+        self.lion_publisher = self.create_publisher(JointState, "/Lion_joint_commands", 10)
 
         # Define motor command sequences
         self.motor_commands = [
@@ -87,7 +77,13 @@ class JointCommandPublisher(Node):
             joint_state_msg.position = position_command
             joint_state_msg.velocity = velocity_command
             joint_state_msg.effort = effort_command
-            self.publisher.publish(joint_state_msg)
+
+            self.goat_publisherpublisher.publish(joint_state_msg)
+            self.duck_publisherpublisher.publish(joint_state_msg)
+            self.frog_publisherpublisher.publish(joint_state_msg)
+            self.swan_publisherpublisher.publish(joint_state_msg)
+            self.lion_publisherpublisher.publish(joint_state_msg)
+            self.pony_publisher.publish(joint_state_msg)
 
             # Increment command index
             self.command_index += 1
