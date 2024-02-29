@@ -92,6 +92,8 @@ class JointCommandPublisher(Node):
 
         self.command_publisher = self.create_publisher(JointState, joint_commands_topic, 10)
 
+        self.coordination_publisher = self.create_publisher(String, "/coordination", 10)
+
         self.state_subscriber = self.create_subscription(JointState, joint_states_topic, self.joint_state_callback, 10)
 
         self.action_subscriber = self.create_subscription(String, worm_action, self.actions_callback, 10)
@@ -188,6 +190,9 @@ class JointCommandPublisher(Node):
 
                 self.publisher.publish(joint_state_msg)
         else:
+            msg = String ()
+            msg.data = "done"
+            self.coordination_publisher.publish(msg)
             self.execute_timer_callback = False
             
 
