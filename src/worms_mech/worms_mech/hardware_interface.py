@@ -159,7 +159,7 @@ class MotorControllerNode(Node):
             elif(motor_id == 2 and (abs((self.logical_pos2 - logic_pose_command) >= 25))):
                 print("Motor 2 Was Commanded to Move: " + str((abs(self.logical_pos2 - logic_pose_command))))
 
-             elif(motor_id == 3 and (abs((self.logical_pos3 - logic_pose_command) >= 25))):
+            elif(motor_id == 3 and (abs((self.logical_pos3 - logic_pose_command) >= 25))):
                 print("Motor 3 Was Commanded to Move: " + str((abs(self.logical_pos3 - logic_pose_command))))
 
             
