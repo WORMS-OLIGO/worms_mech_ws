@@ -5,12 +5,48 @@ from rclpy.callback_groups import MutuallyExclusiveCallbackGroup
 from rclpy.executors import MultiThreadedExecutor
 import time
 
+
+def get_mac_address():
+    
+        mac_address = subprocess.check_output(f"cat /sys/class/net/wlan0/address", shell=True).decode().strip()
+        
+        if mac_address:
+            return mac_address
+            
+        print("Error getting MAC address: No suitable interface found")
+        return None
+
+def find_robot_info(mac_address, spreadsheet_path):
+    df = pd.read_csv(spreadsheet_path)
+    match = df.loc[df['MAC Address'] == mac_address, ['Species', 'Motor1_Direction', 'Motor2_Direction', 'Motor3_Direction']]
+    if not match.empty:
+        return match.iloc[0]
+    else:
+        return None
+
+
 class JointCommandPublisher(Node):
     def __init__(self):
         super().__init__('joint_command_publisher')
 
+         # Construct the path to the CSV file
+        spreadsheet_path = os.path.expanduser('~/worms_mech_ws/src/worms_mech/worms_mech/database.csv')
+
+        mac_address = get_mac_address()
+
+        worm_info = find_robot_info(mac_address, spreadsheet_path)
+
+         # Check if worm_info is not None
+        if worm_info is not None:
+            self.worm_id = worm_info['Species']
+
+        print(f"{self.worm_id} Has Been Initialized")
+
+        self.joint_commands_topic = f'{self.worm_id}_joint_commands'
+        self.joint_states_topic = f'{self.worm_id}_joint_states'
+
         # Initialize publisher
-        self.publisher = self.create_publisher(JointState, 'joint_commands', 10)
+        self.publisher = self.create_publisher(JointState, self.joint_commands_topic, 10)
 
         # Define motor command sequences
         self.motor_commands = [
