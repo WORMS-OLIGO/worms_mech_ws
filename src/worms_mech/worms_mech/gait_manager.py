@@ -41,7 +41,7 @@ class JointCommandPublisher(Node):
 
 
         # Construct the path to the CSV file for worm info
-        #spreadsheet_path = os.path.expanduser('~/worms_mech_ws/src/worms_mech/worms_mech/database.csv')
+        spreadsheet_path = os.path.expanduser('~/worms_mech_ws/src/worms_mech/worms_mech/database.csv')
 
         # Construct the path to the CSV file that holds specialization data
         specialization_path = os.path.expanduser('~/worms_mech_ws/src/worms_mech/worms_mech/specialization_table.csv')
@@ -55,9 +55,6 @@ class JointCommandPublisher(Node):
 
         print("HEAD CONNECTOR: " + head)
 
-        #mac_address = get_mac_address()
-
-        #worm_id = find_robot_name(mac_address, spreadsheet_path)
 
         #print("WORM_ID: " + worm_id)
 
@@ -81,6 +78,10 @@ class JointCommandPublisher(Node):
 
         self.species = head
 
+        mac_address = get_mac_address()
+
+        worm_id = find_robot_name(mac_address, spreadsheet_path)
+
         # # Check if worm_info is not None
         # if configuration_info is not None:
         #     self.species = head
@@ -99,18 +100,18 @@ class JointCommandPublisher(Node):
         # if self.species is None:
         #     raise ValueError("Robot species not found. Please check the camera node and text file created.")
 
-        # joint_commands_topic = f'/{worm_id}_joint_commands'
-        # joint_states_topic = f'/{worm_id}_joint_states'
-        # worm_action = 'actions'
+        joint_commands_topic = f'/{worm_id}_joint_commands'
+        joint_states_topic = f'/{worm_id}_joint_states'
+        worm_action = 'actions'
 
-        #print("Sending Commands To: " + joint_commands_topic)
-        #print("Getting Joint States From: " + joint_states_topic)
+        print("Sending Commands To: " + joint_commands_topic)
+        print("Getting Joint States From: " + joint_states_topic)
         
 
-        # self.command_publisher = self.create_publisher(JointState, joint_commands_topic, 10)
-        # self.coordination_publisher = self.create_publisher(String, "/coordination", 10)
-        # self.state_subscriber = self.create_subscription(JointState, joint_states_topic, self.joint_state_callback, 10)
-        # self.action_subscriber = self.create_subscription(String, worm_action, self.actions_callback, 10)
+        self.command_publisher = self.create_publisher(JointState, joint_commands_topic, 10)
+        self.coordination_publisher = self.create_publisher(String, "/coordination", 10)
+        self.state_subscriber = self.create_subscription(JointState, joint_states_topic, self.joint_state_callback, 10)
+        self.action_subscriber = self.create_subscription(String, worm_action, self.actions_callback, 10)
 
         
         self.execute_timer_callback = False
