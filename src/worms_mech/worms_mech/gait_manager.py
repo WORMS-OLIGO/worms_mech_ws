@@ -261,9 +261,9 @@ class JointCommandPublisher(Node):
 def main(args=None):
     rclpy.init(args=args)
     joint_command_publisher = JointCommandPublisher()
+    
+    rclpy.spin(joint_command_publisher)
 
-    executor = MultiThreadedExecutor()
-    rclpy.spin(joint_command_publisher, executor=executor)
 
     joint_command_publisher.destroy_node()
     rclpy.shutdown()
