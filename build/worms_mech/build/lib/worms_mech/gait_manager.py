@@ -11,7 +11,6 @@ import os
 
 def get_mac_address():
     
-    
     mac_address = subprocess.check_output(f"cat /sys/class/net/wlan0/address", shell=True).decode().strip()
 
     if mac_address:
@@ -42,7 +41,7 @@ class JointCommandPublisher(Node):
 
 
         # Construct the path to the CSV file for worm info
-        spreadsheet_path = os.path.expanduser('~/worms_mech_ws/src/worms_mech/worms_mech/database.csv')
+        #spreadsheet_path = os.path.expanduser('~/worms_mech_ws/src/worms_mech/worms_mech/database.csv')
 
         # Construct the path to the CSV file that holds specialization data
         specialization_path = os.path.expanduser('~/worms_mech_ws/src/worms_mech/worms_mech/specialization_table.csv')
@@ -56,50 +55,72 @@ class JointCommandPublisher(Node):
 
         print("HEAD CONNECTOR: " + head)
 
-        mac_address = get_mac_address()
+        #mac_address = get_mac_address()
 
-        worm_id = find_robot_name(mac_address, spreadsheet_path)
+        #worm_id = find_robot_name(mac_address, spreadsheet_path)
 
-        configuration_info = find_species(head, specialization_path)
+        #print("WORM_ID: " + worm_id)
+
+        configuration_info = find_species(head,specialization_path)
 
         print(configuration_info)
 
-        # Check if worm_info is not None
-        if configuration_info is not None:
-            self.species = head
-            self.motor1_direction = configuration_info['Motor1_Direction']
-            self.motor2_direction = configuration_info['Motor2_Direction']
-            self.motor3_direction = configuration_info['Motor3_Direction']
+        # These variables define the direction of the motors that are specific to the current gait assembled
+        # In the case of our 4 legged system, we use 1 and -1 to define which side each worm would be on in the 
+        # standard forward operating condition, which makes:
+        # ------------------------
+        # 1 = Left Side Leg
+        # -1 = Right Side Leg
+        # ------------------------
+        # The Effect of the -1 on the Right side is to flip the direction of the head motor when executing 
+        # the same step command
 
-            print(f"{worm_id} Has Been Connected to Accessory Port {self.species}")
-            print(f"Motor Direction 1: {self.motor1_direction}")
-            print(f"Motor Direction 2: {self.motor2_direction}")
-            print(f"Motor Direction 3: {self.motor3_direction}")
-        else:
-            print("No matching robot found for the given MAC address.")
+        self.motor1_side_orientation = 1
+        self.motor2_side_orientation = 1
+        self.motor3_side_orientation = 1
+
+        self.species = head
+
+        # # Check if worm_info is not None
+        # if configuration_info is not None:
+        #     self.species = head
+        #     self.motor1_side_orientation = configuration_info['Motor1_Direction']
+        #     self.motor2_side_orientation = configuration_info['Motor2_Direction']
+        #     self.motor3_side_orientation = configuration_info['Motor3_Direction']
+
+        #     #print(f"{worm_id} Has Been Connected to Accessory Port {self.species}")
+        #     print(f"Motor Direction 1: {self.motor1_side_orientation}")
+        #     print(f"Motor Direction 2: {self.motor2_side_orientation}")
+        #     print(f"Motor Direction 3: {self.motor3_side_orientation}")
+        # else:
+        #    # print("No configuration found for the given head connection.")
 
 
-        if self.species is None:
-            raise ValueError("Robot species not found. Please check the camera node and text file created.")
+        # if self.species is None:
+        #     raise ValueError("Robot species not found. Please check the camera node and text file created.")
 
-        joint_commands_topic = f'/{worm_id}_joint_commands'
-        joint_states_topic = f'/{worm_id}_joint_states'
-        worm_action = 'actions'
+        # joint_commands_topic = f'/{worm_id}_joint_commands'
+        # joint_states_topic = f'/{worm_id}_joint_states'
+        # worm_action = 'actions'
 
-        print("Sending Commands To: " + joint_commands_topic)
-        print("Getting Joint States From: " + joint_states_topic)
+        #print("Sending Commands To: " + joint_commands_topic)
+        #print("Getting Joint States From: " + joint_states_topic)
         
 
-        self.command_publisher = self.create_publisher(JointState, joint_commands_topic, 10)
-
-        self.coordination_publisher = self.create_publisher(String, "/coordination", 10)
-
-        self.state_subscriber = self.create_subscription(JointState, joint_states_topic, self.joint_state_callback, 10)
-
-        self.action_subscriber = self.create_subscription(String, worm_action, self.actions_callback, 10)
+        # self.command_publisher = self.create_publisher(JointState, joint_commands_topic, 10)
+        # self.coordination_publisher = self.create_publisher(String, "/coordination", 10)
+        # self.state_subscriber = self.create_subscription(JointState, joint_states_topic, self.joint_state_callback, 10)
+        # self.action_subscriber = self.create_subscription(String, worm_action, self.actions_callback, 10)
 
         
         self.execute_timer_callback = False
+
+
+        # 1 = Robot moving forward with BEAR (Front Left) and BIRD (Front Right) in the direction of motion 
+        # -1 = Robot Moving Backwards with BULL (Front Left) and BOAR (Front Right) leading in the direction of motion
+        self.forward_mode = 1
+
+        
 
         # WAYPOINTS FOR EACH DISCRETE GAIT ACTION
         self.step_waypoints = [
@@ -109,7 +130,7 @@ class JointCommandPublisher(Node):
         ]
 
         self.prone_waypoints = [
-            [0, 120, -120]  
+            [0, 150, -120]  
         ]
 
         self.stand_waypoints = [
@@ -117,8 +138,7 @@ class JointCommandPublisher(Node):
         ]
 
         self.test_gait_waypoints = [
-            [0, 120, -90],
-            
+            [20, 120, -90],
         ]
 
         
@@ -150,18 +170,21 @@ class JointCommandPublisher(Node):
 
     def timer_callback(self):
 
+        # Flag thats set to true when the worm receives some action command (ex: step, prone, walk etc.)
         if self.execute_timer_callback:
             
+            # Goes through all of the position that are contained within the trajectory created for that specific action
             if self.position_index < len(self.interpolated_positions):
+
                 # Ensure the position command is a list of floats
                 self.position_command = list(map(float, self.interpolated_positions[self.position_index]))
 
                 self.get_logger().info(f"Publishing command: {self.position_command}")
 
                 # POSITION_COMMAND[0] IS GETTING SENT TO HIP
-                self.position_command[0] *= self.motor1_direction
-                self.position_command[1] *= self.motor2_direction
-                self.position_command[2] *= self.motor3_direction
+                self.position_command[0] *= self.motor1_side_orientation * self.forward_mode    #Only sending to the head in this specific 4 legged walker configuration
+                self.position_command[1] *= self.motor2_side_orientation
+                self.position_command[2] *= self.motor3_side_orientation
 
                 joint_state_msg = JointState()
                 joint_state_msg.header.stamp = self.get_clock().now().to_msg()
@@ -175,7 +198,6 @@ class JointCommandPublisher(Node):
                 self.position_index += 1
 
             else:
-                
 
                 joint_state_msg = JointState()
 
@@ -224,6 +246,14 @@ class JointCommandPublisher(Node):
             # Interpolate Positions from Current Position to Start of the Desired Action
             self.interpolated_positions = self.interpolate_waypoints(self.test_gait_waypoints)
             self.action = "test_gait"
+
+        if msg.data == "reverse":
+            self.action = "reverse"
+            self.forward_mode = -1
+
+        if msg.data == "forward":
+            self.action = "forward"
+            self.forward_mode = 1
 
 def main(args=None):
     rclpy.init(args=args)
