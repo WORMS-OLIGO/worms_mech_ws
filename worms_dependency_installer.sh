@@ -36,6 +36,7 @@ pip install serial
 pip install pandas
 pip install pyzbar
 pip install opencv-python
+pip install Rpi.GPIO
 
 
 echo "Installing motor library"

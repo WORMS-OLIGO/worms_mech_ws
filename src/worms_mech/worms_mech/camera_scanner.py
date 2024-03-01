@@ -5,11 +5,15 @@ from cv_bridge import CvBridge
 import cv2
 from pyzbar.pyzbar import decode
 import os
+import time
 
 from std_msgs.msg import String
+import RPi.GPIO as GPIO
 
 import pandas as pd
 import subprocess
+buzzer_pin = 21
+GPIO.setup(buzzer_pin, GPIO.OUT)
 
 def get_mac_address():
     
@@ -80,6 +84,9 @@ class QRScannerNode(Node):
                     file.write(obj.data.decode('utf-8'))
 
                 self.qr_scanned = True
+                GPIO.output(buzzer_pin, GPIO.HIGH)
+                time.sleep(0.5)
+                GPIO.output(buzzer_pin, GPIO.LOW)
                 break
             if self.qr_scanned:
                 break
