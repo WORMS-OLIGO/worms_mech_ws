@@ -85,7 +85,7 @@ class QRScannerNode(Node):
 
                 self.qr_scanned = True
                 GPIO.output(buzzer_pin, GPIO.HIGH)
-                time.sleep(0.5)
+                time.sleep(2)
                 GPIO.output(buzzer_pin, GPIO.LOW)
                 break
             if self.qr_scanned:
