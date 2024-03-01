@@ -82,19 +82,11 @@ class JointCommandPublisher(Node):
 
         worm_id = find_robot_name(mac_address, spreadsheet_path)
 
-        # # Check if worm_info is not None
-        # if configuration_info is not None:
-        #     self.species = head
-        #     self.motor1_side_orientation = configuration_info['Motor1_Direction']
-        #     self.motor2_side_orientation = configuration_info['Motor2_Direction']
-        #     self.motor3_side_orientation = configuration_info['Motor3_Direction']
-
-        #     #print(f"{worm_id} Has Been Connected to Accessory Port {self.species}")
-        #     print(f"Motor Direction 1: {self.motor1_side_orientation}")
-        #     print(f"Motor Direction 2: {self.motor2_side_orientation}")
-        #     print(f"Motor Direction 3: {self.motor3_side_orientation}")
-        # else:
-        #    # print("No configuration found for the given head connection.")
+       
+        self.motor1_side_orientation = configuration_info['Motor1_Direction']
+        self.motor2_side_orientation = configuration_info['Motor2_Direction']
+        self.motor3_side_orientation = configuration_info['Motor3_Direction']
+ 
 
 
         # if self.species is None:
