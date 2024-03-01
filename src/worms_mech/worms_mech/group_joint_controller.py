@@ -78,11 +78,11 @@ class JointCommandPublisher(Node):
             joint_state_msg.velocity = velocity_command
             joint_state_msg.effort = effort_command
 
-            self.goat_publisherpublisher.publish(joint_state_msg)
-            self.duck_publisherpublisher.publish(joint_state_msg)
-            self.frog_publisherpublisher.publish(joint_state_msg)
-            self.swan_publisherpublisher.publish(joint_state_msg)
-            self.lion_publisherpublisher.publish(joint_state_msg)
+            self.goat_publisher.publish(joint_state_msg)
+            self.duck_publisher.publish(joint_state_msg)
+            self.frog_publisher.publish(joint_state_msg)
+            self.swan_publisher.publish(joint_state_msg)
+            self.lion_publisher.publish(joint_state_msg)
             self.pony_publisher.publish(joint_state_msg)
 
             # Increment command index
