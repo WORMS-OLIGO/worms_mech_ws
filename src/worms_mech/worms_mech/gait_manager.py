@@ -141,7 +141,7 @@ class JointCommandPublisher(Node):
         ]
 
         self.test_gait_waypoints = [
-            [20, 120, -90],
+            [20, 140, -90],
         ]
 
         
