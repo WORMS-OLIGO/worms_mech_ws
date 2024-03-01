@@ -214,7 +214,7 @@ class JointCommandPublisher(Node):
         else:
             msg = String ()
             msg.data = "done"
-            self.coordination_publisher.publish(msg)
+            # self.coordination_publisher.publish(msg)
             self.execute_timer_callback = False
             
 
