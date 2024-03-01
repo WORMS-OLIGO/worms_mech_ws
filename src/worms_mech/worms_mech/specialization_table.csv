@@ -1,5 +1,5 @@
 Head,Specialization,Motor1_Direction,Motor2_Direction,Motor3_Direction
-BEAR,FrontLeftLeg,1,1,1
+BEAR,FrontLeftLeg,-1,1,1
 BIRD,FrontRightLeg,-1,1,1
 BOAR,BackLeftLeg,1,1,1
 BULL,BackRightLeg,-1,1,1
