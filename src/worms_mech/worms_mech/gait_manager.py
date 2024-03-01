@@ -51,7 +51,7 @@ class JointCommandPublisher(Node):
 
         # Open the file and read its contents
         with open(head_connection_path, 'r') as file:
-            head = file.read()
+            head = file.readline().strip() 
 
         print("HEAD CONNECTOR: " + head)
 
