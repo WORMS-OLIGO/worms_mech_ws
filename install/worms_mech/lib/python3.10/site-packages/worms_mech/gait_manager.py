@@ -109,7 +109,7 @@ class JointCommandPublisher(Node):
         ]
 
         self.prone_waypoints = [
-            [0, -120, 175]  
+            [0, 120, -120]  
         ]
 
         self.stand_waypoints = [
@@ -117,7 +117,7 @@ class JointCommandPublisher(Node):
         ]
 
         self.test_gait_waypoints = [
-            [20, 20, 20],
+            [0, 120, -90],
             
         ]
 

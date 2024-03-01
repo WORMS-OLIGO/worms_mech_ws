@@ -1,0 +1,87 @@
+[0.000000] (-) TimerEvent: {}
+[0.001577] (worms_mech) JobQueued: {'identifier': 'worms_mech', 'dependencies': OrderedDict()}
+[0.002161] (worms_mech) JobStarted: {'identifier': 'worms_mech'}
+[0.099164] (-) TimerEvent: {}
+[0.200143] (-) TimerEvent: {}
+[0.301225] (-) TimerEvent: {}
+[0.401860] (-) TimerEvent: {}
+[0.502478] (-) TimerEvent: {}
+[0.603154] (-) TimerEvent: {}
+[0.703865] (-) TimerEvent: {}
+[0.804450] (-) TimerEvent: {}
+[0.905021] (-) TimerEvent: {}
+[1.005643] (-) TimerEvent: {}
+[1.106276] (-) TimerEvent: {}
+[1.206884] (-) TimerEvent: {}
+[1.307873] (-) TimerEvent: {}
+[1.408558] (-) TimerEvent: {}
+[1.509698] (-) TimerEvent: {}
+[1.610572] (-) TimerEvent: {}
+[1.711252] (-) TimerEvent: {}
+[1.812056] (-) TimerEvent: {}
+[1.912780] (-) TimerEvent: {}
+[2.013462] (-) TimerEvent: {}
+[2.114140] (-) TimerEvent: {}
+[2.214869] (-) TimerEvent: {}
+[2.315547] (-) TimerEvent: {}
+[2.416223] (-) TimerEvent: {}
+[2.516861] (-) TimerEvent: {}
+[2.617621] (-) TimerEvent: {}
+[2.718559] (-) TimerEvent: {}
+[2.819875] (-) TimerEvent: {}
+[2.829858] (worms_mech) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/worms_mech', 'build', '--build-base', '/home/worm3/worms_mech_ws/build/worms_mech/build', 'install', '--record', '/home/worm3/worms_mech_ws/build/worms_mech/install.log', '--single-version-externally-managed'], 'cwd': '/home/worm3/worms_mech_ws/src/worms_mech', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'worm3', 'SSH_CLIENT': '192.168.42.215 51106 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'MOTD_SHOWN': 'pam', 'HOME': '/home/worm3', 'OLDPWD': '/home/worm3', 'SSH_TTY': '/dev/pts/0', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLCON_PREFIX_PATH': '/home/worm3/worms_mech_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'worm3', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '6', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'ROS_DOMAIN_ID': '42', 'AMENT_PREFIX_PATH': '/home/worm3/worms_mech_ws/install/worms_mech:/opt/ros/humble', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PWD': '/home/worm3/worms_mech_ws/build/worms_mech', 'SSH_CONNECTION': '192.168.42.215 51106 192.168.42.103 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/worm3/worms_mech_ws/build/worms_mech/prefix_override:/home/worm3/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages:/home/worm3/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1'}, 'shell': False}
+[2.919947] (-) TimerEvent: {}
+[3.020576] (-) TimerEvent: {}
+[3.121175] (-) TimerEvent: {}
+[3.221752] (-) TimerEvent: {}
+[3.322391] (-) TimerEvent: {}
+[3.422962] (-) TimerEvent: {}
+[3.523581] (-) TimerEvent: {}
+[3.624215] (-) TimerEvent: {}
+[3.724950] (-) TimerEvent: {}
+[3.757111] (worms_mech) StdoutLine: {'line': b'running egg_info\n'}
+[3.759727] (worms_mech) StdoutLine: {'line': b'writing ../../build/worms_mech/worms_mech.egg-info/PKG-INFO\n'}
+[3.760860] (worms_mech) StdoutLine: {'line': b'writing dependency_links to ../../build/worms_mech/worms_mech.egg-info/dependency_links.txt\n'}
+[3.763024] (worms_mech) StdoutLine: {'line': b'writing entry points to ../../build/worms_mech/worms_mech.egg-info/entry_points.txt\n'}
+[3.763924] (worms_mech) StdoutLine: {'line': b'writing requirements to ../../build/worms_mech/worms_mech.egg-info/requires.txt\n'}
+[3.764533] (worms_mech) StdoutLine: {'line': b'writing top-level names to ../../build/worms_mech/worms_mech.egg-info/top_level.txt\n'}
+[3.772676] (worms_mech) StdoutLine: {'line': b"reading manifest file '../../build/worms_mech/worms_mech.egg-info/SOURCES.txt'\n"}
+[3.777014] (worms_mech) StdoutLine: {'line': b"writing manifest file '../../build/worms_mech/worms_mech.egg-info/SOURCES.txt'\n"}
+[3.777704] (worms_mech) StdoutLine: {'line': b'running build\n'}
+[3.778144] (worms_mech) StdoutLine: {'line': b'running build_py\n'}
+[3.779338] (worms_mech) StdoutLine: {'line': b'copying worms_mech/joint_command_publisher.py -> /home/worm3/worms_mech_ws/build/worms_mech/build/lib/worms_mech\n'}
+[3.781762] (worms_mech) StdoutLine: {'line': b'copying worms_mech/group_joint_controller.py -> /home/worm3/worms_mech_ws/build/worms_mech/build/lib/worms_mech\n'}
+[3.784983] (worms_mech) StdoutLine: {'line': b'running install\n'}
+[3.786032] (worms_mech) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.\n'}
+[3.786666] (worms_mech) StderrLine: {'line': b'  warnings.warn(\n'}
+[3.787253] (worms_mech) StdoutLine: {'line': b'running install_lib\n'}
+[3.814290] (worms_mech) StdoutLine: {'line': b'copying /home/worm3/worms_mech_ws/build/worms_mech/build/lib/worms_mech/joint_command_publisher.py -> /home/worm3/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages/worms_mech\n'}
+[3.822761] (worms_mech) StdoutLine: {'line': b'copying /home/worm3/worms_mech_ws/build/worms_mech/build/lib/worms_mech/group_joint_controller.py -> /home/worm3/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages/worms_mech\n'}
+[3.825067] (-) TimerEvent: {}
+[3.827996] (worms_mech) StdoutLine: {'line': b'byte-compiling /home/worm3/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages/worms_mech/joint_command_publisher.py to joint_command_publisher.cpython-310.pyc\n'}
+[3.834569] (worms_mech) StdoutLine: {'line': b'byte-compiling /home/worm3/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages/worms_mech/group_joint_controller.py to group_joint_controller.cpython-310.pyc\n'}
+[3.838999] (worms_mech) StdoutLine: {'line': b'running install_data\n'}
+[3.841515] (worms_mech) StdoutLine: {'line': b'running install_egg_info\n'}
+[3.848375] (worms_mech) StdoutLine: {'line': b"removing '/home/worm3/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages/worms_mech-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[3.850161] (worms_mech) StdoutLine: {'line': b'Copying ../../build/worms_mech/worms_mech.egg-info to /home/worm3/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages/worms_mech-0.0.0-py3.10.egg-info\n'}
+[3.855623] (worms_mech) StdoutLine: {'line': b'running install_scripts\n'}
+[3.925220] (-) TimerEvent: {}
+[3.941024] (worms_mech) StdoutLine: {'line': b'Installing camera_scanner script to /home/worm3/worms_mech_ws/install/worms_mech/lib/worms_mech\n'}
+[3.942038] (worms_mech) StdoutLine: {'line': b'Installing controller_node script to /home/worm3/worms_mech_ws/install/worms_mech/lib/worms_mech\n'}
+[3.943020] (worms_mech) StdoutLine: {'line': b'Installing gait_action_node script to /home/worm3/worms_mech_ws/install/worms_mech/lib/worms_mech\n'}
+[3.944143] (worms_mech) StdoutLine: {'line': b'Installing gait_manager script to /home/worm3/worms_mech_ws/install/worms_mech/lib/worms_mech\n'}
+[3.945113] (worms_mech) StdoutLine: {'line': b'Installing gait_parser script to /home/worm3/worms_mech_ws/install/worms_mech/lib/worms_mech\n'}
+[3.946114] (worms_mech) StdoutLine: {'line': b'Installing group_joint_controller script to /home/worm3/worms_mech_ws/install/worms_mech/lib/worms_mech\n'}
+[3.946883] (worms_mech) StdoutLine: {'line': b'Installing hardware_interface script to /home/worm3/worms_mech_ws/install/worms_mech/lib/worms_mech\n'}
+[3.947828] (worms_mech) StdoutLine: {'line': b'Installing joint_command_publisher script to /home/worm3/worms_mech_ws/install/worms_mech/lib/worms_mech\n'}
+[3.948920] (worms_mech) StdoutLine: {'line': b'Installing joystick_control script to /home/worm3/worms_mech_ws/install/worms_mech/lib/worms_mech\n'}
+[3.949890] (worms_mech) StdoutLine: {'line': b'Installing simple_hardware_interface script to /home/worm3/worms_mech_ws/install/worms_mech/lib/worms_mech\n'}
+[3.950881] (worms_mech) StdoutLine: {'line': b'Installing stand_node script to /home/worm3/worms_mech_ws/install/worms_mech/lib/worms_mech\n'}
+[3.951883] (worms_mech) StdoutLine: {'line': b'Installing testbed_interface script to /home/worm3/worms_mech_ws/install/worms_mech/lib/worms_mech\n'}
+[3.955117] (worms_mech) StdoutLine: {'line': b"writing list of installed files to '/home/worm3/worms_mech_ws/build/worms_mech/install.log'\n"}
+[4.025451] (-) TimerEvent: {}
+[4.079495] (worms_mech) CommandEnded: {'returncode': 0}
+[4.125661] (-) TimerEvent: {}
+[4.226333] (-) TimerEvent: {}
+[4.286552] (worms_mech) JobEnded: {'identifier': 'worms_mech', 'rc': 0}
+[4.289609] (-) EventReactorShutdown: {}

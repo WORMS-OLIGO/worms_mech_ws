@@ -39,16 +39,20 @@ class MotorControllerNode(Node):
 
         mac_address = get_mac_address()
 
+        print(mac_address)
+
         worm_info = find_robot_info(mac_address, spreadsheet_path)
 
-        self.joint_commands_topic = f'{self.worm_id}_joint_commands'
-        self.joint_states_topic = f'{self.worm_id}_joint_states'
+        self.worm_id = "None"
 
-        # Check if worm_info is not None
+         # Check if worm_info is not None
         if worm_info is not None:
             self.worm_id = worm_info['Species']
 
         print(f"{self.worm_id} Has Been Initialized")
+
+        self.joint_commands_topic = f'{self.worm_id}_joint_commands'
+        self.joint_states_topic = f'{self.worm_id}_joint_states'
 
         
         # Hardcoded to match pican board

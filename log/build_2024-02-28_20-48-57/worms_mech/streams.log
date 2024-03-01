@@ -1,0 +1,35 @@
+[2.788s] Invoking command in '/home/worm3/worms_mech_ws/src/worms_mech': PYTHONPATH=/home/worm3/worms_mech_ws/build/worms_mech/prefix_override:/home/worm3/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/worms_mech build --build-base /home/worm3/worms_mech_ws/build/worms_mech/build install --record /home/worm3/worms_mech_ws/build/worms_mech/install.log --single-version-externally-managed
+[3.704s] running egg_info
+[3.706s] writing ../../build/worms_mech/worms_mech.egg-info/PKG-INFO
+[3.707s] writing dependency_links to ../../build/worms_mech/worms_mech.egg-info/dependency_links.txt
+[3.709s] writing entry points to ../../build/worms_mech/worms_mech.egg-info/entry_points.txt
+[3.710s] writing requirements to ../../build/worms_mech/worms_mech.egg-info/requires.txt
+[3.711s] writing top-level names to ../../build/worms_mech/worms_mech.egg-info/top_level.txt
+[3.719s] reading manifest file '../../build/worms_mech/worms_mech.egg-info/SOURCES.txt'
+[3.723s] writing manifest file '../../build/worms_mech/worms_mech.egg-info/SOURCES.txt'
+[3.724s] running build
+[3.724s] running build_py
+[3.727s] copying worms_mech/hardware_interface.py -> /home/worm3/worms_mech_ws/build/worms_mech/build/lib/worms_mech
+[3.730s] running install
+[3.730s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[3.731s]   warnings.warn(
+[3.731s] running install_lib
+[3.737s] copying /home/worm3/worms_mech_ws/build/worms_mech/build/lib/worms_mech/hardware_interface.py -> /home/worm3/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages/worms_mech
+[3.741s] byte-compiling /home/worm3/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages/worms_mech/hardware_interface.py to hardware_interface.cpython-310.pyc
+[3.747s] running install_data
+[3.749s] running install_egg_info
+[3.755s] removing '/home/worm3/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages/worms_mech-0.0.0-py3.10.egg-info' (and everything under it)
+[3.757s] Copying ../../build/worms_mech/worms_mech.egg-info to /home/worm3/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages/worms_mech-0.0.0-py3.10.egg-info
+[3.762s] running install_scripts
+[3.837s] Installing camera_scanner script to /home/worm3/worms_mech_ws/install/worms_mech/lib/worms_mech
+[3.838s] Installing controller_node script to /home/worm3/worms_mech_ws/install/worms_mech/lib/worms_mech
+[3.839s] Installing gait_action_node script to /home/worm3/worms_mech_ws/install/worms_mech/lib/worms_mech
+[3.840s] Installing gait_manager script to /home/worm3/worms_mech_ws/install/worms_mech/lib/worms_mech
+[3.841s] Installing gait_parser script to /home/worm3/worms_mech_ws/install/worms_mech/lib/worms_mech
+[3.841s] Installing hardware_interface script to /home/worm3/worms_mech_ws/install/worms_mech/lib/worms_mech
+[3.842s] Installing joint_command_publisher script to /home/worm3/worms_mech_ws/install/worms_mech/lib/worms_mech
+[3.843s] Installing joystick_control script to /home/worm3/worms_mech_ws/install/worms_mech/lib/worms_mech
+[3.843s] Installing stand_node script to /home/worm3/worms_mech_ws/install/worms_mech/lib/worms_mech
+[3.844s] Installing testbed_interface script to /home/worm3/worms_mech_ws/install/worms_mech/lib/worms_mech
+[3.847s] writing list of installed files to '/home/worm3/worms_mech_ws/build/worms_mech/install.log'
+[3.959s] Invoked command in '/home/worm3/worms_mech_ws/src/worms_mech' returned '0': PYTHONPATH=/home/worm3/worms_mech_ws/build/worms_mech/prefix_override:/home/worm3/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/worms_mech build --build-base /home/worm3/worms_mech_ws/build/worms_mech/build install --record /home/worm3/worms_mech_ws/build/worms_mech/install.log --single-version-externally-managed
