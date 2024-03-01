@@ -9,11 +9,14 @@ import time
 
 from std_msgs.msg import String
 import RPi.GPIO as GPIO
+import gpiod
 
 import pandas as pd
 import subprocess
-buzzer_pin = 21
-GPIO.setup(buzzer_pin, GPIO.OUT)
+chip = gpiod.Chip('gpiochip0')
+line = chip.get_line(21)  # Adjust the GPIO pin number accordingly
+
+line.request(consumer='ros2_gpio', type=gpiod.LINE_REQ_DIR_OUT)
 
 def get_mac_address():
     
@@ -84,9 +87,11 @@ class QRScannerNode(Node):
                     file.write(obj.data.decode('utf-8'))
 
                 self.qr_scanned = True
-                GPIO.output(buzzer_pin, GPIO.HIGH)
+                #GPIO.output(buzzer_pin, GPIO.HIGH)
+                line.set_value(1)
                 time.sleep(2)
-                GPIO.output(buzzer_pin, GPIO.LOW)
+                line.set_value(0)
+                #GPIO.output(buzzer_pin, GPIO.LOW)
                 break
             if self.qr_scanned:
                 break
