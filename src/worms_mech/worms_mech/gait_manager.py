@@ -119,9 +119,9 @@ class JointCommandPublisher(Node):
 
         # WAYPOINTS FOR EACH DISCRETE GAIT ACTION
         self.step_waypoints = [
-            [0, 145, 175], # LIFTED LEG POSITION WHEN ON THE FLOOR
-            [15, 145, 175], # TAKING STEP WITH SHOE ELEVATED - 15 DEGREE MOTION
-            [15, 135, 175]  # BRING SHOE DOWN WHEN ON FLOOR
+            [0, 150, -130], # LIFTED LEG POSITION WHEN ON THE FLOOR
+            [20, 150, -130], # TAKING STEP WITH SHOE ELEVATED - 15 DEGREE MOTION
+            [20, 135, -120]  # BRING SHOE DOWN WHEN ON FLOOR
         ]
 
         self.prone_waypoints = [
@@ -129,7 +129,7 @@ class JointCommandPublisher(Node):
         ]
 
         self.stand_waypoints = [
-            [15, -45, 35]
+            [20, -45, -35]
         ]
 
         self.test_gait_waypoints = [
