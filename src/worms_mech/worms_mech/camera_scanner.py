@@ -8,13 +8,18 @@ import os
 import time
 
 from std_msgs.msg import String
-import RPi.GPIO as GPIO
-import gpiod
+    
+import time
+import lgpio
+
 
 import pandas as pd
 import subprocess
-chip = gpiod.Chip('gpiochip0')
-line = chip.get_line(21)  # Adjust the GPIO pin number accordingly
+
+LED = 21
+h = lgpio.gpiochip_open(0)
+lgpio.gpio_claim_output(h, LED)
+
 
 line.request(consumer='ros2_gpio', type=gpiod.LINE_REQ_DIR_OUT)
 
@@ -87,11 +92,9 @@ class QRScannerNode(Node):
                     file.write(obj.data.decode('utf-8'))
 
                 self.qr_scanned = True
-                #GPIO.output(buzzer_pin, GPIO.HIGH)
-                line.set_value(1)
-                time.sleep(2)
-                line.set_value(0)
-                #GPIO.output(buzzer_pin, GPIO.LOW)
+    		lgpio.gpio_write(h, LED, 1)
+    		time.sleep(1)
+    		lgpio.gpio_write(h, LED, 0)
                 break
             if self.qr_scanned:
                 break
