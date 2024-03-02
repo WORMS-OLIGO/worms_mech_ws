@@ -21,8 +21,6 @@ h = lgpio.gpiochip_open(0)
 lgpio.gpio_claim_output(h, LED)
 
 
-line.request(consumer='ros2_gpio', type=gpiod.LINE_REQ_DIR_OUT)
-
 def get_mac_address():
     
         mac_address = subprocess.check_output(f"cat /sys/class/net/wlan0/address", shell=True).decode().strip()
@@ -92,9 +90,9 @@ class QRScannerNode(Node):
                     file.write(obj.data.decode('utf-8'))
 
                 self.qr_scanned = True
-    		lgpio.gpio_write(h, LED, 1)
-    		time.sleep(1)
-    		lgpio.gpio_write(h, LED, 0)
+                gpio.gpio_write(h, LED, 1)
+                time.sleep(1)
+                lgpio.gpio_write(h, LED, 0)
                 break
             if self.qr_scanned:
                 break
