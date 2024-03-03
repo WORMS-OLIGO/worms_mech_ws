@@ -14,7 +14,7 @@ class MotorControllerNode(Node):
         # Hardcoded to match pican board
         can_device = 'can0'
 
-        self.motor_controller = CanMotorController(can_device, 3, motor_type="AK80_6_V2")
+        self.motor_controller = CanMotorController(can_device, 1, motor_type="AK80_6_V2")
 
         print("Creating Subscriber")
         self.subscription = self.create_subscription(
@@ -25,7 +25,7 @@ class MotorControllerNode(Node):
         
         print("Subscriber Made")
 
-        self.pos = 0
+        self.pos = 20
 
         self.publisher = self.create_publisher(JointState, 'joint_states', 10)
 
