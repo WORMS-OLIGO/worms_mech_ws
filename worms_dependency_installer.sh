@@ -36,6 +36,8 @@ pip install serial
 pip install pandas
 pip install pyzbar
 pip install opencv-python
+sudo apt install python3-lgpio
+
 
 
 echo "Installing motor library"
