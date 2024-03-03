@@ -90,8 +90,8 @@ class QRScannerNode(Node):
                     file.write(obj.data.decode('utf-8'))
 
                 self.qr_scanned = True
-                gpio.gpio_write(h, LED, 1)
-                time.sleep(1)
+                lgpio.gpio_write(h, LED, 1)
+                time.sleep(0.5)
                 lgpio.gpio_write(h, LED, 0)
                 break
             if self.qr_scanned:
