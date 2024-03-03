@@ -62,15 +62,19 @@ class JointCommandPublisher(Node):
 
         print(configuration_info)
 
-        # These variables define the direction of the motors that are specific to the current gait assembled
-        # In the case of our 4 legged system, we use 1 and -1 to define which side each worm would be on in the 
-        # standard forward operating condition, which makes:
-        # ------------------------
-        # 1 = Left Side Leg
-        # -1 = Right Side Leg
-        # ------------------------
-        # The Effect of the -1 on the Right side is to flip the direction of the head motor when executing 
-        # the same step command
+        """
+        These variables define the direction of the motors that are specific to the current gait assembled
+        In the case of our 4 legged system, we use 1 and -1 to define which side each worm would be on in the 
+        standard forward operating condition, which makes:
+        ------------------------
+        1 = Left Side Leg
+        -1 = Right Side Leg
+        ------------------------
+        The Effect of the -1 on the Right side is to flip the direction of the head motor when executing 
+        the same step command
+
+        """
+
 
         self.motor1_side_orientation = 1
         self.motor2_side_orientation = 1
@@ -102,7 +106,7 @@ class JointCommandPublisher(Node):
 
         self.command_publisher = self.create_publisher(JointState, joint_commands_topic, 10)
 
-        #self.coordination_publisher = self.create_publisher(String, "/coordination", 10)
+        self.coordination_publisher = self.create_publisher(String, "/coordination", 10)
 
         self.state_subscriber = self.create_subscription(JointState, joint_states_topic, self.joint_state_callback, 10)
         self.action_subscriber = self.create_subscription(String, worm_action, self.actions_callback, 10)
@@ -208,7 +212,7 @@ class JointCommandPublisher(Node):
         else:
             msg = String ()
             msg.data = "done"
-            # self.coordination_publisher.publish(msg)
+            self.coordination_publisher.publish(msg)
             self.execute_timer_callback = False
             
 
@@ -243,10 +247,12 @@ class JointCommandPublisher(Node):
             self.action = "test_gait"
 
         if msg.data == "reverse":
+            self.execute_timer_callback = True
             self.action = "reverse"
             self.forward_mode = -1
 
         if msg.data == "forward":
+            self.execute_timer_callback = True
             self.action = "forward"
             self.forward_mode = 1
 
