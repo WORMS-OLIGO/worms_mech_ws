@@ -42,6 +42,8 @@ sudo apt install libzbar0
 pip install pyzbar
 
 pip install opencv-python
+
+# Library for Ubuntu on top of RasPi: https://ubuntu.com/tutorials/gpio-on-raspberry-pi#2-installing-gpio
 sudo apt install python3-lgpio
 
 
