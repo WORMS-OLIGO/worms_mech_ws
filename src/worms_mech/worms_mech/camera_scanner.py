@@ -96,7 +96,7 @@ class QRScannerNode(Node):
                 break
             if self.qr_scanned:
                 break
-            cv2.imshow('Scan QR Code', frame)
+            
 
 
             if cv2.waitKey(1) & 0xFF == ord('q'):  # Press 'q' to quit the scanning loop

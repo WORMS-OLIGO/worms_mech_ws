@@ -34,7 +34,13 @@ apt-get install -y python3-pip
 echo "Installing python libraries:"
 pip install serial
 pip install pandas
+
+#Install zbar communication scheme for the python library
+sudo apt install libzbar0
+
+#Install zbar for python specifically
 pip install pyzbar
+
 pip install opencv-python
 sudo apt install python3-lgpio
 
