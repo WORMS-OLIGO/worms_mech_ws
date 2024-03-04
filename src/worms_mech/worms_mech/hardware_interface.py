@@ -159,8 +159,12 @@ class MotorControllerNode(Node):
 
 
             elif(motor_id == 3):
+
+                print("Motor 3 Position Pre-Command: " + str(self.logical_pos3))
+                print("Motor 3 Command Pre-Command: " + str(logic_pose_command))
                     
                 if(abs((self.logical_pos3 - logic_pose_command) < 25)):
+
                     self.motor_reported_pos3, self.vel3, self.curr3 = motor_controller.send_deg_command(logic_pose_command * self.motor3_direction, vel_command, Kp, Kd, K_ff)
                     self.logical_pos3 = self.motor_reported_pos3 * self.motor3_direction
 
