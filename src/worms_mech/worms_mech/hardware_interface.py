@@ -154,13 +154,13 @@ class MotorControllerNode(Node):
                         self.worm_heartbeat.data = "Enabled"
 
             elif(motor_id == 1 and (abs((self.logical_pos1 - logic_pose_command) >= 25))):
-                print("Motor 1 Was Commanded to Move: " + str((abs(self.logical_pos1 - logic_pose_command))))
+                print("Motor 1 Was Commanded to Move: " + str(logic_pose_command) + " While At Position: " + str(logic_pose1))
 
             elif(motor_id == 2 and (abs((self.logical_pos2 - logic_pose_command) >= 25))):
-                print("Motor 2 Was Commanded to Move: " + str((abs(self.logical_pos2 - logic_pose_command))))
+                print("Motor 2 Was Commanded to Move: " + str(logic_pose_command) + " While At Position: " + str(logic_pose1))
 
             elif(motor_id == 3 and (abs((self.logical_pos3 - logic_pose_command) >= 25))):
-                print("Motor 3 Was Commanded to Move: " + str((abs(self.logical_pos3 - logic_pose_command))))
+                print("Motor 3 Was Commanded to Move: " + str(logic_pose_command) + " While At Position: " + str(logic_pose1))
 
             
             
