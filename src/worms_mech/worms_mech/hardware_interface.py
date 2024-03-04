@@ -123,8 +123,9 @@ class MotorControllerNode(Node):
             logic_pose_command = msg.position[idx]
 
 
-            if(motor_id == 1 and (abs((self.logical_pos1 - logic_pose_command) < 25))):
+            if(motor_id == 1):
                     
+                if(abs((self.logical_pos1 - logic_pose_command) < 25)):
                     self.motor_reported_pos1, self.vel1, self.curr1 = motor_controller.send_deg_command(logic_pose_command * self.motor1_direction, vel_command, Kp, Kd, K_ff)
                     self.logical_pos1 = self.motor_reported_pos1 * self.motor1_direction
 
@@ -133,8 +134,12 @@ class MotorControllerNode(Node):
                     else: 
                         self.worm_heartbeat.data = "Enabled"
 
-            elif(motor_id == 2  and (abs((self.logical_pos2 - logic_pose_command) < 25))):
+                else:
+                    print("Motor 1 Was Commanded to Move: " + str(logic_pose_command) + " While At Position: " + str(self.logical_pos1))
+
+            elif(motor_id == 2):
                     
+                if(abs((self.logical_pos2 - logic_pose_command) < 25)):
                     self.motor_reported_pos2, self.vel2, self.curr2 = motor_controller.send_deg_command(logic_pose_command * self.motor2_direction, vel_command, Kp, Kd, K_ff)
                     self.logical_pos2 = self.motor_reported_pos2 * self.motor2_direction
                     
@@ -142,9 +147,14 @@ class MotorControllerNode(Node):
                         self.worm_heartbeat.data = "Disabled"
                     else: 
                         self.worm_heartbeat.data = "Enabled"
+                
+                else:
+                    print("Motor 2 Was Commanded to Move: " + str(logic_pose_command) + " While At Position: " + str(self.logical_pos2))
 
-            elif(motor_id == 3  and (abs((self.logical_pos3 - logic_pose_command) < 25))):
+
+            elif(motor_id == 3):
                     
+                if(abs((self.logical_pos3 - logic_pose_command) < 25)):
                     self.motor_reported_pos3, self.vel3, self.curr3 = motor_controller.send_deg_command(logic_pose_command * self.motor3_direction, vel_command, Kp, Kd, K_ff)
                     self.logical_pos3 = self.motor_reported_pos3 * self.motor3_direction
 
@@ -153,19 +163,11 @@ class MotorControllerNode(Node):
                     else: 
                         self.worm_heartbeat.data = "Enabled"
 
-            elif(motor_id == 1 and (abs((self.logical_pos1 - logic_pose_command) >= 25))):
-                print("Motor 1 Was Commanded to Move: " + str(logic_pose_command) + " While At Position: " + str(self.logical_pos1))
+                else:
+                    print("Motor 3 Was Commanded to Move: " + str(logic_pose_command) + " While At Position: " + str(self.logical_pos3))
 
-            elif(motor_id == 2 and (abs((self.logical_pos2 - logic_pose_command) >= 25))):
-                print("Motor 2 Was Commanded to Move: " + str(logic_pose_command) + " While At Position: " + str(self.logical_pos2))
-
-            elif(motor_id == 3 and (abs((self.logical_pos3 - logic_pose_command) >= 25))):
-                print("Motor 3 Was Commanded to Move: " + str(logic_pose_command) + " While At Position: " + str(self.logical_pos3))
-
-            
-            
-
-           
+            else:
+                print("MOTOR ID ERROR: MOTOR WILL HOLD POSITION")
 
         
         joint_state_msg.header.stamp = self.get_clock().now().to_msg()
