@@ -140,6 +140,10 @@ class JointCommandPublisher(Node):
             [20, 140, -90],
         ]
 
+        self.stand_minimal_motion_waypoints = [
+            [10, 10, 10]  
+        ]
+
 
 #==================
         self.field_step_waypoints = [
@@ -259,6 +263,12 @@ class JointCommandPublisher(Node):
             # Interpolate Positions from Current Position to Start of the Desired Action
             self.interpolated_positions = self.interpolate_waypoints(self.stand_test_gait_waypoints)
             self.action = "stand_test_gait"
+            self.execute_timer_callback = True
+
+        if msg.data == "stand_min_test":
+            # Interpolate Positions from Current Position to Start of the Desired Action
+            self.interpolated_positions = self.interpolate_waypoints(self.stand_minimal_motion_waypoints)
+            self.action = "stand_minimal_test"
             self.execute_timer_callback = True
 
         #=============================================================
