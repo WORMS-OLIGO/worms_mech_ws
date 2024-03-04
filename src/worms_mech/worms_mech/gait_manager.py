@@ -122,22 +122,42 @@ class JointCommandPublisher(Node):
         
 
         # WAYPOINTS FOR EACH DISCRETE GAIT ACTION
-        self.step_waypoints = [
-            [0, 150, -130], # LIFTED LEG POSITION WHEN ON THE FLOOR
-            [20, 150, -130], # TAKING STEP WITH SHOE ELEVATED - 15 DEGREE MOTION
+        self.stand_step_waypoints = [
+            [0, 170, -120], # LIFTED LEG POSITION WHEN ON THE FLOOR
+            [20, 170, -120], # TAKING STEP WITH SHOE ELEVATED - 15 DEGREE MOTION
             [20, 135, -120]  # BRING SHOE DOWN WHEN ON FLOOR
         ]
 
-        self.prone_waypoints = [
+        self.stand_prone_waypoints = [
             [0, 150, -120]  
         ]
 
-        self.stand_waypoints = [
+        self.stand_stand_waypoints = [
             [20, -45, -35]
         ]
 
-        self.test_gait_waypoints = [
+        self.stand_test_gait_waypoints = [
             [20, 140, -90],
+        ]
+
+
+#==================
+        self.field_step_waypoints = [
+            [0, 20, 0], # LIFTED LEG POSITION WHEN ON THE FLOOR
+            [20, 0, 0], # TAKING STEP WITH SHOE ELEVATED - 15 DEGREE MOTION
+            [20, -15, 0]  # BRING SHOE DOWN WHEN ON FLOOR
+        ]
+
+        self.field_prone_waypoints = [
+            [0, 0, 0]
+        ]
+
+        self.field_stand_waypoints = [
+            [20, -195, 85]
+        ]
+
+        self.field_test_gait_waypoints = [
+            [20, -10, 30],
         ]
 
         
@@ -217,44 +237,67 @@ class JointCommandPublisher(Node):
             
 
     def actions_callback(self, msg):
-        if msg.data == "step":
+        if msg.data == "stand_step":
+            # Interpolate Positions from Current Position to Start of the Desired Action
+            self.interpolated_positions = self.interpolate_waypoints(self.stand_step_waypoints)
+            self.action = "stand_step"
             self.execute_timer_callback = True
 
+        if msg.data == "stand_stand":
             # Interpolate Positions from Current Position to Start of the Desired Action
-            self.interpolated_positions = self.interpolate_waypoints(self.step_waypoints)
-            self.action = "step"
-
-        if msg.data == "stand":
+            self.interpolated_positions = self.interpolate_waypoints(self.stand_stand_waypoints)
+            self.action = "stand_stand"
             self.execute_timer_callback = True
 
+        if msg.data == "stand_prone":
             # Interpolate Positions from Current Position to Start of the Desired Action
-            self.interpolated_positions = self.interpolate_waypoints(self.stand_waypoints)
-            self.action = "stand"
-
-        if msg.data == "prone":
+            self.interpolated_positions = self.interpolate_waypoints(self.stand_prone_waypoints)
+            self.action = "stand_prone"
             self.execute_timer_callback = True
 
+        if msg.data == "stand_test_gait":
             # Interpolate Positions from Current Position to Start of the Desired Action
-            self.interpolated_positions = self.interpolate_waypoints(self.prone_waypoints)
-            self.action = "prone"
-
-
-        if msg.data == "test_gait":
+            self.interpolated_positions = self.interpolate_waypoints(self.stand_test_gait_waypoints)
+            self.action = "stand_test_gait"
             self.execute_timer_callback = True
 
+        #=============================================================
+        if msg.data == "field_step":
             # Interpolate Positions from Current Position to Start of the Desired Action
-            self.interpolated_positions = self.interpolate_waypoints(self.test_gait_waypoints)
-            self.action = "test_gait"
+            self.interpolated_positions = self.interpolate_waypoints(self.field_step_waypoints)
+            self.action = "field_step"
+            self.execute_timer_callback = True
+
+        if msg.data == "field_stand":
+            # Interpolate Positions from Current Position to Start of the Desired Action
+            self.interpolated_positions = self.interpolate_waypoints(self.field_stand_waypoints)
+            self.action = "field_stand"
+            self.execute_timer_callback = True
+
+        if msg.data == "field_prone":
+            # Interpolate Positions from Current Position to Start of the Desired Action
+            self.interpolated_positions = self.interpolate_waypoints(self.field_prone_waypoints)
+            self.action = "field_prone"
+            self.execute_timer_callback = True
+
+
+        if msg.data == "field_test_gait":
+            # Interpolate Positions from Current Position to Start of the Desired Action
+            self.interpolated_positions = self.interpolate_waypoints(self.field_test_gait_waypoints)
+            self.action = "field_test_gait"
+            self.execute_timer_callback = True
+
+            
 
         if msg.data == "reverse":
-            self.execute_timer_callback = True
             self.action = "reverse"
             self.forward_mode = -1
+            self.execute_timer_callback = True
 
         if msg.data == "forward":
-            self.execute_timer_callback = True
             self.action = "forward"
             self.forward_mode = 1
+            self.execute_timer_callback = True
 
 def main(args=None):
     rclpy.init(args=args)
