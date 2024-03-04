@@ -162,6 +162,7 @@ class MotorControllerNode(Node):
 
                 print("Motor 3 Position Pre-Command: " + str(self.logical_pos3))
                 print("Motor 3 Command Pre-Command: " + str(logic_pose_command))
+                print("Difference is: " + strabs((self.logical_pos3 - logic_pose_command)))
                     
                 if(abs((self.logical_pos3 - logic_pose_command) < 25)):
 
