@@ -168,7 +168,7 @@ class JointCommandPublisher(Node):
         self.position_index = 0
         self.current_position = [0, 0, 0]
 
-        self.timer = self.create_timer(0.1, self.timer_callback)
+        self.timer = self.create_timer(0.2, self.timer_callback)
 
     def joint_state_callback(self, msg):
         
