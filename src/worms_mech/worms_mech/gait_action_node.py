@@ -56,6 +56,19 @@ class CommandPublisher(Node):
         self.goat_state_subscriber = self.create_subscription(String, goat_coordination_topic, self.goat_action_callback, 10)
         self.frog_state_subscriber = self.create_subscription(String, frog_coordination_topic, self.frog_action_callback, 10)
 
+        self.goat_status = 1
+        
+        self.duck_status = 1
+
+        self.frog_status = 1
+
+        self.pony_status = 1
+
+        self.swan_status = 1
+
+        self.lion_status = 1
+
+
         self.command_list = []
         self.current_index = 0
 
