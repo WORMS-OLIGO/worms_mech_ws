@@ -2,6 +2,24 @@ import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String
 
+def get_mac_address():
+    
+    mac_address = subprocess.check_output(f"cat /sys/class/net/wlan0/address", shell=True).decode().strip()
+
+    if mac_address:
+        return mac_address
+        
+    print("Error getting MAC address: No suitable interface found")
+    return None
+
+def find_robot_name(mac_address, spreadsheet_path):
+    df = pd.read_csv(spreadsheet_path)
+    match = df.loc[df['MAC Address'] == mac_address, 'Species']
+    if not match.empty:
+        return match.iloc[0]
+    else:
+        return None
+
 class CommandPublisher(Node):
 
     def __init__(self):
@@ -10,7 +28,16 @@ class CommandPublisher(Node):
         
         self.get_logger().info('Command Publisher node initialized')
 
-        self.state_subscriber = self.create_subscription(String, "/coordination", self.action_callback, 10)
+        mac_address = get_mac_address()
+
+        worm_id = find_robot_name(mac_address, spreadsheet_path)
+
+        coordination_topic = f'/{worm_id}_coordination'
+
+        # Construct the path to the CSV file for worm info
+        spreadsheet_path = os.path.expanduser('~/worms_mech_ws/src/worms_mech/worms_mech/database.csv')
+
+        self.state_subscriber = self.create_subscription(String, coordination_topic, self.action_callback, 10)
         self.command_list = []
         self.current_index = 0
 

@@ -98,6 +98,7 @@ class JointCommandPublisher(Node):
 
         joint_commands_topic = f'/{worm_id}_joint_commands'
         joint_states_topic = f'/{worm_id}_joint_states'
+        coordination_topic = f'/{worm_id}_coordination'
         worm_action = 'actions'
 
         print("Sending Commands To: " + joint_commands_topic)
@@ -106,7 +107,7 @@ class JointCommandPublisher(Node):
 
         self.command_publisher = self.create_publisher(JointState, joint_commands_topic, 10)
 
-        self.coordination_publisher = self.create_publisher(String, "/coordination", 10)
+        self.coordination_publisher = self.create_publisher(String, coordination_topic, 10)
 
         self.state_subscriber = self.create_subscription(JointState, joint_states_topic, self.joint_state_callback, 10)
         self.action_subscriber = self.create_subscription(String, worm_action, self.actions_callback, 10)
@@ -123,7 +124,7 @@ class JointCommandPublisher(Node):
 
         # WAYPOINTS FOR EACH DISCRETE GAIT ACTION
         self.stand_step_waypoints = [
-            [0, 160, -120], # LIFTED LEG POSITION WHEN ON THE FLOOR
+            [0, 150, -120], # LIFTED LEG POSITION WHEN ON THE FLOOR
             [20, 160, -120], # TAKING STEP WITH SHOE ELEVATED - 15 DEGREE MOTION
             [20, 135, -120]  # BRING SHOE DOWN WHEN ON FLOOR
         ]
@@ -145,6 +146,29 @@ class JointCommandPublisher(Node):
         ]
 
         self.stand_propel_waypoints = [
+            [0, 45, -35]
+        ]
+
+        self.stand_forward_gait = [
+            [0, 150, -120],
+            [20, 160, -120],
+            [20, 135, -120],
+            [20, 45, -35],
+            [0, 45, -35],
+            [0, 150, -120],
+            [20, 160, -120],
+            [20, 135, -120],
+            [20, 45, -35],
+            [0, 45, -35],
+            [0, 150, -120],
+            [20, 160, -120],
+            [20, 135, -120],
+            [20, 45, -35],
+            [0, 45, -35],
+            [0, 150, -120],
+            [20, 160, -120],
+            [20, 135, -120],
+            [20, 45, -35],
             [0, 45, -35]
         ]
 
