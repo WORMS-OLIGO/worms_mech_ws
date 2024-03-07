@@ -1,8 +1,0 @@
-[0.000000] (-) TimerEvent: {}
-[0.001658] (worms_mech) JobQueued: {'identifier': 'worms_mech', 'dependencies': OrderedDict()}
-[0.002229] (worms_mech) JobStarted: {'identifier': 'worms_mech'}
-[0.099217] (-) TimerEvent: {}
-[0.200038] (-) TimerEvent: {}
-[0.301157] (-) TimerEvent: {}
-[0.387508] (worms_mech) JobEnded: {'identifier': 'worms_mech', 'rc': 0}
-[0.390307] (-) EventReactorShutdown: {}

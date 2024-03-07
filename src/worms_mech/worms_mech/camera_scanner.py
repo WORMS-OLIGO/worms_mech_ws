@@ -7,7 +7,6 @@ from pyzbar.pyzbar import decode
 import os
 import time
 
-print("DO SOMETHING PLEASE")
 
 from std_msgs.msg import String
     
@@ -91,8 +90,7 @@ class QRScannerNode(Node):
             
             for obj in decoded_objects:
                 self.get_logger().info(f"QR Code detected: {obj.data.decode('utf-8')}")
-                path = '/home/worm7/worms_mech_ws/src/worms_mech/worms_mech/head.txt'
-
+                path = os.path.expanduser('~/worms_mech_ws/src/worms_mech/worms_mech/head.txt')
 
                 with open(path, "w") as file:
                     file.write(obj.data.decode('utf-8'))

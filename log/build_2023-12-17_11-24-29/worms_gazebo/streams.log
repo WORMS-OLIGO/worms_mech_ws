@@ -1,8 +1,0 @@
-[0.128s] Invoking command in '/home/jacobrod/worms_ws/build/worms_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jacobrod/worms_ws/install/worms_mech:/opt/ros/humble /usr/bin/cmake --build /home/jacobrod/worms_ws/build/worms_gazebo -- -j8 -l8
-[0.238s] gmake[2]: *** No rule to make target '/usr/lib/x86_64-linux-gnu/libgz-utils2.so.2.1.0', needed by 'libBasicSystem.so'.  Stop.
-[0.238s] gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/BasicSystem.dir/all] Error 2
-[0.238s] gmake[1]: *** Waiting for unfinished jobs....
-[0.242s] gmake[2]: *** No rule to make target '/usr/lib/x86_64-linux-gnu/libgz-utils2.so.2.1.0', needed by 'libFullSystem.so'.  Stop.
-[0.242s] gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/FullSystem.dir/all] Error 2
-[0.242s] gmake: *** [Makefile:146: all] Error 2
-[0.260s] Invoked command in '/home/jacobrod/worms_ws/build/worms_gazebo' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jacobrod/worms_ws/install/worms_mech:/opt/ros/humble /usr/bin/cmake --build /home/jacobrod/worms_ws/build/worms_gazebo -- -j8 -l8

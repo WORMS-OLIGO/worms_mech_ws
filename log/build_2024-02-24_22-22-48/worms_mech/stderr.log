@@ -1,7 +1,0 @@
-/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
-  warnings.warn(
-  File "/home/worm3/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages/worms_mech/hardware_interface.py", line 104
-    self.pos1 * motor_direction[0], self.vel1 * motor_direction[0], self.curr1  * motor_direction[0] = motor_controller.send_deg_command(pos_command  * motor_direction[0], vel_command  * motor_direction[0], Kp, Kd, K_ff  * motor_direction[0])
-                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-SyntaxError: cannot assign to expression here. Maybe you meant '==' instead of '='?
-
