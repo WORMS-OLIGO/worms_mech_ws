@@ -7,7 +7,7 @@ class CommandPublisher(Node):
     def __init__(self):
         super().__init__('gait_action_node')
         self.publisher_ = self.create_publisher(String, 'actions', 10)
-        self.timer_ = self.create_timer(0.5, self.publish_command)
+        
         self.get_logger().info('Command Publisher node initialized')
 
         self.state_subscriber = self.create_subscription(String, "/coordination", self.action_callback, 10)
