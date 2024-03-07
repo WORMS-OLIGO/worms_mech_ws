@@ -344,6 +344,12 @@ class JointCommandPublisher(Node):
             self.action = "stand_propel"
             self.execute_timer_callback = True
 
+        if msg.data == "stand_forward_gait":
+            # Interpolate Positions from Current Position to Start of the Desired Action
+            self.interpolated_positions = self.interpolate_waypoints(self.stand_forward_gait)
+            self.action = "stand_forward_gait"
+            self.execute_timer_callback = True
+
         #=============================================================
         if msg.data == "field_step":
             # Interpolate Positions from Current Position to Start of the Desired Action
