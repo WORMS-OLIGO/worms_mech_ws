@@ -189,7 +189,7 @@ class JointCommandPublisher(Node):
             self.current_position = self.current_pose.position
 
 
-    def interpolate_waypoints(self, arrays, increment=0.1):
+    def interpolate_waypoints(self, arrays, increment=0.3):
         """
         Transition from the current position to each array in sequence by 0.1 increments, producing a comprehensive list of
         lists representing each incremental step towards the waypoints.
