@@ -7,8 +7,6 @@ from pyzbar.pyzbar import decode
 import os
 import time
 
-print("DO SOMETHING PLEASE")
-
 from std_msgs.msg import String
     
 import time
@@ -75,8 +73,6 @@ class QRScannerNode(Node):
         
         print("Running QR Code Function")
 
-        self.scan_qr_code()
-
     def heartbeat_callback(self, msg):
         if msg.data == "Disabled" and not self.qr_scanned:
             self.scan_qr_code()
@@ -91,7 +87,7 @@ class QRScannerNode(Node):
             
             for obj in decoded_objects:
                 self.get_logger().info(f"QR Code detected: {obj.data.decode('utf-8')}")
-                path = '/home/worm7/worms_mech_ws/src/worms_mech/worms_mech/head.txt'
+                path = os.path.expanduser('~/worms_mech_ws/src/worms_mech/worms_mech/head.txt')
 
 
                 with open(path, "w") as file:
