@@ -33,14 +33,15 @@ class CommandPublisher(Node):
         
         self.get_logger().info('Command Publisher node initialized')
 
+        # Construct the path to the CSV file for worm info
+        spreadsheet_path = os.path.expanduser('~/worms_mech_ws/src/worms_mech/worms_mech/database.csv')
+        
         mac_address = get_mac_address()
 
         worm_id = find_robot_name(mac_address, spreadsheet_path)
 
         coordination_topic = f'/{worm_id}_coordination'
 
-        # Construct the path to the CSV file for worm info
-        spreadsheet_path = os.path.expanduser('~/worms_mech_ws/src/worms_mech/worms_mech/database.csv')
 
         self.state_subscriber = self.create_subscription(String, coordination_topic, self.action_callback, 10)
         self.command_list = []
