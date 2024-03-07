@@ -263,6 +263,9 @@ class JointCommandPublisher(Node):
 
                 msg.data = "done"
 
+                self.position_index = 0
+                self.execute_timer_callback = False
+
                 joint_state_msg = JointState()
 
                 joint_state_msg.position = self.position_command
@@ -274,9 +277,8 @@ class JointCommandPublisher(Node):
                     self.get_logger().info(f'Path complete. Holding Position at: [{position_str}]')
 
                 self.command_publisher.publish(joint_state_msg)
-        else:
-            msg.data = "done"
-            self.execute_timer_callback = False
+        
+            
 
         self.coordination_publisher.publish(msg)
             
