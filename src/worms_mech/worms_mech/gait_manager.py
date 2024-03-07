@@ -169,7 +169,100 @@ class JointCommandPublisher(Node):
             [20, 160, -120],
             [20, 135, -120],
             [20, 45, -35],
-            [0, 45, -35]
+            [0, 45, -35],
+            [0, 150, -120]
+        ]
+
+        self.stand_reverse_gait = [
+            [0, 150, -120],
+            [-20, 160, -120],
+            [-20, 135, -120],
+            [-20, 45, -35],
+            [0, 45, -35],
+            [0, 150, -120],
+            [-20, 160, -120],
+            [-20, 135, -120],
+            [-20, 45, -35],
+            [0, 45, -35],
+            [0, 150, -120],
+            [-20, 160, -120],
+            [-20, 135, -120],
+            [-20, 45, -35],
+            [0, 45, -35],
+            [0, 150, -120],
+            [-20, 160, -120],
+            [-20, 135, -120],
+            [-20, 45, -35],
+            [0, 45, -35],
+            [0, 150, -120]
+        ]
+
+        self.stand_forward_reverse_gait = [
+
+            [0, 150, -120],
+            [20, 160, -120],
+            [20, 135, -120],
+            [20, 45, -35],
+            [0, 45, -35],
+            [0, 150, -120],
+            [20, 160, -120],
+            [20, 135, -120],
+            [20, 45, -35],
+            [0, 45, -35],
+            [0, 150, -120],
+            [20, 160, -120],
+            [20, 135, -120],
+            [20, 45, -35],
+            [0, 45, -35],
+            [0, 150, -120],
+            [20, 160, -120],
+            [20, 135, -120],
+            [20, 45, -35],
+            [0, 45, -35],
+            [0, 150, -120],
+            [0, 150, -120],
+            [-20, 160, -120],
+            [-20, 135, -120],
+            [-20, 45, -35],
+            [0, 45, -35],
+            [0, 150, -120],
+            [-20, 160, -120],
+            [-20, 135, -120],
+            [-20, 45, -35],
+            [0, 45, -35],
+            [0, 150, -120],
+            [-20, 160, -120],
+            [-20, 135, -120],
+            [-20, 45, -35],
+            [0, 45, -35],
+            [0, 150, -120],
+            [-20, 160, -120],
+            [-20, 135, -120],
+            [-20, 45, -35],
+            [0, 45, -35],
+            [0, 150, -120],
+            [0, 150, -120],
+            [20, 160, -120],
+            [20, 135, -120],
+            [20, 45, -35],
+            [0, 45, -35],
+            [0, 150, -120],
+            [20, 160, -120],
+            [20, 135, -120],
+            [20, 45, -35],
+            [0, 45, -35],
+            [0, 150, -120],
+            [20, 160, -120],
+            [20, 135, -120],
+            [20, 45, -35],
+            [0, 45, -35],
+            [0, 150, -120],
+            [20, 160, -120],
+            [20, 135, -120],
+            [20, 45, -35],
+            [0, 45, -35],
+            [0, 150, -120]
+
         ]
 
 
@@ -348,6 +441,18 @@ class JointCommandPublisher(Node):
             # Interpolate Positions from Current Position to Start of the Desired Action
             self.interpolated_positions = self.interpolate_waypoints(self.stand_forward_gait)
             self.action = "stand_forward_gait"
+            self.execute_timer_callback = True
+
+        if msg.data == "stand_reverse_gait":
+            # Interpolate Positions from Current Position to Start of the Desired Action
+            self.interpolated_positions = self.interpolate_waypoints(self.stand_reverse_gait)
+            self.action = "stand_reverse_gait"
+            self.execute_timer_callback = True
+
+        if msg.data == "stand_forward_reverse_gait":
+            # Interpolate Positions from Current Position to Start of the Desired Action
+            self.interpolated_positions = self.interpolate_waypoints(self.stand_forward_reverse_gait)
+            self.action = "stand_forward_reverse_gait"
             self.execute_timer_callback = True
 
         #=============================================================

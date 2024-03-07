@@ -30,20 +30,32 @@ class CommandPublisher(Node):
     def __init__(self):
         super().__init__('gait_action_node')
         self.publisher_ = self.create_publisher(String, 'actions', 10)
+        self.timer = self.create_timer(0.5, self.gait_manager)
         
         self.get_logger().info('Command Publisher node initialized')
 
         # Construct the path to the CSV file for worm info
         spreadsheet_path = os.path.expanduser('~/worms_mech_ws/src/worms_mech/worms_mech/database.csv')
-        
+
         mac_address = get_mac_address()
 
         worm_id = find_robot_name(mac_address, spreadsheet_path)
 
-        coordination_topic = f'/{worm_id}_coordination'
+        duck_coordination_topic = 'Duck_coordination'
+        swan_coordination_topic = 'Swan_coordination'
+        lion_coordination_topic = 'Lion_coordination'
+        pony_coordination_topic = 'Pony_coordination'
+        goat_coordination_topic = 'Goat_coordination'
+        frog_coordination_topic = 'Frog_coordination'
 
 
-        self.state_subscriber = self.create_subscription(String, coordination_topic, self.action_callback, 10)
+        self.duck_state_subscriber = self.create_subscription(String, duck_coordination_topic, self.duck_action_callback, 10)
+        self.swan_state_subscriber = self.create_subscription(String, swan_coordination_topic, self.swan_action_callback, 10)
+        self.lion_state_subscriber = self.create_subscription(String, lion_coordination_topic, self.lion_action_callback, 10)
+        self.pony_state_subscriber = self.create_subscription(String, pony_coordination_topic, self.pony_action_callback, 10)
+        self.goat_state_subscriber = self.create_subscription(String, goat_coordination_topic, self.goat_action_callback, 10)
+        self.frog_state_subscriber = self.create_subscription(String, frog_coordination_topic, self.frog_action_callback, 10)
+
         self.command_list = []
         self.current_index = 0
 
@@ -56,14 +68,54 @@ class CommandPublisher(Node):
             self.get_logger().info(f'Published command: {msg.data}')
             self.current_index += 1
 
-    def action_callback(self, msg):
+    def duck_action_callback(self, msg):
         if msg.data == "done":
-            print("MOTION COMPLETED")
-            self.publish_command()  # Publish next command if available
+            self.duck_status = 1
+        else:
+            self.duck_status = 0
+
+    def swan_action_callback(self, msg):
+        if msg.data == "done":
+            self.swan_status = 1
+        else:
+            self.swan_status = 0
+
+    def lion_action_callback(self, msg):
+        if msg.data == "done":
+            self.lion_status = 1
+        else:
+            self.lion_status = 0
+
+    def pony_action_callback(self, msg):
+        if msg.data == "done":
+            self.pony_status = 1
+        else:
+            self.pony_status = 0
+
+    def goat_action_callback(self, msg):
+        if msg.data == "done":
+            self.goat_status = 1
+        else:
+            self.goat_status = 0
+
+    def frog_action_callback(self, msg):
+        if msg.data == "done":
+            self.frog_status = 1
+        else:
+            self.frog_status = 0
+
+
+    def gait_manager(self):
+
+        if(self.goat_status and self.pony_status and self.duck_status and self.swan_status):
+            self.publish_command()
         elif(self.current_index == 0):
             self.publish_command()
         else:
-            print(str(msg.data))
+            print("WAITING FOR ALL WORMS TO COMPLETE ACTION")
+    
+
+
 
 def main(args=None):
     rclpy.init(args=args)
