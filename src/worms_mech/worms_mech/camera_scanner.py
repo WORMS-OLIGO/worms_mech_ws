@@ -7,6 +7,8 @@ from pyzbar.pyzbar import decode
 import os
 import time
 
+print("DO SOMETHING PLEASE")
+
 from std_msgs.msg import String
     
 import time
@@ -86,6 +88,7 @@ class QRScannerNode(Node):
             _, frame = cap.read()
             print("Checking for QR Code")
             decoded_objects = decode(frame)
+            cv2.imshow()
             for obj in decoded_objects:
                 self.get_logger().info(f"QR Code detected: {obj.data.decode('utf-8')}")
                 path = '/home/worm7/worms_mech_ws/src/worms_mech/worms_mech/head.txt'
