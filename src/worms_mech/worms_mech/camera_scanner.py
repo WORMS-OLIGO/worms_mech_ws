@@ -70,6 +70,9 @@ class QRScannerNode(Node):
         self.bridge = CvBridge()
         self.qr_scanned = False
         self.Worm_heartbeat = "Disabled"
+        
+        print("Running QR Code Function")
+
         self.scan_qr_code()
 
     def heartbeat_callback(self, msg):
