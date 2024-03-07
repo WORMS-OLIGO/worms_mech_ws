@@ -189,15 +189,41 @@ class JointCommandPublisher(Node):
             self.current_position = self.current_pose.position
 
 
-    def interpolate_waypoints(self, waypoints, interval_degrees=1):
-        interpolated = [self.current_position]
-        for waypoint in waypoints:
-            distance = np.linalg.norm(np.array(waypoint) - np.array(interpolated[-1]))
-            steps = int(distance / interval_degrees)
-            for step in range(1, steps + 1):
-                interpolated_point = interpolated[-1] + (np.array(waypoint) - np.array(interpolated[-1])) * (step / steps)
-                interpolated.append(interpolated_point)
-        return interpolated
+    def interpolate_waypoints(self, arrays, increment=0.1):
+        """
+        Transition from the current position to each array in sequence by 0.1 increments, producing a comprehensive list of
+        lists representing each incremental step towards the waypoints.
+
+        :param arrays: A sequence of arrays where each array is a list of numbers.
+        :param increment: The incremental value to adjust the numbers. Default is 0.1.
+        :return: A list of lists representing each step through the waypoints.
+        """
+        transition_steps = []
+
+        # Start from the current position
+        current_state = self.current_position
+
+        for target_array in arrays:
+            while True:
+                step = []
+                done = True
+                for current_val, target_val in zip(current_state, target_array):
+                    if abs(target_val - current_val) > increment:
+                        done = False
+                        if target_val > current_val:
+                            step.append(current_val + increment)
+                        else:
+                            step.append(current_val - increment)
+                    else:
+                        step.append(target_val)
+                
+                current_state = step
+                transition_steps.append(step)
+                
+                if done:
+                    break
+
+        return transition_steps
 
     def timer_callback(self):
 
