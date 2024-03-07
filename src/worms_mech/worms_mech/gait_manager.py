@@ -227,10 +227,11 @@ class JointCommandPublisher(Node):
 
     def timer_callback(self):
 
+        msg = String ()
+
         # Flag thats set to true when the worm receives some action command (ex: step, prone, walk etc.)
         if self.execute_timer_callback:
 
-            msg = String ()
             msg.data = "in_progress"
             
             # Goes through all of the position that are contained within the trajectory created for that specific action
