@@ -260,6 +260,8 @@ class JointCommandPublisher(Node):
 
             else:
 
+                msg.data = "done"
+
                 joint_state_msg = JointState()
 
                 joint_state_msg.position = self.position_command
