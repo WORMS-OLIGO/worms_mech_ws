@@ -88,7 +88,7 @@ class QRScannerNode(Node):
             _, frame = cap.read()
             print("Checking for QR Code")
             decoded_objects = decode(frame)
-            cv2.imshow("Image", cap)
+            
             for obj in decoded_objects:
                 self.get_logger().info(f"QR Code detected: {obj.data.decode('utf-8')}")
                 path = '/home/worm7/worms_mech_ws/src/worms_mech/worms_mech/head.txt'
@@ -104,7 +104,7 @@ class QRScannerNode(Node):
                 break
             if self.qr_scanned:
                 break
-            
+            cv2.imshow('Scan QR Code', frame)
 
 
             if cv2.waitKey(1) & 0xFF == ord('q'):  # Press 'q' to quit the scanning loop
