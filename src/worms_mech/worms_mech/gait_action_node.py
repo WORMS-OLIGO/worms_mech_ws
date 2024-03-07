@@ -28,7 +28,7 @@ class CommandPublisher(Node):
             print("MOTION COMPLETED")
             self.publish_command()  # Publish next command if available
         else:
-            print(str(msgs.data))
+            print(str(msg.data))
 
 def main(args=None):
     rclpy.init(args=args)
