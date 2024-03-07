@@ -41,7 +41,7 @@ class JointCommandPublisher(Node):
 
 
         # Construct the path to the CSV file for worm info
-        #spreadsheet_path = os.path.expanduser('~/worms_mech_ws/src/worms_mech/worms_mech/database.csv')
+        spreadsheet_path = os.path.expanduser('~/worms_mech_ws/src/worms_mech/worms_mech/database.csv')
 
         # Construct the path to the CSV file that holds specialization data
         specialization_path = os.path.expanduser('~/worms_mech_ws/src/worms_mech/worms_mech/specialization_table.csv')
@@ -51,13 +51,10 @@ class JointCommandPublisher(Node):
 
         # Open the file and read its contents
         with open(head_connection_path, 'r') as file:
-            head = file.read()
+            head = file.readline().strip() 
 
         print("HEAD CONNECTOR: " + head)
 
-        #mac_address = get_mac_address()
-
-        #worm_id = find_robot_name(mac_address, spreadsheet_path)
 
         #print("WORM_ID: " + worm_id)
 
@@ -65,15 +62,19 @@ class JointCommandPublisher(Node):
 
         print(configuration_info)
 
-        # These variables define the direction of the motors that are specific to the current gait assembled
-        # In the case of our 4 legged system, we use 1 and -1 to define which side each worm would be on in the 
-        # standard forward operating condition, which makes:
-        # ------------------------
-        # 1 = Left Side Leg
-        # -1 = Right Side Leg
-        # ------------------------
-        # The Effect of the -1 on the Right side is to flip the direction of the head motor when executing 
-        # the same step command
+        """
+        These variables define the direction of the motors that are specific to the current gait assembled
+        In the case of our 4 legged system, we use 1 and -1 to define which side each worm would be on in the 
+        standard forward operating condition, which makes:
+        ------------------------
+        1 = Left Side Leg
+        -1 = Right Side Leg
+        ------------------------
+        The Effect of the -1 on the Right side is to flip the direction of the head motor when executing 
+        the same step command
+
+        """
+
 
         self.motor1_side_orientation = 1
         self.motor2_side_orientation = 1
@@ -81,36 +82,34 @@ class JointCommandPublisher(Node):
 
         self.species = head
 
-        # # Check if worm_info is not None
-        # if configuration_info is not None:
-        #     self.species = head
-        #     self.motor1_side_orientation = configuration_info['Motor1_Direction']
-        #     self.motor2_side_orientation = configuration_info['Motor2_Direction']
-        #     self.motor3_side_orientation = configuration_info['Motor3_Direction']
+        mac_address = get_mac_address()
 
-        #     #print(f"{worm_id} Has Been Connected to Accessory Port {self.species}")
-        #     print(f"Motor Direction 1: {self.motor1_side_orientation}")
-        #     print(f"Motor Direction 2: {self.motor2_side_orientation}")
-        #     print(f"Motor Direction 3: {self.motor3_side_orientation}")
-        # else:
-        #    # print("No configuration found for the given head connection.")
+        worm_id = find_robot_name(mac_address, spreadsheet_path)
+
+       
+        self.motor1_side_orientation = configuration_info['Motor1_Direction']
+        self.motor2_side_orientation = configuration_info['Motor2_Direction']
+        self.motor3_side_orientation = configuration_info['Motor3_Direction']
+ 
 
 
         # if self.species is None:
         #     raise ValueError("Robot species not found. Please check the camera node and text file created.")
 
-        # joint_commands_topic = f'/{worm_id}_joint_commands'
-        # joint_states_topic = f'/{worm_id}_joint_states'
-        # worm_action = 'actions'
+        joint_commands_topic = f'/{worm_id}_joint_commands'
+        joint_states_topic = f'/{worm_id}_joint_states'
+        worm_action = 'actions'
 
-        #print("Sending Commands To: " + joint_commands_topic)
-        #print("Getting Joint States From: " + joint_states_topic)
+        print("Sending Commands To: " + joint_commands_topic)
+        print("Getting Joint States From: " + joint_states_topic)
         
 
-        # self.command_publisher = self.create_publisher(JointState, joint_commands_topic, 10)
-        # self.coordination_publisher = self.create_publisher(String, "/coordination", 10)
-        # self.state_subscriber = self.create_subscription(JointState, joint_states_topic, self.joint_state_callback, 10)
-        # self.action_subscriber = self.create_subscription(String, worm_action, self.actions_callback, 10)
+        self.command_publisher = self.create_publisher(JointState, joint_commands_topic, 10)
+
+        self.coordination_publisher = self.create_publisher(String, "/coordination", 10)
+
+        self.state_subscriber = self.create_subscription(JointState, joint_states_topic, self.joint_state_callback, 10)
+        self.action_subscriber = self.create_subscription(String, worm_action, self.actions_callback, 10)
 
         
         self.execute_timer_callback = False
@@ -123,29 +122,61 @@ class JointCommandPublisher(Node):
         
 
         # WAYPOINTS FOR EACH DISCRETE GAIT ACTION
-        self.step_waypoints = [
-            [0, 145, 175], # LIFTED LEG POSITION WHEN ON THE FLOOR
-            [15, 145, 175], # TAKING STEP WITH SHOE ELEVATED - 15 DEGREE MOTION
-            [15, 135, 175]  # BRING SHOE DOWN WHEN ON FLOOR
+        self.stand_step_waypoints = [
+            [0, 140, -120], # LIFTED LEG POSITION WHEN ON THE FLOOR
+            [20, 140, -120], # TAKING STEP WITH SHOE ELEVATED - 15 DEGREE MOTION
+            [20, 135, -120]  # BRING SHOE DOWN WHEN ON FLOOR
         ]
 
-        self.prone_waypoints = [
+        self.stand_prone_waypoints = [
             [0, 150, -120]  
         ]
 
-        self.stand_waypoints = [
-            [15, -45, 35]
+        self.stand_stand_waypoints = [
+            [20, 45, -35]
         ]
 
-        self.test_gait_waypoints = [
-            [20, 120, -90],
+        self.stand_test_gait_waypoints = [
+            [20, 140, -90],
+        ]
+
+        self.stand_minimal_motion_waypoints = [
+            [10, 10, 10]  
+        ]
+
+        self.stand_propel_waypoints = [
+            [0, -45, -35]
+        ]
+
+
+#==================
+        self.field_step_waypoints = [
+            [0, 20, 0], # LIFTED LEG POSITION WHEN ON THE FLOOR
+            [20, 0, 0], # TAKING STEP WITH SHOE ELEVATED - 15 DEGREE MOTION
+            [20, -15, 0]  # BRING SHOE DOWN WHEN ON FLOOR
+        ]
+
+        self.field_prone_waypoints = [
+            [0, 0, 0]
+        ]
+
+        self.field_stand_waypoints = [
+            [20, -195, 85]
+        ]
+
+        self.field_test_gait_waypoints = [
+            [20, -10, 30],
+        ]
+
+        self.field_propel_waypoints = [
+            [0, -195, 85]
         ]
 
         
         self.position_index = 0
         self.current_position = [0, 0, 0]
 
-        self.timer = self.create_timer(0.1, self.timer_callback)
+        self.timer = self.create_timer(0.02, self.timer_callback)
 
     def joint_state_callback(self, msg):
         
@@ -158,20 +189,51 @@ class JointCommandPublisher(Node):
             self.current_position = self.current_pose.position
 
 
-    def interpolate_waypoints(self, waypoints, interval_degrees=1):
-        interpolated = [self.current_position]
-        for waypoint in waypoints:
-            distance = np.linalg.norm(np.array(waypoint) - np.array(interpolated[-1]))
-            steps = int(distance / interval_degrees)
-            for step in range(1, steps + 1):
-                interpolated_point = interpolated[-1] + (np.array(waypoint) - np.array(interpolated[-1])) * (step / steps)
-                interpolated.append(interpolated_point)
-        return interpolated
+    def interpolate_waypoints(self, arrays, increment=0.3):
+        """
+        Transition from the current position to each array in sequence by 0.1 increments, producing a comprehensive list of
+        lists representing each incremental step towards the waypoints.
+
+        :param arrays: A sequence of arrays where each array is a list of numbers.
+        :param increment: The incremental value to adjust the numbers. Default is 0.1.
+        :return: A list of lists representing each step through the waypoints.
+        """
+        transition_steps = []
+
+        # Start from the current position
+        current_state = self.current_position
+
+        for target_array in arrays:
+            while True:
+                step = []
+                done = True
+                for current_val, target_val in zip(current_state, target_array):
+                    if abs(target_val - current_val) > increment:
+                        done = False
+                        if target_val > current_val:
+                            step.append(current_val + increment)
+                        else:
+                            step.append(current_val - increment)
+                    else:
+                        step.append(target_val)
+                
+                current_state = step
+                transition_steps.append(step)
+                
+                if done:
+                    break
+
+        return transition_steps
 
     def timer_callback(self):
 
+        msg = String ()
+        msg.data = "Static"
+
         # Flag thats set to true when the worm receives some action command (ex: step, prone, walk etc.)
         if self.execute_timer_callback:
+
+            msg.data = "in_progress"
             
             # Goes through all of the position that are contained within the trajectory created for that specific action
             if self.position_index < len(self.interpolated_positions):
@@ -199,6 +261,11 @@ class JointCommandPublisher(Node):
 
             else:
 
+                msg.data = "done"
+
+                self.position_index = 0
+                self.execute_timer_callback = False
+
                 joint_state_msg = JointState()
 
                 joint_state_msg.position = self.position_command
@@ -210,57 +277,99 @@ class JointCommandPublisher(Node):
                     self.get_logger().info(f'Path complete. Holding Position at: [{position_str}]')
 
                 self.command_publisher.publish(joint_state_msg)
-        else:
-            msg = String ()
-            msg.data = "done"
-            self.coordination_publisher.publish(msg)
-            self.execute_timer_callback = False
+        
+            
+
+        self.coordination_publisher.publish(msg)
             
 
     def actions_callback(self, msg):
-        if msg.data == "step":
+        if msg.data == "stand_step":
+            # Interpolate Positions from Current Position to Start of the Desired Action
+            self.interpolated_positions = self.interpolate_waypoints(self.stand_step_waypoints)
+            self.action = "stand_step"
             self.execute_timer_callback = True
 
+        if msg.data == "stand_stand":
             # Interpolate Positions from Current Position to Start of the Desired Action
-            self.interpolated_positions = self.interpolate_waypoints(self.step_waypoints)
-            self.action = "step"
-
-        if msg.data == "stand":
+            self.interpolated_positions = self.interpolate_waypoints(self.stand_stand_waypoints)
+            self.action = "stand_stand"
             self.execute_timer_callback = True
 
+        if msg.data == "stand_prone":
             # Interpolate Positions from Current Position to Start of the Desired Action
-            self.interpolated_positions = self.interpolate_waypoints(self.stand_waypoints)
-            self.action = "stand"
-
-        if msg.data == "prone":
+            self.interpolated_positions = self.interpolate_waypoints(self.stand_prone_waypoints)
+            self.action = "stand_prone"
             self.execute_timer_callback = True
 
+        if msg.data == "stand_test_gait":
             # Interpolate Positions from Current Position to Start of the Desired Action
-            self.interpolated_positions = self.interpolate_waypoints(self.prone_waypoints)
-            self.action = "prone"
-
-
-        if msg.data == "test_gait":
+            self.interpolated_positions = self.interpolate_waypoints(self.stand_test_gait_waypoints)
+            self.action = "stand_test_gait"
             self.execute_timer_callback = True
 
+        if msg.data == "stand_min_test":
             # Interpolate Positions from Current Position to Start of the Desired Action
-            self.interpolated_positions = self.interpolate_waypoints(self.test_gait_waypoints)
-            self.action = "test_gait"
+            self.interpolated_positions = self.interpolate_waypoints(self.stand_minimal_motion_waypoints)
+            self.action = "stand_minimal_test"
+            self.execute_timer_callback = True
+
+        if msg.data == "stand_propel":
+            # Interpolate Positions from Current Position to Start of the Desired Action
+            self.interpolated_positions = self.interpolate_waypoints(self.stand_propel_waypoints)
+            self.action = "stand_propel"
+            self.execute_timer_callback = True
+
+        #=============================================================
+        if msg.data == "field_step":
+            # Interpolate Positions from Current Position to Start of the Desired Action
+            self.interpolated_positions = self.interpolate_waypoints(self.field_step_waypoints)
+            self.action = "field_step"
+            self.execute_timer_callback = True
+
+        if msg.data == "field_stand":
+            # Interpolate Positions from Current Position to Start of the Desired Action
+            self.interpolated_positions = self.interpolate_waypoints(self.field_stand_waypoints)
+            self.action = "field_stand"
+            self.execute_timer_callback = True
+
+        if msg.data == "field_prone":
+            # Interpolate Positions from Current Position to Start of the Desired Action
+            self.interpolated_positions = self.interpolate_waypoints(self.field_prone_waypoints)
+            self.action = "field_prone"
+            self.execute_timer_callback = True
+
+
+        if msg.data == "field_test_gait":
+            # Interpolate Positions from Current Position to Start of the Desired Action
+            self.interpolated_positions = self.interpolate_waypoints(self.field_test_gait_waypoints)
+            self.action = "field_test_gait"
+            self.execute_timer_callback = True
+
+        if msg.data == "field_propel":
+            # Interpolate Positions from Current Position to Start of the Desired Action
+            self.interpolated_positions = self.interpolate_waypoints(self.field_propel_waypoints)
+            self.action = "field_propel"
+            self.execute_timer_callback = True
+
+            
 
         if msg.data == "reverse":
             self.action = "reverse"
             self.forward_mode = -1
+            self.execute_timer_callback = True
 
         if msg.data == "forward":
             self.action = "forward"
             self.forward_mode = 1
+            self.execute_timer_callback = True
 
 def main(args=None):
     rclpy.init(args=args)
     joint_command_publisher = JointCommandPublisher()
+    
+    rclpy.spin(joint_command_publisher)
 
-    executor = MultiThreadedExecutor()
-    rclpy.spin(joint_command_publisher, executor=executor)
 
     joint_command_publisher.destroy_node()
     rclpy.shutdown()

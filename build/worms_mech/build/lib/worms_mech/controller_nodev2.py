@@ -34,7 +34,7 @@ class JointCommandPublisher(Node):
         pos_error = self.current_pose.position - self.gait_command.position
 
         # GIVEN SOME POSE ERROR CALCULATE THE NECESSARY 
-        k_p = 1.0  
+        k_p = 3.0  
 
         # Calculate the force needed
         force = [pos_error[0] * k_p, pos_error[1] * k_p, pos_error[2] * k_p]

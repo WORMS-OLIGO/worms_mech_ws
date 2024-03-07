@@ -8,6 +8,8 @@ setup.py
 ../../build/worms_mech/worms_mech.egg-info/requires.txt
 ../../build/worms_mech/worms_mech.egg-info/top_level.txt
 ../../build/worms_mech/worms_mech.egg-info/zip-safe
+launch/camera.launch.py
+launch/gait.launch.py
 resource/worms_mech
 test/test_copyright.py
 test/test_flake8.py

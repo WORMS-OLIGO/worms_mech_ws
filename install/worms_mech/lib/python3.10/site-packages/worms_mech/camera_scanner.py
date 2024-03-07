@@ -4,6 +4,24 @@ from sensor_msgs.msg import Image
 from cv_bridge import CvBridge
 import cv2
 from pyzbar.pyzbar import decode
+import os
+import time
+
+print("DO SOMETHING PLEASE")
+
+from std_msgs.msg import String
+    
+import time
+import lgpio
+
+
+import pandas as pd
+import subprocess
+
+LED = 21
+h = lgpio.gpiochip_open(0)
+lgpio.gpio_claim_output(h, LED)
+
 
 def get_mac_address():
     
@@ -40,10 +58,10 @@ class QRScannerNode(Node):
         else: 
             print("No WORM Detected")
 
-        self.worm_heartbeat_topic = f'{species}_heartbeat'
+        self.worm_heartbeat_topic = f'{worm_id}_heartbeat'
 
         self.subscription = self.create_subscription(
-            std_msgs.msg.String,
+            String,
             self.worm_heartbeat_topic,
             self.heartbeat_callback,
             10)
@@ -53,24 +71,36 @@ class QRScannerNode(Node):
         self.subscription  # prevent unused variable warning
         self.bridge = CvBridge()
         self.qr_scanned = False
+        self.Worm_heartbeat = "Disabled"
+        
+        print("Running QR Code Function")
+
+        self.scan_qr_code()
 
     def heartbeat_callback(self, msg):
         if msg.data == "Disabled" and not self.qr_scanned:
             self.scan_qr_code()
 
     def scan_qr_code(self):
+        print("Reading Video Feed")
         cap = cv2.VideoCapture(0)  # Adjust '0' if necessary to match your camera
         while True:
             _, frame = cap.read()
+            print("Checking for QR Code")
             decoded_objects = decode(frame)
+            
             for obj in decoded_objects:
                 self.get_logger().info(f"QR Code detected: {obj.data.decode('utf-8')}")
+                path = '/home/worm7/worms_mech_ws/src/worms_mech/worms_mech/head.txt'
 
 
-                with open("head.txt", "w") as file:
+                with open(path, "w") as file:
                     file.write(obj.data.decode('utf-8'))
 
                 self.qr_scanned = True
+                lgpio.gpio_write(h, LED, 1)
+                time.sleep(0.5)
+                lgpio.gpio_write(h, LED, 0)
                 break
             if self.qr_scanned:
                 break

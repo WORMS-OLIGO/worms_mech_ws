@@ -27,6 +27,8 @@ class CommandPublisher(Node):
         if msg.data == "done":
             print("MOTION COMPLETED")
             self.publish_command()  # Publish next command if available
+        elif(self.current_index == 0):
+            self.publish_command()
         else:
             print(str(msg.data))
 
@@ -51,6 +53,7 @@ def main(args=None):
         command_publisher.command_list = ['field_prone', 'field_step', 'field_stand','field_propel', 'field_prone', 'field_step', 'field_stand','field_propel', 'field_prone', 'field_step', 'field_stand','field_propel', 'field_prone', 'field_step', 'field_stand','field_propel', 'field_prone', 'reverse', 'field_prone', 'field_step', 'field_stand','field_propel', 'field_prone', 'field_step', 'field_stand','field_propel', 'field_prone', 'field_step', 'field_stand','field_propel', 'field_prone', 'field_step', 'field_stand','field_propel', 'field_prone']
     else:
         command_publisher.command_list = command_publisher.command_list
+
 
     try:
         rclpy.spin(command_publisher)
