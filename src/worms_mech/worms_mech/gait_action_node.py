@@ -25,7 +25,10 @@ class CommandPublisher(Node):
 
     def action_callback(self, msg):
         if msg.data == "done":
+            print("MOTION COMPLETED")
             self.publish_command()  # Publish next command if available
+        else:
+            print("Motion in Progress")
 
 def main(args=None):
     rclpy.init(args=args)

@@ -133,7 +133,7 @@ class JointCommandPublisher(Node):
         ]
 
         self.stand_stand_waypoints = [
-            [20, -45, -35]
+            [20, 45, -35]
         ]
 
         self.stand_test_gait_waypoints = [
@@ -176,7 +176,7 @@ class JointCommandPublisher(Node):
         self.position_index = 0
         self.current_position = [0, 0, 0]
 
-        self.timer = self.create_timer(0.025, self.timer_callback)
+        self.timer = self.create_timer(0.02, self.timer_callback)
 
     def joint_state_callback(self, msg):
         
@@ -229,6 +229,9 @@ class JointCommandPublisher(Node):
 
         # Flag thats set to true when the worm receives some action command (ex: step, prone, walk etc.)
         if self.execute_timer_callback:
+
+            msg = String ()
+            msg.data = "in_progress"
             
             # Goes through all of the position that are contained within the trajectory created for that specific action
             if self.position_index < len(self.interpolated_positions):
@@ -268,10 +271,10 @@ class JointCommandPublisher(Node):
 
                 self.command_publisher.publish(joint_state_msg)
         else:
-            msg = String ()
             msg.data = "done"
-            self.coordination_publisher.publish(msg)
             self.execute_timer_callback = False
+
+        self.coordination_publisher.publish(msg)
             
 
     def actions_callback(self, msg):
