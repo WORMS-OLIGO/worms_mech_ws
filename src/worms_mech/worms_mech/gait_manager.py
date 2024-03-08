@@ -277,8 +277,9 @@ class JointCommandPublisher(Node):
             [0, 0, 0]
         ]
 
-        self.field_stand_waypoints = [
-            [20, -195, 85]
+        self.field_init_stand_waypoints = [
+            [0, -85, 85],
+            [0, 0, 0]
         ]
 
         self.field_test_gait_waypoints = [
@@ -485,6 +486,12 @@ class JointCommandPublisher(Node):
             # Interpolate Positions from Current Position to Start of the Desired Action
             self.interpolated_positions = self.interpolate_waypoints(self.field_propel_waypoints)
             self.action = "field_propel"
+            self.execute_timer_callback = True
+
+        if msg.data == "field_init_stand":
+            # Interpolate Positions from Current Position to Start of the Desired Action
+            self.interpolated_positions = self.interpolate_waypoints(self.field_init_stand_waypoints)
+            self.action = "field_init_stand"
             self.execute_timer_callback = True
 
             
