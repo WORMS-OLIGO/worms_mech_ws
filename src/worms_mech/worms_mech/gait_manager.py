@@ -284,8 +284,9 @@ class JointCommandPublisher(Node):
         ]
 
         self.field_init_step_waypoints = [
-            [0, 20, 0],
-            [20, 20, 0],
+            [0, 40, 0],
+            [20, 40, 0],
+            [20, 0, 0]
             [20, -45, 45],
             [20, -65, 65],
             [0, -65, 65],
