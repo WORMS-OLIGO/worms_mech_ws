@@ -279,6 +279,7 @@ class JointCommandPublisher(Node):
 
         self.field_init_stand_waypoints = [
             [0, -45, 45],
+            [0, -65, 65],
             [0, 0, 0]
         ]
 
