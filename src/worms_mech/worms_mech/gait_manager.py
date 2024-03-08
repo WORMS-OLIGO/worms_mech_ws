@@ -278,6 +278,12 @@ class JointCommandPublisher(Node):
         ]
 
         self.field_init_stand_waypoints = [
+            [0, -45, 45],
+            [0, -65, 65],
+            [0, 0, 0]
+        ]
+
+        self.field_init_step_waypoints = [
             [0, 20, 0],
             [20, 20, 0],
             [20, -45, 45],
@@ -496,6 +502,12 @@ class JointCommandPublisher(Node):
             # Interpolate Positions from Current Position to Start of the Desired Action
             self.interpolated_positions = self.interpolate_waypoints(self.field_init_stand_waypoints)
             self.action = "field_init_stand"
+            self.execute_timer_callback = True
+
+        if msg.data == "field_init_step":
+            # Interpolate Positions from Current Position to Start of the Desired Action
+            self.interpolated_positions = self.interpolate_waypoints(self.field_init_step_waypoints)
+            self.action = "field_init_step"
             self.execute_timer_callback = True
 
             
