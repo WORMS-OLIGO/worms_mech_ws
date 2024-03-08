@@ -303,6 +303,51 @@ class JointCommandPublisher(Node):
             [0, 0, 0]
         ]
 
+        self.field_init_forward_reverse_waypoints = [
+            [0, 40, 0],
+            [20, 40, 0],
+            [20, 0, 0],
+            [20, -45, 45],
+            [20, -65, 65],
+            [0, -65, 65],
+            [0, 0, 0],
+            [0, 40, 0],
+            [20, 40, 0],
+            [20, 0, 0],
+            [20, -45, 45],
+            [20, -65, 65],
+            [0, -65, 65],
+            [0, 0, 0],
+            [0, 40, 0],
+            [20, 40, 0],
+            [20, 0, 0],
+            [20, -45, 45],
+            [20, -65, 65],
+            [0, -65, 65],
+            [0, 0, 0],
+            [0, 40, 0],
+            [-20, 40, 0],
+            [-20, 0, 0],
+            [-20, -45, 45],
+            [-20, -65, 65],
+            [0, -65, 65],
+            [0, 0, 0]
+            [0, 40, 0],
+            [-20, 40, 0],
+            [-20, 0, 0],
+            [-20, -45, 45],
+            [-20, -65, 65],
+            [0, -65, 65],
+            [0, 0, 0]
+            [0, 40, 0],
+            [-20, 40, 0],
+            [-20, 0, 0],
+            [-20, -45, 45],
+            [-20, -65, 65],
+            [0, -65, 65],
+            [0, 0, 0]
+        ]
+
         
 
         self.field_test_gait_waypoints = [
@@ -527,6 +572,12 @@ class JointCommandPublisher(Node):
             # Interpolate Positions from Current Position to Start of the Desired Action
             self.interpolated_positions = self.interpolate_waypoints(self.field_init_reverse_step_waypoints)
             self.action = "field_init_reverse_step"
+            self.execute_timer_callback = True
+
+        if msg.data == "field_init_forward_reverse":
+            # Interpolate Positions from Current Position to Start of the Desired Action
+            self.interpolated_positions = self.interpolate_waypoints(self.field_init_forward_reverse_waypoints)
+            self.action = "field_init_forward_reverse"
             self.execute_timer_callback = True
 
             
