@@ -142,7 +142,7 @@ class JointCommandPublisher(Node):
         ]
 
         self.stand_minimal_motion_waypoints = [
-            [0, 20, 20]  
+            [0, -20, 20]  
         ]
 
         self.stand_propel_waypoints = [
