@@ -72,6 +72,7 @@ class QRScannerNode(Node):
         self.Worm_heartbeat = "Disabled"
         
         print("Running QR Code Function")
+        self.scan_qr_code()
 
     def heartbeat_callback(self, msg):
         if msg.data == "Disabled" and not self.qr_scanned:
