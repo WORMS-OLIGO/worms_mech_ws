@@ -92,7 +92,7 @@ class QRScannerNode(Node):
 
 
                 with open(path, "w") as file:
-                    file.write(obj.data.decode('utf-8'))
+                    file.write(obj.data.decode('utf-8').upper())
 
                 self.qr_scanned = True
                 lgpio.gpio_write(h, LED, 1)
