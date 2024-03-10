@@ -87,7 +87,7 @@ class QRScannerNode(Node):
             decoded_objects = decode(frame)
             
             for obj in decoded_objects:
-                self.get_logger().info(f"QR Code detected: {obj.data.decode('utf-8')}")
+                self.get_logger().info(f"QR Code detected: {obj.data.decode('utf-8').upper()}")
                 path = os.path.expanduser('~/worms_mech_ws/src/worms_mech/worms_mech/head.txt')
 
 
