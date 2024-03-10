@@ -54,9 +54,9 @@ class QRScannerNode(Node):
         else: 
             print("No WORM Detected")
 
-        LED = 21
-        h = lgpio.gpiochip_open(0)
-        lgpio.gpio_claim_output(h, LED)
+        self.LED = 21
+        self.h = lgpio.gpiochip_open(0)
+        lgpio.gpio_claim_output(self.h, self.LED)
 
         self.worm_heartbeat_topic = f'{worm_id}_heartbeat'
 
@@ -97,9 +97,9 @@ class QRScannerNode(Node):
                     file.write(obj.data.decode('utf-8').upper())
 
                 self.qr_scanned = True
-                lgpio.gpio_write(h, LED, 1)
+                lgpio.gpio_write(self.h, self.LED, 1)
                 time.sleep(0.5)
-                lgpio.gpio_write(h, LED, 0)
+                lgpio.gpio_write(self.h, self.LED, 0)
                 break
             if self.qr_scanned:
                 break
@@ -115,7 +115,7 @@ class QRScannerNode(Node):
     
     def on_shutdown(self):
         self.get_logger().info("Disabling GPIO...")
-        lgpio.gpiochip_close(h)
+        lgpio.gpiochip_close(self.h)
 
 
 
