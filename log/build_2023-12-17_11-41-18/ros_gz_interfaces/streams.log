@@ -1,0 +1,586 @@
+[0.627s] Invoking command in '/home/jacobrod/worms_ws/build/ros_gz_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jacobrod/worms_ws/install/worms_mech:/opt/ros/humble /usr/bin/cmake /home/jacobrod/worms_ws/src/ros_gz/ros_gz_interfaces -DCMAKE_INSTALL_PREFIX=/home/jacobrod/worms_ws/install/ros_gz_interfaces
+[0.665s] -- Found ament_cmake: 1.3.6 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.942s] -- Found builtin_interfaces: 1.2.1 (/opt/ros/humble/share/builtin_interfaces/cmake)
+[0.991s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.996s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.005s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.030s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.070s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.106s] -- Found rcl_interfaces: 1.2.1 (/opt/ros/humble/share/rcl_interfaces/cmake)
+[1.186s] -- Found std_msgs: 4.2.3 (/opt/ros/humble/share/std_msgs/cmake)
+[1.263s] -- Found geometry_msgs: 4.2.3 (/opt/ros/humble/share/geometry_msgs/cmake)
+[1.365s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[2.130s] -- Found ament_cmake_cppcheck: 0.12.9 (/opt/ros/humble/share/ament_cmake_cppcheck/cmake)
+[2.131s] -- Found ament_cmake_cpplint: 0.12.9 (/opt/ros/humble/share/ament_cmake_cpplint/cmake)
+[2.132s] -- Found ament_cmake_uncrustify: 0.12.9 (/opt/ros/humble/share/ament_cmake_uncrustify/cmake)
+[2.134s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[2.969s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.302s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.335s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[3.373s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[3.373s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[3.373s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[3.530s] -- Found ament_cmake_flake8: 0.12.9 (/opt/ros/humble/share/ament_cmake_flake8/cmake)
+[3.530s] -- Found ament_cmake_pep257: 0.12.9 (/opt/ros/humble/share/ament_cmake_pep257/cmake)
+[3.541s] -- Configuring done
+[3.710s] -- Generating done
+[3.716s] -- Build files have been written to: /home/jacobrod/worms_ws/build/ros_gz_interfaces
+[3.815s] Invoked command in '/home/jacobrod/worms_ws/build/ros_gz_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jacobrod/worms_ws/install/worms_mech:/opt/ros/humble /usr/bin/cmake /home/jacobrod/worms_ws/src/ros_gz/ros_gz_interfaces -DCMAKE_INSTALL_PREFIX=/home/jacobrod/worms_ws/install/ros_gz_interfaces
+[3.819s] Invoking command in '/home/jacobrod/worms_ws/build/ros_gz_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jacobrod/worms_ws/install/worms_mech:/opt/ros/humble /usr/bin/cmake --build /home/jacobrod/worms_ws/build/ros_gz_interfaces -- -j8 -l8
+[3.927s] [35m[1mConsolidate compiler generated dependencies of target ros_gz_interfaces__rosidl_generator_c[0m
+[3.946s] [  0%] Built target ros_gz_interfaces__cpp
+[3.969s] [ 12%] Built target ros_gz_interfaces__rosidl_generator_c
+[3.970s] [ 12%] Built target ament_cmake_python_copy_ros_gz_interfaces
+[3.974s] [35m[1mConsolidate compiler generated dependencies of target ros_gz_interfaces__rosidl_typesupport_cpp[0m
+[3.985s] [35m[1mConsolidate compiler generated dependencies of target ros_gz_interfaces__rosidl_typesupport_fastrtps_cpp[0m
+[3.996s] [35m[1mConsolidate compiler generated dependencies of target ros_gz_interfaces__rosidl_typesupport_introspection_cpp[0m
+[4.012s] [35m[1mConsolidate compiler generated dependencies of target ros_gz_interfaces__rosidl_typesupport_introspection_c[0m
+[4.013s] [35m[1mConsolidate compiler generated dependencies of target ros_gz_interfaces__rosidl_typesupport_c[0m
+[4.032s] [35m[1mConsolidate compiler generated dependencies of target ros_gz_interfaces__rosidl_typesupport_fastrtps_c[0m
+[4.077s] [ 25%] Built target ros_gz_interfaces__rosidl_typesupport_c
+[4.077s] [ 36%] Built target ros_gz_interfaces__rosidl_typesupport_fastrtps_cpp
+[4.083s] [ 59%] Built target ros_gz_interfaces__rosidl_typesupport_cpp
+[4.083s] [ 60%] Built target ros_gz_interfaces__rosidl_typesupport_introspection_c
+[4.098s] [ 73%] Built target ros_gz_interfaces__rosidl_typesupport_introspection_cpp
+[4.114s] [ 85%] Built target ros_gz_interfaces__rosidl_typesupport_fastrtps_c
+[4.155s] [ 85%] Built target ros_gz_interfaces
+[4.184s] [ 86%] Built target ros_gz_interfaces__py
+[4.210s] [35m[1mConsolidate compiler generated dependencies of target ros_gz_interfaces__rosidl_generator_py[0m
+[4.275s] [ 97%] Built target ros_gz_interfaces__rosidl_generator_py
+[4.293s] [35m[1mConsolidate compiler generated dependencies of target ros_gz_interfaces__rosidl_typesupport_fastrtps_c__pyext[0m
+[4.296s] [35m[1mConsolidate compiler generated dependencies of target ros_gz_interfaces__rosidl_typesupport_introspection_c__pyext[0m
+[4.299s] [35m[1mConsolidate compiler generated dependencies of target ros_gz_interfaces__rosidl_typesupport_c__pyext[0m
+[4.321s] [ 98%] Built target ros_gz_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[4.322s] [ 99%] Built target ros_gz_interfaces__rosidl_typesupport_c__pyext
+[4.328s] [100%] Built target ros_gz_interfaces__rosidl_typesupport_introspection_c__pyext
+[4.492s] running egg_info
+[4.495s] writing ros_gz_interfaces.egg-info/PKG-INFO
+[4.495s] writing dependency_links to ros_gz_interfaces.egg-info/dependency_links.txt
+[4.495s] writing top-level names to ros_gz_interfaces.egg-info/top_level.txt
+[4.501s] reading manifest file 'ros_gz_interfaces.egg-info/SOURCES.txt'
+[4.503s] writing manifest file 'ros_gz_interfaces.egg-info/SOURCES.txt'
+[4.548s] [100%] Built target ament_cmake_python_build_ros_gz_interfaces_egg
+[4.713s] Invoked command in '/home/jacobrod/worms_ws/build/ros_gz_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jacobrod/worms_ws/install/worms_mech:/opt/ros/humble /usr/bin/cmake --build /home/jacobrod/worms_ws/build/ros_gz_interfaces -- -j8 -l8
+[5.344s] Invoking command in '/home/jacobrod/worms_ws/build/ros_gz_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jacobrod/worms_ws/install/worms_mech:/opt/ros/humble /usr/bin/cmake --install /home/jacobrod/worms_ws/build/ros_gz_interfaces
+[5.354s] -- Install configuration: ""
+[5.354s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ament_index/resource_index/rosidl_interfaces/ros_gz_interfaces
+[5.354s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces
+[5.354s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg
+[5.355s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/track_visual.h
+[5.355s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/sensor_noise.h
+[5.355s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/world_reset.h
+[5.355s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/rosidl_generator_c__visibility_control.h
+[5.356s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/float32_array.h
+[5.356s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/entity.h
+[5.356s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/string_vec.h
+[5.356s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/altimeter.h
+[5.357s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/light.h
+[5.357s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail
+[5.357s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/video_record__type_support.h
+[5.357s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/gui_camera__functions.c
+[5.357s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/entity__struct.h
+[5.358s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/light__functions.c
+[5.358s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/video_record__functions.h
+[5.358s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/world_control__functions.h
+[5.358s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/string_vec__functions.h
+[5.358s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/string_vec__type_support.h
+[5.358s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/video_record__functions.c
+[5.358s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/entity__functions.h
+[5.359s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/light__type_support.h
+[5.359s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/world_control__struct.h
+[5.359s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/world_control__functions.c
+[5.359s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/string_vec__struct.h
+[5.359s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/string_vec__functions.c
+[5.360s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/joint_wrench__type_support.h
+[5.360s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/param_vec__struct.h
+[5.360s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/contacts__struct.h
+[5.360s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/track_visual__functions.h
+[5.360s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/joint_wrench__struct.h
+[5.360s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/param_vec__type_support.h
+[5.361s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/float32_array__functions.c
+[5.361s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/contact__type_support.h
+[5.361s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/world_reset__functions.h
+[5.361s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/entity__type_support.h
+[5.362s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/light__functions.h
+[5.362s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/world_reset__functions.c
+[5.362s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/param_vec__functions.h
+[5.362s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/world_reset__type_support.h
+[5.362s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/dataframe__functions.c
+[5.362s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/gui_camera__type_support.h
+[5.363s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/video_record__struct.h
+[5.363s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/entity_factory__functions.c
+[5.363s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/track_visual__struct.h
+[5.363s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/contacts__functions.c
+[5.363s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/sensor_noise__struct.h
+[5.363s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/dataframe__type_support.h
+[5.364s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/joint_wrench__functions.c
+[5.364s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/gui_camera__functions.h
+[5.364s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/altimeter__struct.h
+[5.364s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/dataframe__functions.h
+[5.364s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/contact__functions.h
+[5.364s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/gui_camera__struct.h
+[5.364s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/contacts__functions.h
+[5.364s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/float32_array__functions.h
+[5.365s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/altimeter__functions.c
+[5.365s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/sensor_noise__functions.c
+[5.365s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/param_vec__functions.c
+[5.365s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/sensor_noise__functions.h
+[5.365s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/dataframe__struct.h
+[5.365s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/joint_wrench__functions.h
+[5.365s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/contacts__type_support.h
+[5.366s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/track_visual__functions.c
+[5.366s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/altimeter__functions.h
+[5.366s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/entity_factory__functions.h
+[5.366s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/sensor_noise__type_support.h
+[5.366s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/entity__functions.c
+[5.366s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/altimeter__type_support.h
+[5.366s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/entity_factory__struct.h
+[5.367s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/entity_factory__type_support.h
+[5.367s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/track_visual__type_support.h
+[5.367s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/contact__functions.c
+[5.367s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/contact__struct.h
+[5.367s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/float32_array__type_support.h
+[5.367s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/light__struct.h
+[5.368s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/world_control__type_support.h
+[5.368s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/world_reset__struct.h
+[5.368s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/float32_array__struct.h
+[5.368s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/contacts.h
+[5.369s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/param_vec.h
+[5.369s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/joint_wrench.h
+[5.369s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/video_record.h
+[5.369s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/world_control.h
+[5.369s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/dataframe.h
+[5.369s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/gui_camera.h
+[5.369s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/entity_factory.h
+[5.370s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/contact.h
+[5.370s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv
+[5.370s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/delete_entity.h
+[5.370s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/control_world.h
+[5.370s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail
+[5.370s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail/spawn_entity__type_support.h
+[5.371s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail/set_entity_pose__struct.h
+[5.371s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail/control_world__struct.h
+[5.371s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail/control_world__type_support.h
+[5.371s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail/control_world__functions.c
+[5.371s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail/spawn_entity__functions.h
+[5.372s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail/control_world__functions.h
+[5.372s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail/delete_entity__functions.c
+[5.372s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail/delete_entity__struct.h
+[5.372s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail/set_entity_pose__functions.h
+[5.373s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail/set_entity_pose__functions.c
+[5.373s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail/delete_entity__functions.h
+[5.373s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail/spawn_entity__struct.h
+[5.373s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail/set_entity_pose__type_support.h
+[5.373s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail/spawn_entity__functions.c
+[5.373s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail/delete_entity__type_support.h
+[5.374s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/spawn_entity.h
+[5.374s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/set_entity_pose.h
+[5.374s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/environment/library_path.sh
+[5.374s] -- Installing: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/environment/library_path.dsv
+[5.374s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/lib/libros_gz_interfaces__rosidl_generator_c.so
+[5.374s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces
+[5.375s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg
+[5.375s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail
+[5.375s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/gui_camera__rosidl_typesupport_fastrtps_c.h
+[5.375s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/entity__rosidl_typesupport_fastrtps_c.h
+[5.375s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/param_vec__rosidl_typesupport_fastrtps_c.h
+[5.375s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/altimeter__rosidl_typesupport_fastrtps_c.h
+[5.375s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/contact__rosidl_typesupport_fastrtps_c.h
+[5.375s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/string_vec__rosidl_typesupport_fastrtps_c.h
+[5.376s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/entity_factory__rosidl_typesupport_fastrtps_c.h
+[5.376s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/world_reset__rosidl_typesupport_fastrtps_c.h
+[5.376s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/float32_array__rosidl_typesupport_fastrtps_c.h
+[5.376s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/world_control__rosidl_typesupport_fastrtps_c.h
+[5.376s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/light__rosidl_typesupport_fastrtps_c.h
+[5.376s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/video_record__rosidl_typesupport_fastrtps_c.h
+[5.376s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/sensor_noise__rosidl_typesupport_fastrtps_c.h
+[5.377s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/track_visual__rosidl_typesupport_fastrtps_c.h
+[5.377s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/joint_wrench__rosidl_typesupport_fastrtps_c.h
+[5.377s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/dataframe__rosidl_typesupport_fastrtps_c.h
+[5.377s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/contacts__rosidl_typesupport_fastrtps_c.h
+[5.377s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[5.377s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv
+[5.377s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail
+[5.377s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail/delete_entity__rosidl_typesupport_fastrtps_c.h
+[5.378s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail/spawn_entity__rosidl_typesupport_fastrtps_c.h
+[5.378s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail/set_entity_pose__rosidl_typesupport_fastrtps_c.h
+[5.378s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail/control_world__rosidl_typesupport_fastrtps_c.h
+[5.378s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/lib/libros_gz_interfaces__rosidl_typesupport_fastrtps_c.so
+[5.378s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces
+[5.378s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg
+[5.378s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/joint_wrench.hpp
+[5.378s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/param_vec.hpp
+[5.379s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/contact.hpp
+[5.379s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/dataframe.hpp
+[5.379s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/float32_array.hpp
+[5.379s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/track_visual.hpp
+[5.379s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/entity_factory.hpp
+[5.379s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/world_reset.hpp
+[5.379s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/gui_camera.hpp
+[5.379s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail
+[5.380s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/string_vec__builder.hpp
+[5.380s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/video_record__traits.hpp
+[5.380s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/sensor_noise__traits.hpp
+[5.380s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/string_vec__traits.hpp
+[5.380s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/float32_array__traits.hpp
+[5.380s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/joint_wrench__builder.hpp
+[5.380s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/float32_array__builder.hpp
+[5.381s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/float32_array__struct.hpp
+[5.381s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/world_control__struct.hpp
+[5.381s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/sensor_noise__struct.hpp
+[5.381s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/contacts__traits.hpp
+[5.381s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/dataframe__traits.hpp
+[5.381s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/track_visual__traits.hpp
+[5.381s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/contacts__struct.hpp
+[5.382s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/gui_camera__struct.hpp
+[5.382s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/light__traits.hpp
+[5.382s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/track_visual__builder.hpp
+[5.382s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/entity__struct.hpp
+[5.382s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/gui_camera__traits.hpp
+[5.382s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/track_visual__struct.hpp
+[5.383s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/altimeter__traits.hpp
+[5.383s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/altimeter__builder.hpp
+[5.383s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/video_record__builder.hpp
+[5.383s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/altimeter__struct.hpp
+[5.383s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/joint_wrench__traits.hpp
+[5.383s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/param_vec__struct.hpp
+[5.384s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/light__builder.hpp
+[5.384s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/entity_factory__struct.hpp
+[5.384s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/sensor_noise__builder.hpp
+[5.384s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/world_reset__builder.hpp
+[5.384s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/contact__builder.hpp
+[5.384s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/world_control__builder.hpp
+[5.385s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/string_vec__struct.hpp
+[5.385s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/entity__traits.hpp
+[5.385s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/entity_factory__traits.hpp
+[5.385s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/world_reset__struct.hpp
+[5.385s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/world_control__traits.hpp
+[5.385s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/param_vec__builder.hpp
+[5.385s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/dataframe__struct.hpp
+[5.385s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/dataframe__builder.hpp
+[5.386s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/contacts__builder.hpp
+[5.386s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/world_reset__traits.hpp
+[5.386s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/entity_factory__builder.hpp
+[5.386s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/joint_wrench__struct.hpp
+[5.386s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/contact__struct.hpp
+[5.386s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/entity__builder.hpp
+[5.386s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/param_vec__traits.hpp
+[5.387s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/contact__traits.hpp
+[5.387s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/light__struct.hpp
+[5.387s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/video_record__struct.hpp
+[5.387s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/gui_camera__builder.hpp
+[5.387s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/world_control.hpp
+[5.387s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/string_vec.hpp
+[5.387s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/sensor_noise.hpp
+[5.388s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/light.hpp
+[5.388s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/video_record.hpp
+[5.388s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/altimeter.hpp
+[5.388s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/entity.hpp
+[5.388s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/contacts.hpp
+[5.388s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv
+[5.388s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/delete_entity.hpp
+[5.388s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/control_world.hpp
+[5.389s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/spawn_entity.hpp
+[5.389s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail
+[5.389s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail/spawn_entity__struct.hpp
+[5.389s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail/set_entity_pose__traits.hpp
+[5.389s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail/delete_entity__builder.hpp
+[5.389s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail/set_entity_pose__struct.hpp
+[5.389s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail/control_world__struct.hpp
+[5.389s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail/control_world__builder.hpp
+[5.389s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail/control_world__traits.hpp
+[5.390s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail/delete_entity__struct.hpp
+[5.390s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail/set_entity_pose__builder.hpp
+[5.390s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail/spawn_entity__builder.hpp
+[5.390s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail/spawn_entity__traits.hpp
+[5.390s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail/delete_entity__traits.hpp
+[5.390s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/set_entity_pose.hpp
+[5.390s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces
+[5.390s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg
+[5.391s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail
+[5.391s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/contact__rosidl_typesupport_fastrtps_cpp.hpp
+[5.391s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/video_record__rosidl_typesupport_fastrtps_cpp.hpp
+[5.391s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/entity__rosidl_typesupport_fastrtps_cpp.hpp
+[5.391s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/joint_wrench__rosidl_typesupport_fastrtps_cpp.hpp
+[5.391s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/world_control__rosidl_typesupport_fastrtps_cpp.hpp
+[5.391s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/sensor_noise__rosidl_typesupport_fastrtps_cpp.hpp
+[5.391s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/entity_factory__rosidl_typesupport_fastrtps_cpp.hpp
+[5.392s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/gui_camera__rosidl_typesupport_fastrtps_cpp.hpp
+[5.392s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/light__rosidl_typesupport_fastrtps_cpp.hpp
+[5.392s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/contacts__rosidl_typesupport_fastrtps_cpp.hpp
+[5.392s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/dataframe__rosidl_typesupport_fastrtps_cpp.hpp
+[5.392s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/track_visual__rosidl_typesupport_fastrtps_cpp.hpp
+[5.392s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/dds_fastrtps
+[5.392s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/float32_array__rosidl_typesupport_fastrtps_cpp.hpp
+[5.392s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/altimeter__rosidl_typesupport_fastrtps_cpp.hpp
+[5.393s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/param_vec__rosidl_typesupport_fastrtps_cpp.hpp
+[5.393s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/world_reset__rosidl_typesupport_fastrtps_cpp.hpp
+[5.393s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/string_vec__rosidl_typesupport_fastrtps_cpp.hpp
+[5.393s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[5.393s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv
+[5.393s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail
+[5.393s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail/control_world__rosidl_typesupport_fastrtps_cpp.hpp
+[5.393s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail/delete_entity__rosidl_typesupport_fastrtps_cpp.hpp
+[5.394s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail/dds_fastrtps
+[5.394s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail/spawn_entity__rosidl_typesupport_fastrtps_cpp.hpp
+[5.394s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail/set_entity_pose__rosidl_typesupport_fastrtps_cpp.hpp
+[5.394s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/lib/libros_gz_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[5.394s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces
+[5.394s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg
+[5.394s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[5.395s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail
+[5.395s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/entity_factory__type_support.c
+[5.395s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/entity__type_support.c
+[5.395s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/light__type_support.c
+[5.395s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/contacts__rosidl_typesupport_introspection_c.h
+[5.395s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/string_vec__rosidl_typesupport_introspection_c.h
+[5.395s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/param_vec__type_support.c
+[5.395s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/param_vec__rosidl_typesupport_introspection_c.h
+[5.396s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/track_visual__rosidl_typesupport_introspection_c.h
+[5.396s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/altimeter__type_support.c
+[5.396s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/contacts__type_support.c
+[5.396s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/dataframe__rosidl_typesupport_introspection_c.h
+[5.396s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/track_visual__type_support.c
+[5.396s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/contact__rosidl_typesupport_introspection_c.h
+[5.396s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/altimeter__rosidl_typesupport_introspection_c.h
+[5.396s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/world_control__rosidl_typesupport_introspection_c.h
+[5.397s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/dataframe__type_support.c
+[5.397s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/world_reset__rosidl_typesupport_introspection_c.h
+[5.397s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/sensor_noise__type_support.c
+[5.397s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/entity__rosidl_typesupport_introspection_c.h
+[5.397s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/video_record__rosidl_typesupport_introspection_c.h
+[5.397s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/sensor_noise__rosidl_typesupport_introspection_c.h
+[5.397s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/video_record__type_support.c
+[5.397s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/entity_factory__rosidl_typesupport_introspection_c.h
+[5.398s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/float32_array__rosidl_typesupport_introspection_c.h
+[5.398s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/gui_camera__rosidl_typesupport_introspection_c.h
+[5.398s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/world_reset__type_support.c
+[5.398s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/joint_wrench__type_support.c
+[5.398s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/string_vec__type_support.c
+[5.398s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/joint_wrench__rosidl_typesupport_introspection_c.h
+[5.398s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/world_control__type_support.c
+[5.399s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/float32_array__type_support.c
+[5.399s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/gui_camera__type_support.c
+[5.399s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/light__rosidl_typesupport_introspection_c.h
+[5.399s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/contact__type_support.c
+[5.399s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv
+[5.400s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail
+[5.400s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail/delete_entity__type_support.c
+[5.400s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail/set_entity_pose__type_support.c
+[5.400s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail/spawn_entity__rosidl_typesupport_introspection_c.h
+[5.400s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail/set_entity_pose__rosidl_typesupport_introspection_c.h
+[5.400s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail/control_world__rosidl_typesupport_introspection_c.h
+[5.400s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail/spawn_entity__type_support.c
+[5.401s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail/delete_entity__rosidl_typesupport_introspection_c.h
+[5.401s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail/control_world__type_support.c
+[5.401s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/lib/libros_gz_interfaces__rosidl_typesupport_introspection_c.so
+[5.401s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/lib/libros_gz_interfaces__rosidl_typesupport_c.so
+[5.401s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces
+[5.401s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg
+[5.401s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail
+[5.402s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/param_vec__type_support.cpp
+[5.402s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/float32_array__rosidl_typesupport_introspection_cpp.hpp
+[5.402s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/world_reset__rosidl_typesupport_introspection_cpp.hpp
+[5.402s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/entity_factory__type_support.cpp
+[5.402s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/world_control__type_support.cpp
+[5.402s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/param_vec__rosidl_typesupport_introspection_cpp.hpp
+[5.402s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/contacts__rosidl_typesupport_introspection_cpp.hpp
+[5.402s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/joint_wrench__rosidl_typesupport_introspection_cpp.hpp
+[5.403s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/video_record__rosidl_typesupport_introspection_cpp.hpp
+[5.403s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/track_visual__rosidl_typesupport_introspection_cpp.hpp
+[5.403s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/string_vec__rosidl_typesupport_introspection_cpp.hpp
+[5.403s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/light__rosidl_typesupport_introspection_cpp.hpp
+[5.403s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/track_visual__type_support.cpp
+[5.403s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/video_record__type_support.cpp
+[5.403s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/entity_factory__rosidl_typesupport_introspection_cpp.hpp
+[5.404s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/sensor_noise__type_support.cpp
+[5.404s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/world_reset__type_support.cpp
+[5.404s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/contact__type_support.cpp
+[5.404s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/altimeter__rosidl_typesupport_introspection_cpp.hpp
+[5.404s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/string_vec__type_support.cpp
+[5.404s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/float32_array__type_support.cpp
+[5.404s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/sensor_noise__rosidl_typesupport_introspection_cpp.hpp
+[5.404s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/world_control__rosidl_typesupport_introspection_cpp.hpp
+[5.404s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/light__type_support.cpp
+[5.405s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/dataframe__type_support.cpp
+[5.405s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/contacts__type_support.cpp
+[5.405s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/gui_camera__type_support.cpp
+[5.405s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/gui_camera__rosidl_typesupport_introspection_cpp.hpp
+[5.405s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/dataframe__rosidl_typesupport_introspection_cpp.hpp
+[5.405s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/contact__rosidl_typesupport_introspection_cpp.hpp
+[5.405s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/entity__type_support.cpp
+[5.405s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/entity__rosidl_typesupport_introspection_cpp.hpp
+[5.405s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/altimeter__type_support.cpp
+[5.406s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/msg/detail/joint_wrench__type_support.cpp
+[5.406s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv
+[5.406s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail
+[5.406s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail/delete_entity__type_support.cpp
+[5.406s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail/set_entity_pose__type_support.cpp
+[5.406s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail/control_world__rosidl_typesupport_introspection_cpp.hpp
+[5.406s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail/delete_entity__rosidl_typesupport_introspection_cpp.hpp
+[5.406s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail/spawn_entity__rosidl_typesupport_introspection_cpp.hpp
+[5.406s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail/control_world__type_support.cpp
+[5.407s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail/spawn_entity__type_support.cpp
+[5.407s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/include/ros_gz_interfaces/ros_gz_interfaces/srv/detail/set_entity_pose__rosidl_typesupport_introspection_cpp.hpp
+[5.407s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/lib/libros_gz_interfaces__rosidl_typesupport_introspection_cpp.so
+[5.407s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/lib/libros_gz_interfaces__rosidl_typesupport_cpp.so
+[5.407s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/environment/pythonpath.sh
+[5.407s] -- Installing: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/environment/pythonpath.dsv
+[5.408s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces-0.244.11-py3.10.egg-info
+[5.408s] -- Installing: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces-0.244.11-py3.10.egg-info/PKG-INFO
+[5.408s] -- Installing: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces-0.244.11-py3.10.egg-info/dependency_links.txt
+[5.408s] -- Installing: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces-0.244.11-py3.10.egg-info/top_level.txt
+[5.408s] -- Installing: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces-0.244.11-py3.10.egg-info/SOURCES.txt
+[5.408s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces
+[5.408s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/_ros_gz_interfaces_s.ep.rosidl_typesupport_c.c
+[5.408s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/msg
+[5.408s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/msg/_joint_wrench.py
+[5.408s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/msg/_joint_wrench_s.c
+[5.409s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/msg/_param_vec_s.c
+[5.409s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/msg/_altimeter.py
+[5.409s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/msg/_param_vec.py
+[5.409s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/msg/_contact.py
+[5.409s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/msg/_dataframe.py
+[5.409s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/msg/_entity_factory.py
+[5.409s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/msg/_entity_factory_s.c
+[5.410s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/msg/_light_s.c
+[5.410s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/msg/_world_reset.py
+[5.410s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/msg/_gui_camera_s.c
+[5.410s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/msg/_track_visual_s.c
+[5.410s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/msg/_sensor_noise_s.c
+[5.410s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/msg/_video_record.py
+[5.411s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/msg/_contacts_s.c
+[5.411s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/msg/_contacts.py
+[5.411s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/msg/_light.py
+[5.411s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/msg/_track_visual.py
+[5.411s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/msg/_world_reset_s.c
+[5.411s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/msg/_float32_array_s.c
+[5.411s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/msg/_altimeter_s.c
+[5.412s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/msg/_string_vec_s.c
+[5.412s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/msg/_string_vec.py
+[5.412s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/msg/_entity.py
+[5.412s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/msg/_gui_camera.py
+[5.412s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/msg/_world_control_s.c
+[5.412s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/msg/_entity_s.c
+[5.412s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/msg/_contact_s.c
+[5.412s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/msg/_world_control.py
+[5.413s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/msg/_sensor_noise.py
+[5.413s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/msg/_float32_array.py
+[5.413s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/msg/_video_record_s.c
+[5.413s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/msg/__init__.py
+[5.413s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/msg/_dataframe_s.c
+[5.413s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/libros_gz_interfaces__rosidl_generator_py.so
+[5.413s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/_ros_gz_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[5.413s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/_ros_gz_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[5.414s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/ros_gz_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[5.414s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/ros_gz_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[5.414s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/srv
+[5.414s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/srv/_set_entity_pose_s.c
+[5.414s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/srv/_delete_entity.py
+[5.414s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/srv/_control_world_s.c
+[5.414s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/srv/_spawn_entity_s.c
+[5.414s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/srv/_spawn_entity.py
+[5.415s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/srv/_set_entity_pose.py
+[5.415s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/srv/_control_world.py
+[5.415s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/srv/_delete_entity_s.c
+[5.415s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/srv/__init__.py
+[5.415s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/ros_gz_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[5.415s] -- Installing: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/__init__.py
+[5.419s] Listing '/home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces'...
+[5.419s] Compiling '/home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/__init__.py'...
+[5.419s] Listing '/home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/msg'...
+[5.419s] Listing '/home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/srv'...
+[5.423s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/ros_gz_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[5.424s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/ros_gz_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[5.424s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages/ros_gz_interfaces/ros_gz_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[5.425s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/lib/libros_gz_interfaces__rosidl_generator_py.so
+[5.425s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/msg/Altimeter.idl
+[5.425s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/msg/Contact.idl
+[5.426s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/msg/Contacts.idl
+[5.426s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/msg/Dataframe.idl
+[5.426s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/msg/Entity.idl
+[5.426s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/msg/EntityFactory.idl
+[5.426s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/msg/Float32Array.idl
+[5.426s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/msg/GuiCamera.idl
+[5.426s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/msg/JointWrench.idl
+[5.427s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/msg/Light.idl
+[5.427s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/msg/ParamVec.idl
+[5.427s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/msg/SensorNoise.idl
+[5.427s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/msg/StringVec.idl
+[5.427s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/msg/TrackVisual.idl
+[5.427s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/msg/VideoRecord.idl
+[5.427s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/msg/WorldControl.idl
+[5.428s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/msg/WorldReset.idl
+[5.428s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/srv/ControlWorld.idl
+[5.428s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/srv/DeleteEntity.idl
+[5.428s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/srv/SetEntityPose.idl
+[5.429s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/srv/SpawnEntity.idl
+[5.429s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/msg/Altimeter.msg
+[5.429s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/msg/Contact.msg
+[5.429s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/msg/Contacts.msg
+[5.430s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/msg/Dataframe.msg
+[5.430s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/msg/Entity.msg
+[5.430s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/msg/EntityFactory.msg
+[5.430s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/msg/Float32Array.msg
+[5.430s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/msg/GuiCamera.msg
+[5.431s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/msg/JointWrench.msg
+[5.431s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/msg/Light.msg
+[5.431s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/msg/ParamVec.msg
+[5.431s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/msg/SensorNoise.msg
+[5.431s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/msg/StringVec.msg
+[5.431s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/msg/TrackVisual.msg
+[5.432s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/msg/VideoRecord.msg
+[5.432s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/msg/WorldControl.msg
+[5.432s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/msg/WorldReset.msg
+[5.432s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/srv/ControlWorld.srv
+[5.432s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/srv/ControlWorld_Request.msg
+[5.433s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/srv/ControlWorld_Response.msg
+[5.433s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/srv/DeleteEntity.srv
+[5.433s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/srv/DeleteEntity_Request.msg
+[5.433s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/srv/DeleteEntity_Response.msg
+[5.433s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/srv/SetEntityPose.srv
+[5.434s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/srv/SetEntityPose_Request.msg
+[5.434s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/srv/SetEntityPose_Response.msg
+[5.434s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/srv/SpawnEntity.srv
+[5.434s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/srv/SpawnEntity_Request.msg
+[5.434s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/srv/SpawnEntity_Response.msg
+[5.434s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ament_index/resource_index/package_run_dependencies/ros_gz_interfaces
+[5.435s] -- Installing: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ament_index/resource_index/parent_prefix_path/ros_gz_interfaces
+[5.435s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/environment/ament_prefix_path.sh
+[5.435s] -- Installing: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/environment/ament_prefix_path.dsv
+[5.435s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/environment/path.sh
+[5.435s] -- Installing: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/environment/path.dsv
+[5.435s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/local_setup.bash
+[5.436s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/local_setup.sh
+[5.436s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/local_setup.zsh
+[5.436s] -- Installing: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/local_setup.dsv
+[5.436s] -- Installing: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/package.dsv
+[5.436s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ament_index/resource_index/packages/ros_gz_interfaces
+[5.437s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/cmake/export_ros_gz_interfaces__rosidl_generator_cExport.cmake
+[5.437s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/cmake/export_ros_gz_interfaces__rosidl_generator_cExport-noconfig.cmake
+[5.437s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/cmake/export_ros_gz_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[5.437s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/cmake/export_ros_gz_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[5.437s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/cmake/export_ros_gz_interfaces__rosidl_generator_cppExport.cmake
+[5.437s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/cmake/export_ros_gz_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[5.438s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/cmake/export_ros_gz_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[5.438s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/cmake/ros_gz_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[5.438s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/cmake/ros_gz_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[5.438s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/cmake/ros_gz_interfaces__rosidl_typesupport_cExport.cmake
+[5.438s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/cmake/ros_gz_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[5.438s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/cmake/ros_gz_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[5.438s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/cmake/ros_gz_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[5.438s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/cmake/ros_gz_interfaces__rosidl_typesupport_cppExport.cmake
+[5.439s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/cmake/ros_gz_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[5.439s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/cmake/export_ros_gz_interfaces__rosidl_generator_pyExport.cmake
+[5.439s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/cmake/export_ros_gz_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[5.439s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/cmake/rosidl_cmake-extras.cmake
+[5.439s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[5.439s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[5.439s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[5.440s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[5.440s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[5.440s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[5.440s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/cmake/ros_gz_interfacesConfig.cmake
+[5.441s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/cmake/ros_gz_interfacesConfig-version.cmake
+[5.441s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/package.xml
+[5.442s] Invoked command in '/home/jacobrod/worms_ws/build/ros_gz_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jacobrod/worms_ws/install/worms_mech:/opt/ros/humble /usr/bin/cmake --install /home/jacobrod/worms_ws/build/ros_gz_interfaces

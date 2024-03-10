@@ -1,0 +1,5 @@
+<launch>
+    <node pkg="worms_mech" exec="hardware_interface"/>
+    <node pkg="worms_mech" exec="gait_manager"/>
+    <node pkg="worms_mech" exec="gait_action_node"/>
+</launch>

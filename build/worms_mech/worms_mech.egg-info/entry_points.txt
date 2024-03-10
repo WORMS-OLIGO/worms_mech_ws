@@ -1,0 +1,14 @@
+[console_scripts]
+camera_scanner = worms_mech.camera_scanner:main
+controller_node = worms_mech.controller_node:main
+gait_action_node = worms_mech.gait_action_node:main
+gait_manager = worms_mech.gait_manager:main
+gait_parser = worms_mech.gait_parser:main
+group_joint_controller = worms_mech.group_joint_controller:main
+hardware_interface = worms_mech.hardware_interface:main
+joint_command_publisher = worms_mech.joint_command_publisher:main
+joystick_control = worms_mech.joystick_control:main
+simple_hardware_interface = worms_mech.simple_hardware_interface:main
+stand_node = worms_mech.stand_node:main
+testbed_interface = worms_mech.testbed_interface:main
+

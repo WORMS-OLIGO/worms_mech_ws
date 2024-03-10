@@ -1,0 +1,41 @@
+[0.509s] Invoking command in '/home/jacobrod/worms_ws/build/ros_gz_example_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jacobrod/worms_ws/install/worms_mech:/opt/ros/humble /usr/bin/cmake --build /home/jacobrod/worms_ws/build/ros_gz_example_description -- -j8 -l8
+[1.002s] Invoked command in '/home/jacobrod/worms_ws/build/ros_gz_example_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jacobrod/worms_ws/install/worms_mech:/opt/ros/humble /usr/bin/cmake --build /home/jacobrod/worms_ws/build/ros_gz_example_description -- -j8 -l8
+[1.054s] Invoking command in '/home/jacobrod/worms_ws/build/ros_gz_example_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jacobrod/worms_ws/install/worms_mech:/opt/ros/humble /usr/bin/cmake --install /home/jacobrod/worms_ws/build/ros_gz_example_description
+[1.108s] -- Install configuration: ""
+[1.108s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/models
+[1.109s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/diff_drive
+[1.109s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/diff_drive/model.config
+[1.110s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/diff_drive/model.sdf
+[1.110s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/worms_1
+[1.110s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/worms_1/urdf
+[1.114s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/worms_1/urdf/worms_1.xacro
+[1.115s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/worms_1/urdf/worms_1.csv
+[1.115s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/worms_1/model.config
+[1.115s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/worms_1/worms_1.sdf
+[1.116s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/worms_1/meshes
+[1.116s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/worms_1/meshes/Link1.STL
+[1.116s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/worms_1/meshes/base_link.STL
+[1.116s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/worms_1/meshes/Link3.STL
+[1.116s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/worms_1/meshes/Link2.STL
+[1.117s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/worms_1/config
+[1.117s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/worms_1/config/worms_1.yaml
+[1.117s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/rrbot
+[1.117s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/rrbot/model.sdf
+[1.118s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/environment/ros_gz_example_description.dsv
+[1.118s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/environment/ros_gz_example_description.sh
+[1.118s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_example_description/share/ament_index/resource_index/package_run_dependencies/ros_gz_example_description
+[1.118s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_example_description/share/ament_index/resource_index/parent_prefix_path/ros_gz_example_description
+[1.118s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/environment/ament_prefix_path.sh
+[1.118s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/environment/ament_prefix_path.dsv
+[1.119s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/environment/path.sh
+[1.119s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/environment/path.dsv
+[1.119s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/local_setup.bash
+[1.120s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/local_setup.sh
+[1.120s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/local_setup.zsh
+[1.122s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/local_setup.dsv
+[1.122s] -- Installing: /home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/package.dsv
+[1.127s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_example_description/share/ament_index/resource_index/packages/ros_gz_example_description
+[1.127s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/cmake/ros_gz_example_descriptionConfig.cmake
+[1.127s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/cmake/ros_gz_example_descriptionConfig-version.cmake
+[1.128s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_example_description/share/ros_gz_example_description/package.xml
+[1.291s] Invoked command in '/home/jacobrod/worms_ws/build/ros_gz_example_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jacobrod/worms_ws/install/worms_mech:/opt/ros/humble /usr/bin/cmake --install /home/jacobrod/worms_ws/build/ros_gz_example_description

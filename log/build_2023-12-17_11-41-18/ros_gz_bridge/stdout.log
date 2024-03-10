@@ -1,0 +1,152 @@
+-- Found ament_cmake: 1.3.6 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found rclcpp: 16.0.7 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.5 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found rclcpp_components: 16.0.7 (/opt/ros/humble/share/rclcpp_components/cmake)
+-- Found yaml_cpp_vendor: 8.0.2 (/opt/ros/humble/share/yaml_cpp_vendor/cmake)
+-- Looking for gz-transport12 -- found version 12.2.1
+-- Searching for dependencies of gz-transport12
+-- Config-file not installed for ZeroMQ -- checking for pkg-config
+-- Checking for module 'libzmq >= 4'
+--   Found libzmq , version 4.3.4
+-- Checking for module 'uuid'
+--   Found uuid, version 2.37.2
+-- Looking for gz-utils2 -- found version 2.2.0
+-- Searching for dependencies of gz-utils2
+-- Searching for <gz-utils2> component [cli]
+-- Looking for gz-utils2-cli -- found version 2.2.0
+-- Searching for dependencies of gz-utils2-cli
+-- Looking for gz-msgs9 -- found version 9.5.0
+-- Searching for dependencies of gz-msgs9
+-- Looking for gz-math7 -- found version 7.3.0
+-- Searching for dependencies of gz-math7
+-- Looking for gz-utils2 -- found version 2.2.0
+-- Checking for module 'tinyxml2'
+--   Found tinyxml2, version 9.0.0
+-- Looking for gz-msgs9 -- found version 9.5.0
+-- Compiling against Gazebo Garden
+-- Found builtin_interfaces: 1.2.1 (/opt/ros/humble/share/builtin_interfaces/cmake)
+-- Found actuator_msgs: 0.0.1 (/opt/ros/humble/share/actuator_msgs/cmake)
+-- Found geometry_msgs: 4.2.3 (/opt/ros/humble/share/geometry_msgs/cmake)
+-- Found nav_msgs: 4.2.3 (/opt/ros/humble/share/nav_msgs/cmake)
+-- Found rcl_interfaces: 1.2.1 (/opt/ros/humble/share/rcl_interfaces/cmake)
+-- Found ros_gz_interfaces: 0.244.11 (/home/jacobrod/worms_ws/install/ros_gz_interfaces/share/ros_gz_interfaces/cmake)
+-- Found rosgraph_msgs: 1.2.1 (/opt/ros/humble/share/rosgraph_msgs/cmake)
+-- Found sensor_msgs: 4.2.3 (/opt/ros/humble/share/sensor_msgs/cmake)
+-- Found std_msgs: 4.2.3 (/opt/ros/humble/share/std_msgs/cmake)
+-- Found tf2_msgs: 0.25.5 (/opt/ros/humble/share/tf2_msgs/cmake)
+-- Found trajectory_msgs: 4.2.3 (/opt/ros/humble/share/trajectory_msgs/cmake)
+-- Found vision_msgs: 4.1.0 (/opt/ros/humble/share/vision_msgs/cmake)
+-- Found ament_lint_auto: 0.12.9 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+-- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built
+-- Added test 'copyright' to check source files copyright and LICENSE
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: /home/jacobrod/worms_ws/src/ros_gz/ros_gz_bridge/include;/home/jacobrod/worms_ws/src/ros_gz/ros_gz_bridge/src;/home/jacobrod/worms_ws/src/ros_gz/ros_gz_bridge/test;/home/jacobrod/worms_ws/src/ros_gz/ros_gz_bridge/test/subscribers
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'cpplint' to check C / C++ code against the Google style
+-- Configured cpplint exclude dirs and/or files: 
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/jacobrod/worms_ws/build/ros_gz_bridge
+[35m[1mConsolidate compiler generated dependencies of target gtest_main[0m
+[35m[1mConsolidate compiler generated dependencies of target gtest[0m
+[35m[1mConsolidate compiler generated dependencies of target bridge_node[0m
+[  2%] Built target gtest_main
+[  4%] Built target gtest
+[  6%] Built target bridge_node
+[35m[1mConsolidate compiler generated dependencies of target ros_gz_bridge_lib[0m
+[35m[1mConsolidate compiler generated dependencies of target test_utils[0m
+[35m[1mConsolidate compiler generated dependencies of target test_rcl_interfaces[0m
+[ 10%] Built target test_rcl_interfaces
+[ 13%] Built target test_utils
+[35m[1mConsolidate compiler generated dependencies of target test_ros_client[0m
+[35m[1mConsolidate compiler generated dependencies of target test_gz_publisher[0m
+[35m[1mConsolidate compiler generated dependencies of target test_gz_server[0m
+[35m[1mConsolidate compiler generated dependencies of target test_gz_subscriber[0m
+[35m[1mConsolidate compiler generated dependencies of target test_ros_publisher[0m
+[35m[1mConsolidate compiler generated dependencies of target test_ros_subscriber[0m
+[ 16%] Built target test_ros_client
+[ 19%] Built target test_gz_publisher
+[ 22%] Built target test_ros_publisher
+[ 25%] Built target test_gz_server
+[ 28%] Built target test_gz_subscriber
+[ 70%] Built target ros_gz_bridge_lib
+[35m[1mConsolidate compiler generated dependencies of target bridge_types[0m
+[35m[1mConsolidate compiler generated dependencies of target parameter_bridge[0m
+[35m[1mConsolidate compiler generated dependencies of target test_ros_gz_interfaces[0m
+[35m[1mConsolidate compiler generated dependencies of target ros_gz_bridge_bridge_config[0m
+[35m[1mConsolidate compiler generated dependencies of target static_bridge[0m
+[ 72%] Built target bridge_types
+[ 74%] Built target ros_gz_bridge_bridge_config
+[ 77%] Built target parameter_bridge
+[ 91%] Built target static_bridge
+[ 96%] Built target test_ros_subscriber
+[100%] Built target test_ros_gz_interfaces
+-- Install configuration: ""
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/lib/ros_gz_bridge/bridge_node
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/lib/libros_gz_bridge_lib.so
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert/std_msgs.hpp
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert/nav_msgs.hpp
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert/sensor_msgs.hpp
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert/rosgraph_msgs.hpp
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert/geometry_msgs.hpp
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert/builtin_interfaces.hpp
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert/ros_gz_interfaces.hpp
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert/rcl_interfaces.hpp
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert/tf2_msgs.hpp
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert/trajectory_msgs.hpp
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert/actuator_msgs.hpp
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert/vision_msgs.hpp
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert_decl.hpp
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/ros_gz_bridge.hpp
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/convert.hpp
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/include/ros_gz_bridge/bridge_config.hpp
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/environment/library_path.sh
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/environment/library_path.dsv
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/lib/ros_gz_bridge/parameter_bridge
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/lib/ros_gz_bridge/static_bridge
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/lib/ros_gz_bridge/bridge_types
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/lib/ros_gz_bridge/test_ros_publisher
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/lib/ros_gz_bridge/test_ros_subscriber
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/lib/ros_gz_bridge/test_gz_publisher
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/lib/ros_gz_bridge/test_gz_subscriber
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/lib/ros_gz_bridge/test_gz_server
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/lib/ros_gz_bridge/test_ros_client
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ament_index/resource_index/package_run_dependencies/ros_gz_bridge
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ament_index/resource_index/parent_prefix_path/ros_gz_bridge
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/environment/ament_prefix_path.sh
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/environment/path.sh
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/environment/path.dsv
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/local_setup.bash
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/local_setup.sh
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/local_setup.zsh
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/local_setup.dsv
+-- Installing: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/package.dsv
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ament_index/resource_index/packages/ros_gz_bridge
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ament_index/resource_index/rclcpp_components/ros_gz_bridge
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/cmake/ament_cmake_export_libraries-extras.cmake
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/cmake/ros_gz_bridgeConfig.cmake
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/cmake/ros_gz_bridgeConfig-version.cmake
+-- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_bridge/share/ros_gz_bridge/package.xml

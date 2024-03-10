@@ -1,0 +1,4 @@
+[0.176s] Invoking command in '/home/jacobrod/worms_ws/build/ros_ign_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jacobrod/worms_ws/install/worms_mech:/opt/ros/humble /usr/bin/cmake --build /home/jacobrod/worms_ws/build/ros_ign_gazebo -- -j8 -l8
+[0.242s] [ 50%] [32mBuilding CXX object CMakeFiles/create.dir/src/create_shim.cpp.o[0m
+[0.619s] [100%] [32m[1mLinking CXX executable create[0m
+[0.732s] [100%] Built target create

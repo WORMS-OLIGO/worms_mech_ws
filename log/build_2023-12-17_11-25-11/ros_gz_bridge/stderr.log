@@ -1,0 +1,13 @@
+gmake[2]: *** [CMakeFiles/test_ros_subscriber.dir/build.make:226: CMakeFiles/test_ros_subscriber.dir/generated/test/rosgraph_msgs_subscriber.cpp.o] Interrupt
+gmake[2]: *** [CMakeFiles/test_ros_subscriber.dir/build.make:170: CMakeFiles/test_ros_subscriber.dir/generated/test/geometry_msgs_subscriber.cpp.o] Interrupt
+gmake[2]: *** [CMakeFiles/test_ros_subscriber.dir/build.make:212: CMakeFiles/test_ros_subscriber.dir/generated/test/ros_gz_interfaces_subscriber.cpp.o] Interrupt
+gmake[2]: *** [CMakeFiles/test_ros_subscriber.dir/build.make:198: CMakeFiles/test_ros_subscriber.dir/generated/test/rcl_interfaces_subscriber.cpp.o] Interrupt
+gmake[2]: *** [CMakeFiles/test_ros_subscriber.dir/build.make:156: CMakeFiles/test_ros_subscriber.dir/generated/test/actuator_msgs_subscriber.cpp.o] Interrupt
+gmake[2]: *** [CMakeFiles/test_ros_subscriber.dir/build.make:240: CMakeFiles/test_ros_subscriber.dir/generated/test/sensor_msgs_subscriber.cpp.o] Interrupt
+gmake[2]: *** [CMakeFiles/test_ros_subscriber.dir/build.make:254: CMakeFiles/test_ros_subscriber.dir/generated/test/std_msgs_subscriber.cpp.o] Interrupt
+gmake[2]: *** wait: No child processes.  Stop.
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[2]: *** wait: No child processes.  Stop.
+gmake[1]: *** [CMakeFiles/Makefile2:422: CMakeFiles/test_ros_publisher.dir/all] Error 2
+gmake[1]: *** [CMakeFiles/Makefile2:530: CMakeFiles/test_ros_subscriber.dir/all] Interrupt
+gmake: *** [Makefile:146: all] Interrupt

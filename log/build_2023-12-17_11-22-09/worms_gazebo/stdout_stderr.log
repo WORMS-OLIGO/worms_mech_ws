@@ -1,0 +1,8 @@
+[35m[1mConsolidate compiler generated dependencies of target BasicSystem[0m
+[35m[1mConsolidate compiler generated dependencies of target FullSystem[0m
+gmake[2]: *** No rule to make target '/usr/lib/x86_64-linux-gnu/libgz-utils2.so.2.1.0', needed by 'libBasicSystem.so'.  Stop.
+gmake[2]: *** No rule to make target '/usr/lib/x86_64-linux-gnu/libgz-utils2.so.2.1.0', needed by 'libFullSystem.so'.  Stop.
+gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/BasicSystem.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/FullSystem.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

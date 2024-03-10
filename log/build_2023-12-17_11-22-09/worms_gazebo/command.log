@@ -1,0 +1,2 @@
+Invoking command in '/home/jacobrod/worms_ws/build/worms_gazebo': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/jacobrod/worms_ws/build/worms_gazebo -- -j8 -l8
+Invoked command in '/home/jacobrod/worms_ws/build/worms_gazebo' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/jacobrod/worms_ws/build/worms_gazebo -- -j8 -l8

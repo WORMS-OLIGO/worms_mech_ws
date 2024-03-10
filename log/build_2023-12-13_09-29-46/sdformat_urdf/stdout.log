@@ -1,0 +1,116 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+-- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+-- Found pluginlib: 5.1.0 (/opt/ros/humble/share/pluginlib/cmake)
+-- Found urdf_parser_plugin: 2.6.0 (/opt/ros/humble/share/urdf_parser_plugin/cmake)
+-- Found TinyXML2: /usr/lib/x86_64-linux-gnu/libtinyxml2.so  
+-- Looking for sdformat13 -- found version 13.6.0
+-- Searching for dependencies of sdformat13
+-- Checking for module 'tinyxml2'
+--   Found tinyxml2, version 9.0.0
+-- Looking for gz-math7 -- found version 7.3.0
+-- Searching for dependencies of gz-math7
+-- Looking for gz-utils2 -- found version 2.1.0
+-- Searching for dependencies of gz-utils2
+-- Looking for gz-utils2 -- found version 2.1.0
+-- Searching for dependencies of gz-utils2
+-- Searching for <gz-utils2> component [cli]
+-- Looking for gz-utils2-cli -- found version 2.1.0
+-- Searching for dependencies of gz-utils2-cli
+-- Compiling against Gazebo Garden (libSDFormat 13)
+-- Found ament_lint_auto: 0.12.8 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Added test 'copyright' to check source files copyright and LICENSE
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/jacobrod/worms_ws/src/sdformat_urdf/sdformat_urdf/include>;/home/jacobrod/worms_ws/src/sdformat_urdf/sdformat_urdf/test/include
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'cpplint' to check C / C++ code against the Google style
+-- Configured cpplint exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/jacobrod/worms_ws/build/sdformat_urdf
+[  4%] [32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[0m
+[  9%] [32mBuilding CXX object CMakeFiles/sdformat_urdf.dir/src/sdformat_urdf.cpp.o[0m
+[ 13%] [32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[ 18%] [32m[1mLinking CXX static library libgtest_main.a[0m
+[ 18%] Built target gtest_main
+[ 22%] [32m[1mLinking CXX shared library libsdformat_urdf.so[0m
+[ 27%] [32m[1mLinking CXX static library libgtest.a[0m
+[ 27%] Built target sdformat_urdf
+[ 27%] Built target gtest
+[ 31%] [32mBuilding CXX object CMakeFiles/sdformat_urdf_plugin.dir/src/sdformat_urdf_plugin.cpp.o[0m
+[ 36%] [32mBuilding CXX object CMakeFiles/sdf_geometry_tests.dir/test/geometry_tests.cpp.o[0m
+[ 40%] [32mBuilding CXX object CMakeFiles/sdf_graph_tests.dir/test/graph_tests.cpp.o[0m
+[ 45%] [32mBuilding CXX object CMakeFiles/sdf_model_tests.dir/test/model_tests.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/sdf_joint_tests.dir/test/joint_tests.cpp.o[0m
+[ 54%] [32mBuilding CXX object CMakeFiles/sdf_material_tests.dir/test/material_tests.cpp.o[0m
+[ 59%] [32mBuilding CXX object CMakeFiles/sdf_link_tests.dir/test/link_tests.cpp.o[0m
+[ 63%] [32mBuilding CXX object CMakeFiles/sdf_pose_tests.dir/test/pose_tests.cpp.o[0m
+[ 68%] [32m[1mLinking CXX shared library libsdformat_urdf_plugin.so[0m
+[ 72%] [32m[1mLinking CXX executable sdf_link_tests[0m
+[ 72%] Built target sdformat_urdf_plugin
+[ 72%] Built target sdf_link_tests
+[ 77%] [32m[1mLinking CXX executable sdf_model_tests[0m
+[ 77%] Built target sdf_model_tests
+[ 81%] [32m[1mLinking CXX executable sdf_material_tests[0m
+[ 81%] Built target sdf_material_tests
+[ 86%] [32m[1mLinking CXX executable sdf_graph_tests[0m
+[ 90%] [32m[1mLinking CXX executable sdf_joint_tests[0m
+[ 95%] [32m[1mLinking CXX executable sdf_geometry_tests[0m
+[100%] [32m[1mLinking CXX executable sdf_pose_tests[0m
+[100%] Built target sdf_graph_tests
+[100%] Built target sdf_joint_tests
+[100%] Built target sdf_geometry_tests
+[100%] Built target sdf_pose_tests
+-- Install configuration: ""
+-- Installing: /home/jacobrod/worms_ws/install/sdformat_urdf/lib/libsdformat_urdf.so
+-- Set runtime path of "/home/jacobrod/worms_ws/install/sdformat_urdf/lib/libsdformat_urdf.so" to ""
+-- Installing: /home/jacobrod/worms_ws/install/sdformat_urdf/lib/libsdformat_urdf_plugin.so
+-- Set runtime path of "/home/jacobrod/worms_ws/install/sdformat_urdf/lib/libsdformat_urdf_plugin.so" to ""
+-- Installing: /home/jacobrod/worms_ws/install/sdformat_urdf/include
+-- Installing: /home/jacobrod/worms_ws/install/sdformat_urdf/include/sdformat_urdf
+-- Installing: /home/jacobrod/worms_ws/install/sdformat_urdf/include/sdformat_urdf/visibility_control.hpp
+-- Installing: /home/jacobrod/worms_ws/install/sdformat_urdf/include/sdformat_urdf/sdformat_urdf.hpp
+-- Installing: /home/jacobrod/worms_ws/install/sdformat_urdf/share/sdformat_urdf/environment/library_path.sh
+-- Installing: /home/jacobrod/worms_ws/install/sdformat_urdf/share/sdformat_urdf/environment/library_path.dsv
+-- Installing: /home/jacobrod/worms_ws/install/sdformat_urdf/share/sdformat_urdf/sdformat_urdf_plugin.xml
+-- Installing: /home/jacobrod/worms_ws/install/sdformat_urdf/share/ament_index/resource_index/package_run_dependencies/sdformat_urdf
+-- Installing: /home/jacobrod/worms_ws/install/sdformat_urdf/share/ament_index/resource_index/parent_prefix_path/sdformat_urdf
+-- Installing: /home/jacobrod/worms_ws/install/sdformat_urdf/share/sdformat_urdf/environment/ament_prefix_path.sh
+-- Installing: /home/jacobrod/worms_ws/install/sdformat_urdf/share/sdformat_urdf/environment/ament_prefix_path.dsv
+-- Installing: /home/jacobrod/worms_ws/install/sdformat_urdf/share/sdformat_urdf/environment/path.sh
+-- Installing: /home/jacobrod/worms_ws/install/sdformat_urdf/share/sdformat_urdf/environment/path.dsv
+-- Installing: /home/jacobrod/worms_ws/install/sdformat_urdf/share/sdformat_urdf/local_setup.bash
+-- Installing: /home/jacobrod/worms_ws/install/sdformat_urdf/share/sdformat_urdf/local_setup.sh
+-- Installing: /home/jacobrod/worms_ws/install/sdformat_urdf/share/sdformat_urdf/local_setup.zsh
+-- Installing: /home/jacobrod/worms_ws/install/sdformat_urdf/share/sdformat_urdf/local_setup.dsv
+-- Installing: /home/jacobrod/worms_ws/install/sdformat_urdf/share/sdformat_urdf/package.dsv
+-- Installing: /home/jacobrod/worms_ws/install/sdformat_urdf/share/ament_index/resource_index/packages/sdformat_urdf
+-- Installing: /home/jacobrod/worms_ws/install/sdformat_urdf/share/ament_index/resource_index/urdf_parser_plugin__pluginlib__plugin/sdformat_urdf
+-- Installing: /home/jacobrod/worms_ws/install/sdformat_urdf/share/sdformat_urdf/cmake/sdformat_urdf-exportExport.cmake
+-- Installing: /home/jacobrod/worms_ws/install/sdformat_urdf/share/sdformat_urdf/cmake/sdformat_urdf-exportExport-noconfig.cmake
+-- Installing: /home/jacobrod/worms_ws/install/sdformat_urdf/share/sdformat_urdf/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Installing: /home/jacobrod/worms_ws/install/sdformat_urdf/share/sdformat_urdf/cmake/ament_cmake_export_targets-extras.cmake
+-- Installing: /home/jacobrod/worms_ws/install/sdformat_urdf/share/sdformat_urdf/cmake/sdformat_urdfConfig.cmake
+-- Installing: /home/jacobrod/worms_ws/install/sdformat_urdf/share/sdformat_urdf/cmake/sdformat_urdfConfig-version.cmake
+-- Installing: /home/jacobrod/worms_ws/install/sdformat_urdf/share/sdformat_urdf/package.xml

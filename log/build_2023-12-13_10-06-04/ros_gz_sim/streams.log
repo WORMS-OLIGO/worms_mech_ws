@@ -1,0 +1,40 @@
+[0.720s] Invoking command in '/home/jacobrod/worms_ws/build/ros_gz_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jacobrod/worms_ws/src/install/worms_mech:/home/jacobrod/worms_ws/install/worms_mech:/opt/ros/humble /usr/bin/cmake --build /home/jacobrod/worms_ws/build/ros_gz_sim -- -j8 -l8
+[0.803s] [35m[1mConsolidate compiler generated dependencies of target ros_gz_sim[0m
+[0.806s] [35m[1mConsolidate compiler generated dependencies of target create[0m
+[0.817s] [35m[1mConsolidate compiler generated dependencies of target gtest_main[0m
+[0.821s] [35m[1mConsolidate compiler generated dependencies of target gtest[0m
+[0.846s] [ 20%] Built target ros_gz_sim
+[0.864s] [ 40%] Built target create
+[0.875s] [ 60%] Built target gtest_main
+[0.882s] [ 80%] Built target gtest
+[0.902s] [35m[1mConsolidate compiler generated dependencies of target test_stopwatch[0m
+[0.974s] [100%] Built target test_stopwatch
+[1.168s] Invoked command in '/home/jacobrod/worms_ws/build/ros_gz_sim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jacobrod/worms_ws/src/install/worms_mech:/home/jacobrod/worms_ws/install/worms_mech:/opt/ros/humble /usr/bin/cmake --build /home/jacobrod/worms_ws/build/ros_gz_sim -- -j8 -l8
+[1.812s] Invoking command in '/home/jacobrod/worms_ws/build/ros_gz_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jacobrod/worms_ws/src/install/worms_mech:/home/jacobrod/worms_ws/install/worms_mech:/opt/ros/humble /usr/bin/cmake --install /home/jacobrod/worms_ws/build/ros_gz_sim
+[1.965s] -- Install configuration: ""
+[1.965s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_sim/include/ros_gz_sim
+[1.965s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_sim/include/ros_gz_sim/Stopwatch.hpp
+[1.965s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_sim/share/ros_gz_sim/launch/gz_sim.launch.py
+[1.966s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_sim/lib/ros_gz_sim/create
+[1.966s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_sim/lib/libros_gz_sim.so
+[1.966s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_sim/lib/ros_gz_sim/test_stopwatch
+[1.966s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_sim/share/ament_index/resource_index/package_run_dependencies/ros_gz_sim
+[1.967s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_sim/share/ament_index/resource_index/parent_prefix_path/ros_gz_sim
+[1.967s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_sim/share/ros_gz_sim/environment/ament_prefix_path.sh
+[1.967s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_sim/share/ros_gz_sim/environment/ament_prefix_path.dsv
+[1.968s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_sim/share/ros_gz_sim/environment/path.sh
+[1.968s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_sim/share/ros_gz_sim/environment/path.dsv
+[1.968s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_sim/share/ros_gz_sim/local_setup.bash
+[1.968s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_sim/share/ros_gz_sim/local_setup.sh
+[1.969s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_sim/share/ros_gz_sim/local_setup.zsh
+[1.969s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_sim/share/ros_gz_sim/local_setup.dsv
+[1.969s] -- Installing: /home/jacobrod/worms_ws/install/ros_gz_sim/share/ros_gz_sim/package.dsv
+[1.970s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_sim/share/ament_index/resource_index/packages/ros_gz_sim
+[1.970s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_sim/share/ros_gz_sim/cmake/ros_gz_simExport.cmake
+[1.970s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_sim/share/ros_gz_sim/cmake/ros_gz_simExport-noconfig.cmake
+[1.970s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_sim/share/ros_gz_sim/cmake/ament_cmake_export_targets-extras.cmake
+[1.971s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_sim/share/ros_gz_sim/cmake/ament_cmake_export_dependencies-extras.cmake
+[1.971s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_sim/share/ros_gz_sim/cmake/ros_gz_simConfig.cmake
+[1.971s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_sim/share/ros_gz_sim/cmake/ros_gz_simConfig-version.cmake
+[1.971s] -- Up-to-date: /home/jacobrod/worms_ws/install/ros_gz_sim/share/ros_gz_sim/package.xml
+[2.194s] Invoked command in '/home/jacobrod/worms_ws/build/ros_gz_sim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jacobrod/worms_ws/src/install/worms_mech:/home/jacobrod/worms_ws/install/worms_mech:/opt/ros/humble /usr/bin/cmake --install /home/jacobrod/worms_ws/build/ros_gz_sim

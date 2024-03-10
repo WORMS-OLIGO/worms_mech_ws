@@ -1,0 +1,193 @@
+[0.556s] Invoking command in '/home/jacobrod/worms_ws/build/sdformat_test_files': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jacobrod/worms_ws/src/install/worms_mech:/home/jacobrod/worms_ws/install/worms_mech:/opt/ros/humble /usr/bin/cmake /home/jacobrod/worms_ws/src/sdformat_urdf/sdformat_test_files -DBUILD_TESTING=ON -DCMAKE_INSTALL_PREFIX=/home/jacobrod/worms_ws/install/sdformat_test_files
+[0.655s] -- The C compiler identification is GNU 11.4.0
+[0.773s] -- The CXX compiler identification is GNU 11.4.0
+[0.789s] -- Detecting C compiler ABI info
+[0.928s] -- Detecting C compiler ABI info - done
+[0.952s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.952s] -- Detecting C compile features
+[0.953s] -- Detecting C compile features - done
+[0.964s] -- Detecting CXX compiler ABI info
+[1.126s] -- Detecting CXX compiler ABI info - done
+[1.143s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.144s] -- Detecting CXX compile features
+[1.145s] -- Detecting CXX compile features - done
+[1.151s] -- Configuring done
+[1.153s] -- Generating done
+[1.154s] [33mCMake Warning:
+[1.154s]   Manually-specified variables were not used by the project:
+[1.154s] 
+[1.155s]     BUILD_TESTING
+[1.155s] 
+[1.155s] [0m
+[1.155s] -- Build files have been written to: /home/jacobrod/worms_ws/build/sdformat_test_files
+[1.163s] Invoked command in '/home/jacobrod/worms_ws/build/sdformat_test_files' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jacobrod/worms_ws/src/install/worms_mech:/home/jacobrod/worms_ws/install/worms_mech:/opt/ros/humble /usr/bin/cmake /home/jacobrod/worms_ws/src/sdformat_urdf/sdformat_test_files -DBUILD_TESTING=ON -DCMAKE_INSTALL_PREFIX=/home/jacobrod/worms_ws/install/sdformat_test_files
+[1.164s] Invoking command in '/home/jacobrod/worms_ws/build/sdformat_test_files': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jacobrod/worms_ws/src/install/worms_mech:/home/jacobrod/worms_ws/install/worms_mech:/opt/ros/humble /usr/bin/cmake --build /home/jacobrod/worms_ws/build/sdformat_test_files -- -j8 -l8
+[1.801s] Invoked command in '/home/jacobrod/worms_ws/build/sdformat_test_files' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jacobrod/worms_ws/src/install/worms_mech:/home/jacobrod/worms_ws/install/worms_mech:/opt/ros/humble /usr/bin/cmake --build /home/jacobrod/worms_ws/build/sdformat_test_files -- -j8 -l8
+[1.861s] Invoking command in '/home/jacobrod/worms_ws/build/sdformat_test_files': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jacobrod/worms_ws/src/install/worms_mech:/home/jacobrod/worms_ws/install/worms_mech:/opt/ros/humble /usr/bin/cmake --install /home/jacobrod/worms_ws/build/sdformat_test_files
+[1.872s] -- Install configuration: ""
+[1.872s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/geometry_box
+[1.873s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/geometry_box/model.config
+[1.873s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/geometry_box/geometry_box.sdf
+[1.874s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/geometry_cylinder
+[1.874s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/geometry_cylinder/geometry_cylinder.sdf
+[1.875s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/geometry_cylinder/model.config
+[1.875s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/geometry_heightmap
+[1.876s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/geometry_heightmap/heightmap.png
+[1.876s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/geometry_heightmap/model.config
+[1.877s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/geometry_heightmap/geometry_heightmap.sdf
+[1.877s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/geometry_mesh_collada
+[1.877s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/geometry_mesh_collada/torus.dae
+[1.878s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/geometry_mesh_collada/geometry_mesh_collada.sdf
+[1.879s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/geometry_mesh_collada/model.config
+[1.879s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/geometry_mesh_obj
+[1.880s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/geometry_mesh_obj/model.config
+[1.880s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/geometry_mesh_obj/torus.obj
+[1.881s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/geometry_mesh_obj/torus.mtl
+[1.881s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/geometry_mesh_obj/geometry_mesh_obj.sdf
+[1.881s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/geometry_mesh_scaled
+[1.882s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/geometry_mesh_scaled/model.config
+[1.882s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/geometry_mesh_scaled/torus.stl
+[1.883s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/geometry_mesh_scaled/geometry_mesh_scaled.sdf
+[1.883s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/geometry_mesh_stl
+[1.883s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/geometry_mesh_stl/model.config
+[1.884s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/geometry_mesh_stl/torus.stl
+[1.884s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/geometry_mesh_stl/geometry_mesh_stl.sdf
+[1.885s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/geometry_plane
+[1.885s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/geometry_plane/model.config
+[1.886s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/geometry_plane/geometry_plane.sdf
+[1.886s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/geometry_sphere
+[1.886s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/geometry_sphere/model.config
+[1.887s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/geometry_sphere/geometry_sphere.sdf
+[1.887s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/graph_chain
+[1.888s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/graph_chain/model.config
+[1.888s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/graph_chain/graph_chain.sdf
+[1.889s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/graph_chain_non_canonical_root
+[1.889s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/graph_chain_non_canonical_root/model.config
+[1.890s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/graph_chain_non_canonical_root/graph_chain_non_canonical_root.sdf
+[1.890s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/graph_four_bar
+[1.891s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/graph_four_bar/model.config
+[1.891s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/graph_four_bar/graph_four_bar.sdf
+[1.891s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/graph_loop
+[1.892s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/graph_loop/graph_loop.sdf
+[1.892s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/graph_loop/model.config
+[1.893s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/graph_tree
+[1.893s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/graph_tree/model.config
+[1.893s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/graph_tree/graph_tree.sdf
+[1.894s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/graph_tree_non_canonical_root
+[1.894s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/graph_tree_non_canonical_root/graph_tree_non_canonical_root.sdf
+[1.895s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/graph_tree_non_canonical_root/model.config
+[1.895s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/joint_ball
+[1.895s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/joint_ball/model.config
+[1.896s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/joint_ball/joint_ball.sdf
+[1.896s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/joint_continuous
+[1.897s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/joint_continuous/model.config
+[1.897s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/joint_continuous/joint_continuous.sdf
+[1.898s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/joint_fixed
+[1.898s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/joint_fixed/model.config
+[1.898s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/joint_fixed/joint_fixed.sdf
+[1.899s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/joint_gearbox
+[1.899s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/joint_gearbox/model.config
+[1.900s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/joint_gearbox/joint_gearbox.sdf
+[1.900s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/joint_prismatic
+[1.900s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/joint_prismatic/model.config
+[1.901s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/joint_prismatic/joint_prismatic.sdf
+[1.901s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/joint_prismatic_no_axis
+[1.902s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/joint_prismatic_no_axis/model.config
+[1.902s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/joint_prismatic_no_axis/joint_prismatic_no_axis.sdf
+[1.902s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/joint_revolute
+[1.903s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/joint_revolute/model.config
+[1.903s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/joint_revolute/joint_revolute.sdf
+[1.904s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/joint_revolute2
+[1.904s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/joint_revolute2/joint_revolute2.sdf
+[1.905s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/joint_revolute2/model.config
+[1.905s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/joint_revolute_axis
+[1.906s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/joint_revolute_axis/joint_revolute_axis.sdf
+[1.906s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/joint_revolute_axis/model.config
+[1.907s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/joint_revolute_axis_in_frame
+[1.907s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/joint_revolute_axis_in_frame/model.config
+[1.907s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/joint_revolute_axis_in_frame/joint_revolute_axis_in_frame.sdf
+[1.908s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/joint_revolute_default_limits
+[1.908s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/joint_revolute_default_limits/joint_revolute_default_limits.sdf
+[1.908s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/joint_revolute_default_limits/model.config
+[1.909s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/joint_revolute_two_joints_two_links
+[1.909s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/joint_revolute_two_joints_two_links/joint_revolute_two_joints_two_links.sdf
+[1.910s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/joint_revolute_two_joints_two_links/model.config
+[1.910s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/joint_screw
+[1.911s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/joint_screw/model.config
+[1.911s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/joint_screw/joint_screw.sdf
+[1.912s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/joint_universal
+[1.912s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/joint_universal/model.config
+[1.913s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/joint_universal/joint_universal.sdf
+[1.913s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/link_inertia
+[1.913s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/link_inertia/model.config
+[1.914s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/link_inertia/link_inertia.sdf
+[1.914s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/link_light_point
+[1.915s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/link_light_point/link_light_point.sdf
+[1.915s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/link_light_point/model.config
+[1.915s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/link_multiple_collisions
+[1.918s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/link_multiple_collisions/link_multiple_collisions.sdf
+[1.919s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/link_multiple_collisions/model.config
+[1.920s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/link_multiple_visuals
+[1.920s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/link_multiple_visuals/link_multiple_visuals.sdf
+[1.942s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/link_multiple_visuals/model.config
+[1.943s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/link_sensor_imu
+[1.944s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/link_sensor_imu/link_sensor_imu.sdf
+[1.951s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/link_sensor_imu/model.config
+[1.951s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/material_blinn_phong
+[1.951s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/material_blinn_phong/model.config
+[1.952s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/material_blinn_phong/material_blinn_phong.sdf
+[1.952s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/material_dynamic_lights
+[1.952s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/material_dynamic_lights/model.config
+[1.952s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/material_dynamic_lights/material_dynamic_lights.sdf
+[1.952s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/model_two_models
+[1.952s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/model_two_models/model.config
+[1.953s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/model_two_models/model_two_models.sdf
+[1.953s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/model_zero_models
+[1.953s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/model_zero_models/model.config
+[1.953s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/model_zero_models/model_zero_models.sdf
+[1.953s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/pose_chain
+[1.954s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/pose_chain/model.config
+[1.954s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/pose_chain/pose_chain.sdf
+[1.954s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/pose_collision
+[1.954s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/pose_collision/model.config
+[1.954s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/pose_collision/pose_collision.sdf
+[1.954s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/pose_collision_in_frame
+[1.955s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/pose_collision_in_frame/model.config
+[1.955s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/pose_collision_in_frame/pose_collision_in_frame.sdf
+[1.955s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/pose_inertial
+[1.955s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/pose_inertial/pose_inertial.sdf
+[1.955s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/pose_inertial/model.config
+[1.955s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/pose_inertial_in_frame
+[1.956s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/pose_inertial_in_frame/model.config
+[1.956s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/pose_inertial_in_frame/pose_inertial_in_frame.sdf
+[1.956s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/pose_joint
+[1.956s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/pose_joint/model.config
+[1.956s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/pose_joint/pose_joint.sdf
+[1.958s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/pose_joint_all
+[1.959s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/pose_joint_all/pose_joint_all.sdf
+[1.959s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/pose_joint_all/model.config
+[1.959s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/pose_joint_in_frame
+[1.959s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/pose_joint_in_frame/model.config
+[1.959s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/pose_joint_in_frame/pose_joint_in_frame.sdf
+[1.959s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/pose_link
+[1.959s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/pose_link/model.config
+[1.959s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/pose_link/pose_link.sdf
+[1.960s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/pose_link_all
+[1.960s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/pose_link_all/pose_link_all.sdf
+[1.960s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/pose_link_all/model.config
+[1.960s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/pose_link_in_frame
+[1.960s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/pose_link_in_frame/model.config
+[1.960s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/pose_link_in_frame/pose_link_in_frame.sdf
+[1.960s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/pose_model
+[1.960s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/pose_model/model.config
+[1.961s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/pose_model/pose_model.sdf
+[1.961s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/pose_visual
+[1.961s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/pose_visual/model.config
+[1.961s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/pose_visual/pose_visual.sdf
+[1.961s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/pose_visual_in_frame
+[1.961s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/pose_visual_in_frame/model.config
+[1.961s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/models/pose_visual_in_frame/pose_visual_in_frame.sdf
+[1.962s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/cmake/sdformat_test_filesConfig.cmake
+[1.962s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/cmake/sdformat_test_filesConfigVersion.cmake
+[1.962s] -- Installing: /home/jacobrod/worms_ws/install/sdformat_test_files/share/sdformat_test_files/cmake/sdformat_test_files_functions.cmake
+[1.963s] Invoked command in '/home/jacobrod/worms_ws/build/sdformat_test_files' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jacobrod/worms_ws/src/install/worms_mech:/home/jacobrod/worms_ws/install/worms_mech:/opt/ros/humble /usr/bin/cmake --install /home/jacobrod/worms_ws/build/sdformat_test_files
