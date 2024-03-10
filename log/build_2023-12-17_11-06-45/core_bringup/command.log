@@ -1,2 +1,0 @@
-Invoking command in '/home/jacobrod/worms_ws/build/core_bringup': /usr/bin/cmake /home/jacobrod/worms_ws/src/core_bringup -DCMAKE_INSTALL_PREFIX=/home/jacobrod/worms_ws/install/core_bringup
-Invoked command in '/home/jacobrod/worms_ws/build/core_bringup' returned '1': /usr/bin/cmake /home/jacobrod/worms_ws/src/core_bringup -DCMAKE_INSTALL_PREFIX=/home/jacobrod/worms_ws/install/core_bringup

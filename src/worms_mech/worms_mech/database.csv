@@ -1,7 +1,0 @@
-MAC Address,Species,Motor1_Direction,Motor2_Direction,Motor3_Direction
-dc:a6:32:c4:51:3b,Duck,-1,-1,1
-e4:5f:01:b2:da:b8,Frog,1,1,-1
-e4:5f:01:b2:ce:8b,Goat,1,1,-1
-e4:5f:01:b2:dd:b5,Lion,1,1,-1
-e4:5f:01:b2:db:3a,Pony,1,-1,1
-e4:5f:01:b2:dd:8c,Swan,-1,-1,-1

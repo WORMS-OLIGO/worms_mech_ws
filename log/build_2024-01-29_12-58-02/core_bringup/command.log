@@ -1,4 +1,0 @@
-Invoking command in '/home/jacobrod/worms_ws/build/core_bringup': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/jacobrod/worms_ws/src/core_bringup -DCMAKE_INSTALL_PREFIX=/home/jacobrod/worms_ws/install/core_bringup
-Invoked command in '/home/jacobrod/worms_ws/build/core_bringup' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/jacobrod/worms_ws/src/core_bringup -DCMAKE_INSTALL_PREFIX=/home/jacobrod/worms_ws/install/core_bringup
-Invoking command in '/home/jacobrod/worms_ws/build/core_bringup': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/jacobrod/worms_ws/build/core_bringup -- -j8 -l8
-Invoked command in '/home/jacobrod/worms_ws/build/core_bringup' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/jacobrod/worms_ws/build/core_bringup -- -j8 -l8

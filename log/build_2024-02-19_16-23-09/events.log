@@ -1,4 +1,0 @@
-[0.000000] (-) TimerEvent: {}
-[0.001793] (-) JobUnselected: {'identifier': 'image_tools'}
-[0.002043] (-) JobUnselected: {'identifier': 'worms_mech'}
-[0.002926] (-) EventReactorShutdown: {}
