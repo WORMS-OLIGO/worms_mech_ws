@@ -110,18 +110,24 @@ class QRScannerNode(Node):
 
         cap.release()
         cv2.destroyAllWindows()
+    
+    def on_shutdown(self):
+        self.get_logger().info("Disabling GPIO...")
+        lgpio.gpio_close(h)
+
+
 
 def main(args=None):
     rclpy.init(args=args)
     qr_scanner_node = QRScannerNode()
-
-
-    rclpy.spin(qr_scanner_node) # RUNS UNTIL CTRL C OR TERMINATED
-
-
+    try:
+        rclpy.spin(qr_scanner_node)
+    except KeyboardInterrupt:
+        pass
+    #THIS PART SHUTSDOWN THE BUZZER
+    qr_scanner_node.on_shutdown()
     qr_scanner_node.destroy_node()
-    
-    rclpy.shutdown()
+    rclpy.shutdown() 
 
 if __name__ == '__main__':
     main()
