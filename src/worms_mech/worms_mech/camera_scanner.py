@@ -16,9 +16,7 @@ import lgpio
 import pandas as pd
 import subprocess
 
-LED = 21
-h = lgpio.gpiochip_open(0)
-lgpio.gpio_claim_output(h, LED)
+
 
 
 def get_mac_address():
@@ -55,6 +53,10 @@ class QRScannerNode(Node):
             worm_id = worm_info['Species']
         else: 
             print("No WORM Detected")
+
+        LED = 21
+        h = lgpio.gpiochip_open(0)
+        lgpio.gpio_claim_output(h, LED)
 
         self.worm_heartbeat_topic = f'{worm_id}_heartbeat'
 
