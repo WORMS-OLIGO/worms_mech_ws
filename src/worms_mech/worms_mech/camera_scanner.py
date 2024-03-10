@@ -114,8 +114,13 @@ class QRScannerNode(Node):
 def main(args=None):
     rclpy.init(args=args)
     qr_scanner_node = QRScannerNode()
-    rclpy.spin(qr_scanner_node)
+
+
+    rclpy.spin(qr_scanner_node) # RUNS UNTIL CTRL C OR TERMINATED
+
+
     qr_scanner_node.destroy_node()
+    
     rclpy.shutdown()
 
 if __name__ == '__main__':
