@@ -40,7 +40,7 @@ def find_robot_info(mac_address, spreadsheet_path):
 class QRScannerNode(Node):
     def __init__(self):
         super().__init__('camera_scanner')
-
+        print("start of init")
         # Construct the path to the CSV file
         spreadsheet_path = os.path.expanduser('~/worms_mech_ws/src/worms_mech/worms_mech/database.csv')
 
