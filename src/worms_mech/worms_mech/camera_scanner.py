@@ -56,7 +56,6 @@ class QRScannerNode(Node):
         else: 
             print("No WORM Detected")
 
-        self.h = lgpio.gpiochip_close(0)
         self.LED = 21
         self.h = lgpio.gpiochip_open(0)
         lgpio.gpio_claim_output(self.h, self.LED)
