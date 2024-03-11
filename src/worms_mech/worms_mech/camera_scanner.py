@@ -87,7 +87,7 @@ class QRScannerNode(Node):
         self.cap = cv2.VideoCapture(0)  # Adjust '0' if necessary to match your camera
         
         while True:
-            _, frame = cap.read()
+            _, frame = self.cap.read()
             print("Checking for QR Code")
             decoded_objects = decode(frame)
             
