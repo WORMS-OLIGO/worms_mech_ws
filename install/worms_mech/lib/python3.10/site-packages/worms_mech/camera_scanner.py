@@ -38,9 +38,11 @@ def find_robot_info(mac_address, spreadsheet_path):
         return None
 
 class QRScannerNode(Node):
-    def __init__(self):
-        super().__init__('camera_scanner')
 
+    def __init__(self):
+
+        super().__init__('camera_scanner')
+       
         # Construct the path to the CSV file
         spreadsheet_path = os.path.expanduser('~/worms_mech_ws/src/worms_mech/worms_mech/database.csv')
 
@@ -54,10 +56,12 @@ class QRScannerNode(Node):
         else: 
             print("No WORM Detected")
 
+        self.h = lgpio.gpiochip_close(0)
         self.LED = 21
         self.h = lgpio.gpiochip_open(0)
         lgpio.gpio_claim_output(self.h, self.LED)
-        print("set up gpio")
+        
+        self.get_logger().info("GPIO INITIALIZED")
 
         self.worm_heartbeat_topic = f'{worm_id}_heartbeat'
 
@@ -68,13 +72,11 @@ class QRScannerNode(Node):
             10)
 
 
-
         self.subscription  # prevent unused variable warning
         self.bridge = CvBridge()
         self.qr_scanned = False
         self.Worm_heartbeat = "Disabled"
         
-        print("Running QR Code Function")
         self.scan_qr_code()
 
     def heartbeat_callback(self, msg):
@@ -82,11 +84,13 @@ class QRScannerNode(Node):
             self.scan_qr_code()
 
     def scan_qr_code(self):
-        print("Reading Video Feed")
-        cap = cv2.VideoCapture(0)  # Adjust '0' if necessary to match your camera
+        self.get_logger().info("Reading Video Feed")
+        self.cap = cv2.VideoCapture(0)  # Adjust '0' if necessary to match your camera
+        self.get_logger().info("Initialized Video Capture")
+
         while True:
-            _, frame = cap.read()
-            print("Checking for QR Code")
+            self.get_logger().info("Running Loop")
+            _, frame = self.cap.read()
             decoded_objects = decode(frame)
             
             for obj in decoded_objects:
@@ -111,25 +115,26 @@ class QRScannerNode(Node):
                 break
 
 
-        cap.release()
-        cv2.destroyAllWindows()
+        self.on_shutdown()
+        self.destroy_node()
     
     def on_shutdown(self):
         self.get_logger().info("Disabling GPIO...")
         lgpio.gpiochip_close(self.h)
+        self.cap.release()
 
 
 
-def main(args=None):camera
-    print("start of main")
+def main(args=None):
+
     rclpy.init(args=args)
     qr_scanner_node = QRScannerNode()
-    print("main created qr_scanner")
-    try:camera
+    try:
         rclpy.spin(qr_scanner_node)
     except KeyboardInterrupt:
         pass
     #THIS PART SHUTSDOWN THE BUZZER
+
     qr_scanner_node.on_shutdown()
     qr_scanner_node.destroy_node()
     rclpy.shutdown() 

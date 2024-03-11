@@ -16,6 +16,7 @@ def generate_launch_description():
             package='worms_mech',
             executable='hardware_interface',
             namespace="",
+            output="screen",
             name='hardware_interface',
             # Launch the node with root access (GPIO) in a shell
             prefix=["sudo -E env \"PYTHONPATH=$PYTHONPATH\" \"LD_LIBRARY_PATH=$LD_LIBRARY_PATH\" \"PATH=$PATH\" \"USER=$USER\"  bash -c "],
