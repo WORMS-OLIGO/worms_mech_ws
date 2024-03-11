@@ -121,7 +121,7 @@ class JointCommandPublisher(Node):
         
         self.execute_timer_callback = False
 
-        if self.species == "MOLE":
+        if self.species == "SEAL":
             self.joystick_callback()
 
 
