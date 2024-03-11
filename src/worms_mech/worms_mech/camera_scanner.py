@@ -16,7 +16,7 @@ import lgpio
 import pandas as pd
 import subprocess
 
-
+print("Before Initialization")
 
 
 def get_mac_address():
@@ -57,6 +57,7 @@ class QRScannerNode(Node):
         self.LED = 21
         self.h = lgpio.gpiochip_open(0)
         lgpio.gpio_claim_output(self.h, self.LED)
+        print("set up gpio")
 
         self.worm_heartbeat_topic = f'{worm_id}_heartbeat'
 
@@ -119,10 +120,12 @@ class QRScannerNode(Node):
 
 
 
-def main(args=None):
+def main(args=None):camera
+    print("start of main")
     rclpy.init(args=args)
     qr_scanner_node = QRScannerNode()
-    try:
+    print("main created qr_scanner")
+    try:camera
         rclpy.spin(qr_scanner_node)
     except KeyboardInterrupt:
         pass
