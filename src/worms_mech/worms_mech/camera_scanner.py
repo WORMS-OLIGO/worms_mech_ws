@@ -84,7 +84,7 @@ class QRScannerNode(Node):
 
     def scan_qr_code(self):
         self.get_logger().info("Reading Video Feed")
-        cap = cv2.VideoCapture(0)  # Adjust '0' if necessary to match your camera
+        self.cap = cv2.VideoCapture(0)  # Adjust '0' if necessary to match your camera
         
         while True:
             _, frame = cap.read()
@@ -113,13 +113,13 @@ class QRScannerNode(Node):
                 break
 
 
-        cap.release()
-        cv2.destroyAllWindows()
+        self.on_shutdown()
+        self.destroy_node()
     
     def on_shutdown(self):
         self.get_logger().info("Disabling GPIO...")
         lgpio.gpiochip_close(self.h)
-        cap.release()
+        self.cap.release()
 
 
 
