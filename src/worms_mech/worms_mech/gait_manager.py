@@ -111,18 +111,11 @@ class JointCommandPublisher(Node):
 
         self.state_subscriber = self.create_subscription(JointState, joint_states_topic, self.joint_state_callback, 10)
         self.action_subscriber = self.create_subscription(String, worm_action, self.actions_callback, 10)
-        self.joy_subscriber = self.create_subscription(
-            Joy,
-            '/joy',
-            self.joystick_callback,
-            10
-        )
+        
+        self.joy_subscriber = self.create_subscription(Joy, '/joy', self.joystick_callback, 10)
 
         
         self.execute_timer_callback = False
-
-        if self.species == "SEAL":
-            self.joystick_callback()
 
 
         # 1 = Robot moving forward with BEAR (Front Left) and BIRD (Front Right) in the direction of motion 
@@ -676,67 +669,60 @@ class JointCommandPublisher(Node):
 
     def joystick_callback(self, msg):
 
-        # Handle the incoming joystick messages here 
-        # ---------------------------------------------------------------------------------------
+        if self.species == "SEAL":
+            
+            # Handle the incoming joystick messages here 
+            # ---------------------------------------------------------------------------------------
 
-        # 1) Read in Joystick Messages and extract axis values
+            # 1) Read in Joystick Messages and extract axis values
 
-        self.current_motor_positions = self.current_pose  # Three motors
-        self.commanded_motor_velocity = [0, 0, 0]  # Three motors
-        self.commanded_motor_effort = [0, 0, 0]  # Three motors
+            self.current_motor_positions = self.current_pose  # Three motors
+            self.commanded_motor_velocity = [0, 0, 0]  # Three motors
+            self.commanded_motor_effort = [0, 0, 0]  # Three motors
 
-        if abs(msg.axes[6])>self.threshold:
-            if msg.axes[6]>0:
-                increment = 1
-                print("Positive Motion Triggered")
+            if abs(msg.axes[6])>self.threshold:
+                if msg.axes[6]>0:
+                    print("Positive Motion Triggered")
+                    self.commanded_motor_effort = [2, 0, 0]  # Three motors
+                    
+
+                else:
+                    increment = -1
+                    print("Negative Motion Triggered")                
+                    self.commanded_motor_effort = [-2, 0, 0]  # Three motors
+
+            if abs(msg.axes[3])>self.threshold:
+                if msg.axes[3]>0:
+
+                    print("Positive Motion Triggered")
+                    self.commanded_motor_effort = [0, 2, 0]  # Three motors
+                    
+
+                else:
+
+                    print("Negative Motion Triggered")
+                    self.commanded_motor_effort = [0, -2, 0]  # Three motors
+
+            if abs(msg.axes[2])>self.threshold:
+                if msg.axes[2]>0:
+
+                    print("Positive Motion Triggered")
+                    self.commanded_motor_effort = [0, 0, 2]  # Three motors
+                    
+
+                else:
+                    print("Negative Motion Triggered")    
+                    self.commanded_motor_effort = [0, 0, -2]  # Three motors
+
                 
-                self.commanded_motor_effort = [2, 0, 0]  # Three motors
-                
-
+            
             else:
-                increment = -1
-                print("Negative Motion Triggered")
-                self.current_motor_positions[0] += increment
-                
-                self.commanded_motor_effort = [-2, 0, 0]  # Three motors
+                print("Not Active")
 
-        if abs(msg.axes[3])>self.threshold:
-            if msg.axes[3]>0:
-                increment = 1
-                print("Positive Motion Triggered")
-                
-                self.commanded_motor_effort = [0, 2, 0]  # Three motors
-                
-
-            else:
-                increment = -1
-                print("Negative Motion Triggered")
-                self.current_motor_positions[0] += increment
-                
-                self.commanded_motor_effort = [0, -2, 0]  # Three motors
-
-        if abs(msg.axes[2])>self.threshold:
-            if msg.axes[2]>0:
-                increment = 1
-                print("Positive Motion Triggered")
-                
-                self.commanded_motor_effort = [0, 0, 2]  # Three motors
-                
-
-            else:
-                increment = -1
-                print("Negative Motion Triggered")
-                self.current_motor_positions[0] += increment
-                
-                self.commanded_motor_effort = [0, 0, -2]  # Three motors
-
-               
-        
-        else:
-            print("Not Active")
-
-        # After you assign all three values of joint positions Call this Line and the Robot will Move
-        self.publish_joint_command()
+            # After you assign all three values of joint positions Call this Line and the Robot will Move
+            self.publish_joint_command()
+    
+    
 
     
     def publish_joint_command(self):
