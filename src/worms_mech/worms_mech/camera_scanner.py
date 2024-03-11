@@ -112,6 +112,7 @@ class QRScannerNode(Node):
     def on_shutdown(self):
         self.get_logger().info("Disabling GPIO...")
         lgpio.gpiochip_close(self.h)
+        cv2.destroyAllWindows()
         self.cap.release()
         self.get_logger().info("Capture Released")
 
