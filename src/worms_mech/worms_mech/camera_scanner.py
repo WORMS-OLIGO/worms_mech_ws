@@ -124,7 +124,7 @@ class QRScannerNode(Node):
 
 
 def main(args=None):
-    self.get_logger().info("Start of Main")
+
     rclpy.init(args=args)
     qr_scanner_node = QRScannerNode()
     try:
@@ -133,7 +133,6 @@ def main(args=None):
         pass
     #THIS PART SHUTSDOWN THE BUZZER
 
-    self.get_logger().info("SHUTTING DOWN")
     qr_scanner_node.on_shutdown()
     qr_scanner_node.destroy_node()
     rclpy.shutdown() 
