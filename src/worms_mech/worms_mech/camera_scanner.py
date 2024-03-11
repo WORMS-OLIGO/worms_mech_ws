@@ -73,6 +73,10 @@ class QRScannerNode(Node):
         self.bridge = CvBridge()
         self.qr_scanned = False
         self.Worm_heartbeat = "Disabled"
+
+        self.get_logger().info("Reading Video Feed")
+        self.cap = cv2.VideoCapture(0)  # Adjust '0' if necessary to match your camera
+        self.get_logger().info("Initialized Video Capture")
         
         self.scan_qr_code()
 
@@ -81,9 +85,6 @@ class QRScannerNode(Node):
             self.scan_qr_code()
 
     def scan_qr_code(self):
-        self.get_logger().info("Reading Video Feed")
-        self.cap = cv2.VideoCapture(0)  # Adjust '0' if necessary to match your camera
-        self.get_logger().info("Initialized Video Capture")
 
         while True:
             self.get_logger().info("Running Loop")
@@ -106,15 +107,6 @@ class QRScannerNode(Node):
             if self.qr_scanned:
                 break
             cv2.imshow('Scan QR Code', frame)
-
-
-            if cv2.waitKey(1) & 0xFF == ord('q'):  # Press 'q' to quit the scanning loop
-                break
-
-
-        self.on_shutdown()
-        self.destroy_node()
-        rclpy.shutdown() 
 
     
     def on_shutdown(self):
