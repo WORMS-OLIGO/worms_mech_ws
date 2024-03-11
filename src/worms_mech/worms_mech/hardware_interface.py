@@ -40,6 +40,8 @@ class MotorControllerNode(Node):
 
         mac_address = get_mac_address()
 
+        print("CHANGE INACTED")
+
         worm_info = find_robot_info(mac_address, spreadsheet_path)
 
         # Check if worm_info is not None
