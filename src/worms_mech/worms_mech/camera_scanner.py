@@ -120,12 +120,11 @@ class QRScannerNode(Node):
 
 
 
-def main(args=None):camera
+def main(args=None):
     print("start of main")
     rclpy.init(args=args)
     qr_scanner_node = QRScannerNode()
-    print("main created qr_scanner")
-    try:camera
+    try:
         rclpy.spin(qr_scanner_node)
     except KeyboardInterrupt:
         pass
