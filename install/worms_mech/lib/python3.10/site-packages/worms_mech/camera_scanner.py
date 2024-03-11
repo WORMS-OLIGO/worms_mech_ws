@@ -7,8 +7,6 @@ from pyzbar.pyzbar import decode
 import os
 import time
 
-print("DO SOMETHING PLEASE")
-
 from std_msgs.msg import String
     
 import time
@@ -18,9 +16,7 @@ import lgpio
 import pandas as pd
 import subprocess
 
-LED = 21
-h = lgpio.gpiochip_open(0)
-lgpio.gpio_claim_output(h, LED)
+print("Before Initialization")
 
 
 def get_mac_address():
@@ -58,6 +54,11 @@ class QRScannerNode(Node):
         else: 
             print("No WORM Detected")
 
+        self.LED = 21
+        self.h = lgpio.gpiochip_open(0)
+        lgpio.gpio_claim_output(self.h, self.LED)
+        print("set up gpio")
+
         self.worm_heartbeat_topic = f'{worm_id}_heartbeat'
 
         self.subscription = self.create_subscription(
@@ -74,7 +75,6 @@ class QRScannerNode(Node):
         self.Worm_heartbeat = "Disabled"
         
         print("Running QR Code Function")
-
         self.scan_qr_code()
 
     def heartbeat_callback(self, msg):
@@ -90,17 +90,17 @@ class QRScannerNode(Node):
             decoded_objects = decode(frame)
             
             for obj in decoded_objects:
-                self.get_logger().info(f"QR Code detected: {obj.data.decode('utf-8')}")
-                path = '/home/worm7/worms_mech_ws/src/worms_mech/worms_mech/head.txt'
+                self.get_logger().info(f"QR Code detected: {obj.data.decode('utf-8').upper()}")
+                path = os.path.expanduser('~/worms_mech_ws/src/worms_mech/worms_mech/head.txt')
 
 
                 with open(path, "w") as file:
-                    file.write(obj.data.decode('utf-8'))
+                    file.write(obj.data.decode('utf-8').upper())
 
                 self.qr_scanned = True
-                lgpio.gpio_write(h, LED, 1)
+                lgpio.gpio_write(self.h, self.LED, 1)
                 time.sleep(0.5)
-                lgpio.gpio_write(h, LED, 0)
+                lgpio.gpio_write(self.h, self.LED, 0)
                 break
             if self.qr_scanned:
                 break
@@ -113,13 +113,26 @@ class QRScannerNode(Node):
 
         cap.release()
         cv2.destroyAllWindows()
+    
+    def on_shutdown(self):
+        self.get_logger().info("Disabling GPIO...")
+        lgpio.gpiochip_close(self.h)
 
-def main(args=None):
+
+
+def main(args=None):camera
+    print("start of main")
     rclpy.init(args=args)
     qr_scanner_node = QRScannerNode()
-    rclpy.spin(qr_scanner_node)
+    print("main created qr_scanner")
+    try:camera
+        rclpy.spin(qr_scanner_node)
+    except KeyboardInterrupt:
+        pass
+    #THIS PART SHUTSDOWN THE BUZZER
+    qr_scanner_node.on_shutdown()
     qr_scanner_node.destroy_node()
-    rclpy.shutdown()
+    rclpy.shutdown() 
 
 if __name__ == '__main__':
     main()

@@ -98,6 +98,7 @@ class JointCommandPublisher(Node):
 
         joint_commands_topic = f'/{worm_id}_joint_commands'
         joint_states_topic = f'/{worm_id}_joint_states'
+        coordination_topic = f'/{worm_id}_coordination'
         worm_action = 'actions'
 
         print("Sending Commands To: " + joint_commands_topic)
@@ -106,7 +107,7 @@ class JointCommandPublisher(Node):
 
         self.command_publisher = self.create_publisher(JointState, joint_commands_topic, 10)
 
-        self.coordination_publisher = self.create_publisher(String, "/coordination", 10)
+        self.coordination_publisher = self.create_publisher(String, coordination_topic, 10)
 
         self.state_subscriber = self.create_subscription(JointState, joint_states_topic, self.joint_state_callback, 10)
         self.action_subscriber = self.create_subscription(String, worm_action, self.actions_callback, 10)
@@ -119,12 +120,18 @@ class JointCommandPublisher(Node):
         # -1 = Robot Moving Backwards with BULL (Front Left) and BOAR (Front Right) leading in the direction of motion
         self.forward_mode = 1
 
+
+        # 0 Means that the system is not in turning mode
+        # 1 Means that the system is turning to the left (counter-clockwise)
+        # -1 Means that the system is turning to the right (clockwise)
+        self.turn_mode = 0
+
         
 
         # WAYPOINTS FOR EACH DISCRETE GAIT ACTION
         self.stand_step_waypoints = [
-            [0, 140, -120], # LIFTED LEG POSITION WHEN ON THE FLOOR
-            [20, 140, -120], # TAKING STEP WITH SHOE ELEVATED - 15 DEGREE MOTION
+            [0, 150, -120], # LIFTED LEG POSITION WHEN ON THE FLOOR
+            [20, 160, -120], # TAKING STEP WITH SHOE ELEVATED - 15 DEGREE MOTION
             [20, 135, -120]  # BRING SHOE DOWN WHEN ON FLOOR
         ]
 
@@ -141,11 +148,146 @@ class JointCommandPublisher(Node):
         ]
 
         self.stand_minimal_motion_waypoints = [
-            [10, 10, 10]  
+            [0, 20, 20]  
         ]
 
         self.stand_propel_waypoints = [
-            [0, -45, -35]
+            [0, 45, -35]
+        ]
+
+        self.stand_init_left_turn_waypoints = [
+            [0, 150, -120],  #GO PRONE
+            [0, 170, -120],  #LIFT LEG FOR STEP
+            [20, 170, -120], #LIFT MOVE LEG FOR STEP
+            [20, 45, -35],  #MOVE LEG DOWN TO STAND
+            [0, 45, -35],   #TURN HIPS FOR PALLET TO TURN
+            [0, 150, -120]  #RETURN TO PRONE
+        ]
+
+        self.stand_init_right_turn_waypoints = [
+            [0, 150, -120],  #GO PRONE
+            [0, 170, -120],  #LIFT LEG FOR STEP
+            [-20, 170, -120], #LIFT MOVE LEG FOR STEP
+            [-20, 45, -35],  #MOVE LEG DOWN TO STAND
+            [0, 45, -35],   #TURN HIPS FOR PALLET TO TURN
+            [0, 150, -120]  #RETURN TO PRONE
+        ]
+
+
+        self.stand_forward_gait = [
+            [0, 150, -120],
+            [20, 160, -120],
+            [20, 135, -120],
+            [20, 45, -35],
+            [0, 45, -35],
+            [0, 150, -120],
+            [20, 160, -120],
+            [20, 135, -120],
+            [20, 45, -35],
+            [0, 45, -35],
+            [0, 150, -120],
+            [20, 160, -120],
+            [20, 135, -120],
+            [20, 45, -35],
+            [0, 45, -35],
+            [0, 150, -120],
+            [20, 160, -120],
+            [20, 135, -120],
+            [20, 45, -35],
+            [0, 45, -35],
+            [0, 150, -120]
+        ]
+
+        self.stand_reverse_gait = [
+            [0, 150, -120],
+            [-20, 160, -120],
+            [-20, 135, -120],
+            [-20, 45, -35],
+            [0, 45, -35],
+            [0, 150, -120],
+            [-20, 160, -120],
+            [-20, 135, -120],
+            [-20, 45, -35],
+            [0, 45, -35],
+            [0, 150, -120],
+            [-20, 160, -120],
+            [-20, 135, -120],
+            [-20, 45, -35],
+            [0, 45, -35],
+            [0, 150, -120],
+            [-20, 160, -120],
+            [-20, 135, -120],
+            [-20, 45, -35],
+            [0, 45, -35],
+            [0, 150, -120]
+        ]
+
+        self.stand_forward_reverse_gait = [
+
+            [0, 150, -120],
+            [20, 160, -120],
+            [20, 135, -120],
+            [20, 45, -35],
+            [0, 45, -35],
+            [0, 150, -120],
+            [20, 160, -120],
+            [20, 135, -120],
+            [20, 45, -35],
+            [0, 45, -35],
+            [0, 150, -120],
+            [20, 160, -120],
+            [20, 135, -120],
+            [20, 45, -35],
+            [0, 45, -35],
+            [0, 150, -120],
+            [20, 160, -120],
+            [20, 135, -120],
+            [20, 45, -35],
+            [0, 45, -35],
+            [0, 150, -120],
+            [0, 150, -120],
+            [-20, 160, -120],
+            [-20, 135, -120],
+            [-20, 45, -35],
+            [0, 45, -35],
+            [0, 150, -120],
+            [-20, 160, -120],
+            [-20, 135, -120],
+            [-20, 45, -35],
+            [0, 45, -35],
+            [0, 150, -120],
+            [-20, 160, -120],
+            [-20, 135, -120],
+            [-20, 45, -35],
+            [0, 45, -35],
+            [0, 150, -120],
+            [-20, 160, -120],
+            [-20, 135, -120],
+            [-20, 45, -35],
+            [0, 45, -35],
+            [0, 150, -120],
+            [0, 150, -120],
+            [20, 160, -120],
+            [20, 135, -120],
+            [20, 45, -35],
+            [0, 45, -35],
+            [0, 150, -120],
+            [20, 160, -120],
+            [20, 135, -120],
+            [20, 45, -35],
+            [0, 45, -35],
+            [0, 150, -120],
+            [20, 160, -120],
+            [20, 135, -120],
+            [20, 45, -35],
+            [0, 45, -35],
+            [0, 150, -120],
+            [20, 160, -120],
+            [20, 135, -120],
+            [20, 45, -35],
+            [0, 45, -35],
+            [0, 150, -120]
+
         ]
 
 
@@ -160,9 +302,98 @@ class JointCommandPublisher(Node):
             [0, 0, 0]
         ]
 
-        self.field_stand_waypoints = [
-            [20, -195, 85]
+        self.field_init_stand_waypoints = [
+            [0, -45, 45],
+            [0, -65, 65],
+            [0, 0, 0]
         ]
+
+        self.field_init_step_waypoints = [
+            [0, 40, 0],
+            [20, 40, 0],
+            [20, 0, 0],
+            [20, -45, 45],
+            [20, -65, 65],
+            [0, -65, 65],
+            [0, 0, 0]
+        ]
+
+        self.field_init_left_turn_waypoints = [
+            [0, 40, 0],
+            [20, 40, 0],
+            [20, 0, 0],
+            [20, -45, 45],
+            [20, -65, 65],
+            [0, -65, 65],
+            [0, 0, 0]
+        ]
+
+        self.field_init_right_turn_waypoints = [
+            [0, 40, 0],
+            [20, 40, 0],
+            [20, 0, 0],
+            [20, -45, 45],
+            [20, -65, 65],
+            [0, -65, 65],
+            [0, 0, 0]
+        ]
+
+        self.field_init_reverse_step_waypoints = [
+            [0, 40, 0],
+            [-20, 40, 0],
+            [-20, 0, 0],
+            [-20, -45, 45],
+            [-20, -65, 65],
+            [0, -65, 65],
+            [0, 0, 0]
+        ]
+
+        self.field_init_forward_reverse_waypoints = [
+            [0, 40, 0],
+            [20, 40, 0],
+            [20, 0, 0],
+            [20, -45, 45],
+            [20, -65, 65],
+            [0, -65, 65],
+            [0, 0, 0],
+            [0, 40, 0],
+            [20, 40, 0],
+            [20, 0, 0],
+            [20, -45, 45],
+            [20, -65, 65],
+            [0, -65, 65],
+            [0, 0, 0],
+            [0, 40, 0],
+            [20, 40, 0],
+            [20, 0, 0],
+            [20, -45, 45],
+            [20, -65, 65],
+            [0, -65, 65],
+            [0, 0, 0],
+            [0, 40, 0],
+            [-20, 40, 0],
+            [-20, 0, 0],
+            [-20, -45, 45],
+            [-20, -65, 65],
+            [0, -65, 65],
+            [0, 0, 0],
+            [0, 40, 0],
+            [-20, 40, 0],
+            [-20, 0, 0],
+            [-20, -45, 45],
+            [-20, -65, 65],
+            [0, -65, 65],
+            [0, 0, 0],
+            [0, 40, 0],
+            [-20, 40, 0],
+            [-20, 0, 0],
+            [-20, -45, 45],
+            [-20, -65, 65],
+            [0, -65, 65],
+            [0, 0, 0]
+        ]
+
+        
 
         self.field_test_gait_waypoints = [
             [20, -10, 30],
@@ -244,7 +475,19 @@ class JointCommandPublisher(Node):
                 self.get_logger().info(f"Publishing command: {self.position_command}")
 
                 # POSITION_COMMAND[0] IS GETTING SENT TO HIP
-                self.position_command[0] *= self.motor1_side_orientation * self.forward_mode    #Only sending to the head in this specific 4 legged walker configuration
+
+                # IF TURN MODE IS ON LEFT TURN MODE AND THE CURRENT WORM IS ON THE LEFT SIDE, MAKE IT GO THE OPPOSITE DIRECTION OF THE RIGHT SIDE
+                if(self.turn_mode == 1 and (self.species == "BEAR" or self.species == "BOAR")):
+                    self.position_command[0] *= self.motor1_side_orientation * self.forward_mode * -1  #Only sending to the head in this specific 4 legged walker configuration
+                
+                # IF TURN MODE IS ON RIGHT TURN MODE AND THE CURRENT WORM IS ON THE RIGHT SIDE, MAKE IT GO THE OPPOSITE DIRECTION OF THE LEFT SIDE
+                elif(self.turn_mode == -1 and (self.species == "BIRD" or self.species == "BULL")):
+                    self.position_command[0] *= self.motor1_side_orientation * self.forward_mode * -1  #Only sending to the head in this specific 4 legged walker configuration
+
+                # IF TURN MODE IS ON 0 WE ARE IN STRAIGHT LOCOMOTION MODE AND THE WORMS SHOULD BE AT THEIR DEFAULT HIP DIRECTION DICTATED BY SIDE
+                else:
+                    self.position_command[0] *= self.motor1_side_orientation * self.forward_mode
+
                 self.position_command[1] *= self.motor2_side_orientation
                 self.position_command[2] *= self.motor3_side_orientation
 
@@ -314,10 +557,42 @@ class JointCommandPublisher(Node):
             self.action = "stand_minimal_test"
             self.execute_timer_callback = True
 
+        if msg.data == "stand_left_turn":
+            # Interpolate Positions from Current Position to Start of the Desired Action
+            self.interpolated_positions = self.interpolate_waypoints(self.stand_init_left_turn_waypoints)
+            self.action = "stand_left_turn"
+            self.turn_mode = 1  # 1 IS LEFT TURN MODE (COUNTERCLOCKWISE)
+            self.execute_timer_callback = True
+
+        if msg.data == "stand_right_turn":
+            # Interpolate Positions from Current Position to Start of the Desired Action
+            self.interpolated_positions = self.interpolate_waypoints(self.stand_init_right_turn_waypoints)
+            self.action = "stand_right_turn"
+            self.turn_mode = -1  # -1 IS RIGHT TURN MODE (CLOCKWISE)
+            self.execute_timer_callback = True
+
         if msg.data == "stand_propel":
             # Interpolate Positions from Current Position to Start of the Desired Action
             self.interpolated_positions = self.interpolate_waypoints(self.stand_propel_waypoints)
             self.action = "stand_propel"
+            self.execute_timer_callback = True
+
+        if msg.data == "stand_forward_gait":
+            # Interpolate Positions from Current Position to Start of the Desired Action
+            self.interpolated_positions = self.interpolate_waypoints(self.stand_forward_gait)
+            self.action = "stand_forward_gait"
+            self.execute_timer_callback = True
+
+        if msg.data == "stand_reverse_gait":
+            # Interpolate Positions from Current Position to Start of the Desired Action
+            self.interpolated_positions = self.interpolate_waypoints(self.stand_reverse_gait)
+            self.action = "stand_reverse_gait"
+            self.execute_timer_callback = True
+
+        if msg.data == "stand_forward_reverse_gait":
+            # Interpolate Positions from Current Position to Start of the Desired Action
+            self.interpolated_positions = self.interpolate_waypoints(self.stand_forward_reverse_gait)
+            self.action = "stand_forward_reverse_gait"
             self.execute_timer_callback = True
 
         #=============================================================
@@ -350,6 +625,30 @@ class JointCommandPublisher(Node):
             # Interpolate Positions from Current Position to Start of the Desired Action
             self.interpolated_positions = self.interpolate_waypoints(self.field_propel_waypoints)
             self.action = "field_propel"
+            self.execute_timer_callback = True
+
+        if msg.data == "field_init_stand":
+            # Interpolate Positions from Current Position to Start of the Desired Action
+            self.interpolated_positions = self.interpolate_waypoints(self.field_init_stand_waypoints)
+            self.action = "field_init_stand"
+            self.execute_timer_callback = True
+
+        if msg.data == "field_init_step":
+            # Interpolate Positions from Current Position to Start of the Desired Action
+            self.interpolated_positions = self.interpolate_waypoints(self.field_init_step_waypoints)
+            self.action = "field_init_step"
+            self.execute_timer_callback = True
+
+        if msg.data == "field_init_reverse_step":
+            # Interpolate Positions from Current Position to Start of the Desired Action
+            self.interpolated_positions = self.interpolate_waypoints(self.field_init_reverse_step_waypoints)
+            self.action = "field_init_reverse_step"
+            self.execute_timer_callback = True
+
+        if msg.data == "field_init_forward_reverse":
+            # Interpolate Positions from Current Position to Start of the Desired Action
+            self.interpolated_positions = self.interpolate_waypoints(self.field_init_forward_reverse_waypoints)
+            self.action = "field_init_forward_reverse"
             self.execute_timer_callback = True
 
             

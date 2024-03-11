@@ -38,9 +38,11 @@ def find_robot_info(mac_address, spreadsheet_path):
         return None
 
 class QRScannerNode(Node):
+
     def __init__(self):
+
         super().__init__('camera_scanner')
-        print("start of init")
+       
         # Construct the path to the CSV file
         spreadsheet_path = os.path.expanduser('~/worms_mech_ws/src/worms_mech/worms_mech/database.csv')
 
@@ -57,7 +59,8 @@ class QRScannerNode(Node):
         self.LED = 21
         self.h = lgpio.gpiochip_open(0)
         lgpio.gpio_claim_output(self.h, self.LED)
-        print("set up gpio")
+        
+        self.get_logger().info("GPIO INITIALIZED")
 
         self.worm_heartbeat_topic = f'{worm_id}_heartbeat'
 
@@ -68,13 +71,11 @@ class QRScannerNode(Node):
             10)
 
 
-
         self.subscription  # prevent unused variable warning
         self.bridge = CvBridge()
         self.qr_scanned = False
         self.Worm_heartbeat = "Disabled"
         
-        print("Running QR Code Function")
         self.scan_qr_code()
 
     def heartbeat_callback(self, msg):
@@ -82,8 +83,9 @@ class QRScannerNode(Node):
             self.scan_qr_code()
 
     def scan_qr_code(self):
-        print("Reading Video Feed")
+        self.get_logger().info("Reading Video Feed")
         cap = cv2.VideoCapture(0)  # Adjust '0' if necessary to match your camera
+        
         while True:
             _, frame = cap.read()
             print("Checking for QR Code")
@@ -117,11 +119,12 @@ class QRScannerNode(Node):
     def on_shutdown(self):
         self.get_logger().info("Disabling GPIO...")
         lgpio.gpiochip_close(self.h)
+        cap.release()
 
 
 
 def main(args=None):
-    print("start of main")
+    self.get_logger().info("Start of Main")
     rclpy.init(args=args)
     qr_scanner_node = QRScannerNode()
     try:
@@ -129,6 +132,8 @@ def main(args=None):
     except KeyboardInterrupt:
         pass
     #THIS PART SHUTSDOWN THE BUZZER
+
+    self.get_logger().info("SHUTTING DOWN")
     qr_scanner_node.on_shutdown()
     qr_scanner_node.destroy_node()
     rclpy.shutdown() 
