@@ -16,8 +16,6 @@ import lgpio
 import pandas as pd
 import subprocess
 
-print("Before Initialization")
-
 
 def get_mac_address():
     
@@ -116,11 +114,15 @@ class QRScannerNode(Node):
 
         self.on_shutdown()
         self.destroy_node()
+        rclpy.shutdown() 
+
     
     def on_shutdown(self):
         self.get_logger().info("Disabling GPIO...")
         lgpio.gpiochip_close(self.h)
         self.cap.release()
+        self.get_logger().info("Capture Released")
+
 
 
 
