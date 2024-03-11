@@ -56,6 +56,7 @@ class QRScannerNode(Node):
         else: 
             print("No WORM Detected")
 
+        self.h = lgpio.gpioclose_open(0)
         self.LED = 21
         self.h = lgpio.gpiochip_open(0)
         lgpio.gpio_claim_output(self.h, self.LED)
@@ -90,7 +91,6 @@ class QRScannerNode(Node):
         while True:
             self.get_logger().info("Running Loop")
             _, frame = self.cap.read()
-            print("Checking for QR Code")
             decoded_objects = decode(frame)
             
             for obj in decoded_objects:
