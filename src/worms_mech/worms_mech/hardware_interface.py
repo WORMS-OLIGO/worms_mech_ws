@@ -114,8 +114,8 @@ class MotorControllerNode(Node):
         
         # Assuming the JointState message will have as many entries as there are motors
         for idx, (motor_id, motor_controller) in enumerate(self.motor_controller_dict.items()):
-            # Assuming Kp and Kd as constants for this example
-            Kp = 50
+            # Assuming Kp and Kd as constants for this example original 35
+            Kp = 100
             Kd = 2
 
             joint_state_msg = JointState()
