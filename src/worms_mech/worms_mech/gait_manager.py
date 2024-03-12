@@ -119,6 +119,8 @@ class JointCommandPublisher(Node):
 
         self.threshold = .3
 
+        self.increment = 1
+
 
         # 1 = Robot moving forward with BEAR (Front Left) and BIRD (Front Right) in the direction of motion 
         # -1 = Robot Moving Backwards with BULL (Front Left) and BOAR (Front Right) leading in the direction of motion
@@ -685,36 +687,41 @@ class JointCommandPublisher(Node):
             if abs(msg.axes[0])>self.threshold:
                 if msg.axes[0]>0:
                     print("Positive Motion Triggered")
-                    self.commanded_motor_effort = [2, 0, 0]  # Three motors
+                    self.current_motor_positions[0] += 1
+                   # self.commanded_motor_effort = [2, 0, 0]  # Three motors
                     
 
                 else:
                     increment = -1
-                    print("Negative Motion Triggered")                
-                    self.commanded_motor_effort = [-2, 0, 0]  # Three motors
+                    print("Negative Motion Triggered")    
+                    self.current_motor_positions[0] -= 1            
+                    #self.commanded_motor_effort = [-2, 0, 0]  # Three motors
 
             if abs(msg.axes[3])>self.threshold:
                 if msg.axes[3]>0:
-
+                    self.current_motor_positions[1] += 1
                     print("Positive Motion Triggered")
-                    self.commanded_motor_effort = [0, 2, 0]  # Three motors
+                    #self.commanded_motor_effort = [0, 2, 0]  # Three motors
                     
 
                 else:
 
                     print("Negative Motion Triggered")
-                    self.commanded_motor_effort = [0, -2, 0]  # Three motors
+                    self.current_motor_positions[1] -= 1
+                    #self.commanded_motor_effort = [0, -2, 0]  # Three motors
 
             if abs(msg.axes[4])>self.threshold:
                 if msg.axes[4]>0:
 
                     print("Positive Motion Triggered")
-                    self.commanded_motor_effort = [0, 0, 2]  # Three motors
+                    self.current_motor_positions[2] += 1
+                    #self.commanded_motor_effort = [0, 0, 2]  # Three motors
                     
 
                 else:
                     print("Negative Motion Triggered")    
-                    self.commanded_motor_effort = [0, 0, -2]  # Three motors
+                    self.current_motor_positions[2] -= 1
+                    #self.commanded_motor_effort = [0, 0, -2]  # Three motors
 
                 
             
