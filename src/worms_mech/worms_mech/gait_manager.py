@@ -469,7 +469,10 @@ class JointCommandPublisher(Node):
 
         # Flag thats set to true when the worm receives some action command (ex: step, prone, walk etc.)
         print(self.execute_timer_callback)
+
         if self.execute_timer_callback:
+
+            print("Entered Timer Loop")
 
             msg.data = "in_progress"
             
@@ -521,6 +524,8 @@ class JointCommandPublisher(Node):
                 joint_state_msg.position = self.position_command
                 joint_state_msg.velocity = [0.0, 0.0, 0.0]  # Ensuring these are also floats
                 joint_state_msg.effort = [0.0, 0.0, 0.0]
+
+                print(self.execute_timer_callback)
                 
                 if hasattr(self, 'current_pose') and self.current_pose is not None:
                     position_str = ', '.join([f"{p:.2f}" for p in self.current_pose.position])
@@ -528,12 +533,15 @@ class JointCommandPublisher(Node):
 
                 self.command_publisher.publish(joint_state_msg)
         
-            
+        else:
+            print("Timer Executor Not Found")    
 
         self.coordination_publisher.publish(msg)
             
 
     def actions_callback(self, msg):
+
+
         if msg.data == "stand_step":
             # Interpolate Positions from Current Position to Start of the Desired Action
             self.interpolated_positions = self.interpolate_waypoints(self.stand_step_waypoints)
@@ -729,7 +737,7 @@ class JointCommandPublisher(Node):
                 
             
             else:
-                print("Not Active")
+                print("Joystick Not Active")
 
             # After you assign all three values of joint positions Call this Line and the Robot will Move
             self.publish_joint_command()
