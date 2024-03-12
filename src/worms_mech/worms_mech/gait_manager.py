@@ -701,37 +701,36 @@ class JointCommandPublisher(Node):
 
                 if msg.axes[0]>0:
                     print("Positive Motion Triggered")
-                    self.motor1_command += 5
+                    self.motor1_command = self.current_position[0] + 1
                    # self.commanded_motor_effort = [2, 0, 0]  # Three motors
                     
                 else:
                     print("Negative Motion Triggered") 
-                    self.motor1_command -= 5   
+                    self.motor1_command = self.current_position[0] - 1   
                     #self.commanded_motor_effort = [-2, 0, 0]  # Three motors
 
             elif abs(msg.axes[3])>self.threshold:
-                
                 if msg.axes[3]>0:
-                    self.motor2_command += 5
+                    self.motor2_command = self.current_position[1] + 1
                     print("Positive Motion Triggered")
                     #self.commanded_motor_effort = [0, 2, 0]  # Three motors
                     
                 else:
                     print("Negative Motion Triggered")
-                    self.motor2_command -= 5
+                    self.motor2_command = self.current_position[1] - 1
                     #self.commanded_motor_effort = [0, -2, 0]  # Three motors
 
             elif abs(msg.axes[4])>self.threshold:
                 if msg.axes[4]>0:
 
                     print("Positive Motion Triggered")
-                    self.motor3_command += 5
+                    self.motor3_command = self.current_position[2] + 1
                     #self.commanded_motor_effort = [0, 0, 2]  # Three motors
                     
 
                 else:
                     print("Negative Motion Triggered") 
-                    self.motor3_command -= 5
+                    self.motor3_command = self.current_position[2] - 5
    
         
                     #self.commanded_motor_effort = [0, 0, -2]  # Three motors
