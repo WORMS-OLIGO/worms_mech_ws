@@ -1,6 +1,6 @@
 import rclpy
 from rclpy.node import Node
-from sensor_msgs.msg import JointState
+from sensor_msgs.msg import JointState, Joy
 from std_msgs.msg import String
 from rclpy.executors import MultiThreadedExecutor
 import numpy as np
@@ -111,6 +111,8 @@ class JointCommandPublisher(Node):
 
         self.state_subscriber = self.create_subscription(JointState, joint_states_topic, self.joint_state_callback, 10)
         self.action_subscriber = self.create_subscription(String, worm_action, self.actions_callback, 10)
+        
+        self.joy_subscriber = self.create_subscription(Joy, '/joy', self.joystick_callback, 10)
 
         
         self.execute_timer_callback = False
@@ -663,17 +665,95 @@ class JointCommandPublisher(Node):
             self.forward_mode = 1
             self.execute_timer_callback = True
 
-def main(args=None):
+    
+
+    def joystick_callback(self, msg):
+
+        if self.species == "SEAL":
+            
+            # Handle the incoming joystick messages here 
+            # ---------------------------------------------------------------------------------------
+
+            # 1) Read in Joystick Messages and extract axis values
+
+            self.current_motor_positions = self.current_pose  # Three motors
+            self.commanded_motor_velocity = [0, 0, 0]  # Three motors
+            self.commanded_motor_effort = [0, 0, 0]  # Three motors
+
+            if abs(msg.axes[0])>self.threshold:
+                if msg.axes[0]>0:
+                    print("Positive Motion Triggered")
+                    self.commanded_motor_effort = [2, 0, 0]  # Three motors
+                    
+
+                else:
+                    increment = -1
+                    print("Negative Motion Triggered")                
+                    self.commanded_motor_effort = [-2, 0, 0]  # Three motors
+
+            if abs(msg.axes[3])>self.threshold:
+                if msg.axes[3]>0:
+
+                    print("Positive Motion Triggered")
+                    self.commanded_motor_effort = [0, 2, 0]  # Three motors
+                    
+
+                else:
+
+                    print("Negative Motion Triggered")
+                    self.commanded_motor_effort = [0, -2, 0]  # Three motors
+
+            if abs(msg.axes[4])>self.threshold:
+                if msg.axes[4]>0:
+
+                    print("Positive Motion Triggered")
+                    self.commanded_motor_effort = [0, 0, 2]  # Three motors
+                    
+
+                else:
+                    print("Negative Motion Triggered")    
+                    self.commanded_motor_effort = [0, 0, -2]  # Three motors
+
+                
+            
+            else:
+                print("Not Active")
+
+            # After you assign all three values of joint positions Call this Line and the Robot will Move
+            self.publish_joint_command()
+    
+    
+
+    
+    def publish_joint_command(self):
+
+        command = {'position': self.current_motor_positions, 'velocity': [0, 0, 0], 'effort': self.commanded_motor_effort}
+
+        # Logging for debugging
+        self.get_logger().info(f"Publishing command: {command}")
+
+        # Ensure values are float
+        position_command = [float(pos) for pos in command['position']]
+        velocity_command = [float(vel) for vel in command['velocity']]
+        effort_command = [float(eff) for eff in command['effort']]
+
+        # Create and publish JointState message
+        joint_state_msg = JointState()
+        joint_state_msg.header.stamp = self.get_clock().now().to_msg()
+        joint_state_msg.position = position_command
+        joint_state_msg.velocity = velocity_command
+        joint_state_msg.effort = effort_command
+        self.command_publisher.publish(joint_state_msg)
+
+
+def main(self, args=None):
     rclpy.init(args=args)
     joint_command_publisher = JointCommandPublisher()
     
     rclpy.spin(joint_command_publisher)
-
 
     joint_command_publisher.destroy_node()
     rclpy.shutdown()
 
 if __name__ == '__main__':
     main()
-
-
