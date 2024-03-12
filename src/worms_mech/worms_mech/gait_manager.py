@@ -117,6 +117,8 @@ class JointCommandPublisher(Node):
         
         self.execute_timer_callback = False
 
+        self.threshold = .3
+
 
         # 1 = Robot moving forward with BEAR (Front Left) and BIRD (Front Right) in the direction of motion 
         # -1 = Robot Moving Backwards with BULL (Front Left) and BOAR (Front Right) leading in the direction of motion
