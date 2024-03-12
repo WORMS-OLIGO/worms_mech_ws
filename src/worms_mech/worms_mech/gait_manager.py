@@ -746,7 +746,7 @@ class JointCommandPublisher(Node):
         self.command_publisher.publish(joint_state_msg)
 
 
-def main(self, args=None):
+def main(args=None):
     rclpy.init(args=args)
     joint_command_publisher = JointCommandPublisher()
     
