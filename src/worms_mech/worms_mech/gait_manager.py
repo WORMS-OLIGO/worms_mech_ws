@@ -680,8 +680,8 @@ class JointCommandPublisher(Node):
             self.commanded_motor_velocity = [0, 0, 0]  # Three motors
             self.commanded_motor_effort = [0, 0, 0]  # Three motors
 
-            if abs(msg.axes[6])>self.threshold:
-                if msg.axes[6]>0:
+            if abs(msg.axes[0])>self.threshold:
+                if msg.axes[0]>0:
                     print("Positive Motion Triggered")
                     self.commanded_motor_effort = [2, 0, 0]  # Three motors
                     
@@ -703,8 +703,8 @@ class JointCommandPublisher(Node):
                     print("Negative Motion Triggered")
                     self.commanded_motor_effort = [0, -2, 0]  # Three motors
 
-            if abs(msg.axes[2])>self.threshold:
-                if msg.axes[2]>0:
+            if abs(msg.axes[4])>self.threshold:
+                if msg.axes[4]>0:
 
                     print("Positive Motion Triggered")
                     self.commanded_motor_effort = [0, 0, 2]  # Three motors
