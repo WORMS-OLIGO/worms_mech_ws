@@ -688,7 +688,7 @@ class JointCommandPublisher(Node):
             # 1) Read in Joystick Messages and extract axis values
 
 
-            self.commanded_motor_positions = self.current_position  # Three motors
+            # Three motors
             self.commanded_motor_velocity = [0, 0, 0]  # Three motors
             self.commanded_motor_effort = [0, 0, 0]  # Three motors
 
