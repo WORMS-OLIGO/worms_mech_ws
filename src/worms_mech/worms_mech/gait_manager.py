@@ -731,7 +731,7 @@ class JointCommandPublisher(Node):
                     
                     self.motor3_command = self.current_position[2] - 1
    
-                    self.current_motor_positions[2] -= 1
+        
                     #self.commanded_motor_effort = [0, 0, -2]  # Three motors
             
             else:
@@ -745,12 +745,14 @@ class JointCommandPublisher(Node):
             command = {'position': self.commanded_motor_positions, 'velocity': [0, 0, 0], 'effort': self.commanded_motor_effort}
 
             # Logging for debugging
-            self.get_logger().info(f"Publishing command: {command}")
+            
 
             # Ensure values are float
             position_command = [float(pos) for pos in command['position']]
             velocity_command = [float(vel) for vel in command['velocity']]
             effort_command = [float(eff) for eff in command['effort']]
+
+            self.get_logger().info(f"Publishing command: {position_command}")
 
             # Create and publish JointState message
             joint_state_msg = JointState()
