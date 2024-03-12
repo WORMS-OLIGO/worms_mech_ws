@@ -1,0 +1,40 @@
+[0.538s] Invoking command in '/home/oligo/worms_mech_ws/src/worms_mech': PYTHONPATH=/home/oligo/worms_mech_ws/build/worms_mech/prefix_override:/home/oligo/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/worms_mech build --build-base /home/oligo/worms_mech_ws/build/worms_mech/build install --record /home/oligo/worms_mech_ws/build/worms_mech/install.log --single-version-externally-managed
+[0.648s] running egg_info
+[0.648s] writing ../../build/worms_mech/worms_mech.egg-info/PKG-INFO
+[0.650s] writing dependency_links to ../../build/worms_mech/worms_mech.egg-info/dependency_links.txt
+[0.650s] writing entry points to ../../build/worms_mech/worms_mech.egg-info/entry_points.txt
+[0.650s] writing requirements to ../../build/worms_mech/worms_mech.egg-info/requires.txt
+[0.650s] writing top-level names to ../../build/worms_mech/worms_mech.egg-info/top_level.txt
+[0.652s] reading manifest file '../../build/worms_mech/worms_mech.egg-info/SOURCES.txt'
+[0.653s] writing manifest file '../../build/worms_mech/worms_mech.egg-info/SOURCES.txt'
+[0.653s] running build
+[0.653s] running build_py
+[0.653s] copying worms_mech/hardware_interface.py -> /home/oligo/worms_mech_ws/build/worms_mech/build/lib/worms_mech
+[0.654s] copying worms_mech/camera_scanner.py -> /home/oligo/worms_mech_ws/build/worms_mech/build/lib/worms_mech
+[0.655s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[0.655s]   warnings.warn(
+[0.655s] running install
+[0.655s] running install_lib
+[0.656s] copying /home/oligo/worms_mech_ws/build/worms_mech/build/lib/worms_mech/hardware_interface.py -> /home/oligo/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages/worms_mech
+[0.656s] copying /home/oligo/worms_mech_ws/build/worms_mech/build/lib/worms_mech/camera_scanner.py -> /home/oligo/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages/worms_mech
+[0.657s] byte-compiling /home/oligo/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages/worms_mech/hardware_interface.py to hardware_interface.cpython-310.pyc
+[0.658s] byte-compiling /home/oligo/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages/worms_mech/camera_scanner.py to camera_scanner.cpython-310.pyc
+[0.658s] running install_data
+[0.659s] running install_egg_info
+[0.660s] removing '/home/oligo/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages/worms_mech-0.0.0-py3.10.egg-info' (and everything under it)
+[0.660s] Copying ../../build/worms_mech/worms_mech.egg-info to /home/oligo/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages/worms_mech-0.0.0-py3.10.egg-info
+[0.660s] running install_scripts
+[0.672s] Installing camera_scanner script to /home/oligo/worms_mech_ws/install/worms_mech/lib/worms_mech
+[0.673s] Installing controller_node script to /home/oligo/worms_mech_ws/install/worms_mech/lib/worms_mech
+[0.673s] Installing gait_action_node script to /home/oligo/worms_mech_ws/install/worms_mech/lib/worms_mech
+[0.673s] Installing gait_manager script to /home/oligo/worms_mech_ws/install/worms_mech/lib/worms_mech
+[0.673s] Installing gait_parser script to /home/oligo/worms_mech_ws/install/worms_mech/lib/worms_mech
+[0.673s] Installing group_joint_controller script to /home/oligo/worms_mech_ws/install/worms_mech/lib/worms_mech
+[0.673s] Installing hardware_interface script to /home/oligo/worms_mech_ws/install/worms_mech/lib/worms_mech
+[0.673s] Installing joint_command_publisher script to /home/oligo/worms_mech_ws/install/worms_mech/lib/worms_mech
+[0.673s] Installing joystick_control script to /home/oligo/worms_mech_ws/install/worms_mech/lib/worms_mech
+[0.673s] Installing simple_hardware_interface script to /home/oligo/worms_mech_ws/install/worms_mech/lib/worms_mech
+[0.673s] Installing stand_node script to /home/oligo/worms_mech_ws/install/worms_mech/lib/worms_mech
+[0.673s] Installing testbed_interface script to /home/oligo/worms_mech_ws/install/worms_mech/lib/worms_mech
+[0.674s] writing list of installed files to '/home/oligo/worms_mech_ws/build/worms_mech/install.log'
+[0.719s] Invoked command in '/home/oligo/worms_mech_ws/src/worms_mech' returned '0': PYTHONPATH=/home/oligo/worms_mech_ws/build/worms_mech/prefix_override:/home/oligo/worms_mech_ws/install/worms_mech/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/worms_mech build --build-base /home/oligo/worms_mech_ws/build/worms_mech/build install --record /home/oligo/worms_mech_ws/build/worms_mech/install.log --single-version-externally-managed

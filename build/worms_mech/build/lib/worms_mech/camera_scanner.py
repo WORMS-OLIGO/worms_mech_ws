@@ -16,8 +16,6 @@ import lgpio
 import pandas as pd
 import subprocess
 
-print("Before Initialization")
-
 
 def get_mac_address():
     
@@ -56,7 +54,6 @@ class QRScannerNode(Node):
         else: 
             print("No WORM Detected")
 
-        self.h = lgpio.gpiochip_close(0)
         self.LED = 21
         self.h = lgpio.gpiochip_open(0)
         lgpio.gpio_claim_output(self.h, self.LED)
@@ -76,6 +73,10 @@ class QRScannerNode(Node):
         self.bridge = CvBridge()
         self.qr_scanned = False
         self.Worm_heartbeat = "Disabled"
+
+        self.get_logger().info("Reading Video Feed")
+        self.cap = cv2.VideoCapture(0)  # Adjust '0' if necessary to match your camera
+        self.get_logger().info("Initialized Video Capture")
         
         self.scan_qr_code()
 
@@ -84,9 +85,6 @@ class QRScannerNode(Node):
             self.scan_qr_code()
 
     def scan_qr_code(self):
-        self.get_logger().info("Reading Video Feed")
-        self.cap = cv2.VideoCapture(0)  # Adjust '0' if necessary to match your camera
-        self.get_logger().info("Initialized Video Capture")
 
         while True:
             self.get_logger().info("Running Loop")
@@ -110,18 +108,14 @@ class QRScannerNode(Node):
                 break
             cv2.imshow('Scan QR Code', frame)
 
-
-            if cv2.waitKey(1) & 0xFF == ord('q'):  # Press 'q' to quit the scanning loop
-                break
-
-
-        self.on_shutdown()
-        self.destroy_node()
     
     def on_shutdown(self):
         self.get_logger().info("Disabling GPIO...")
         lgpio.gpiochip_close(self.h)
+        cv2.destroyAllWindows()
         self.cap.release()
+        self.get_logger().info("Capture Released")
+
 
 
 

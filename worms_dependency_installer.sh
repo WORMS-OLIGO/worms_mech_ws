@@ -25,7 +25,7 @@ echo "Updating Debian/APT Packages"
 apt update 
 
 echo "Installing Joy:"
-apt-get install ros-humble-joy-node
+apt-get install ros-humble-joy
 
 echo "Installing pip:"
 # Ensure pip is installed
@@ -56,5 +56,6 @@ pip install .
 cd 
 
 source export ROS_DOMAIN_ID = 42
+chmod +rw /dev/input/event0
 
 echo -e "\e[32m[SUCCESS]\e[0m All libraries have been installed!"
