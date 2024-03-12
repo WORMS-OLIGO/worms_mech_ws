@@ -674,6 +674,8 @@ class JointCommandPublisher(Node):
     def joystick_callback(self, msg):
 
         if self.species == "SEAL":
+            print("IN JOYSTICK MODE")
+            self.execute_timer_callback = False
             
             # Handle the incoming joystick messages here 
             # ---------------------------------------------------------------------------------------
