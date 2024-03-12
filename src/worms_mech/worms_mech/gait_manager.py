@@ -422,7 +422,7 @@ class JointCommandPublisher(Node):
 
         if hasattr(self, 'current_pose') and self.current_pose is not None:
             position_str = ', '.join([f"{p:.2f}" for p in self.current_pose.position])
-            self.get_logger().info(f'Path complete. Holding Position at: [{position_str}]')
+            self.get_logger().info(f'Current Position at: [{position_str}]')
             self.current_position = self.current_pose.position
 
 
@@ -472,8 +472,6 @@ class JointCommandPublisher(Node):
 
         if self.execute_timer_callback:
 
-            print("Entered Timer Loop")
-
             msg.data = "in_progress"
             
             # Goes through all of the position that are contained within the trajectory created for that specific action
@@ -506,7 +504,6 @@ class JointCommandPublisher(Node):
                 joint_state_msg.position = self.position_command
                 joint_state_msg.velocity = [0.0, 0.0, 0.0]  # Ensuring these are also floats
                 joint_state_msg.effort = [0.0, 0.0, 0.0]
-                print(joint_state_msg)
                 self.command_publisher.publish(joint_state_msg)
 
 
@@ -525,8 +522,6 @@ class JointCommandPublisher(Node):
                 joint_state_msg.velocity = [0.0, 0.0, 0.0]  # Ensuring these are also floats
                 joint_state_msg.effort = [0.0, 0.0, 0.0]
 
-                print(self.execute_timer_callback)
-                
                 if hasattr(self, 'current_pose') and self.current_pose is not None:
                     position_str = ', '.join([f"{p:.2f}" for p in self.current_pose.position])
                     self.get_logger().info(f'Path complete. Holding Position at: [{position_str}]')
