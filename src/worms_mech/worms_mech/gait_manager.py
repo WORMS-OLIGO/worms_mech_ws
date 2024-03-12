@@ -734,31 +734,26 @@ class JointCommandPublisher(Node):
             else:
                 print("Joystick Not Active")
 
-            # After you assign all three values of joint positions Call this Line and the Robot will Move
-            self.publish_joint_command()
+            command = {'position': self.current_motor_positions, 'velocity': [0, 0, 0], 'effort': self.commanded_motor_effort}
+
+            # Logging for debugging
+            self.get_logger().info(f"Publishing command: {command}")
+
+            # Ensure values are float
+            position_command = [float(pos) for pos in command['position']]
+            velocity_command = [float(vel) for vel in command['velocity']]
+            effort_command = [float(eff) for eff in command['effort']]
+
+            # Create and publish JointState message
+            joint_state_msg = JointState()
+            joint_state_msg.header.stamp = self.get_clock().now().to_msg()
+            joint_state_msg.position = position_command
+            joint_state_msg.velocity = velocity_command
+            joint_state_msg.effort = effort_command
+            self.command_publisher.publish(joint_state_msg)
     
-    
 
-    
-    def publish_joint_command(self):
-
-        command = {'position': self.current_motor_positions, 'velocity': [0, 0, 0], 'effort': self.commanded_motor_effort}
-
-        # Logging for debugging
-        self.get_logger().info(f"Publishing command: {command}")
-
-        # Ensure values are float
-        position_command = [float(pos) for pos in command['position']]
-        velocity_command = [float(vel) for vel in command['velocity']]
-        effort_command = [float(eff) for eff in command['effort']]
-
-        # Create and publish JointState message
-        joint_state_msg = JointState()
-        joint_state_msg.header.stamp = self.get_clock().now().to_msg()
-        joint_state_msg.position = position_command
-        joint_state_msg.velocity = velocity_command
-        joint_state_msg.effort = effort_command
-        self.command_publisher.publish(joint_state_msg)
+        
 
 
 def main(args=None):
