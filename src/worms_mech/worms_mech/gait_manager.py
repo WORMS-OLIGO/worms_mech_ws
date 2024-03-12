@@ -415,6 +415,10 @@ class JointCommandPublisher(Node):
 
         self.timer = self.create_timer(0.02, self.timer_callback)
 
+        self.motor1_command = self.current_position[0]
+        self.motor2_command = self.current_position[1]
+        self.motor3_command = self.current_position[2]
+
     def joint_state_callback(self, msg):
         
         print("Updating Joint State")
@@ -735,9 +739,6 @@ class JointCommandPublisher(Node):
             
             else:
                 print("Joystick Not Active")
-                self.motor1_command = self.current_position[0]
-                self.motor2_command = self.current_position[1]
-                self.motor3_command = self.current_position[2]
 
             self.commanded_motor_positions = [self.motor1_command, self.motor2_command, self.motor3_command]
 
