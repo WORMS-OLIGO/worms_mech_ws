@@ -468,6 +468,7 @@ class JointCommandPublisher(Node):
         msg.data = "Static"
 
         # Flag thats set to true when the worm receives some action command (ex: step, prone, walk etc.)
+        print(self.execute_timer_callback)
         if self.execute_timer_callback:
 
             msg.data = "in_progress"
