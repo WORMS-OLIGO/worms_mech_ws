@@ -678,6 +678,7 @@ class JointCommandPublisher(Node):
     def joystick_callback(self, msg):
 
         if self.species == "SEAL":
+
             print("IN JOYSTICK MODE")
             self.execute_timer_callback = False
             
@@ -686,55 +687,62 @@ class JointCommandPublisher(Node):
 
             # 1) Read in Joystick Messages and extract axis values
 
-            self.current_motor_positions = self.current_position  # Three motors
+
+            self.commanded_motor_positions = self.current_position  # Three motors
             self.commanded_motor_velocity = [0, 0, 0]  # Three motors
             self.commanded_motor_effort = [0, 0, 0]  # Three motors
 
             if abs(msg.axes[0])>self.threshold:
+
                 if msg.axes[0]>0:
                     print("Positive Motion Triggered")
-                    self.current_motor_positions[0] += 1
+                    self.motor1_command = self.current_position[0] + 1
                    # self.commanded_motor_effort = [2, 0, 0]  # Three motors
                     
 
                 else:
                     increment = -1
-                    print("Negative Motion Triggered")    
-                    self.current_motor_positions[0] -= 1            
+                    print("Negative Motion Triggered") 
+                    self.motor1_command = self.current_position[0] - 1   
                     #self.commanded_motor_effort = [-2, 0, 0]  # Three motors
 
             if abs(msg.axes[3])>self.threshold:
                 if msg.axes[3]>0:
-                    self.current_motor_positions[1] += 1
+                    self.motor2_command = self.current_position[1] + 1
                     print("Positive Motion Triggered")
                     #self.commanded_motor_effort = [0, 2, 0]  # Three motors
                     
-
                 else:
-
                     print("Negative Motion Triggered")
-                    self.current_motor_positions[1] -= 1
+                    self.motor2_command = self.current_position[1] - 1
                     #self.commanded_motor_effort = [0, -2, 0]  # Three motors
 
             if abs(msg.axes[4])>self.threshold:
                 if msg.axes[4]>0:
 
                     print("Positive Motion Triggered")
-                    self.current_motor_positions[2] += 1
+                    self.motor3_command = self.current_position[2] + 1
+
                     #self.commanded_motor_effort = [0, 0, 2]  # Three motors
                     
 
                 else:
-                    print("Negative Motion Triggered")    
+                    print("Negative Motion Triggered") 
+                    
+                    self.motor3_command = self.current_position[2] - 1
+   
                     self.current_motor_positions[2] -= 1
                     #self.commanded_motor_effort = [0, 0, -2]  # Three motors
-
-                
             
             else:
                 print("Joystick Not Active")
+                self.motor1_command = self.current_position[0]
+                self.motor2_command = self.current_position[1]
+                self.motor3_command = self.current_position[2]
 
-            command = {'position': self.current_motor_positions, 'velocity': [0, 0, 0], 'effort': self.commanded_motor_effort}
+            self.commanded_motor_positions = [self.motor1_command, self.motor2_command, self.motor3_command]
+
+            command = {'position': self.commanded_motor_positions, 'velocity': [0, 0, 0], 'effort': self.commanded_motor_effort}
 
             # Logging for debugging
             self.get_logger().info(f"Publishing command: {command}")
