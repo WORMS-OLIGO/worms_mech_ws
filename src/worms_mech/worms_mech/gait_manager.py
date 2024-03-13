@@ -419,6 +419,8 @@ class JointCommandPublisher(Node):
         self.motor2_command = self.current_position[1]
         self.motor3_command = self.current_position[2]
 
+        self.joy_enabled = False
+
     def joint_state_callback(self, msg):
         
         print("Updating Joint State")
@@ -535,7 +537,7 @@ class JointCommandPublisher(Node):
         
         else:
             print("Timer Executor Not Found") 
-            if self.species == "SEAL":
+            if (self.species == "SEAL" and self.joy_enabled):
                 self.joystick_publish()
 
         self.coordination_publisher.publish(msg)
@@ -683,6 +685,8 @@ class JointCommandPublisher(Node):
     
 
     def joystick_callback(self, msg):
+
+        self.joy_enabled = True
 
         if self.species == "SEAL":
 
