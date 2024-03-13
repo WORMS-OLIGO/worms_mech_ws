@@ -98,7 +98,7 @@ class QRScannerNode(Node):
         
 
         while (self.motor_state == "Disabled"):
-            self.get_logger().info("Running Loop")
+            self.get_logger().info("Looking for QR Code ʕ•ᴥ•ʔ")
             _, frame = self.cap.read()
             decoded_objects = decode(frame)
             
@@ -109,12 +109,13 @@ class QRScannerNode(Node):
                     file.write(obj.data.decode('utf-8').upper())
 
                 self.qr_scanned = True
-                lgpio.gpio_write(self.h, self.LED, 1)
-                time.sleep(0.5)
-                lgpio.gpio_write(self.h, self.LED, 0)
+
                 
                 if (self.qr_scanned and (obj.data.decode('utf-8').upper() != self.last_head)):
                     self.last_head = obj.data.decode('utf-8').upper()
+                    lgpio.gpio_write(self.h, self.LED, 1)
+                    time.sleep(0.5)
+                    lgpio.gpio_write(self.h, self.LED, 0)
                     break
 
                 elif((obj.data.decode('utf-8').upper() == self.last_head)):
