@@ -131,6 +131,8 @@ class MotorControllerNode(Node):
             # Handle other generic exceptions if necessary
             print(f"An unexpected error occurred: {e}")
 
+        self.heartbeat_publisher.publish(self.worm_heartbeat)
+
 
 
     def joint_commands_callback(self, msg):
