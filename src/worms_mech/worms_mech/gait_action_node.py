@@ -119,6 +119,26 @@ class CommandPublisher(Node):
 
 
     def gait_manager(self):
+        self.command_publisher = CommandPublisher()
+
+    # Get the list of commands from the user
+        self.command_publisher.command_list = input("Enter a list of commands (separated by spaces): ").split()
+
+        if self.command_publisher.command_list == ["run_stand_forward_gait"]:
+            self.command_publisher.command_list = ['stand_prone', 'stand_step', 'stand_stand','stand_propel', 'stand_prone', 'stand_step', 'stand_stand','stand_propel', 'stand_prone', 'stand_step', 'stand_stand','stand_propel', 'stand_prone', 'stand_step', 'stand_stand','stand_propel', 'stand_prone']
+        elif self.command_publisher.command_list == ["run_field_forward_gait"]:
+            self.command_publisher.command_list = ['field_prone', 'field_step', 'field_stand','field_propel', 'field_prone', 'field_step', 'field_stand','field_propel', 'field_prone', 'field_step', 'field_stand','field_propel', 'field_prone', 'field_step', 'field_stand','field_propel', 'field_prone']
+        elif self.command_publisher.command_list == ["run_stand_reverse_gait"]:
+            self.command_publisher.command_list = ['reverse', 'stand_prone', 'stand_step', 'stand_stand','stand_propel', 'stand_prone', 'stand_step', 'stand_stand','stand_propel', 'stand_prone', 'stand_step', 'stand_stand','stand_propel', 'stand_prone', 'stand_step', 'stand_stand','stand_propel', 'stand_prone']
+        elif self.command_publisher.command_list == ["run_field_forward_gait"]:
+            self.command_publisher.command_list = ['reverse', 'field_prone', 'field_step', 'field_stand','field_propel', 'field_prone', 'field_step', 'field_stand','field_propel', 'field_prone', 'field_step', 'field_stand','field_propel', 'field_prone', 'field_step', 'field_stand','field_propel', 'field_prone']
+        elif self.command_publisher.command_list == ["run_full_stand_gait"]:
+            self.command_publisher.command_list = ['stand_prone', 'stand_step', 'stand_stand','stand_propel', 'stand_prone', 'stand_step', 'stand_stand','stand_propel', 'stand_prone', 'stand_step', 'stand_stand','stand_propel', 'stand_prone', 'stand_step', 'stand_stand','stand_propel', 'stand_prone', 'reverse', 'stand_prone', 'stand_step', 'stand_stand','stand_propel', 'stand_prone', 'stand_step', 'stand_stand','stand_propel', 'stand_prone', 'stand_step', 'stand_stand','stand_propel', 'stand_prone', 'stand_step', 'stand_stand','stand_propel', 'stand_prone']
+        elif self.command_publisher.command_list == ["run_full_field_gait"]:
+            self.command_publisher.command_list = ['field_prone', 'field_step', 'field_stand','field_propel', 'field_prone', 'field_step', 'field_stand','field_propel', 'field_prone', 'field_step', 'field_stand','field_propel', 'field_prone', 'field_step', 'field_stand','field_propel', 'field_prone', 'reverse', 'field_prone', 'field_step', 'field_stand','field_propel', 'field_prone', 'field_step', 'field_stand','field_propel', 'field_prone', 'field_step', 'field_stand','field_propel', 'field_prone', 'field_step', 'field_stand','field_propel', 'field_prone']
+        else:
+            self.command_publisher.command_list = self.command_publisher.command_list
+
 
         if(self.goat_status and self.pony_status and self.duck_status and self.swan_status):
             self.publish_command()
@@ -130,34 +150,15 @@ class CommandPublisher(Node):
 
 
 
-def main(args=None):
+def main(self, args=None):
     rclpy.init(args=args)
-    command_publisher = CommandPublisher()
-
-    # Get the list of commands from the user
-    command_publisher.command_list = input("Enter a list of commands (separated by spaces): ").split()
-
-    if command_publisher.command_list == ["run_stand_forward_gait"]:
-        command_publisher.command_list = ['stand_prone', 'stand_step', 'stand_stand','stand_propel', 'stand_prone', 'stand_step', 'stand_stand','stand_propel', 'stand_prone', 'stand_step', 'stand_stand','stand_propel', 'stand_prone', 'stand_step', 'stand_stand','stand_propel', 'stand_prone']
-    elif command_publisher.command_list == ["run_field_forward_gait"]:
-        command_publisher.command_list = ['field_prone', 'field_step', 'field_stand','field_propel', 'field_prone', 'field_step', 'field_stand','field_propel', 'field_prone', 'field_step', 'field_stand','field_propel', 'field_prone', 'field_step', 'field_stand','field_propel', 'field_prone']
-    elif command_publisher.command_list == ["run_stand_reverse_gait"]:
-        command_publisher.command_list = ['reverse', 'stand_prone', 'stand_step', 'stand_stand','stand_propel', 'stand_prone', 'stand_step', 'stand_stand','stand_propel', 'stand_prone', 'stand_step', 'stand_stand','stand_propel', 'stand_prone', 'stand_step', 'stand_stand','stand_propel', 'stand_prone']
-    elif command_publisher.command_list == ["run_field_forward_gait"]:
-        command_publisher.command_list = ['reverse', 'field_prone', 'field_step', 'field_stand','field_propel', 'field_prone', 'field_step', 'field_stand','field_propel', 'field_prone', 'field_step', 'field_stand','field_propel', 'field_prone', 'field_step', 'field_stand','field_propel', 'field_prone']
-    elif command_publisher.command_list == ["run_full_stand_gait"]:
-        command_publisher.command_list = ['stand_prone', 'stand_step', 'stand_stand','stand_propel', 'stand_prone', 'stand_step', 'stand_stand','stand_propel', 'stand_prone', 'stand_step', 'stand_stand','stand_propel', 'stand_prone', 'stand_step', 'stand_stand','stand_propel', 'stand_prone', 'reverse', 'stand_prone', 'stand_step', 'stand_stand','stand_propel', 'stand_prone', 'stand_step', 'stand_stand','stand_propel', 'stand_prone', 'stand_step', 'stand_stand','stand_propel', 'stand_prone', 'stand_step', 'stand_stand','stand_propel', 'stand_prone']
-    elif command_publisher.command_list == ["run_full_field_gait"]:
-        command_publisher.command_list = ['field_prone', 'field_step', 'field_stand','field_propel', 'field_prone', 'field_step', 'field_stand','field_propel', 'field_prone', 'field_step', 'field_stand','field_propel', 'field_prone', 'field_step', 'field_stand','field_propel', 'field_prone', 'reverse', 'field_prone', 'field_step', 'field_stand','field_propel', 'field_prone', 'field_step', 'field_stand','field_propel', 'field_prone', 'field_step', 'field_stand','field_propel', 'field_prone', 'field_step', 'field_stand','field_propel', 'field_prone']
-    else:
-        command_publisher.command_list = command_publisher.command_list
-
+    
 
     try:
-        rclpy.spin(command_publisher)
+        rclpy.spin(self.command_publisher)
     except KeyboardInterrupt:
         pass
-    command_publisher.destroy_node()
+    self.command_publisher.destroy_node()
     rclpy.shutdown()
 
 if __name__ == '__main__':
