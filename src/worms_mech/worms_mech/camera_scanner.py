@@ -79,10 +79,10 @@ class QRScannerNode(Node):
         self.cap = cv2.VideoCapture(0)  # Adjust '0' if necessary to match your camera
         self.get_logger().info("Initialized Video Capture")
 
-        self.timer = self.create_timer(0.1, self.timer_callback)
-
         # Open the file and read its contents
         path = os.path.expanduser('~/worms_mech_ws/src/worms_mech/worms_mech/head.txt')
+
+        self.timer = self.create_timer(0.5, self.timer_callback)
 
 
     def heartbeat_callback(self, msg):
