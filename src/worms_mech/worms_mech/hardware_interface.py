@@ -125,7 +125,7 @@ class MotorControllerNode(Node):
         except MotorStateError as e:
             self.worm_heartbeat.data = "Disabled"
             print("Error Connecting to Motors. Please Make Sure They Are Turned On and CAN IDs are Set Correctly")
-            self.destroy_node()
+            #self.destroy_node()
             rclpy.shutdown()
 
         except Exception as e:
