@@ -165,8 +165,8 @@ class JointCommandPublisher(Node):
             [0, 150, -120],  #GO PRONE
             [0, 170, -120],  #LIFT LEG FOR STEP
             [20, 170, -120], #LIFT MOVE LEG FOR STEP
-            [20, 45, -35],  #MOVE LEG DOWN TO STAND
-            [0, 45, -35],   #TURN HIPS FOR PALLET TO TURN
+            [20, 45, -45],  #MOVE LEG DOWN TO STAND
+            [0, 45, -45],   #TURN HIPS FOR PALLET TO TURN
             [0, 150, -120]  #RETURN TO PRONE
         ]
 
@@ -174,8 +174,8 @@ class JointCommandPublisher(Node):
             [0, 150, -120],  #GO PRONE
             [0, 170, -120],  #LIFT LEG FOR STEP
             [-20, 170, -120], #LIFT MOVE LEG FOR STEP
-            [-20, 45, -35],  #MOVE LEG DOWN TO STAND
-            [0, 45, -35],   #TURN HIPS FOR PALLET TO TURN
+            [-20, 45, -45],  #MOVE LEG DOWN TO STAND
+            [0, 45, -45],   #TURN HIPS FOR PALLET TO TURN
             [0, 150, -120]  #RETURN TO PRONE
         ]
 
@@ -493,7 +493,7 @@ class JointCommandPublisher(Node):
 
                 # IF TURN MODE IS ON LEFT TURN MODE AND THE CURRENT WORM IS ON THE LEFT SIDE, MAKE IT GO THE OPPOSITE DIRECTION OF THE RIGHT SIDE
                 if(self.turn_mode == 1 and (self.species == "BEAR" or self.species == "BOAR")):
-                    self.position_command[0] *= self.motor1_side_orientation * self.forward_mode * -1  #Only sending to the head in this specific 4 legged walker configuration
+                    self.position_command[0] *= self.motor1_side_orientation * self.forward_mode * 1  #Only sending to the head in this specific 4 legged walker configuration
                 
                 # IF TURN MODE IS ON RIGHT TURN MODE AND THE CURRENT WORM IS ON THE RIGHT SIDE, MAKE IT GO THE OPPOSITE DIRECTION OF THE LEFT SIDE
                 elif(self.turn_mode == -1 and (self.species == "BIRD" or self.species == "BULL")):

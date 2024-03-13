@@ -108,6 +108,7 @@ class MotorControllerNode(Node):
         self.worm_heartbeat = String()
         self.worm_heartbeat.data = "Disabled"
 
+        self.heartbeat_publisher.publish(self.worm_heartbeat)
         
         self.get_logger().info("Enabling Motors...")
         
@@ -132,7 +133,6 @@ class MotorControllerNode(Node):
             # Handle other generic exceptions if necessary
             print(f"An unexpected error occurred: {e}")
 
-        self.heartbeat_publisher.publish(self.worm_heartbeat)
 
 
 

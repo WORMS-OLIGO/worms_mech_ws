@@ -82,12 +82,12 @@ class QRScannerNode(Node):
         # Open the file and read its contents
         self.path = os.path.expanduser('~/worms_mech_ws/src/worms_mech/worms_mech/head.txt')
 
-        self.timer = self.create_timer(0.5, self.timer_callback)
+        self.timer = self.create_timer(0.1, self.timer_callback)
 
 
     def heartbeat_callback(self, msg):
         self.motor_state = msg.data
-        self.get_logger().info("MOTORS ENABLED. STOPPING SEARCH")
+        self.get_logger().info("MOTORS ENABLED")
         
 
     def timer_callback(self):
@@ -130,8 +130,6 @@ class QRScannerNode(Node):
         cv2.destroyAllWindows()
         self.cap.release()
         self.get_logger().info("Capture Released")
-
-
 
 
 def main(args=None):
