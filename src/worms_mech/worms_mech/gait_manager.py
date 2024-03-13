@@ -492,16 +492,18 @@ class JointCommandPublisher(Node):
                 # POSITION_COMMAND[0] IS GETTING SENT TO HIP
 
                 # IF TURN MODE IS ON LEFT TURN MODE AND THE CURRENT WORM IS ON THE LEFT SIDE, MAKE IT GO THE OPPOSITE DIRECTION OF THE RIGHT SIDE
-                if(self.turn_mode == 1 and (self.species == "BEAR" or self.species == "BOAR")):
-                    self.position_command[0] *= self.motor1_side_orientation * self.forward_mode * 1  #Only sending to the head in this specific 4 legged walker configuration
+                # if(self.turn_mode == 1 and (self.species == "BEAR" or self.species == "BOAR")):
+                #     self.position_command[0] *= self.motor1_side_orientation * self.forward_mode * 1  #Only sending to the head in this specific 4 legged walker configuration
                 
-                # IF TURN MODE IS ON RIGHT TURN MODE AND THE CURRENT WORM IS ON THE RIGHT SIDE, MAKE IT GO THE OPPOSITE DIRECTION OF THE LEFT SIDE
-                elif(self.turn_mode == -1 and (self.species == "BIRD" or self.species == "BULL")):
-                    self.position_command[0] *= self.motor1_side_orientation * self.forward_mode * -1  #Only sending to the head in this specific 4 legged walker configuration
+                # # IF TURN MODE IS ON RIGHT TURN MODE AND THE CURRENT WORM IS ON THE RIGHT SIDE, MAKE IT GO THE OPPOSITE DIRECTION OF THE LEFT SIDE
+                # elif(self.turn_mode == -1 and (self.species == "BIRD" or self.species == "BULL")):
+                #     self.position_command[0] *= self.motor1_side_orientation * self.forward_mode * -1  #Only sending to the head in this specific 4 legged walker configuration
 
-                # IF TURN MODE IS ON 0 WE ARE IN STRAIGHT LOCOMOTION MODE AND THE WORMS SHOULD BE AT THEIR DEFAULT HIP DIRECTION DICTATED BY SIDE
-                else:
-                    self.position_command[0] *= self.motor1_side_orientation * self.forward_mode
+                # # IF TURN MODE IS ON 0 WE ARE IN STRAIGHT LOCOMOTION MODE AND THE WORMS SHOULD BE AT THEIR DEFAULT HIP DIRECTION DICTATED BY SIDE
+                # else:
+                #     self.position_command[0] *= self.motor1_side_orientation * self.forward_mode
+
+                self.position_command[0] *= self.motor1_side_orientation * self.forward_mode
 
                 self.position_command[1] *= self.motor2_side_orientation
                 self.position_command[2] *= self.motor3_side_orientation
