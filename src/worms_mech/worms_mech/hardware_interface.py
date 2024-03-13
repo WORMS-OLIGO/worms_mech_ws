@@ -112,6 +112,8 @@ class MotorControllerNode(Node):
             for motor_id, motor_controller in self.motor_controller_dict.items():
                 state = motor_controller.enable_motor()
 
+                print(state)
+
                 if(state == None):
                     self.worm_heartbeat.data = "Disabled"
                 else:
