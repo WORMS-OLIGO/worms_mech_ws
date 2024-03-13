@@ -534,7 +534,9 @@ class JointCommandPublisher(Node):
                 self.command_publisher.publish(joint_state_msg)
         
         else:
-            print("Timer Executor Not Found")    
+            print("Timer Executor Not Found") 
+            if self.species == "SEAL":
+                self.joystick_publish()
 
         self.coordination_publisher.publish(msg)
             
@@ -753,13 +755,16 @@ class JointCommandPublisher(Node):
             self.get_logger().info(f"Publishing command: {position_command}")
 
             # Create and publish JointState message
-            joint_state_msg = JointState()
-            joint_state_msg.header.stamp = self.get_clock().now().to_msg()
-            joint_state_msg.position = position_command
-            joint_state_msg.velocity = velocity_command
-            joint_state_msg.effort = effort_command
-            self.command_publisher.publish(joint_state_msg)
+            self.joint_state_msg = JointState()
+            self.joint_state_msg.header.stamp = self.get_clock().now().to_msg()
+            self.joint_state_msg.position = position_command
+            self.joint_state_msg.velocity = velocity_command
+            self.joint_state_msg.effort = effort_command
+            #self.command_publisher.publish(self.joint_state_msg)
     
+    def joystick_publish(self):
+        self.command_publisher.publish(self.joint_state_msg)
+
 
         
 
