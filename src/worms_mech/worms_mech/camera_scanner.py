@@ -72,7 +72,7 @@ class QRScannerNode(Node):
         self.subscription  # prevent unused variable warning
         self.bridge = CvBridge()
         self.qr_scanned = False
-        self.Worm_heartbeat = "Disabled"
+        self.motor_state = "Disabled"
 
         self.get_logger().info("Reading Video Feed")
         self.cap = cv2.VideoCapture(0)  # Adjust '0' if necessary to match your camera
@@ -80,12 +80,12 @@ class QRScannerNode(Node):
         self.scan_qr_code()
 
     def heartbeat_callback(self, msg):
-        self.motors_disabled = msg.data 
+        self.motor_state = msg.data 
         
 
     def scan_qr_code(self):
 
-        while (self.motors_disabled == "Disabled"):
+        while (self.motor_state == "Disabled"):
             self.get_logger().info("Running Loop")
             _, frame = self.cap.read()
             decoded_objects = decode(frame)
