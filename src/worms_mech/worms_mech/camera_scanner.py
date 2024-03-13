@@ -82,7 +82,8 @@ class QRScannerNode(Node):
 
     def heartbeat_callback(self, msg):
         self.motor_state = msg.data
-        self.scan_qr_code()
+        self.get_logger().info("MOTORS ENABLED. STOPPING SEARCH")
+        
         
 
     def scan_qr_code(self):
