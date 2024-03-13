@@ -116,8 +116,6 @@ class MotorControllerNode(Node):
                 state = motor_controller.enable_motor()
 
                 if state is None:
-                    # Run a specific function before raising the error
-                    self.handle_motor_disabled()  # Example function call
                     raise MotorStateError(f"Motor {motor_id} failed to enable.")
 
                 self.worm_heartbeat.data = "Enabled"
@@ -125,7 +123,7 @@ class MotorControllerNode(Node):
         except MotorStateError as e:
             self.worm_heartbeat.data = "Disabled"
             print("Error Connecting to Motors. Please Make Sure They Are Turned On and CAN IDs are Set Correctly")
-            #self.destroy_node()
+            self.destroy_node()
             rclpy.shutdown()
 
         except Exception as e:
