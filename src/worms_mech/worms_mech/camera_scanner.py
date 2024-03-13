@@ -84,12 +84,10 @@ class QRScannerNode(Node):
         # Open the file and read its contents
         path = os.path.expanduser('~/worms_mech_ws/src/worms_mech/worms_mech/head.txt')
 
-        self.scan_qr_code()
 
     def heartbeat_callback(self, msg):
         self.motor_state = msg.data
         self.get_logger().info("MOTORS ENABLED. STOPPING SEARCH")
-        
         
 
     def timer_callback(self):
