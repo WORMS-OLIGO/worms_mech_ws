@@ -72,41 +72,56 @@ class QRScannerNode(Node):
         self.subscription  # prevent unused variable warning
         self.bridge = CvBridge()
         self.qr_scanned = False
-        self.Worm_heartbeat = "Disabled"
+        self.motor_state = "Disabled"
+        self.last_head = None
 
         self.get_logger().info("Reading Video Feed")
         self.cap = cv2.VideoCapture(0)  # Adjust '0' if necessary to match your camera
         self.get_logger().info("Initialized Video Capture")
-        
-        self.scan_qr_code()
+
+        # Open the file and read its contents
+        self.path = os.path.expanduser('~/worms_mech_ws/src/worms_mech/worms_mech/head.txt')
+
+        self.timer = self.create_timer(0.1, self.timer_callback)
+
 
     def heartbeat_callback(self, msg):
-        if msg.data == "Disabled" and not self.qr_scanned:
-            self.scan_qr_code()
+        self.motor_state = msg.data
+        self.get_logger().info("MOTORS ENABLED")
+        
 
-    def scan_qr_code(self):
+    def timer_callback(self):
 
-        while True:
-            self.get_logger().info("Running Loop")
+        if(self.motor_state == "Disabled"):
+
+            with open(self.path, 'r') as file:
+                self.last_head = file.readline().strip()
+
+            self.get_logger().info("Looking for QR Code ʕ•ᴥ•ʔ")
             _, frame = self.cap.read()
             decoded_objects = decode(frame)
             
             for obj in decoded_objects:
                 self.get_logger().info(f"QR Code detected: {obj.data.decode('utf-8').upper()}")
-                path = os.path.expanduser('~/worms_mech_ws/src/worms_mech/worms_mech/head.txt')
 
-
-                with open(path, "w") as file:
+                with open(self.path, "w") as file:
                     file.write(obj.data.decode('utf-8').upper())
 
                 self.qr_scanned = True
-                lgpio.gpio_write(self.h, self.LED, 1)
-                time.sleep(0.5)
-                lgpio.gpio_write(self.h, self.LED, 0)
-                break
-            if self.qr_scanned:
-                break
-            cv2.imshow('Scan QR Code', frame)
+
+                
+                if (self.qr_scanned and (obj.data.decode('utf-8').upper() != self.last_head)):
+                    self.last_head = obj.data.decode('utf-8').upper()
+                    lgpio.gpio_write(self.h, self.LED, 1)
+                    time.sleep(0.5)
+                    lgpio.gpio_write(self.h, self.LED, 0)
+                    break
+
+                elif((obj.data.decode('utf-8').upper() == self.last_head)):
+                    self.get_logger().info(f"Still Connected to: {obj.data.decode('utf-8').upper()}. Waiting to Detect New QR")
+
+        else:
+            self.get_logger().info(f"Current QR Code on File: {self.last_head}")    
 
     
     def on_shutdown(self):
@@ -115,8 +130,6 @@ class QRScannerNode(Node):
         cv2.destroyAllWindows()
         self.cap.release()
         self.get_logger().info("Capture Released")
-
-
 
 
 def main(args=None):

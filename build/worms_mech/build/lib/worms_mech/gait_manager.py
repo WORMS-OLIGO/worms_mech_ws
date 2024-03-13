@@ -165,8 +165,8 @@ class JointCommandPublisher(Node):
             [0, 150, -120],  #GO PRONE
             [0, 170, -120],  #LIFT LEG FOR STEP
             [20, 170, -120], #LIFT MOVE LEG FOR STEP
-            [20, 45, -35],  #MOVE LEG DOWN TO STAND
-            [0, 45, -35],   #TURN HIPS FOR PALLET TO TURN
+            [20, 45, -45],  #MOVE LEG DOWN TO STAND
+            [0, 45, -45],   #TURN HIPS FOR PALLET TO TURN
             [0, 150, -120]  #RETURN TO PRONE
         ]
 
@@ -174,8 +174,8 @@ class JointCommandPublisher(Node):
             [0, 150, -120],  #GO PRONE
             [0, 170, -120],  #LIFT LEG FOR STEP
             [-20, 170, -120], #LIFT MOVE LEG FOR STEP
-            [-20, 45, -35],  #MOVE LEG DOWN TO STAND
-            [0, 45, -35],   #TURN HIPS FOR PALLET TO TURN
+            [-20, 45, -45],  #MOVE LEG DOWN TO STAND
+            [0, 45, -45],   #TURN HIPS FOR PALLET TO TURN
             [0, 150, -120]  #RETURN TO PRONE
         ]
 
@@ -419,6 +419,8 @@ class JointCommandPublisher(Node):
         self.motor2_command = self.current_position[1]
         self.motor3_command = self.current_position[2]
 
+        self.joy_enabled = False
+
     def joint_state_callback(self, msg):
         
         print("Updating Joint State")
@@ -491,7 +493,7 @@ class JointCommandPublisher(Node):
 
                 # IF TURN MODE IS ON LEFT TURN MODE AND THE CURRENT WORM IS ON THE LEFT SIDE, MAKE IT GO THE OPPOSITE DIRECTION OF THE RIGHT SIDE
                 if(self.turn_mode == 1 and (self.species == "BEAR" or self.species == "BOAR")):
-                    self.position_command[0] *= self.motor1_side_orientation * self.forward_mode * -1  #Only sending to the head in this specific 4 legged walker configuration
+                    self.position_command[0] *= self.motor1_side_orientation * self.forward_mode * 1  #Only sending to the head in this specific 4 legged walker configuration
                 
                 # IF TURN MODE IS ON RIGHT TURN MODE AND THE CURRENT WORM IS ON THE RIGHT SIDE, MAKE IT GO THE OPPOSITE DIRECTION OF THE LEFT SIDE
                 elif(self.turn_mode == -1 and (self.species == "BIRD" or self.species == "BULL")):
@@ -535,7 +537,7 @@ class JointCommandPublisher(Node):
         
         else:
             print("Timer Executor Not Found") 
-            if self.species == "SEAL":
+            if (self.species == "SEAL" and self.joy_enabled):
                 self.joystick_publish()
 
         self.coordination_publisher.publish(msg)
@@ -684,6 +686,13 @@ class JointCommandPublisher(Node):
 
     def joystick_callback(self, msg):
 
+        self.joy_msg = Joy()
+        self.joy_msg = msg
+        self.joy_enabled = True
+
+        
+    
+    def joystick_publish(self):
         if self.species == "SEAL":
 
             print("IN JOYSTICK MODE")
@@ -699,40 +708,40 @@ class JointCommandPublisher(Node):
             self.commanded_motor_velocity = [0, 0, 0]  # Three motors
             self.commanded_motor_effort = [0, 0, 0]  # Three motors
 
-            if abs(msg.axes[0])>self.threshold:
+            if abs(self.joy_msg.axes[0])>self.threshold:
 
-                if msg.axes[0]>0:
+                if self.joy_msg.axes[0]>0:
                     print("Positive Motion Triggered")
-                    self.motor1_command += .5
+                    self.motor1_command += .1
                     #self.commanded_motor_effort = [1, 0, 0]  # Three motors
                     
                 else:
                     print("Negative Motion Triggered") 
-                    self.motor1_command -= .5   
+                    self.motor1_command -= .1  
                     #self.commanded_motor_effort = [-1, 0, 0]  # Three motors
 
-            elif abs(msg.axes[3])>self.threshold:
-                if msg.axes[3]>0:
-                    self.motor2_command += .5
+            if abs(self.joy_msg.axes[3])>self.threshold:
+                if self.joy_msg.axes[3]>0:
+                    self.motor2_command += .1
                     print("Positive Motion Triggered")
                     #self.commanded_motor_effort = [0, 1, 0]  # Three motors
                     
                 else:
                     print("Negative Motion Triggered")
-                    self.motor2_command -= .5
+                    self.motor2_command -= .1
                     #self.commanded_motor_effort = [0, -1, 0]  # Three motors
 
-            elif abs(msg.axes[4])>self.threshold:
-                if msg.axes[4]>0:
+            if abs(self.joy_msg.axes[4])>self.threshold:
+                if self.joy_msg.axes[4]>0:
 
                     print("Positive Motion Triggered")
-                    self.motor3_command += .5
+                    self.motor3_command += .1
                     #self.commanded_motor_effort = [0, 0, 1]  # Three motors
                     
 
                 else:
                     print("Negative Motion Triggered") 
-                    self.motor3_command -= .5
+                    self.motor3_command -= .1
                     #self.commanded_motor_effort = [0, 0, -1]  # Three motors
             
             else:
@@ -761,9 +770,7 @@ class JointCommandPublisher(Node):
             self.joint_state_msg.velocity = velocity_command
             self.joint_state_msg.effort = effort_command
             #self.command_publisher.publish(self.joint_state_msg)
-    
-    def joystick_publish(self):
-        self.command_publisher.publish(self.joint_state_msg)
+            self.command_publisher.publish(self.joint_state_msg)
 
 
         

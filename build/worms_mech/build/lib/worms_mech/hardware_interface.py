@@ -11,14 +11,14 @@ import os
 
 
 def get_mac_address():
+
+    mac_address = subprocess.check_output(f"cat /sys/class/net/wlan0/address", shell=True).decode().strip()
     
-        mac_address = subprocess.check_output(f"cat /sys/class/net/wlan0/address", shell=True).decode().strip()
+    if mac_address:
+        return mac_address
         
-        if mac_address:
-            return mac_address
-            
-        print("Error getting MAC address: No suitable interface found")
-        return None
+    print("Error getting MAC address: No suitable interface found")
+    return None
 
 def find_robot_info(mac_address, spreadsheet_path):
     df = pd.read_csv(spreadsheet_path)
@@ -28,11 +28,15 @@ def find_robot_info(mac_address, spreadsheet_path):
     else:
         return None
 
+class MotorStateError(Exception):
+    """Exception raised when the motor state is None."""
+    pass
 
 class MotorControllerNode(Node):
             
 
     def __init__(self):
+
         super().__init__('hardware_interface')
 
         # Construct the path to the CSV file
@@ -55,13 +59,16 @@ class MotorControllerNode(Node):
             print(f"Motor Direction 1: {self.motor1_direction}")
             print(f"Motor Direction 2: {self.motor2_direction}")
             print(f"Motor Direction 3: {self.motor3_direction}")
+        
         else:
             print("No matching robot found for the given MAC address.")
 
+        
         self.joint_commands_topic = f'{self.worm_id}_joint_commands'
         self.joint_states_topic = f'{self.worm_id}_joint_states'
         self.worm_heartbeat_topic = f'{self.worm_id}_heartbeat'
 
+        
         print("Recieving Commands From: " + self.joint_commands_topic)
         print("Joint States Publishing To: " + self.joint_states_topic)
 
@@ -84,121 +91,150 @@ class MotorControllerNode(Node):
         for motor_id in motor_ids:
             self.motor_controller_dict[motor_id] = CanMotorController(can_device, motor_id, motor_type="AK80_6_V2")
 
-        print("Creating Subscriber")
+
         self.subscription = self.create_subscription(
             JointState,
             self.joint_commands_topic,
             self.joint_commands_callback,
             10)
 
+        
         self.publisher = self.create_publisher(JointState, self.joint_states_topic, 10)
 
+        
         self.heartbeat_publisher = self.create_publisher(String, self.worm_heartbeat_topic, 10)
 
+        
         self.worm_heartbeat = String()
         self.worm_heartbeat.data = "Disabled"
 
+        self.heartbeat_publisher.publish(self.worm_heartbeat)
+        
         self.get_logger().info("Enabling Motors...")
+        
 
-        for motor_id, motor_controller in self.motor_controller_dict.items():
-            state = motor_controller.enable_motor()
+        try:
+            for motor_id, motor_controller in self.motor_controller_dict.items():
+                state = motor_controller.enable_motor()
 
-            if(state == None):
-                self.worm_heartbeat.data = "Disabled"
-            else:
+                if state is None:
+                    raise MotorStateError(f"Motor {motor_id} failed to enable.")
+
                 self.worm_heartbeat.data = "Enabled"
+        
+        except MotorStateError as e:
+            self.worm_heartbeat.data = "Disabled"
+            self.heartbeat_publisher.publish(self.worm_heartbeat)
+            print("Error Connecting to Motors. Please Make Sure They Are Turned On and CAN IDs are Set Correctly")
+            self.destroy_node()
+            rclpy.shutdown()
+
+        except Exception as e:
+            # Handle other generic exceptions if necessary
+            print(f"An unexpected error occurred: {e}")
+
+
 
 
     def joint_commands_callback(self, msg):
         # Handle the incoming joint state command messages here
         
-        # Assuming the JointState message will have as many entries as there are motors
-        for idx, (motor_id, motor_controller) in enumerate(self.motor_controller_dict.items()):
-            # Assuming Kp and Kd as constants for this example original 35
-            Kp = 300
-            Kd = 2
+        try:
+            # Assuming the JointState message will have as many entries as there are motors
+            for idx, (motor_id, motor_controller) in enumerate(self.motor_controller_dict.items()):
+                # Assuming Kp and Kd as constants for this example original 35
+                Kp = 300
+                Kd = 2
 
-            joint_state_msg = JointState()
+                joint_state_msg = JointState()
 
-            vel_command = msg.velocity[idx]
-            K_ff = msg.effort[idx]
-            logic_pose_command = msg.position[idx]
+                vel_command = msg.velocity[idx]
+                K_ff = msg.effort[idx]
+                logic_pose_command = msg.position[idx]
 
 
-            if(motor_id == 1):
+                if(motor_id == 1):
 
-                print("Motor 1 Position Pre-Command: " + str(self.logical_pos1))
-                print("Motor 1 Command Pre-Command: " + str(logic_pose_command))
-                print("Difference is: " + str(abs(self.logical_pos1 - logic_pose_command)))
+                    print("Motor 1 Position Pre-Command: " + str(self.logical_pos1))
+                    print("Motor 1 Command Pre-Command: " + str(logic_pose_command))
+                    print("Difference is: " + str(abs(self.logical_pos1 - logic_pose_command)))
+                        
+                    if(abs(self.logical_pos1 - logic_pose_command) < 25):
+
                     
-                if(abs(self.logical_pos1 - logic_pose_command) < 25):
+                        self.motor_reported_pos1, self.vel1, self.curr1 = motor_controller.send_deg_command(logic_pose_command * self.motor1_direction, vel_command, Kp, Kd, K_ff)
+                        self.logical_pos1 = self.motor_reported_pos1 * self.motor1_direction
 
-                
-                    self.motor_reported_pos1, self.vel1, self.curr1 = motor_controller.send_deg_command(logic_pose_command * self.motor1_direction, vel_command, Kp, Kd, K_ff)
-                    self.logical_pos1 = self.motor_reported_pos1 * self.motor1_direction
+                        print("Motor 1 Commanded To: " + str(logic_pose_command))
 
-                    print("Motor 1 Commanded To: " + str(logic_pose_command))
+                        if(self.logical_pos1 == None):
+                            self.worm_heartbeat.data = "Disabled"
+                        else: 
+                            self.worm_heartbeat.data = "Enabled"
 
-                    if(self.logical_pos1 == None):
-                        self.worm_heartbeat.data = "Disabled"
-                    else: 
-                        self.worm_heartbeat.data = "Enabled"
+                    else:
+                        print("Motor 1 Over Pushed")
+
+
+                elif(motor_id == 2):
+
+                    print("Motor 2 Position Pre-Command: " + str(self.logical_pos2))
+                    print("Motor 2 Command Pre-Command: " + str(logic_pose_command))
+                    print("Difference is: " + str(abs(self.logical_pos2 - logic_pose_command)))
+
+                    if(abs(self.logical_pos2 - logic_pose_command) < 25):
+
+                        self.motor_reported_pos2, self.vel2, self.curr2 = motor_controller.send_deg_command(logic_pose_command * self.motor2_direction, vel_command, Kp, Kd, K_ff)
+                        self.logical_pos2 = self.motor_reported_pos2 * self.motor2_direction
+                        
+                        if(self.logical_pos2 == None):
+                            self.worm_heartbeat.data = "Disabled"
+                        else: 
+                            self.worm_heartbeat.data = "Enabled"
+                    else:
+                        print("Motor 2 Over Pushed")
+
+                    
+
+                elif(motor_id == 3):
+
+                    print("Motor 3 Position Pre-Command: " + str(self.logical_pos3))
+                    print("Motor 3 Command Pre-Command: " + str(logic_pose_command))
+                    print("Difference is: " + str(abs(self.logical_pos3 - logic_pose_command)))
+                        
+                    if(abs(self.logical_pos3 - logic_pose_command) < 25):
+
+                        self.motor_reported_pos3, self.vel3, self.curr3 = motor_controller.send_deg_command(logic_pose_command * self.motor3_direction, vel_command, Kp, Kd, K_ff)
+                        self.logical_pos3 = self.motor_reported_pos3 * self.motor3_direction
+
+                        if(self.logical_pos3 == None):
+                            self.worm_heartbeat.data = "Disabled"
+                        else: 
+                            self.worm_heartbeat.data = "Enabled"
+
+                    else:
+                        print("Motor 3 Over Pushed")
 
                 else:
-                    print("Motor 1 Over Pushed")
+                    print("MOTOR ID ERROR: MOTOR WILL HOLD POSITION")
 
+            
+            joint_state_msg.header.stamp = self.get_clock().now().to_msg()
+            joint_state_msg.name = ["motor_1", "motor_2", "motor_3"]
+            joint_state_msg.position = [self.logical_pos1, self.logical_pos2, self.logical_pos3]
+            joint_state_msg.velocity = [self.vel1, self.vel2, self.vel3]
+            joint_state_msg.effort = [self.curr1, self.curr2, self.curr3]
 
-            elif(motor_id == 2):
-
-                print("Motor 2 Position Pre-Command: " + str(self.logical_pos2))
-                print("Motor 2 Command Pre-Command: " + str(logic_pose_command))
-                print("Difference is: " + str(abs(self.logical_pos2 - logic_pose_command)))
-
-                if(abs(self.logical_pos2 - logic_pose_command) < 25):
-
-                    self.motor_reported_pos2, self.vel2, self.curr2 = motor_controller.send_deg_command(logic_pose_command * self.motor2_direction, vel_command, Kp, Kd, K_ff)
-                    self.logical_pos2 = self.motor_reported_pos2 * self.motor2_direction
-                    
-                    if(self.logical_pos2 == None):
-                        self.worm_heartbeat.data = "Disabled"
-                    else: 
-                        self.worm_heartbeat.data = "Enabled"
-                else:
-                    print("Motor 2 Over Pushed")
-
-                
-
-            elif(motor_id == 3):
-
-                print("Motor 3 Position Pre-Command: " + str(self.logical_pos3))
-                print("Motor 3 Command Pre-Command: " + str(logic_pose_command))
-                print("Difference is: " + str(abs(self.logical_pos3 - logic_pose_command)))
-                    
-                if(abs(self.logical_pos3 - logic_pose_command) < 25):
-
-                    self.motor_reported_pos3, self.vel3, self.curr3 = motor_controller.send_deg_command(logic_pose_command * self.motor3_direction, vel_command, Kp, Kd, K_ff)
-                    self.logical_pos3 = self.motor_reported_pos3 * self.motor3_direction
-
-                    if(self.logical_pos3 == None):
-                        self.worm_heartbeat.data = "Disabled"
-                    else: 
-                        self.worm_heartbeat.data = "Enabled"
-
-                else:
-                    print("Motor 3 Over Pushed")
-
-            else:
-                print("MOTOR ID ERROR: MOTOR WILL HOLD POSITION")
-
+            self.publisher.publish(joint_state_msg)
         
-        joint_state_msg.header.stamp = self.get_clock().now().to_msg()
-        joint_state_msg.name = ["motor_1", "motor_2", "motor_3"]
-        joint_state_msg.position = [self.logical_pos1, self.logical_pos2, self.logical_pos3]
-        joint_state_msg.velocity = [self.vel1, self.vel2, self.vel3]
-        joint_state_msg.effort = [self.curr1, self.curr2, self.curr3]
+        except Exception as e:
+            self.worm_heartbeat = "Disabled"
+            self.heartbeat_publisher.publish(self.worm_heartbeat)
+            self.on_shutdown()
+            self.destroy_node()
+            rclpy.shutdown()
 
-        self.publisher.publish(joint_state_msg)
-        self.heartbeat_publisher.publish(self.worm_heartbeat)
+                
 
     def set_zero_position(self, motor):
         motor.set_zero_position()
