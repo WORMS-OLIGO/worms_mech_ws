@@ -1,6 +1,6 @@
 import rclpy
 from rclpy.node import Node
-from sensor_msgs.msg import JointState
+from sensor_msgs.msg import JointState, Joy
 from std_msgs.msg import String
 from rclpy.executors import MultiThreadedExecutor
 import numpy as np
@@ -111,9 +111,15 @@ class JointCommandPublisher(Node):
 
         self.state_subscriber = self.create_subscription(JointState, joint_states_topic, self.joint_state_callback, 10)
         self.action_subscriber = self.create_subscription(String, worm_action, self.actions_callback, 10)
+        
+        self.joy_subscriber = self.create_subscription(Joy, '/joy', self.joystick_callback, 10)
 
         
         self.execute_timer_callback = False
+
+        self.threshold = .3
+
+        self.increment = 1
 
 
         # 1 = Robot moving forward with BEAR (Front Left) and BIRD (Front Right) in the direction of motion 
@@ -416,7 +422,7 @@ class JointCommandPublisher(Node):
 
         if hasattr(self, 'current_pose') and self.current_pose is not None:
             position_str = ', '.join([f"{p:.2f}" for p in self.current_pose.position])
-            self.get_logger().info(f'Path complete. Holding Position at: [{position_str}]')
+            self.get_logger().info(f'Current Position at: [{position_str}]')
             self.current_position = self.current_pose.position
 
 
@@ -462,6 +468,8 @@ class JointCommandPublisher(Node):
         msg.data = "Static"
 
         # Flag thats set to true when the worm receives some action command (ex: step, prone, walk etc.)
+        print(self.execute_timer_callback)
+
         if self.execute_timer_callback:
 
             msg.data = "in_progress"
@@ -496,7 +504,6 @@ class JointCommandPublisher(Node):
                 joint_state_msg.position = self.position_command
                 joint_state_msg.velocity = [0.0, 0.0, 0.0]  # Ensuring these are also floats
                 joint_state_msg.effort = [0.0, 0.0, 0.0]
-                print(joint_state_msg)
                 self.command_publisher.publish(joint_state_msg)
 
 
@@ -514,19 +521,22 @@ class JointCommandPublisher(Node):
                 joint_state_msg.position = self.position_command
                 joint_state_msg.velocity = [0.0, 0.0, 0.0]  # Ensuring these are also floats
                 joint_state_msg.effort = [0.0, 0.0, 0.0]
-                
+
                 if hasattr(self, 'current_pose') and self.current_pose is not None:
                     position_str = ', '.join([f"{p:.2f}" for p in self.current_pose.position])
                     self.get_logger().info(f'Path complete. Holding Position at: [{position_str}]')
 
                 self.command_publisher.publish(joint_state_msg)
         
-            
+        else:
+            print("Timer Executor Not Found")    
 
         self.coordination_publisher.publish(msg)
             
 
     def actions_callback(self, msg):
+
+
         if msg.data == "stand_step":
             # Interpolate Positions from Current Position to Start of the Desired Action
             self.interpolated_positions = self.interpolate_waypoints(self.stand_step_waypoints)
@@ -663,17 +673,97 @@ class JointCommandPublisher(Node):
             self.forward_mode = 1
             self.execute_timer_callback = True
 
+    
+
+    def joystick_callback(self, msg):
+
+        if self.species == "SEAL":
+            print("IN JOYSTICK MODE")
+            self.execute_timer_callback = False
+            
+            # Handle the incoming joystick messages here 
+            # ---------------------------------------------------------------------------------------
+
+            # 1) Read in Joystick Messages and extract axis values
+
+            self.current_motor_positions = self.current_position  # Three motors
+            self.commanded_motor_velocity = [0, 0, 0]  # Three motors
+            self.commanded_motor_effort = [0, 0, 0]  # Three motors
+
+            if abs(msg.axes[0])>self.threshold:
+                if msg.axes[0]>0:
+                    print("Positive Motion Triggered")
+                    self.current_motor_positions[0] += 1
+                   # self.commanded_motor_effort = [2, 0, 0]  # Three motors
+                    
+
+                else:
+                    increment = -1
+                    print("Negative Motion Triggered")    
+                    self.current_motor_positions[0] -= 1            
+                    #self.commanded_motor_effort = [-2, 0, 0]  # Three motors
+
+            if abs(msg.axes[3])>self.threshold:
+                if msg.axes[3]>0:
+                    self.current_motor_positions[1] += 1
+                    print("Positive Motion Triggered")
+                    #self.commanded_motor_effort = [0, 2, 0]  # Three motors
+                    
+
+                else:
+
+                    print("Negative Motion Triggered")
+                    self.current_motor_positions[1] -= 1
+                    #self.commanded_motor_effort = [0, -2, 0]  # Three motors
+
+            if abs(msg.axes[4])>self.threshold:
+                if msg.axes[4]>0:
+
+                    print("Positive Motion Triggered")
+                    self.current_motor_positions[2] += 1
+                    #self.commanded_motor_effort = [0, 0, 2]  # Three motors
+                    
+
+                else:
+                    print("Negative Motion Triggered")    
+                    self.current_motor_positions[2] -= 1
+                    #self.commanded_motor_effort = [0, 0, -2]  # Three motors
+
+                
+            
+            else:
+                print("Joystick Not Active")
+
+            command = {'position': self.current_motor_positions, 'velocity': [0, 0, 0], 'effort': self.commanded_motor_effort}
+
+            # Logging for debugging
+            self.get_logger().info(f"Publishing command: {command}")
+
+            # Ensure values are float
+            position_command = [float(pos) for pos in command['position']]
+            velocity_command = [float(vel) for vel in command['velocity']]
+            effort_command = [float(eff) for eff in command['effort']]
+
+            # Create and publish JointState message
+            joint_state_msg = JointState()
+            joint_state_msg.header.stamp = self.get_clock().now().to_msg()
+            joint_state_msg.position = position_command
+            joint_state_msg.velocity = velocity_command
+            joint_state_msg.effort = effort_command
+            self.command_publisher.publish(joint_state_msg)
+    
+
+        
+
+
 def main(args=None):
     rclpy.init(args=args)
     joint_command_publisher = JointCommandPublisher()
     
     rclpy.spin(joint_command_publisher)
 
-
     joint_command_publisher.destroy_node()
     rclpy.shutdown()
 
 if __name__ == '__main__':
     main()
-
-
