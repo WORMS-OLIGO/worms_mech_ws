@@ -78,6 +78,12 @@ class QRScannerNode(Node):
         self.get_logger().info("Reading Video Feed")
         self.cap = cv2.VideoCapture(0)  # Adjust '0' if necessary to match your camera
         self.get_logger().info("Initialized Video Capture")
+
+        self.timer = self.create_timer(0.1, self.timer_callback)
+
+        # Open the file and read its contents
+        path = os.path.expanduser('~/worms_mech_ws/src/worms_mech/worms_mech/head.txt')
+
         self.scan_qr_code()
 
     def heartbeat_callback(self, msg):
@@ -86,19 +92,13 @@ class QRScannerNode(Node):
         
         
 
-    def scan_qr_code(self):
+    def timer_callback(self):
 
-        # Open the file and read its contents
-        path = os.path.expanduser('~/worms_mech_ws/src/worms_mech/worms_mech/head.txt')
+        if(self.motor_state == "Disabled"):
 
-        with open(path, 'r') as file:
-            self.last_head = file.readline().strip()
-        
-        self.get_logger().info(f"Current QR Code on File: {self.last_head}")
+            with open(path, 'r') as file:
+                self.last_head = file.readline().strip()
 
-        
-
-        while (self.motor_state == "Disabled"):
             self.get_logger().info("Looking for QR Code ʕ•ᴥ•ʔ")
             _, frame = self.cap.read()
             decoded_objects = decode(frame)
@@ -121,7 +121,9 @@ class QRScannerNode(Node):
 
                 elif((obj.data.decode('utf-8').upper() == self.last_head)):
                     self.get_logger().info(f"Still Connected to: {obj.data.decode('utf-8').upper()}. Waiting to Detect New QR")
-            
+
+        else:
+            self.get_logger().info(f"Current QR Code on File: {self.last_head}")    
 
     
     def on_shutdown(self):

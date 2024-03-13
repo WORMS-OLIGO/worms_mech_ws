@@ -110,6 +110,7 @@ class MotorControllerNode(Node):
 
         
         self.get_logger().info("Enabling Motors...")
+        
 
         try:
             for motor_id, motor_controller in self.motor_controller_dict.items():
