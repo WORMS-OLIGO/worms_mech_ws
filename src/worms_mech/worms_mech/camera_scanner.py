@@ -77,16 +77,15 @@ class QRScannerNode(Node):
         self.get_logger().info("Reading Video Feed")
         self.cap = cv2.VideoCapture(0)  # Adjust '0' if necessary to match your camera
         self.get_logger().info("Initialized Video Capture")
-        
         self.scan_qr_code()
 
     def heartbeat_callback(self, msg):
-        if msg.data == "Disabled" and not self.qr_scanned:
-            self.scan_qr_code()
+        self.motors_disabled = msg.data 
+        
 
     def scan_qr_code(self):
 
-        while True:
+        while (self.motors_disabled == "Disabled"):
             self.get_logger().info("Running Loop")
             _, frame = self.cap.read()
             decoded_objects = decode(frame)
@@ -104,9 +103,10 @@ class QRScannerNode(Node):
                 time.sleep(0.5)
                 lgpio.gpio_write(self.h, self.LED, 0)
                 break
+
             if self.qr_scanned:
                 break
-            cv2.imshow('Scan QR Code', frame)
+            
 
     
     def on_shutdown(self):
