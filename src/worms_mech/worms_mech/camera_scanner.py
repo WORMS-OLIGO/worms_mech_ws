@@ -73,6 +73,7 @@ class QRScannerNode(Node):
         self.bridge = CvBridge()
         self.qr_scanned = False
         self.motor_state = "Disabled"
+        self.last_head = None
 
         self.get_logger().info("Reading Video Feed")
         self.cap = cv2.VideoCapture(0)  # Adjust '0' if necessary to match your camera
@@ -80,10 +81,21 @@ class QRScannerNode(Node):
         self.scan_qr_code()
 
     def heartbeat_callback(self, msg):
-        self.motor_state = msg.data 
+        self.motor_state = msg.data
+        self.scan_qr_code()
         
 
     def scan_qr_code(self):
+
+        # Open the file and read its contents
+        path = os.path.expanduser('~/worms_mech_ws/src/worms_mech/worms_mech/head.txt')
+
+        with open(path, 'r') as file:
+            self.last_head = file.readline().strip()
+        
+        self.get_logger().info(f"Current QR Code on File: {self.last_head}")
+
+        
 
         while (self.motor_state == "Disabled"):
             self.get_logger().info("Running Loop")
@@ -92,8 +104,6 @@ class QRScannerNode(Node):
             
             for obj in decoded_objects:
                 self.get_logger().info(f"QR Code detected: {obj.data.decode('utf-8').upper()}")
-                path = os.path.expanduser('~/worms_mech_ws/src/worms_mech/worms_mech/head.txt')
-
 
                 with open(path, "w") as file:
                     file.write(obj.data.decode('utf-8').upper())
@@ -102,10 +112,13 @@ class QRScannerNode(Node):
                 lgpio.gpio_write(self.h, self.LED, 1)
                 time.sleep(0.5)
                 lgpio.gpio_write(self.h, self.LED, 0)
-                break
+                
+                if (self.qr_scanned and (obj.data.decode('utf-8').upper() != self.last_head)):
+                    self.last_head = obj.data.decode('utf-8').upper()
+                    break
 
-            if self.qr_scanned:
-                break
+                elif((obj.data.decode('utf-8').upper() == self.last_head)):
+                    self.get_logger().info(f"Still Connected to: {obj.data.decode('utf-8').upper()}. Waiting to Detect New QR")
             
 
     
