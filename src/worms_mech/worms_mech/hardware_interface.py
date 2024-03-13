@@ -28,6 +28,9 @@ def find_robot_info(mac_address, spreadsheet_path):
     else:
         return None
 
+class MotorStateError(Exception):
+    """Exception raised when the motor state is None."""
+    pass
 
 class MotorControllerNode(Node):
             
@@ -112,15 +115,22 @@ class MotorControllerNode(Node):
             for motor_id, motor_controller in self.motor_controller_dict.items():
                 state = motor_controller.enable_motor()
 
-                print(state)
+                if state is None:
+                    # Run a specific function before raising the error
+                    self.handle_motor_disabled()  # Example function call
+                    raise MotorStateError(f"Motor {motor_id} failed to enable.")
 
-                if(state == None):
-                    self.worm_heartbeat.data = "Disabled"
-                else:
-                    self.worm_heartbeat.data = "Enabled"
+                self.worm_heartbeat.data = "Enabled"
         
+        except MotorStateError as e:
+            self.worm_heartbeat.data = "Disabled"
+            print("Error Connecting to Motors. Please Make Sure They Are Turned On and CAN IDs are Set Correctly")
+            self.destroy_node()
+            rclpy.shutdown()
+
         except Exception as e:
-            print("Error Connecting to Motors. Please Make Sure They Are Turned On CAN ID's are Set Correctly")
+            # Handle other generic exceptions if necessary
+            print(f"An unexpected error occurred: {e}")
 
 
 
@@ -218,8 +228,10 @@ class MotorControllerNode(Node):
         except Exception as e:
             self.worm_heartbeat = "Disabled"
             self.heartbeat_publisher.publish(self.worm_heartbeat)
-            motor_controller_node.on_shutdown()
-            motor_controller_node.destroy_node()
+            self.on_shutdown()
+            self.destroy_node()
+            rclpy.shutdown()
+
                 
 
     def set_zero_position(self, motor):
