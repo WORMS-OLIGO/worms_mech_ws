@@ -80,7 +80,7 @@ class QRScannerNode(Node):
         self.get_logger().info("Initialized Video Capture")
 
         # Open the file and read its contents
-        path = os.path.expanduser('~/worms_mech_ws/src/worms_mech/worms_mech/head.txt')
+        self.path = os.path.expanduser('~/worms_mech_ws/src/worms_mech/worms_mech/head.txt')
 
         self.timer = self.create_timer(0.5, self.timer_callback)
 
@@ -94,7 +94,7 @@ class QRScannerNode(Node):
 
         if(self.motor_state == "Disabled"):
 
-            with open(path, 'r') as file:
+            with open(self.path, 'r') as file:
                 self.last_head = file.readline().strip()
 
             self.get_logger().info("Looking for QR Code ʕ•ᴥ•ʔ")
@@ -104,7 +104,7 @@ class QRScannerNode(Node):
             for obj in decoded_objects:
                 self.get_logger().info(f"QR Code detected: {obj.data.decode('utf-8').upper()}")
 
-                with open(path, "w") as file:
+                with open(self.path, "w") as file:
                     file.write(obj.data.decode('utf-8').upper())
 
                 self.qr_scanned = True
