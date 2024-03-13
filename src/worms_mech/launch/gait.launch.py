@@ -9,8 +9,6 @@ def generate_launch_description():
             namespace="",
             output="screen",
             name='gait_manager',
-            # Launch the node with root access in a shell
-            prefix=["sudo -E env \"PYTHONPATH=$PYTHONPATH\" \"LD_LIBRARY_PATH=$LD_LIBRARY_PATH\" \"PATH=$PATH\" \"USER=$USER\"  bash -c "],
             shell=True,
         ),
         Node(
@@ -19,8 +17,6 @@ def generate_launch_description():
             namespace="",
             output="screen",
             name='hardware_interface',
-            # Launch the node with root access in a shell
-            prefix=["sudo -E env \"PYTHONPATH=$PYTHONPATH\" \"LD_LIBRARY_PATH=$LD_LIBRARY_PATH\" \"PATH=$PATH\" \"USER=$USER\"  bash -c "],
             shell=True,
         ),
         
