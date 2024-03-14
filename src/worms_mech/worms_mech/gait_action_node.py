@@ -127,10 +127,8 @@ class CommandPublisher(Node):
         # Get the list of commands from the user
 
         if(self.goat_status and self.pony_status and self.duck_status and self.swan_status):
-            self.command_publisher.command_list = input("Enter a list of commands (separated by spaces): ").split()
+            self.command_publisher.command_list.append(input("Enter a list of commands (separated by spaces): ").split())
             self.publish_command()
-            
-
             # if self.command_publisher.command_list == ["run_stand_forward_gait"]:
             #     self.command_publisher.command_list = ['stand_prone', 'stand_step', 'stand_stand','stand_propel', 'stand_prone', 'stand_step', 'stand_stand','stand_propel', 'stand_prone', 'stand_step', 'stand_stand','stand_propel', 'stand_prone', 'stand_step', 'stand_stand','stand_propel', 'stand_prone']
             # elif self.command_publisher.command_list == ["run_field_forward_gait"]:
