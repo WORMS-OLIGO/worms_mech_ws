@@ -5,5 +5,4 @@ cd ~/worms_mech_ws/
 source install/setup.bash
 ros2 daemon stop 
 ros2 daemon start
-ros2 launch worms_mech camera.launch.py
-
+sudo python3 camera_looper.py
