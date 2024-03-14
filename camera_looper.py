@@ -16,7 +16,7 @@ class QRScanner:
         print("Initialized Video Capture")
 
         # Open the file and read its contents
-        self.path = os.path.expanduser('~/worms_mech_ws/src/worms_mech/worms_mech/head.txt')
+        self.path = os.path.expanduser('src/worms_mech/worms_mech/head.txt')
 
     def read_last_qr_code(self):
         try:
