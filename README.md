@@ -1,46 +1,164 @@
+
 # WORMS Project Codebase
-![worms bannet](https://github.com/WORMS-OLIGO/worms_ws/assets/67200075/6f45db3f-da1c-4a3d-9e11-7c6b638430c2)
-Workspace to House Simulator and Hardware Codebases. All Built in ROS 2 Humble
 
-### Cloning the Repository
+![worms banner](https://github.com/WORMS-OLIGO/worms_ws/assets/67200075/6f45db3f-da1c-4a3d-9e11-7c6b638430c2)
 
-The first thing you need to do is setup an ssh key on your machine if you have not cloned a workspace before with your ubuntu vm/dual boot. To do so enter the following commands:
+This workspace houses both the **Simulator** and **Hardware Codebases**, all built using **ROS 2 Humble**.
 
-1) Open Terminal.
+## Cloning the Repository
 
-Paste the text below, replacing the email used in the example with your GitHub email address.
-```
+The first thing you need to do is set up an SSH key on your machine if you have not cloned a workspace before with your Ubuntu VM or dual boot. To do so, enter the following commands:
+
+### 1. Open Terminal
+
+Paste the following text, replacing the email used in the example with your GitHub email address:
+
+```bash
 ssh-keygen -t ed25519 -C "your_email@example.com"
 ```
 
-This creates a new SSH key, using the provided email as a label.
+This will create a new SSH key, using the provided email as a label.
 
-2) Generating public/private ALGORITHM key pair.
-When you're prompted to "Enter a file in which to save the key", you can press Enter to accept the default file location. Please note that if you created SSH keys previously, ssh-keygen may ask you to rewrite another key, in which case we recommend creating a custom-named SSH key. To do so, type the default file location and replace id_ALGORITHM with your custom key name.
+### 2. Generating Public/Private ALGORITHM Key Pair
+
+When you're prompted to "Enter a file in which to save the key", you can press Enter to accept the default file location. 
+
+Please note that if you created SSH keys previously, `ssh-keygen` may ask you to rewrite another key. In this case, we recommend creating a custom-named SSH key. 
+
+To do so, type the default file location and replace `id_ALGORITHM` with your custom key name:
+
+```bash
+> Enter a file in which to save the key (/home/YOU/.ssh/ALGORITHM): [Press Enter]
+```
+
+At the prompt, do not enter a passphrase, just press the Enter key twice.
+
+```bash
+> Enter passphrase (empty for no passphrase): [Press enter]
+> Enter same passphrase again: [Press enter]
+```
+
+### 3. Testing the SSH Key
+
+To confirm that your key was successfully generated and is correctly set up, use the following command:
+
+```bash
+ssh -T git@github.com
+```
+
+You should receive a message like this:
 
 ```
-> Enter a file in which to save the key (/home/YOU/.ssh/ALGORITHM):[Press enter]
-```
-At the prompt, do not enter a passphrase and just press the enter key, repeat twice.
-
-```
-> Enter passphrase (empty for no passphrase): [Type a passphrase]
-> Enter same passphrase again: [Type passphrase again]
+Hi username! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 
-Testing
+If you see this message, you're all set to clone repositories!
 
+---
 
+## WORMS ROS 2 Workspace
 
+The **WORMS ROS 2 workspace** is designed for running both the simulator and hardware codebases of the WORMS project. Below is an overview of the codebase structure:
 
+### Directory Structure:
 
+- **`src/worms_mech`** - Main ROS 2 package for the WORMS project. Contains scripts, launch files, and hardware interfaces.
+  - **`launch/`** - Launch files for different ROS nodes.
+    - **`camera.launch.py`** - Launch file for camera-related nodes.
+    - **`gait.launch.py`** - Launch file for gait/movement-related nodes.
+  - **`scripts/`** - Python scripts, such as the hardware interface.
+    - **`hardware_interface.py`** - Python script to interact with hardware (e.g., sensors, actuators).
+  - **`msg/`** - Custom message types for communication between nodes.
+  - **`Testing_Instructions/`** - Instructions for testing the system.
+  - **`setup.cfg`** and **`setup.py`** - Configuration files for setting up the package and dependencies.
+  - **`package.xml`** - Metadata for the ROS 2 package.
+  - **`test/`** - Folder containing tests for the package.
 
+---
 
-Run these commands to install Gazebo:
-sudo apt-get update
-sudo apt-get install lsb-release wget gnupg
+## Building the Workspace
 
-sudo wget https://packages.osrfoundation.org/gazebo.gpg -O /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg] http://packages.osrfoundation.org/gazebo/ubuntu-stable $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/gazebo-stable.list > /dev/null
-sudo apt-get update
-sudo apt-get install gz-garden
+Once the workspace is cloned and dependencies are set up, build the entire workspace using the following command:
+
+```bash
+colcon build
+```
+
+This will compile all the ROS 2 packages in the workspace.
+
+---
+
+## Running the ROS 2 Nodes
+
+Once the workspace is built, you can launch the ROS 2 nodes using the following commands:
+
+### Launching Camera Nodes
+
+To launch the camera-related nodes, use the following command:
+
+```bash
+ros2 launch worms_mech camera.launch.py
+```
+
+### Launching Gait Nodes
+
+To launch the gait-related nodes, use the following command:
+
+```bash
+ros2 launch worms_mech gait.launch.py
+```
+
+### Running the Hardware Interface Script
+
+You can also run the hardware interface script directly using:
+
+```bash
+python3 src/worms_mech/scripts/hardware_interface.py
+```
+
+---
+
+## Installing Dependencies
+
+If you encounter any missing dependencies, use the following command to install them:
+
+```bash
+rosdep install --from-paths src --ignore-src -r -y
+```
+
+---
+
+## Running Tests
+
+To run the package tests, use the following command:
+
+```bash
+colcon test
+```
+
+---
+
+## Contribution
+
+Feel free to fork the repository and submit pull requests with improvements or bug fixes. Please ensure that your code follows the guidelines provided in the `Testing_Instructions` folder and passes all tests before submitting.
+
+---
+
+## License
+
+The code is licensed under the terms defined in the `LICENSE` file.
+
+---
+
+## Contact
+
+For any questions or issues, please reach out to the project maintainer:
+
+- **Name**: Jacob Rodriguez
+- **Email**: jrod@oligo.space
+
+---
+
+## Acknowledgements
+
+This project is built using **ROS 2 Humble** and depends on various other libraries and tools, including those found in the ROS 2 ecosystem.
