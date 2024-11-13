@@ -92,6 +92,20 @@ This will compile all the ROS 2 packages in the workspace.
 
 Once the workspace is built, you can launch the ROS 2 nodes using the following commands:
 
+### Launching Hardware Interface
+
+To get each worm to it's functional state, you need to run the hardware interface script. This runs the simple_hardware_bootup node, camera, and sets up all the neccesary can setting with the usb to can interfaces. Tjis boot up sequence it powered through a simple bash script. To run it use the following command when in the root directory of the workspace (worms_mech_ws)
+
+```bash
+./simple_bootup.sh
+```
+
+After this you need to activate the gait manager node on each of the worms. This activates the ROS node responsible for getting commands from the gait manager node that would be send from a chosen commander WORM. To launch that node, use the following:
+
+```bash
+ros2 run worms_mech_ws gait_manager
+```
+
 ### Launching Camera Nodes
 
 To launch the camera-related nodes, use the following command:
@@ -108,13 +122,6 @@ To launch the gait-related nodes, use the following command:
 ros2 launch worms_mech gait.launch.py
 ```
 
-### Running the Hardware Interface Script
-
-You can also run the hardware interface script directly using:
-
-```bash
-python3 src/worms_mech/scripts/hardware_interface.py
-```
 
 ---
 
