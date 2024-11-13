@@ -110,15 +110,31 @@ After this point you then need to choose a worm to run the gait commander from. 
 ```bash
 ros2 run worms_mech_ws gait_action_node
 ```
-Now you are ready to send a command to all connected worms in the network. After the command is entered there will be the option to enter the manuever in which you want the system to do and a list of those can be found below and also in the gait action node file within the repository
+Now you are ready to send a command to all connected worms in the network. After the command is entered there will be the option to enter the manuever in which you want the system to do. A list of those can be found below and also in the gait_manager.py file within the repository
 
-
-
-
-
-
-
-
+| Gait Action                    |
+|--------------------------------|
+| stand_step_waypoints           |
+| stand_prone_waypoints          |
+| stand_stand_waypoints          |
+| stand_test_gait_waypoints      |
+| stand_minimal_motion_waypoints |
+| stand_propel_waypoints         |
+| stand_init_left_turn_waypoints |
+| stand_init_right_turn_waypoints|
+| stand_forward_gait             |
+| stand_reverse_gait             |
+| stand_forward_reverse_gait     |
+| field_step_waypoints           |
+| field_prone_waypoints          |
+| field_init_stand_waypoints     |
+| field_init_step_waypoints      |
+| field_init_left_turn_waypoints |
+| field_init_right_turn_waypoints|
+| field_init_reverse_step_waypoints |
+| field_init_forward_reverse_waypoints |
+| field_test_gait_waypoints      |
+| field_propel_waypoints         |
 
 
 
