@@ -108,8 +108,19 @@ ros2 run worms_mech_ws gait_manager
 After this point you then need to choose a worm to run the gait commander from. This command is found below:
 
 ```bash
-ros2 run worms_mech_ws gait_commander
+ros2 run worms_mech_ws gait_action_node
 ```
+Now you are ready to send a command to all connected worms in the network. After the command is entered there will be the option to enter the manuever in which you want the system to do and a list of those can be found below and also in the gait action node file within the repository
+
+
+
+
+
+
+
+
+
+
 
 ### Launching Camera Nodes
 
