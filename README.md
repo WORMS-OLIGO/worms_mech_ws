@@ -105,6 +105,11 @@ After this you need to activate the gait manager node on each of the worms. This
 ```bash
 ros2 run worms_mech_ws gait_manager
 ```
+After this point you then need to choose a worm to run the gait commander from. This command is found below:
+
+```bash
+ros2 run worms_mech_ws gait_commander
+```
 
 ### Launching Camera Nodes
 
